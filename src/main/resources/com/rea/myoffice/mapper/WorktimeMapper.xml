@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rea.myoffice.mapper.WorktimeMapper">
+  <resultMap id="BaseResultMap" type="com.rea.myoffice.model.Worktime">
+    <id column="WorkTimeId" jdbcType="INTEGER" property="worktimeid" />
+    <result column="OnDutyTime" jdbcType="TIMESTAMP" property="ondutytime" />
+    <result column="OffDutyTime" jdbcType="TIMESTAMP" property="offdutytime" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    WorkTimeId, OnDutyTime, OffDutyTime
+  </sql>
+  <select id="selectByExample" parameterType="com.rea.myoffice.model.WorktimeExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from worktime
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from worktime
+    where WorkTimeId = #{worktimeid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from worktime
+    where WorkTimeId = #{worktimeid,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.rea.myoffice.model.WorktimeExample">
+    delete from worktime
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.rea.myoffice.model.Worktime">
+    insert into worktime (WorkTimeId, OnDutyTime, OffDutyTime
+      )
+    values (#{worktimeid,jdbcType=INTEGER}, #{ondutytime,jdbcType=TIMESTAMP}, #{offdutytime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.rea.myoffice.model.Worktime">
+    insert into worktime
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="worktimeid != null">
+        WorkTimeId,
+      </if>
+      <if test="ondutytime != null">
+        OnDutyTime,
+      </if>
+      <if test="offdutytime != null">
+        OffDutyTime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="worktimeid != null">
+        #{worktimeid,jdbcType=INTEGER},
+      </if>
+      <if test="ondutytime != null">
+        #{ondutytime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="offdutytime != null">
+        #{offdutytime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.rea.myoffice.model.WorktimeExample" resultType="java.lang.Long">
+    select count(*) from worktime
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update worktime
+    <set>
+      <if test="record.worktimeid != null">
+        WorkTimeId = #{record.worktimeid,jdbcType=INTEGER},
+      </if>
+      <if test="record.ondutytime != null">
+        OnDutyTime = #{record.ondutytime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.offdutytime != null">
+        OffDutyTime = #{record.offdutytime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update worktime
+    set WorkTimeId = #{record.worktimeid,jdbcType=INTEGER},
+      OnDutyTime = #{record.ondutytime,jdbcType=TIMESTAMP},
+      OffDutyTime = #{record.offdutytime,jdbcType=TIMESTAMP}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.rea.myoffice.model.Worktime">
+    update worktime
+    <set>
+      <if test="ondutytime != null">
+        OnDutyTime = #{ondutytime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="offdutytime != null">
+        OffDutyTime = #{offdutytime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where WorkTimeId = #{worktimeid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.rea.myoffice.model.Worktime">
+    update worktime
+    set OnDutyTime = #{ondutytime,jdbcType=TIMESTAMP},
+      OffDutyTime = #{offdutytime,jdbcType=TIMESTAMP}
+    where WorkTimeId = #{worktimeid,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rea.myoffice.mapper.FileinfoMapper">
+  <resultMap id="BaseResultMap" type="com.rea.myoffice.model.Fileinfo">
+    <id column="FileId" jdbcType="INTEGER" property="fileid" />
+    <result column="FileName" jdbcType="VARCHAR" property="filename" />
+    <result column="FileType" jdbcType="INTEGER" property="filetype" />
+    <result column="Remark" jdbcType="VARCHAR" property="remark" />
+    <result column="FileOwner" jdbcType="VARCHAR" property="fileowner" />
+    <result column="CreateDate" jdbcType="TIMESTAMP" property="createdate" />
+    <result column="ParentId" jdbcType="INTEGER" property="parentid" />
+    <result column="FilePath" jdbcType="VARCHAR" property="filepath" />
+    <result column="IfDelete" jdbcType="INTEGER" property="ifdelete" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    FileId, FileName, FileType, Remark, FileOwner, CreateDate, ParentId, FilePath, IfDelete
+  </sql>
+  <select id="selectByExample" parameterType="com.rea.myoffice.model.FileinfoExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from fileinfo
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from fileinfo
+    where FileId = #{fileid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from fileinfo
+    where FileId = #{fileid,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.rea.myoffice.model.FileinfoExample">
+    delete from fileinfo
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.rea.myoffice.model.Fileinfo">
+    insert into fileinfo (FileId, FileName, FileType, 
+      Remark, FileOwner, CreateDate, 
+      ParentId, FilePath, IfDelete
+      )
+    values (#{fileid,jdbcType=INTEGER}, #{filename,jdbcType=VARCHAR}, #{filetype,jdbcType=INTEGER}, 
+      #{remark,jdbcType=VARCHAR}, #{fileowner,jdbcType=VARCHAR}, #{createdate,jdbcType=TIMESTAMP}, 
+      #{parentid,jdbcType=INTEGER}, #{filepath,jdbcType=VARCHAR}, #{ifdelete,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.rea.myoffice.model.Fileinfo">
+    insert into fileinfo
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="fileid != null">
+        FileId,
+      </if>
+      <if test="filename != null">
+        FileName,
+      </if>
+      <if test="filetype != null">
+        FileType,
+      </if>
+      <if test="remark != null">
+        Remark,
+      </if>
+      <if test="fileowner != null">
+        FileOwner,
+      </if>
+      <if test="createdate != null">
+        CreateDate,
+      </if>
+      <if test="parentid != null">
+        ParentId,
+      </if>
+      <if test="filepath != null">
+        FilePath,
+      </if>
+      <if test="ifdelete != null">
+        IfDelete,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="fileid != null">
+        #{fileid,jdbcType=INTEGER},
+      </if>
+      <if test="filename != null">
+        #{filename,jdbcType=VARCHAR},
+      </if>
+      <if test="filetype != null">
+        #{filetype,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="fileowner != null">
+        #{fileowner,jdbcType=VARCHAR},
+      </if>
+      <if test="createdate != null">
+        #{createdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="parentid != null">
+        #{parentid,jdbcType=INTEGER},
+      </if>
+      <if test="filepath != null">
+        #{filepath,jdbcType=VARCHAR},
+      </if>
+      <if test="ifdelete != null">
+        #{ifdelete,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.rea.myoffice.model.FileinfoExample" resultType="java.lang.Long">
+    select count(*) from fileinfo
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update fileinfo
+    <set>
+      <if test="record.fileid != null">
+        FileId = #{record.fileid,jdbcType=INTEGER},
+      </if>
+      <if test="record.filename != null">
+        FileName = #{record.filename,jdbcType=VARCHAR},
+      </if>
+      <if test="record.filetype != null">
+        FileType = #{record.filetype,jdbcType=INTEGER},
+      </if>
+      <if test="record.remark != null">
+        Remark = #{record.remark,jdbcType=VARCHAR},
+      </if>
+      <if test="record.fileowner != null">
+        FileOwner = #{record.fileowner,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createdate != null">
+        CreateDate = #{record.createdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.parentid != null">
+        ParentId = #{record.parentid,jdbcType=INTEGER},
+      </if>
+      <if test="record.filepath != null">
+        FilePath = #{record.filepath,jdbcType=VARCHAR},
+      </if>
+      <if test="record.ifdelete != null">
+        IfDelete = #{record.ifdelete,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update fileinfo
+    set FileId = #{record.fileid,jdbcType=INTEGER},
+      FileName = #{record.filename,jdbcType=VARCHAR},
+      FileType = #{record.filetype,jdbcType=INTEGER},
+      Remark = #{record.remark,jdbcType=VARCHAR},
+      FileOwner = #{record.fileowner,jdbcType=VARCHAR},
+      CreateDate = #{record.createdate,jdbcType=TIMESTAMP},
+      ParentId = #{record.parentid,jdbcType=INTEGER},
+      FilePath = #{record.filepath,jdbcType=VARCHAR},
+      IfDelete = #{record.ifdelete,jdbcType=INTEGER}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.rea.myoffice.model.Fileinfo">
+    update fileinfo
+    <set>
+      <if test="filename != null">
+        FileName = #{filename,jdbcType=VARCHAR},
+      </if>
+      <if test="filetype != null">
+        FileType = #{filetype,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null">
+        Remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="fileowner != null">
+        FileOwner = #{fileowner,jdbcType=VARCHAR},
+      </if>
+      <if test="createdate != null">
+        CreateDate = #{createdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="parentid != null">
+        ParentId = #{parentid,jdbcType=INTEGER},
+      </if>
+      <if test="filepath != null">
+        FilePath = #{filepath,jdbcType=VARCHAR},
+      </if>
+      <if test="ifdelete != null">
+        IfDelete = #{ifdelete,jdbcType=INTEGER},
+      </if>
+    </set>
+    where FileId = #{fileid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.rea.myoffice.model.Fileinfo">
+    update fileinfo
+    set FileName = #{filename,jdbcType=VARCHAR},
+      FileType = #{filetype,jdbcType=INTEGER},
+      Remark = #{remark,jdbcType=VARCHAR},
+      FileOwner = #{fileowner,jdbcType=VARCHAR},
+      CreateDate = #{createdate,jdbcType=TIMESTAMP},
+      ParentId = #{parentid,jdbcType=INTEGER},
+      FilePath = #{filepath,jdbcType=VARCHAR},
+      IfDelete = #{ifdelete,jdbcType=INTEGER}
+    where FileId = #{fileid,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rea.myoffice.mapper.AccessoryfileMapper">
+  <resultMap id="BaseResultMap" type="com.rea.myoffice.model.Accessoryfile">
+    <id column="AccessoryId" jdbcType="INTEGER" property="accessoryid" />
+    <result column="FileId" jdbcType="INTEGER" property="fileid" />
+    <result column="AccessoryName" jdbcType="VARCHAR" property="accessoryname" />
+    <result column="AccessorySize" jdbcType="INTEGER" property="accessorysize" />
+    <result column="AccessoryType" jdbcType="INTEGER" property="accessorytype" />
+    <result column="CreateDate" jdbcType="TIMESTAMP" property="createdate" />
+    <result column="AccessoryPath" jdbcType="VARCHAR" property="accessorypath" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    AccessoryId, FileId, AccessoryName, AccessorySize, AccessoryType, CreateDate, AccessoryPath
+  </sql>
+  <select id="selectByExample" parameterType="com.rea.myoffice.model.AccessoryfileExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from accessoryfile
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from accessoryfile
+    where AccessoryId = #{accessoryid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from accessoryfile
+    where AccessoryId = #{accessoryid,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.rea.myoffice.model.AccessoryfileExample">
+    delete from accessoryfile
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.rea.myoffice.model.Accessoryfile">
+    insert into accessoryfile (AccessoryId, FileId, AccessoryName, 
+      AccessorySize, AccessoryType, CreateDate, 
+      AccessoryPath)
+    values (#{accessoryid,jdbcType=INTEGER}, #{fileid,jdbcType=INTEGER}, #{accessoryname,jdbcType=VARCHAR}, 
+      #{accessorysize,jdbcType=INTEGER}, #{accessorytype,jdbcType=INTEGER}, #{createdate,jdbcType=TIMESTAMP}, 
+      #{accessorypath,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.rea.myoffice.model.Accessoryfile">
+    insert into accessoryfile
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="accessoryid != null">
+        AccessoryId,
+      </if>
+      <if test="fileid != null">
+        FileId,
+      </if>
+      <if test="accessoryname != null">
+        AccessoryName,
+      </if>
+      <if test="accessorysize != null">
+        AccessorySize,
+      </if>
+      <if test="accessorytype != null">
+        AccessoryType,
+      </if>
+      <if test="createdate != null">
+        CreateDate,
+      </if>
+      <if test="accessorypath != null">
+        AccessoryPath,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="accessoryid != null">
+        #{accessoryid,jdbcType=INTEGER},
+      </if>
+      <if test="fileid != null">
+        #{fileid,jdbcType=INTEGER},
+      </if>
+      <if test="accessoryname != null">
+        #{accessoryname,jdbcType=VARCHAR},
+      </if>
+      <if test="accessorysize != null">
+        #{accessorysize,jdbcType=INTEGER},
+      </if>
+      <if test="accessorytype != null">
+        #{accessorytype,jdbcType=INTEGER},
+      </if>
+      <if test="createdate != null">
+        #{createdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="accessorypath != null">
+        #{accessorypath,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.rea.myoffice.model.AccessoryfileExample" resultType="java.lang.Long">
+    select count(*) from accessoryfile
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update accessoryfile
+    <set>
+      <if test="record.accessoryid != null">
+        AccessoryId = #{record.accessoryid,jdbcType=INTEGER},
+      </if>
+      <if test="record.fileid != null">
+        FileId = #{record.fileid,jdbcType=INTEGER},
+      </if>
+      <if test="record.accessoryname != null">
+        AccessoryName = #{record.accessoryname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.accessorysize != null">
+        AccessorySize = #{record.accessorysize,jdbcType=INTEGER},
+      </if>
+      <if test="record.accessorytype != null">
+        AccessoryType = #{record.accessorytype,jdbcType=INTEGER},
+      </if>
+      <if test="record.createdate != null">
+        CreateDate = #{record.createdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.accessorypath != null">
+        AccessoryPath = #{record.accessorypath,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update accessoryfile
+    set AccessoryId = #{record.accessoryid,jdbcType=INTEGER},
+      FileId = #{record.fileid,jdbcType=INTEGER},
+      AccessoryName = #{record.accessoryname,jdbcType=VARCHAR},
+      AccessorySize = #{record.accessorysize,jdbcType=INTEGER},
+      AccessoryType = #{record.accessorytype,jdbcType=INTEGER},
+      CreateDate = #{record.createdate,jdbcType=TIMESTAMP},
+      AccessoryPath = #{record.accessorypath,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.rea.myoffice.model.Accessoryfile">
+    update accessoryfile
+    <set>
+      <if test="fileid != null">
+        FileId = #{fileid,jdbcType=INTEGER},
+      </if>
+      <if test="accessoryname != null">
+        AccessoryName = #{accessoryname,jdbcType=VARCHAR},
+      </if>
+      <if test="accessorysize != null">
+        AccessorySize = #{accessorysize,jdbcType=INTEGER},
+      </if>
+      <if test="accessorytype != null">
+        AccessoryType = #{accessorytype,jdbcType=INTEGER},
+      </if>
+      <if test="createdate != null">
+        CreateDate = #{createdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="accessorypath != null">
+        AccessoryPath = #{accessorypath,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where AccessoryId = #{accessoryid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.rea.myoffice.model.Accessoryfile">
+    update accessoryfile
+    set FileId = #{fileid,jdbcType=INTEGER},
+      AccessoryName = #{accessoryname,jdbcType=VARCHAR},
+      AccessorySize = #{accessorysize,jdbcType=INTEGER},
+      AccessoryType = #{accessorytype,jdbcType=INTEGER},
+      CreateDate = #{createdate,jdbcType=TIMESTAMP},
+      AccessoryPath = #{accessorypath,jdbcType=VARCHAR}
+    where AccessoryId = #{accessoryid,jdbcType=INTEGER}
+  </update>
+</mapper>
