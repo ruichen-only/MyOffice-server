@@ -1,14 +1,13 @@
 package com.rea.myoffice.controller;
 
-import com.alibaba.fastjson.JSONObject;
 import com.rea.myoffice.model.Userinfo;
 import com.rea.myoffice.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -70,28 +69,27 @@ public class UserController {
     Map<String, Object> result = new HashMap<>(2);
 
     result.put("code", 20000);
-    // TODO 录入数据库数据，查询
-    result.put("data", new ArrayList<>());
+    result.put("data", userService.findAll());
     return result;
   }
 
   @DeleteMapping("deleteByIds")
-  public Map<String, Object> deleteByIds(@RequestBody JSONObject param) {
+  public Map<String, Object> deleteByIds(@RequestBody Map<String, List<String>> param) {
     Map<String, Object> result = new HashMap<>(2);
 
-    //    param.get("userIds")
+    userService.deleteByIds(param.get("userIds"));
     result.put("code", 20000);
-    result.put("data", "用户删除成功");
+    result.put("msg", "用户删除成功");
     return result;
   }
 
   @DeleteMapping("deleteById")
-  public Map<String, Object> deleteById(@RequestBody JSONObject param) {
+  public Map<String, Object> deleteById(@RequestBody Map<String, String> param) {
     Map<String, Object> result = new HashMap<>(2);
 
-    //    param.get("userId")
+    userService.deleteById(param.get("userId"));
     result.put("code", 20000);
-    result.put("data", "用户删除成功");
+    result.put("msg", "用户删除成功");
     return result;
   }
 
@@ -99,8 +97,10 @@ public class UserController {
   public Map<String, Object> create(@RequestBody Userinfo userinfo) {
     Map<String, Object> result = new HashMap<>(2);
 
-    result.put("code", 20000);
-    result.put("data", "用户创建成功");
+    if (userService.createUser(userinfo) > 0) {
+      result.put("code", 20000);
+      result.put("msg", "用户创建成功");
+    }
     return result;
   }
 
@@ -108,8 +108,10 @@ public class UserController {
   public Map<String, Object> updateById(@RequestBody Userinfo userinfo) {
     Map<String, Object> result = new HashMap<>(2);
 
-    result.put("code", 20000);
-    result.put("data", "用户更新成功");
+    if (userService.updateById(userinfo) > 0) {
+      result.put("code", 20000);
+      result.put("msg", "用户更新成功");
+    }
     return result;
   }
 }

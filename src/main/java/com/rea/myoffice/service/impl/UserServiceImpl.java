@@ -1,5 +1,6 @@
 package com.rea.myoffice.service.impl;
 
+import com.rea.myoffice.bean.UserBean;
 import com.rea.myoffice.mapper.UserinfoMapper;
 import com.rea.myoffice.model.Userinfo;
 import com.rea.myoffice.model.UserinfoExample;
@@ -25,5 +26,36 @@ public class UserServiceImpl implements UserService {
     List<Userinfo> userInfos = userinfoMapper.selectByExample(userinfoExample);
 
     return userInfos.size() > 0;
+  }
+
+  @Override
+  public List<UserBean> findAll() {
+    return userinfoMapper.findAllUserInfo(new UserinfoExample());
+  }
+
+  @Override
+  public int deleteById(String userId) {
+    UserinfoExample example = new UserinfoExample();
+    example.createCriteria().andUseridEqualTo(userId);
+
+    return userinfoMapper.deleteByExample(example);
+  }
+
+  @Override
+  public int deleteByIds(List<String> userIds) {
+    UserinfoExample example = new UserinfoExample();
+    example.createCriteria().andUseridIn(userIds);
+
+    return userinfoMapper.deleteByExample(example);
+  }
+
+  @Override
+  public int createUser(Userinfo userinfo) {
+    return userinfoMapper.insertSelective(userinfo);
+  }
+
+  @Override
+  public int updateById(Userinfo userinfo) {
+    return userinfoMapper.updateByPrimaryKey(userinfo);
   }
 }
