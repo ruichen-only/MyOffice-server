@@ -248,9 +248,11 @@
         <if test="distinct">
             distinct
         </if>
-        DepartId, DepartName, PrincipalUser, ConnectTelNo, ConnectMobileTelNo, Faxes, b.BranchId as BranchId, BranchName
-        from departinfo
-        inner join branchinfo b on departinfo.BranchId = b.BranchId
+        d.DepartId, DepartName, PrincipalUser userId, ConnectTelNo, ConnectMobileTelNo, Faxes, b.BranchId as BranchId,
+        BranchName, u.UserName as username
+        from departinfo d
+        inner join branchinfo b on d.BranchId = b.BranchId
+        left join userinfo u on d.PrincipalUser = u.UserId
         <if test="_parameter != null">
             <include refid="Example_Where_Clause"/>
         </if>

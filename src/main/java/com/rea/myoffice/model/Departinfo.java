@@ -11,7 +11,7 @@ public class Departinfo implements Serializable {
   @JsonProperty("deptName")
   private String departname;
 
-  @JsonProperty("username")
+  @JsonProperty("userId")
   private String principaluser;
 
   @JsonProperty("telephone")
@@ -85,19 +85,26 @@ public class Departinfo implements Serializable {
 
   @Override
   public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append(getClass().getSimpleName());
-    sb.append(" [");
-    sb.append("Hash = ").append(hashCode());
-    sb.append(", departid=").append(departid);
-    sb.append(", departname=").append(departname);
-    sb.append(", principaluser=").append(principaluser);
-    sb.append(", connecttelno=").append(connecttelno);
-    sb.append(", connectmobiletelno=").append(connectmobiletelno);
-    sb.append(", faxes=").append(faxes);
-    sb.append(", branchid=").append(branchid);
-    sb.append(", serialVersionUID=").append(serialVersionUID);
-    sb.append("]");
-    return sb.toString();
+    return getClass().getSimpleName()
+        + " ["
+        + "Hash = "
+        + hashCode()
+        + ", departid="
+        + departid
+        + ", departname="
+        + departname
+        + ", principaluser="
+        + principaluser
+        + ", connecttelno="
+        + connecttelno
+        + ", connectmobiletelno="
+        + connectmobiletelno
+        + ", faxes="
+        + faxes
+        + ", branchid="
+        + branchid
+        + ", serialVersionUID="
+        + serialVersionUID
+        + "]";
   }
 }
