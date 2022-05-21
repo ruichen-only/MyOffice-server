@@ -14,7 +14,12 @@ import java.util.List;
  */
 @Service
 public class BranchServiceImpl implements BranchService {
-  @Autowired private BranchinfoMapper branchinfoMapper;
+  private final BranchinfoMapper branchinfoMapper;
+
+  @Autowired
+  public BranchServiceImpl(BranchinfoMapper branchinfoMapper) {
+    this.branchinfoMapper = branchinfoMapper;
+  }
 
   @Override
   public List<Branchinfo> findAll() {

@@ -16,7 +16,12 @@ import java.util.Map;
 @RestController
 @RequestMapping("/dev-api/user-state/")
 public class UserStateController {
-  @Autowired private UserstateMapper userstateMapper;
+  private final UserstateMapper userstateMapper;
+
+  @Autowired
+  public UserStateController(UserstateMapper userstateMapper) {
+    this.userstateMapper = userstateMapper;
+  }
 
   @GetMapping("findAll")
   public Map<String, Object> findAll() {

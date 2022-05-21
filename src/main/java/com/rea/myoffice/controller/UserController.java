@@ -18,7 +18,12 @@ import java.util.Map;
 public class UserController {
   private static final String TOKEN = "admin-token";
 
-  @Autowired private UserService userService;
+  private final UserService userService;
+
+  @Autowired
+  public UserController(UserService userService) {
+    this.userService = userService;
+  }
 
   @RequestMapping("login")
   public Map<String, Object> login(@RequestBody Userinfo userinfo) {

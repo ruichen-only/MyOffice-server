@@ -15,7 +15,12 @@ import java.util.List;
  */
 @Service
 public class DepartmentServiceImpl implements DepartmentService {
-  @Autowired private DepartinfoMapper departinfoMapper;
+  private final DepartinfoMapper departinfoMapper;
+
+  @Autowired
+  public DepartmentServiceImpl(DepartinfoMapper departinfoMapper) {
+    this.departinfoMapper = departinfoMapper;
+  }
 
   @Override
   public List<DepartBean> findAll() {

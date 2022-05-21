@@ -16,7 +16,12 @@ import java.util.Map;
 @RestController
 @RequestMapping("/dev-api/role/")
 public class RoleController {
-  @Autowired private RoleinfoMapper roleinfoMapper;
+  private final RoleinfoMapper roleinfoMapper;
+
+  @Autowired
+  public RoleController(RoleinfoMapper roleinfoMapper) {
+    this.roleinfoMapper = roleinfoMapper;
+  }
 
   @GetMapping("findAll")
   public Map<String, Object> findAll() {

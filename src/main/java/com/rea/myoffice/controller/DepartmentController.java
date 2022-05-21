@@ -18,7 +18,12 @@ public class DepartmentController {
   private static final String DEPT_ID = "deptId";
   private static final String DEPT_IDS = "deptIds";
 
-  @Autowired private DepartmentService departmentService;
+  private final DepartmentService departmentService;
+
+  @Autowired
+  public DepartmentController(DepartmentService departmentService) {
+    this.departmentService = departmentService;
+  }
 
   @GetMapping("findAll")
   public Map<String, Object> findAll() {

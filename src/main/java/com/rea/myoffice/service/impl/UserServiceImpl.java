@@ -16,7 +16,12 @@ import java.util.List;
 @Service
 public class UserServiceImpl implements UserService {
 
-  @Autowired private UserinfoMapper userinfoMapper;
+  private final UserinfoMapper userinfoMapper;
+
+  @Autowired
+  public UserServiceImpl(UserinfoMapper userinfoMapper) {
+    this.userinfoMapper = userinfoMapper;
+  }
 
   @Override
   public boolean login(String username, String password) {

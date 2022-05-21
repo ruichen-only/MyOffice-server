@@ -17,7 +17,13 @@ import java.util.Map;
 public class BranchController {
   private static final String BRANCH_ID = "branchId";
   private static final String BRANCH_IDS = "branchIds";
-  @Autowired private BranchService branchService;
+
+  private final BranchService branchService;
+
+  @Autowired
+  public BranchController(BranchService branchService) {
+    this.branchService = branchService;
+  }
 
   @GetMapping("findAll")
   public Map<String, Object> findAll() {
