@@ -17,7 +17,7 @@ public interface UserService {
    * @param password 密码
    * @return 存在时返回TRUE，否则返回FALSE
    */
-  boolean login(String username, String password);
+  String login(String username, String password);
 
   /**
    * 查询所有的用户信息

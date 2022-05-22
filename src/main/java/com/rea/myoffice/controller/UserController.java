@@ -28,10 +28,11 @@ public class UserController {
   @RequestMapping("login")
   public Map<String, Object> login(@RequestBody Userinfo userinfo) {
     Map<String, Object> result = new HashMap<>(2);
-    if (userService.login(userinfo.getUsername(), userinfo.getPassword())) {
+    String token = userService.login(userinfo.getUsername(), userinfo.getPassword());
+    if (token != null) {
       result.put("code", 20000);
       // TODO:后续增加Authorization验证，生成token返回
-      result.put("data", TOKEN);
+      result.put("data", token);
     } else {
       result.put("code", 60204);
       result.put("message", "Account and password are incorrect.");

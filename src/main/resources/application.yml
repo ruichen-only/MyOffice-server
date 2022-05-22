@@ -47,3 +47,12 @@ management:
 endpoints:
   shutdown:
     enabled: true
+jwt:
+  #  JWT存储请求头
+  tokenHeader: Authorization
+  #  JWT加密使用的密钥
+  secret: juejin-secret
+  #  JWT超期限时间（60*60*24）
+  expiration: 604800
+  #  JWT负载中拿到开头
+  tokenHead: Bearer
