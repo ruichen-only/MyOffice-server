@@ -1,19 +1,26 @@
 package com.rea.myoffice.model;
 
+import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
 import java.util.Date;
 
 public class Loginlog implements Serializable {
+    @ApiModelProperty(value = "登录日志id")
     private Integer loginid;
 
+    @ApiModelProperty(value = "登录者")
     private String userid;
 
+    @ApiModelProperty(value = "登录时间")
     private Date logintime;
 
+    @ApiModelProperty(value = "登录是否成功。1：成功、0失败。")
     private Integer ifsuccess;
 
+    @ApiModelProperty(value = "登录用户IP")
     private String loginuserip;
 
+    @ApiModelProperty(value = "登录备注")
     private String logindesc;
 
     private static final long serialVersionUID = 1L;

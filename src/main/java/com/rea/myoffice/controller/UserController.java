@@ -2,6 +2,8 @@ package com.rea.myoffice.controller;
 
 import com.rea.myoffice.model.Userinfo;
 import com.rea.myoffice.service.UserService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,6 +17,7 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/dev-api/user/")
+@Api(tags = "UserController")
 public class UserController {
   private static final String TOKEN = "admin-token";
 
@@ -26,6 +29,7 @@ public class UserController {
   }
 
   @RequestMapping("login")
+  @ApiOperation("用户登录")
   public Map<String, Object> login(@RequestBody Userinfo userinfo) {
     Map<String, Object> result = new HashMap<>(2);
     String token = userService.login(userinfo.getUsername(), userinfo.getPassword());

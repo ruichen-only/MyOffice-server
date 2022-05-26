@@ -183,50 +183,50 @@
   <update id="updateByExampleSelective" parameterType="map">
     update message
     <set>
-      <if test="record.messageid != null">
-        MessageId = #{record.messageid,jdbcType=INTEGER},
+      <if test="row.messageid != null">
+        MessageId = #{row.messageid,jdbcType=INTEGER},
       </if>
-      <if test="record.title != null">
-        Title = #{record.title,jdbcType=VARCHAR},
+      <if test="row.title != null">
+        Title = #{row.title,jdbcType=VARCHAR},
       </if>
-      <if test="record.content != null">
-        Content = #{record.content,jdbcType=VARCHAR},
+      <if test="row.content != null">
+        Content = #{row.content,jdbcType=VARCHAR},
       </if>
-      <if test="record.type != null">
-        Type = #{record.type,jdbcType=INTEGER},
+      <if test="row.type != null">
+        Type = #{row.type,jdbcType=INTEGER},
       </if>
-      <if test="record.begintime != null">
-        BeginTime = #{record.begintime,jdbcType=TIMESTAMP},
+      <if test="row.begintime != null">
+        BeginTime = #{row.begintime,jdbcType=TIMESTAMP},
       </if>
-      <if test="record.endtime != null">
-        EndTime = #{record.endtime,jdbcType=TIMESTAMP},
+      <if test="row.endtime != null">
+        EndTime = #{row.endtime,jdbcType=TIMESTAMP},
       </if>
-      <if test="record.fromuserid != null">
-        FromUserId = #{record.fromuserid,jdbcType=VARCHAR},
+      <if test="row.fromuserid != null">
+        FromUserId = #{row.fromuserid,jdbcType=VARCHAR},
       </if>
-      <if test="record.ifpublish != null">
-        IfPublish = #{record.ifpublish,jdbcType=INTEGER},
+      <if test="row.ifpublish != null">
+        IfPublish = #{row.ifpublish,jdbcType=INTEGER},
       </if>
-      <if test="record.recordtime != null">
-        RecordTime = #{record.recordtime,jdbcType=TIMESTAMP},
+      <if test="row.recordtime != null">
+        RecordTime = #{row.recordtime,jdbcType=TIMESTAMP},
       </if>
     </set>
-    <if test="_parameter != null">
+    <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
   <update id="updateByExample" parameterType="map">
     update message
-    set MessageId = #{record.messageid,jdbcType=INTEGER},
-      Title = #{record.title,jdbcType=VARCHAR},
-      Content = #{record.content,jdbcType=VARCHAR},
-      Type = #{record.type,jdbcType=INTEGER},
-      BeginTime = #{record.begintime,jdbcType=TIMESTAMP},
-      EndTime = #{record.endtime,jdbcType=TIMESTAMP},
-      FromUserId = #{record.fromuserid,jdbcType=VARCHAR},
-      IfPublish = #{record.ifpublish,jdbcType=INTEGER},
-      RecordTime = #{record.recordtime,jdbcType=TIMESTAMP}
-    <if test="_parameter != null">
+    set MessageId = #{row.messageid,jdbcType=INTEGER},
+      Title = #{row.title,jdbcType=VARCHAR},
+      Content = #{row.content,jdbcType=VARCHAR},
+      Type = #{row.type,jdbcType=INTEGER},
+      BeginTime = #{row.begintime,jdbcType=TIMESTAMP},
+      EndTime = #{row.endtime,jdbcType=TIMESTAMP},
+      FromUserId = #{row.fromuserid,jdbcType=VARCHAR},
+      IfPublish = #{row.ifpublish,jdbcType=INTEGER},
+      RecordTime = #{row.recordtime,jdbcType=TIMESTAMP}
+    <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>

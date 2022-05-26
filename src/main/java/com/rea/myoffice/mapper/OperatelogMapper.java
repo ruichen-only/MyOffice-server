@@ -12,19 +12,19 @@ public interface OperatelogMapper {
 
     int deleteByPrimaryKey(Integer operateid);
 
-    int insert(Operatelog record);
+    int insert(Operatelog row);
 
-    int insertSelective(Operatelog record);
+    int insertSelective(Operatelog row);
 
     List<Operatelog> selectByExample(OperatelogExample example);
 
     Operatelog selectByPrimaryKey(Integer operateid);
 
-    int updateByExampleSelective(@Param("record") Operatelog record, @Param("example") OperatelogExample example);
+    int updateByExampleSelective(@Param("row") Operatelog row, @Param("example") OperatelogExample example);
 
-    int updateByExample(@Param("record") Operatelog record, @Param("example") OperatelogExample example);
+    int updateByExample(@Param("row") Operatelog row, @Param("example") OperatelogExample example);
 
-    int updateByPrimaryKeySelective(Operatelog record);
+    int updateByPrimaryKeySelective(Operatelog row);
 
-    int updateByPrimaryKey(Operatelog record);
+    int updateByPrimaryKey(Operatelog row);
 }

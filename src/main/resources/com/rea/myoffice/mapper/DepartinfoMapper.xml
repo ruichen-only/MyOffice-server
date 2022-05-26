@@ -170,42 +170,42 @@
     <update id="updateByExampleSelective" parameterType="map">
         update departinfo
         <set>
-            <if test="record.departid != null">
-                DepartId = #{record.departid,jdbcType=INTEGER},
+            <if test="row.departid != null">
+                DepartId = #{row.departid,jdbcType=INTEGER},
             </if>
-            <if test="record.departname != null">
-                DepartName = #{record.departname,jdbcType=VARCHAR},
+            <if test="row.departname != null">
+                DepartName = #{row.departname,jdbcType=VARCHAR},
             </if>
-            <if test="record.principaluser != null">
-                PrincipalUser = #{record.principaluser,jdbcType=VARCHAR},
+            <if test="row.principaluser != null">
+                PrincipalUser = #{row.principaluser,jdbcType=VARCHAR},
             </if>
-            <if test="record.connecttelno != null">
-                ConnectTelNo = #{record.connecttelno,jdbcType=BIGINT},
+            <if test="row.connecttelno != null">
+                ConnectTelNo = #{row.connecttelno,jdbcType=BIGINT},
             </if>
-            <if test="record.connectmobiletelno != null">
-                ConnectMobileTelNo = #{record.connectmobiletelno,jdbcType=BIGINT},
+            <if test="row.connectmobiletelno != null">
+                ConnectMobileTelNo = #{row.connectmobiletelno,jdbcType=BIGINT},
             </if>
-            <if test="record.faxes != null">
-                Faxes = #{record.faxes,jdbcType=BIGINT},
+            <if test="row.faxes != null">
+                Faxes = #{row.faxes,jdbcType=BIGINT},
             </if>
-            <if test="record.branchid != null">
-                BranchId = #{record.branchid,jdbcType=INTEGER},
+            <if test="row.branchid != null">
+                BranchId = #{row.branchid,jdbcType=INTEGER},
             </if>
         </set>
-        <if test="_parameter != null">
+        <if test="example != null">
             <include refid="Update_By_Example_Where_Clause"/>
         </if>
     </update>
     <update id="updateByExample" parameterType="map">
         update departinfo
-        set DepartId = #{record.departid,jdbcType=INTEGER},
-        DepartName = #{record.departname,jdbcType=VARCHAR},
-        PrincipalUser = #{record.principaluser,jdbcType=VARCHAR},
-        ConnectTelNo = #{record.connecttelno,jdbcType=BIGINT},
-        ConnectMobileTelNo = #{record.connectmobiletelno,jdbcType=BIGINT},
-        Faxes = #{record.faxes,jdbcType=BIGINT},
-        BranchId = #{record.branchid,jdbcType=INTEGER}
-        <if test="_parameter != null">
+        set DepartId = #{row.departid,jdbcType=INTEGER},
+        DepartName = #{row.departname,jdbcType=VARCHAR},
+        PrincipalUser = #{row.principaluser,jdbcType=VARCHAR},
+        ConnectTelNo = #{row.connecttelno,jdbcType=BIGINT},
+        ConnectMobileTelNo = #{row.connectmobiletelno,jdbcType=BIGINT},
+        Faxes = #{row.faxes,jdbcType=BIGINT},
+        BranchId = #{row.branchid,jdbcType=INTEGER}
+        <if test="example != null">
             <include refid="Update_By_Example_Where_Clause"/>
         </if>
     </update>

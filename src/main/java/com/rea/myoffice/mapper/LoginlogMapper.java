@@ -12,19 +12,19 @@ public interface LoginlogMapper {
 
     int deleteByPrimaryKey(Integer loginid);
 
-    int insert(Loginlog record);
+    int insert(Loginlog row);
 
-    int insertSelective(Loginlog record);
+    int insertSelective(Loginlog row);
 
     List<Loginlog> selectByExample(LoginlogExample example);
 
     Loginlog selectByPrimaryKey(Integer loginid);
 
-    int updateByExampleSelective(@Param("record") Loginlog record, @Param("example") LoginlogExample example);
+    int updateByExampleSelective(@Param("row") Loginlog row, @Param("example") LoginlogExample example);
 
-    int updateByExample(@Param("record") Loginlog record, @Param("example") LoginlogExample example);
+    int updateByExample(@Param("row") Loginlog row, @Param("example") LoginlogExample example);
 
-    int updateByPrimaryKeySelective(Loginlog record);
+    int updateByPrimaryKeySelective(Loginlog row);
 
-    int updateByPrimaryKey(Loginlog record);
+    int updateByPrimaryKey(Loginlog row);
 }

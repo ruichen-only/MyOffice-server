@@ -14,23 +14,22 @@ public interface DepartinfoMapper {
 
   int deleteByPrimaryKey(Integer departid);
 
-  int insert(Departinfo record);
+  int insert(Departinfo row);
 
-  int insertSelective(Departinfo record);
+  int insertSelective(Departinfo row);
 
   List<Departinfo> selectByExample(DepartinfoExample example);
 
   Departinfo selectByPrimaryKey(Integer departid);
 
   int updateByExampleSelective(
-      @Param("record") Departinfo record, @Param("example") DepartinfoExample example);
+      @Param("row") Departinfo row, @Param("example") DepartinfoExample example);
 
-  int updateByExample(
-      @Param("record") Departinfo record, @Param("example") DepartinfoExample example);
+  int updateByExample(@Param("row") Departinfo row, @Param("example") DepartinfoExample example);
 
-  int updateByPrimaryKeySelective(Departinfo record);
+  int updateByPrimaryKeySelective(Departinfo row);
 
-  int updateByPrimaryKey(Departinfo record);
+  int updateByPrimaryKey(Departinfo row);
 
   List<DepartBean> findDepartAndBranchInfo(DepartinfoExample example);
 }

@@ -12,19 +12,19 @@ public interface MynoteMapper {
 
     int deleteByPrimaryKey(Integer noteid);
 
-    int insert(Mynote record);
+    int insert(Mynote row);
 
-    int insertSelective(Mynote record);
+    int insertSelective(Mynote row);
 
     List<Mynote> selectByExample(MynoteExample example);
 
     Mynote selectByPrimaryKey(Integer noteid);
 
-    int updateByExampleSelective(@Param("record") Mynote record, @Param("example") MynoteExample example);
+    int updateByExampleSelective(@Param("row") Mynote row, @Param("example") MynoteExample example);
 
-    int updateByExample(@Param("record") Mynote record, @Param("example") MynoteExample example);
+    int updateByExample(@Param("row") Mynote row, @Param("example") MynoteExample example);
 
-    int updateByPrimaryKeySelective(Mynote record);
+    int updateByPrimaryKeySelective(Mynote row);
 
-    int updateByPrimaryKey(Mynote record);
+    int updateByPrimaryKey(Mynote row);
 }

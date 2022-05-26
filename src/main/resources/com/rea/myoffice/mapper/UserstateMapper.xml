@@ -128,22 +128,22 @@
   <update id="updateByExampleSelective" parameterType="map">
     update userstate
     <set>
-      <if test="record.userstateid != null">
-        UserStateId = #{record.userstateid,jdbcType=INTEGER},
+      <if test="row.userstateid != null">
+        UserStateId = #{row.userstateid,jdbcType=INTEGER},
       </if>
-      <if test="record.userstatename != null">
-        UserStateName = #{record.userstatename,jdbcType=VARCHAR},
+      <if test="row.userstatename != null">
+        UserStateName = #{row.userstatename,jdbcType=VARCHAR},
       </if>
     </set>
-    <if test="_parameter != null">
+    <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
   <update id="updateByExample" parameterType="map">
     update userstate
-    set UserStateId = #{record.userstateid,jdbcType=INTEGER},
-      UserStateName = #{record.userstatename,jdbcType=VARCHAR}
-    <if test="_parameter != null">
+    set UserStateId = #{row.userstateid,jdbcType=INTEGER},
+      UserStateName = #{row.userstatename,jdbcType=VARCHAR}
+    <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>

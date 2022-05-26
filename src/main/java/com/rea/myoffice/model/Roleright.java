@@ -1,12 +1,16 @@
 package com.rea.myoffice.model;
 
+import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
 
 public class Roleright implements Serializable {
+    @ApiModelProperty(value = "角色权限id")
     private Integer rolerightid;
 
+    @ApiModelProperty(value = "角色id")
     private Integer roleid;
 
+    @ApiModelProperty(value = "菜单节点id")
     private Integer nodeid;
 
     private static final long serialVersionUID = 1L;

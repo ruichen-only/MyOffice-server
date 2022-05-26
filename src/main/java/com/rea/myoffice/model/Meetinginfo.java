@@ -1,10 +1,13 @@
 package com.rea.myoffice.model;
 
+import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
 
 public class Meetinginfo implements Serializable {
+    @ApiModelProperty(value = "会议类型Id")
     private Integer meetingid;
 
+    @ApiModelProperty(value = "会议类型名称")
     private String meetingname;
 
     private static final long serialVersionUID = 1L;

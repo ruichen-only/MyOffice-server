@@ -137,26 +137,26 @@
   <update id="updateByExampleSelective" parameterType="map">
     update roleright
     <set>
-      <if test="record.rolerightid != null">
-        RoleRightId = #{record.rolerightid,jdbcType=INTEGER},
+      <if test="row.rolerightid != null">
+        RoleRightId = #{row.rolerightid,jdbcType=INTEGER},
       </if>
-      <if test="record.roleid != null">
-        RoleId = #{record.roleid,jdbcType=INTEGER},
+      <if test="row.roleid != null">
+        RoleId = #{row.roleid,jdbcType=INTEGER},
       </if>
-      <if test="record.nodeid != null">
-        NodeId = #{record.nodeid,jdbcType=INTEGER},
+      <if test="row.nodeid != null">
+        NodeId = #{row.nodeid,jdbcType=INTEGER},
       </if>
     </set>
-    <if test="_parameter != null">
+    <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
   <update id="updateByExample" parameterType="map">
     update roleright
-    set RoleRightId = #{record.rolerightid,jdbcType=INTEGER},
-      RoleId = #{record.roleid,jdbcType=INTEGER},
-      NodeId = #{record.nodeid,jdbcType=INTEGER}
-    <if test="_parameter != null">
+    set RoleRightId = #{row.rolerightid,jdbcType=INTEGER},
+      RoleId = #{row.roleid,jdbcType=INTEGER},
+      NodeId = #{row.nodeid,jdbcType=INTEGER}
+    <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>

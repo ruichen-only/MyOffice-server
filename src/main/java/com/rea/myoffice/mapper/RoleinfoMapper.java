@@ -12,19 +12,19 @@ public interface RoleinfoMapper {
 
     int deleteByPrimaryKey(Integer roleid);
 
-    int insert(Roleinfo record);
+    int insert(Roleinfo row);
 
-    int insertSelective(Roleinfo record);
+    int insertSelective(Roleinfo row);
 
     List<Roleinfo> selectByExample(RoleinfoExample example);
 
     Roleinfo selectByPrimaryKey(Integer roleid);
 
-    int updateByExampleSelective(@Param("record") Roleinfo record, @Param("example") RoleinfoExample example);
+    int updateByExampleSelective(@Param("row") Roleinfo row, @Param("example") RoleinfoExample example);
 
-    int updateByExample(@Param("record") Roleinfo record, @Param("example") RoleinfoExample example);
+    int updateByExample(@Param("row") Roleinfo row, @Param("example") RoleinfoExample example);
 
-    int updateByPrimaryKeySelective(Roleinfo record);
+    int updateByPrimaryKeySelective(Roleinfo row);
 
-    int updateByPrimaryKey(Roleinfo record);
+    int updateByPrimaryKey(Roleinfo row);
 }

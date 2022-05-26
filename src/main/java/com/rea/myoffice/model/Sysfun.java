@@ -1,16 +1,22 @@
 package com.rea.myoffice.model;
 
+import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
 
 public class Sysfun implements Serializable {
+    @ApiModelProperty(value = "菜单节点id")
     private Integer nodeid;
 
+    @ApiModelProperty(value = "菜单名称")
     private String displayname;
 
+    @ApiModelProperty(value = "菜单连接地址")
     private String nodeurl;
 
+    @ApiModelProperty(value = "菜单显示顺序")
     private Integer displayorder;
 
+    @ApiModelProperty(value = "父节点id")
     private Integer parentnodeid;
 
     private static final long serialVersionUID = 1L;

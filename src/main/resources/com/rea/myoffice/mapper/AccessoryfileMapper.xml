@@ -167,42 +167,42 @@
   <update id="updateByExampleSelective" parameterType="map">
     update accessoryfile
     <set>
-      <if test="record.accessoryid != null">
-        AccessoryId = #{record.accessoryid,jdbcType=INTEGER},
+      <if test="row.accessoryid != null">
+        AccessoryId = #{row.accessoryid,jdbcType=INTEGER},
       </if>
-      <if test="record.fileid != null">
-        FileId = #{record.fileid,jdbcType=INTEGER},
+      <if test="row.fileid != null">
+        FileId = #{row.fileid,jdbcType=INTEGER},
       </if>
-      <if test="record.accessoryname != null">
-        AccessoryName = #{record.accessoryname,jdbcType=VARCHAR},
+      <if test="row.accessoryname != null">
+        AccessoryName = #{row.accessoryname,jdbcType=VARCHAR},
       </if>
-      <if test="record.accessorysize != null">
-        AccessorySize = #{record.accessorysize,jdbcType=INTEGER},
+      <if test="row.accessorysize != null">
+        AccessorySize = #{row.accessorysize,jdbcType=INTEGER},
       </if>
-      <if test="record.accessorytype != null">
-        AccessoryType = #{record.accessorytype,jdbcType=INTEGER},
+      <if test="row.accessorytype != null">
+        AccessoryType = #{row.accessorytype,jdbcType=INTEGER},
       </if>
-      <if test="record.createdate != null">
-        CreateDate = #{record.createdate,jdbcType=TIMESTAMP},
+      <if test="row.createdate != null">
+        CreateDate = #{row.createdate,jdbcType=TIMESTAMP},
       </if>
-      <if test="record.accessorypath != null">
-        AccessoryPath = #{record.accessorypath,jdbcType=VARCHAR},
+      <if test="row.accessorypath != null">
+        AccessoryPath = #{row.accessorypath,jdbcType=VARCHAR},
       </if>
     </set>
-    <if test="_parameter != null">
+    <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
   <update id="updateByExample" parameterType="map">
     update accessoryfile
-    set AccessoryId = #{record.accessoryid,jdbcType=INTEGER},
-      FileId = #{record.fileid,jdbcType=INTEGER},
-      AccessoryName = #{record.accessoryname,jdbcType=VARCHAR},
-      AccessorySize = #{record.accessorysize,jdbcType=INTEGER},
-      AccessoryType = #{record.accessorytype,jdbcType=INTEGER},
-      CreateDate = #{record.createdate,jdbcType=TIMESTAMP},
-      AccessoryPath = #{record.accessorypath,jdbcType=VARCHAR}
-    <if test="_parameter != null">
+    set AccessoryId = #{row.accessoryid,jdbcType=INTEGER},
+      FileId = #{row.fileid,jdbcType=INTEGER},
+      AccessoryName = #{row.accessoryname,jdbcType=VARCHAR},
+      AccessorySize = #{row.accessorysize,jdbcType=INTEGER},
+      AccessoryType = #{row.accessorytype,jdbcType=INTEGER},
+      CreateDate = #{row.createdate,jdbcType=TIMESTAMP},
+      AccessoryPath = #{row.accessorypath,jdbcType=VARCHAR}
+    <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>

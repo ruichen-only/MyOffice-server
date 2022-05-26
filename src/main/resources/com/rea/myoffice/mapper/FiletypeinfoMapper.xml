@@ -144,30 +144,30 @@
   <update id="updateByExampleSelective" parameterType="map">
     update filetypeinfo
     <set>
-      <if test="record.filetypeid != null">
-        FileTypeId = #{record.filetypeid,jdbcType=INTEGER},
+      <if test="row.filetypeid != null">
+        FileTypeId = #{row.filetypeid,jdbcType=INTEGER},
       </if>
-      <if test="record.filetypename != null">
-        FileTypeName = #{record.filetypename,jdbcType=VARCHAR},
+      <if test="row.filetypename != null">
+        FileTypeName = #{row.filetypename,jdbcType=VARCHAR},
       </if>
-      <if test="record.filetypeimage != null">
-        FileTypeImage = #{record.filetypeimage,jdbcType=VARCHAR},
+      <if test="row.filetypeimage != null">
+        FileTypeImage = #{row.filetypeimage,jdbcType=VARCHAR},
       </if>
-      <if test="record.filetypesuffix != null">
-        FileTypeSuffix = #{record.filetypesuffix,jdbcType=VARCHAR},
+      <if test="row.filetypesuffix != null">
+        FileTypeSuffix = #{row.filetypesuffix,jdbcType=VARCHAR},
       </if>
     </set>
-    <if test="_parameter != null">
+    <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
   <update id="updateByExample" parameterType="map">
     update filetypeinfo
-    set FileTypeId = #{record.filetypeid,jdbcType=INTEGER},
-      FileTypeName = #{record.filetypename,jdbcType=VARCHAR},
-      FileTypeImage = #{record.filetypeimage,jdbcType=VARCHAR},
-      FileTypeSuffix = #{record.filetypesuffix,jdbcType=VARCHAR}
-    <if test="_parameter != null">
+    set FileTypeId = #{row.filetypeid,jdbcType=INTEGER},
+      FileTypeName = #{row.filetypename,jdbcType=VARCHAR},
+      FileTypeImage = #{row.filetypeimage,jdbcType=VARCHAR},
+      FileTypeSuffix = #{row.filetypesuffix,jdbcType=VARCHAR}
+    <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>

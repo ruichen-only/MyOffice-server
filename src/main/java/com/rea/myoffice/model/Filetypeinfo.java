@@ -1,14 +1,19 @@
 package com.rea.myoffice.model;
 
+import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
 
 public class Filetypeinfo implements Serializable {
+    @ApiModelProperty(value = "文件类型id")
     private Integer filetypeid;
 
+    @ApiModelProperty(value = "文件类型名")
     private String filetypename;
 
+    @ApiModelProperty(value = "文件类型对应的图标")
     private String filetypeimage;
 
+    @ApiModelProperty(value = "文件类型后缀")
     private String filetypesuffix;
 
     private static final long serialVersionUID = 1L;

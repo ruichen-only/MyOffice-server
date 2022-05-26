@@ -1,27 +1,38 @@
 package com.rea.myoffice.model;
 
+import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
 import java.util.Date;
 
 public class Schedule implements Serializable {
+    @ApiModelProperty(value = "日程Id")
     private Integer scheduleid;
 
+    @ApiModelProperty(value = "日程标题")
     private String title;
 
+    @ApiModelProperty(value = "会议地址")
     private String address;
 
+    @ApiModelProperty(value = "会议类型")
     private Integer meetingid;
 
+    @ApiModelProperty(value = "日程开始时间")
     private Date begintime;
 
+    @ApiModelProperty(value = "日程结束时间")
     private Date endtime;
 
+    @ApiModelProperty(value = "日程内容")
     private String schcontent;
 
+    @ApiModelProperty(value = "创建者")
     private String createuser;
 
+    @ApiModelProperty(value = "创建时间")
     private Date createtime;
 
+    @ApiModelProperty(value = "是否私有")
     private Integer ifprivate;
 
     private static final long serialVersionUID = 1L;

@@ -137,26 +137,26 @@
   <update id="updateByExampleSelective" parameterType="map">
     update branchinfo
     <set>
-      <if test="record.branchid != null">
-        BranchId = #{record.branchid,jdbcType=INTEGER},
+      <if test="row.branchid != null">
+        BranchId = #{row.branchid,jdbcType=INTEGER},
       </if>
-      <if test="record.branchname != null">
-        BranchName = #{record.branchname,jdbcType=VARCHAR},
+      <if test="row.branchname != null">
+        BranchName = #{row.branchname,jdbcType=VARCHAR},
       </if>
-      <if test="record.branchshortname != null">
-        BranchShortName = #{record.branchshortname,jdbcType=VARCHAR},
+      <if test="row.branchshortname != null">
+        BranchShortName = #{row.branchshortname,jdbcType=VARCHAR},
       </if>
     </set>
-    <if test="_parameter != null">
+    <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
   <update id="updateByExample" parameterType="map">
     update branchinfo
-    set BranchId = #{record.branchid,jdbcType=INTEGER},
-      BranchName = #{record.branchname,jdbcType=VARCHAR},
-      BranchShortName = #{record.branchshortname,jdbcType=VARCHAR}
-    <if test="_parameter != null">
+    set BranchId = #{row.branchid,jdbcType=INTEGER},
+      BranchName = #{row.branchname,jdbcType=VARCHAR},
+      BranchShortName = #{row.branchshortname,jdbcType=VARCHAR}
+    <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>

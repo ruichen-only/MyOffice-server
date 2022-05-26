@@ -137,26 +137,26 @@
   <update id="updateByExampleSelective" parameterType="map">
     update roleinfo
     <set>
-      <if test="record.roleid != null">
-        RoleId = #{record.roleid,jdbcType=INTEGER},
+      <if test="row.roleid != null">
+        RoleId = #{row.roleid,jdbcType=INTEGER},
       </if>
-      <if test="record.rolename != null">
-        RoleName = #{record.rolename,jdbcType=VARCHAR},
+      <if test="row.rolename != null">
+        RoleName = #{row.rolename,jdbcType=VARCHAR},
       </if>
-      <if test="record.roledesc != null">
-        RoleDesc = #{record.roledesc,jdbcType=VARCHAR},
+      <if test="row.roledesc != null">
+        RoleDesc = #{row.roledesc,jdbcType=VARCHAR},
       </if>
     </set>
-    <if test="_parameter != null">
+    <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
   <update id="updateByExample" parameterType="map">
     update roleinfo
-    set RoleId = #{record.roleid,jdbcType=INTEGER},
-      RoleName = #{record.rolename,jdbcType=VARCHAR},
-      RoleDesc = #{record.roledesc,jdbcType=VARCHAR}
-    <if test="_parameter != null">
+    set RoleId = #{row.roleid,jdbcType=INTEGER},
+      RoleName = #{row.rolename,jdbcType=VARCHAR},
+      RoleDesc = #{row.roledesc,jdbcType=VARCHAR}
+    <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>

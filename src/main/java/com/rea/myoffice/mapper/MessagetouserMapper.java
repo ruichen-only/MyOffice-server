@@ -12,19 +12,19 @@ public interface MessagetouserMapper {
 
     int deleteByPrimaryKey(Integer id);
 
-    int insert(Messagetouser record);
+    int insert(Messagetouser row);
 
-    int insertSelective(Messagetouser record);
+    int insertSelective(Messagetouser row);
 
     List<Messagetouser> selectByExample(MessagetouserExample example);
 
     Messagetouser selectByPrimaryKey(Integer id);
 
-    int updateByExampleSelective(@Param("record") Messagetouser record, @Param("example") MessagetouserExample example);
+    int updateByExampleSelective(@Param("row") Messagetouser row, @Param("example") MessagetouserExample example);
 
-    int updateByExample(@Param("record") Messagetouser record, @Param("example") MessagetouserExample example);
+    int updateByExample(@Param("row") Messagetouser row, @Param("example") MessagetouserExample example);
 
-    int updateByPrimaryKeySelective(Messagetouser record);
+    int updateByPrimaryKeySelective(Messagetouser row);
 
-    int updateByPrimaryKey(Messagetouser record);
+    int updateByPrimaryKey(Messagetouser row);
 }

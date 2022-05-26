@@ -151,34 +151,34 @@
   <update id="updateByExampleSelective" parameterType="map">
     update manualsign
     <set>
-      <if test="record.signid != null">
-        SignId = #{record.signid,jdbcType=INTEGER},
+      <if test="row.signid != null">
+        SignId = #{row.signid,jdbcType=INTEGER},
       </if>
-      <if test="record.userid != null">
-        UserId = #{record.userid,jdbcType=VARCHAR},
+      <if test="row.userid != null">
+        UserId = #{row.userid,jdbcType=VARCHAR},
       </if>
-      <if test="record.signtime != null">
-        SignTime = #{record.signtime,jdbcType=TIMESTAMP},
+      <if test="row.signtime != null">
+        SignTime = #{row.signtime,jdbcType=TIMESTAMP},
       </if>
-      <if test="record.signdesc != null">
-        SignDesc = #{record.signdesc,jdbcType=VARCHAR},
+      <if test="row.signdesc != null">
+        SignDesc = #{row.signdesc,jdbcType=VARCHAR},
       </if>
-      <if test="record.signtag != null">
-        SignTag = #{record.signtag,jdbcType=INTEGER},
+      <if test="row.signtag != null">
+        SignTag = #{row.signtag,jdbcType=INTEGER},
       </if>
     </set>
-    <if test="_parameter != null">
+    <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
   <update id="updateByExample" parameterType="map">
     update manualsign
-    set SignId = #{record.signid,jdbcType=INTEGER},
-      UserId = #{record.userid,jdbcType=VARCHAR},
-      SignTime = #{record.signtime,jdbcType=TIMESTAMP},
-      SignDesc = #{record.signdesc,jdbcType=VARCHAR},
-      SignTag = #{record.signtag,jdbcType=INTEGER}
-    <if test="_parameter != null">
+    set SignId = #{row.signid,jdbcType=INTEGER},
+      UserId = #{row.userid,jdbcType=VARCHAR},
+      SignTime = #{row.signtime,jdbcType=TIMESTAMP},
+      SignDesc = #{row.signdesc,jdbcType=VARCHAR},
+      SignTag = #{row.signtag,jdbcType=INTEGER}
+    <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>

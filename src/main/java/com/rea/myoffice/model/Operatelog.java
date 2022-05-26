@@ -1,19 +1,26 @@
 package com.rea.myoffice.model;
 
+import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
 import java.util.Date;
 
 public class Operatelog implements Serializable {
+    @ApiModelProperty(value = "操作日志Id")
     private Integer operateid;
 
+    @ApiModelProperty(value = "操作者")
     private String userid;
 
+    @ApiModelProperty(value = "操作名称")
     private String operatename;
 
+    @ApiModelProperty(value = "操作对象Id")
     private String objectid;
 
+    @ApiModelProperty(value = "操作描述")
     private String operatedesc;
 
+    @ApiModelProperty(value = "操作时间")
     private Date operatetime;
 
     private static final long serialVersionUID = 1L;

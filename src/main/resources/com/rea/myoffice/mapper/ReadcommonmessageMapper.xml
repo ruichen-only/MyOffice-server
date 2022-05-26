@@ -137,26 +137,26 @@
   <update id="updateByExampleSelective" parameterType="map">
     update readcommonmessage
     <set>
-      <if test="record.readid != null">
-        ReadId = #{record.readid,jdbcType=INTEGER},
+      <if test="row.readid != null">
+        ReadId = #{row.readid,jdbcType=INTEGER},
       </if>
-      <if test="record.messageid != null">
-        MessageId = #{record.messageid,jdbcType=INTEGER},
+      <if test="row.messageid != null">
+        MessageId = #{row.messageid,jdbcType=INTEGER},
       </if>
-      <if test="record.userid != null">
-        UserId = #{record.userid,jdbcType=VARCHAR},
+      <if test="row.userid != null">
+        UserId = #{row.userid,jdbcType=VARCHAR},
       </if>
     </set>
-    <if test="_parameter != null">
+    <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
   <update id="updateByExample" parameterType="map">
     update readcommonmessage
-    set ReadId = #{record.readid,jdbcType=INTEGER},
-      MessageId = #{record.messageid,jdbcType=INTEGER},
-      UserId = #{record.userid,jdbcType=VARCHAR}
-    <if test="_parameter != null">
+    set ReadId = #{row.readid,jdbcType=INTEGER},
+      MessageId = #{row.messageid,jdbcType=INTEGER},
+      UserId = #{row.userid,jdbcType=VARCHAR}
+    <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>

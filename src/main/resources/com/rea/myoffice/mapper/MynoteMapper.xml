@@ -151,34 +151,34 @@
   <update id="updateByExampleSelective" parameterType="map">
     update mynote
     <set>
-      <if test="record.noteid != null">
-        NoteId = #{record.noteid,jdbcType=INTEGER},
+      <if test="row.noteid != null">
+        NoteId = #{row.noteid,jdbcType=INTEGER},
       </if>
-      <if test="record.notetitle != null">
-        NoteTitle = #{record.notetitle,jdbcType=VARCHAR},
+      <if test="row.notetitle != null">
+        NoteTitle = #{row.notetitle,jdbcType=VARCHAR},
       </if>
-      <if test="record.notecontent != null">
-        NoteContent = #{record.notecontent,jdbcType=VARCHAR},
+      <if test="row.notecontent != null">
+        NoteContent = #{row.notecontent,jdbcType=VARCHAR},
       </if>
-      <if test="record.createtime != null">
-        CreateTime = #{record.createtime,jdbcType=TIMESTAMP},
+      <if test="row.createtime != null">
+        CreateTime = #{row.createtime,jdbcType=TIMESTAMP},
       </if>
-      <if test="record.createuser != null">
-        CreateUser = #{record.createuser,jdbcType=VARCHAR},
+      <if test="row.createuser != null">
+        CreateUser = #{row.createuser,jdbcType=VARCHAR},
       </if>
     </set>
-    <if test="_parameter != null">
+    <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
   <update id="updateByExample" parameterType="map">
     update mynote
-    set NoteId = #{record.noteid,jdbcType=INTEGER},
-      NoteTitle = #{record.notetitle,jdbcType=VARCHAR},
-      NoteContent = #{record.notecontent,jdbcType=VARCHAR},
-      CreateTime = #{record.createtime,jdbcType=TIMESTAMP},
-      CreateUser = #{record.createuser,jdbcType=VARCHAR}
-    <if test="_parameter != null">
+    set NoteId = #{row.noteid,jdbcType=INTEGER},
+      NoteTitle = #{row.notetitle,jdbcType=VARCHAR},
+      NoteContent = #{row.notecontent,jdbcType=VARCHAR},
+      CreateTime = #{row.createtime,jdbcType=TIMESTAMP},
+      CreateUser = #{row.createuser,jdbcType=VARCHAR}
+    <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>

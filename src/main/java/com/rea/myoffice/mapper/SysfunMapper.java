@@ -12,19 +12,19 @@ public interface SysfunMapper {
 
     int deleteByPrimaryKey(Integer nodeid);
 
-    int insert(Sysfun record);
+    int insert(Sysfun row);
 
-    int insertSelective(Sysfun record);
+    int insertSelective(Sysfun row);
 
     List<Sysfun> selectByExample(SysfunExample example);
 
     Sysfun selectByPrimaryKey(Integer nodeid);
 
-    int updateByExampleSelective(@Param("record") Sysfun record, @Param("example") SysfunExample example);
+    int updateByExampleSelective(@Param("row") Sysfun row, @Param("example") SysfunExample example);
 
-    int updateByExample(@Param("record") Sysfun record, @Param("example") SysfunExample example);
+    int updateByExample(@Param("row") Sysfun row, @Param("example") SysfunExample example);
 
-    int updateByPrimaryKeySelective(Sysfun record);
+    int updateByPrimaryKeySelective(Sysfun row);
 
-    int updateByPrimaryKey(Sysfun record);
+    int updateByPrimaryKey(Sysfun row);
 }

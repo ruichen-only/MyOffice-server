@@ -167,62 +167,45 @@
             <include refid="Example_Where_Clause"/>
         </if>
     </select>
-    <select id="findAllUserInfo" resultType="com.rea.myoffice.bean.UserBean">
-        select UserId,
-               UserName,
-               Password,
-               d.DepartId,
-               Gender,
-               r.RoleId,
-               UserState,
-               RoleName,
-               DepartName deptName,
-               b.branchId,
-               BranchName
-        from userinfo u
-                 left join roleinfo r on u.RoleId = r.RoleId
-                 left join departinfo d on d.DepartId = u.DepartId
-                 left join branchinfo b on d.BranchId = b.BranchId
-    </select>
     <update id="updateByExampleSelective" parameterType="map">
         update userinfo
         <set>
-            <if test="record.userid != null">
-                UserId = #{record.userid,jdbcType=VARCHAR},
+            <if test="row.userid != null">
+                UserId = #{row.userid,jdbcType=VARCHAR},
             </if>
-            <if test="record.username != null">
-                UserName = #{record.username,jdbcType=VARCHAR},
+            <if test="row.username != null">
+                UserName = #{row.username,jdbcType=VARCHAR},
             </if>
-            <if test="record.password != null">
-                Password = #{record.password,jdbcType=VARCHAR},
+            <if test="row.password != null">
+                Password = #{row.password,jdbcType=VARCHAR},
             </if>
-            <if test="record.departid != null">
-                DepartId = #{record.departid,jdbcType=INTEGER},
+            <if test="row.departid != null">
+                DepartId = #{row.departid,jdbcType=INTEGER},
             </if>
-            <if test="record.gender != null">
-                Gender = #{record.gender,jdbcType=INTEGER},
+            <if test="row.gender != null">
+                Gender = #{row.gender,jdbcType=INTEGER},
             </if>
-            <if test="record.roleid != null">
-                RoleId = #{record.roleid,jdbcType=INTEGER},
+            <if test="row.roleid != null">
+                RoleId = #{row.roleid,jdbcType=INTEGER},
             </if>
-            <if test="record.userstate != null">
-                UserState = #{record.userstate,jdbcType=INTEGER},
+            <if test="row.userstate != null">
+                UserState = #{row.userstate,jdbcType=INTEGER},
             </if>
         </set>
-        <if test="_parameter != null">
+        <if test="example != null">
             <include refid="Update_By_Example_Where_Clause"/>
         </if>
     </update>
     <update id="updateByExample" parameterType="map">
         update userinfo
-        set UserId = #{record.userid,jdbcType=VARCHAR},
-        UserName = #{record.username,jdbcType=VARCHAR},
-        Password = #{record.password,jdbcType=VARCHAR},
-        DepartId = #{record.departid,jdbcType=INTEGER},
-        Gender = #{record.gender,jdbcType=INTEGER},
-        RoleId = #{record.roleid,jdbcType=INTEGER},
-        UserState = #{record.userstate,jdbcType=INTEGER}
-        <if test="_parameter != null">
+        set UserId = #{row.userid,jdbcType=VARCHAR},
+        UserName = #{row.username,jdbcType=VARCHAR},
+        Password = #{row.password,jdbcType=VARCHAR},
+        DepartId = #{row.departid,jdbcType=INTEGER},
+        Gender = #{row.gender,jdbcType=INTEGER},
+        RoleId = #{row.roleid,jdbcType=INTEGER},
+        UserState = #{row.userstate,jdbcType=INTEGER}
+        <if test="example != null">
             <include refid="Update_By_Example_Where_Clause"/>
         </if>
     </update>
@@ -260,4 +243,21 @@
             UserState = #{userstate,jdbcType=INTEGER}
         where UserId = #{userid,jdbcType=VARCHAR}
     </update>
+    <select id="findAllUserInfo" resultType="com.rea.myoffice.bean.UserBean">
+        select UserId,
+               UserName,
+               Password,
+               d.DepartId,
+               Gender,
+               r.RoleId,
+               UserState,
+               RoleName,
+               DepartName deptName,
+               b.branchId,
+               BranchName
+        from userinfo u
+                 left join roleinfo r on u.RoleId = r.RoleId
+                 left join departinfo d on d.DepartId = u.DepartId
+                 left join branchinfo b on d.BranchId = b.BranchId
+    </select>
 </mapper>

@@ -12,19 +12,19 @@ public interface UserstateMapper {
 
     int deleteByPrimaryKey(Integer userstateid);
 
-    int insert(Userstate record);
+    int insert(Userstate row);
 
-    int insertSelective(Userstate record);
+    int insertSelective(Userstate row);
 
     List<Userstate> selectByExample(UserstateExample example);
 
     Userstate selectByPrimaryKey(Integer userstateid);
 
-    int updateByExampleSelective(@Param("record") Userstate record, @Param("example") UserstateExample example);
+    int updateByExampleSelective(@Param("row") Userstate row, @Param("example") UserstateExample example);
 
-    int updateByExample(@Param("record") Userstate record, @Param("example") UserstateExample example);
+    int updateByExample(@Param("row") Userstate row, @Param("example") UserstateExample example);
 
-    int updateByPrimaryKeySelective(Userstate record);
+    int updateByPrimaryKeySelective(Userstate row);
 
-    int updateByPrimaryKey(Userstate record);
+    int updateByPrimaryKey(Userstate row);
 }

@@ -14,22 +14,22 @@ public interface UserinfoMapper {
 
   int deleteByPrimaryKey(String userid);
 
-  int insert(Userinfo record);
+  int insert(Userinfo row);
 
-  int insertSelective(Userinfo record);
+  int insertSelective(Userinfo row);
 
   List<Userinfo> selectByExample(UserinfoExample example);
 
   Userinfo selectByPrimaryKey(String userid);
 
   int updateByExampleSelective(
-      @Param("record") Userinfo record, @Param("example") UserinfoExample example);
+      @Param("row") Userinfo row, @Param("example") UserinfoExample example);
 
-  int updateByExample(@Param("record") Userinfo record, @Param("example") UserinfoExample example);
+  int updateByExample(@Param("row") Userinfo row, @Param("example") UserinfoExample example);
 
-  int updateByPrimaryKeySelective(Userinfo record);
+  int updateByPrimaryKeySelective(Userinfo row);
 
-  int updateByPrimaryKey(Userinfo record);
+  int updateByPrimaryKey(Userinfo row);
 
   List<UserBean> findAllUserInfo(UserinfoExample example);
 }

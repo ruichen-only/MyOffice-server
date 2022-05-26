@@ -12,19 +12,19 @@ public interface WorktimeMapper {
 
     int deleteByPrimaryKey(Integer worktimeid);
 
-    int insert(Worktime record);
+    int insert(Worktime row);
 
-    int insertSelective(Worktime record);
+    int insertSelective(Worktime row);
 
     List<Worktime> selectByExample(WorktimeExample example);
 
     Worktime selectByPrimaryKey(Integer worktimeid);
 
-    int updateByExampleSelective(@Param("record") Worktime record, @Param("example") WorktimeExample example);
+    int updateByExampleSelective(@Param("row") Worktime row, @Param("example") WorktimeExample example);
 
-    int updateByExample(@Param("record") Worktime record, @Param("example") WorktimeExample example);
+    int updateByExample(@Param("row") Worktime row, @Param("example") WorktimeExample example);
 
-    int updateByPrimaryKeySelective(Worktime record);
+    int updateByPrimaryKeySelective(Worktime row);
 
-    int updateByPrimaryKey(Worktime record);
+    int updateByPrimaryKey(Worktime row);
 }

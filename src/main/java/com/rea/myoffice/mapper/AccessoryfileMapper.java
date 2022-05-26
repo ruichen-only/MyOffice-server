@@ -12,19 +12,19 @@ public interface AccessoryfileMapper {
 
     int deleteByPrimaryKey(Integer accessoryid);
 
-    int insert(Accessoryfile record);
+    int insert(Accessoryfile row);
 
-    int insertSelective(Accessoryfile record);
+    int insertSelective(Accessoryfile row);
 
     List<Accessoryfile> selectByExample(AccessoryfileExample example);
 
     Accessoryfile selectByPrimaryKey(Integer accessoryid);
 
-    int updateByExampleSelective(@Param("record") Accessoryfile record, @Param("example") AccessoryfileExample example);
+    int updateByExampleSelective(@Param("row") Accessoryfile row, @Param("example") AccessoryfileExample example);
 
-    int updateByExample(@Param("record") Accessoryfile record, @Param("example") AccessoryfileExample example);
+    int updateByExample(@Param("row") Accessoryfile row, @Param("example") AccessoryfileExample example);
 
-    int updateByPrimaryKeySelective(Accessoryfile record);
+    int updateByPrimaryKeySelective(Accessoryfile row);
 
-    int updateByPrimaryKey(Accessoryfile record);
+    int updateByPrimaryKey(Accessoryfile row);
 }

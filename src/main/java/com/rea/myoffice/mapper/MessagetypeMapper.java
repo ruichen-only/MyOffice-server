@@ -12,19 +12,19 @@ public interface MessagetypeMapper {
 
     int deleteByPrimaryKey(Integer messagetypeid);
 
-    int insert(Messagetype record);
+    int insert(Messagetype row);
 
-    int insertSelective(Messagetype record);
+    int insertSelective(Messagetype row);
 
     List<Messagetype> selectByExample(MessagetypeExample example);
 
     Messagetype selectByPrimaryKey(Integer messagetypeid);
 
-    int updateByExampleSelective(@Param("record") Messagetype record, @Param("example") MessagetypeExample example);
+    int updateByExampleSelective(@Param("row") Messagetype row, @Param("example") MessagetypeExample example);
 
-    int updateByExample(@Param("record") Messagetype record, @Param("example") MessagetypeExample example);
+    int updateByExample(@Param("row") Messagetype row, @Param("example") MessagetypeExample example);
 
-    int updateByPrimaryKeySelective(Messagetype record);
+    int updateByPrimaryKeySelective(Messagetype row);
 
-    int updateByPrimaryKey(Messagetype record);
+    int updateByPrimaryKey(Messagetype row);
 }

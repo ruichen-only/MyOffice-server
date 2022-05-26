@@ -1,13 +1,17 @@
 package com.rea.myoffice.model;
 
+import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
 import java.util.Date;
 
 public class Worktime implements Serializable {
+    @ApiModelProperty(value = "工作时间Id")
     private Integer worktimeid;
 
+    @ApiModelProperty(value = "上班时间")
     private Date ondutytime;
 
+    @ApiModelProperty(value = "下班时间")
     private Date offdutytime;
 
     private static final long serialVersionUID = 1L;

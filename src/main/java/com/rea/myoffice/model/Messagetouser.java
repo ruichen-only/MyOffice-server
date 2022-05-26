@@ -1,14 +1,19 @@
 package com.rea.myoffice.model;
 
+import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
 
 public class Messagetouser implements Serializable {
+    @ApiModelProperty(value = "序号Id")
     private Integer id;
 
+    @ApiModelProperty(value = "消息Id")
     private Integer messageid;
 
+    @ApiModelProperty(value = "发送对象Id")
     private String touserid;
 
+    @ApiModelProperty(value = "是否已读。1：已读、0：未读")
     private Integer ifread;
 
     private static final long serialVersionUID = 1L;

@@ -1,17 +1,23 @@
 package com.rea.myoffice.model;
 
+import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
 import java.util.Date;
 
 public class Manualsign implements Serializable {
+    @ApiModelProperty(value = "签卡Id")
     private Integer signid;
 
+    @ApiModelProperty(value = "用户id")
     private String userid;
 
+    @ApiModelProperty(value = "签卡时间")
     private Date signtime;
 
+    @ApiModelProperty(value = "签卡备注")
     private String signdesc;
 
+    @ApiModelProperty(value = "签卡标记")
     private Integer signtag;
 
     private static final long serialVersionUID = 1L;

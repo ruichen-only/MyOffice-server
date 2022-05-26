@@ -183,50 +183,50 @@
   <update id="updateByExampleSelective" parameterType="map">
     update fileinfo
     <set>
-      <if test="record.fileid != null">
-        FileId = #{record.fileid,jdbcType=INTEGER},
+      <if test="row.fileid != null">
+        FileId = #{row.fileid,jdbcType=INTEGER},
       </if>
-      <if test="record.filename != null">
-        FileName = #{record.filename,jdbcType=VARCHAR},
+      <if test="row.filename != null">
+        FileName = #{row.filename,jdbcType=VARCHAR},
       </if>
-      <if test="record.filetype != null">
-        FileType = #{record.filetype,jdbcType=INTEGER},
+      <if test="row.filetype != null">
+        FileType = #{row.filetype,jdbcType=INTEGER},
       </if>
-      <if test="record.remark != null">
-        Remark = #{record.remark,jdbcType=VARCHAR},
+      <if test="row.remark != null">
+        Remark = #{row.remark,jdbcType=VARCHAR},
       </if>
-      <if test="record.fileowner != null">
-        FileOwner = #{record.fileowner,jdbcType=VARCHAR},
+      <if test="row.fileowner != null">
+        FileOwner = #{row.fileowner,jdbcType=VARCHAR},
       </if>
-      <if test="record.createdate != null">
-        CreateDate = #{record.createdate,jdbcType=TIMESTAMP},
+      <if test="row.createdate != null">
+        CreateDate = #{row.createdate,jdbcType=TIMESTAMP},
       </if>
-      <if test="record.parentid != null">
-        ParentId = #{record.parentid,jdbcType=INTEGER},
+      <if test="row.parentid != null">
+        ParentId = #{row.parentid,jdbcType=INTEGER},
       </if>
-      <if test="record.filepath != null">
-        FilePath = #{record.filepath,jdbcType=VARCHAR},
+      <if test="row.filepath != null">
+        FilePath = #{row.filepath,jdbcType=VARCHAR},
       </if>
-      <if test="record.ifdelete != null">
-        IfDelete = #{record.ifdelete,jdbcType=INTEGER},
+      <if test="row.ifdelete != null">
+        IfDelete = #{row.ifdelete,jdbcType=INTEGER},
       </if>
     </set>
-    <if test="_parameter != null">
+    <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
   <update id="updateByExample" parameterType="map">
     update fileinfo
-    set FileId = #{record.fileid,jdbcType=INTEGER},
-      FileName = #{record.filename,jdbcType=VARCHAR},
-      FileType = #{record.filetype,jdbcType=INTEGER},
-      Remark = #{record.remark,jdbcType=VARCHAR},
-      FileOwner = #{record.fileowner,jdbcType=VARCHAR},
-      CreateDate = #{record.createdate,jdbcType=TIMESTAMP},
-      ParentId = #{record.parentid,jdbcType=INTEGER},
-      FilePath = #{record.filepath,jdbcType=VARCHAR},
-      IfDelete = #{record.ifdelete,jdbcType=INTEGER}
-    <if test="_parameter != null">
+    set FileId = #{row.fileid,jdbcType=INTEGER},
+      FileName = #{row.filename,jdbcType=VARCHAR},
+      FileType = #{row.filetype,jdbcType=INTEGER},
+      Remark = #{row.remark,jdbcType=VARCHAR},
+      FileOwner = #{row.fileowner,jdbcType=VARCHAR},
+      CreateDate = #{row.createdate,jdbcType=TIMESTAMP},
+      ParentId = #{row.parentid,jdbcType=INTEGER},
+      FilePath = #{row.filepath,jdbcType=VARCHAR},
+      IfDelete = #{row.ifdelete,jdbcType=INTEGER}
+    <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>

@@ -160,38 +160,38 @@
   <update id="updateByExampleSelective" parameterType="map">
     update loginlog
     <set>
-      <if test="record.loginid != null">
-        LoginId = #{record.loginid,jdbcType=INTEGER},
+      <if test="row.loginid != null">
+        LoginId = #{row.loginid,jdbcType=INTEGER},
       </if>
-      <if test="record.userid != null">
-        UserId = #{record.userid,jdbcType=VARCHAR},
+      <if test="row.userid != null">
+        UserId = #{row.userid,jdbcType=VARCHAR},
       </if>
-      <if test="record.logintime != null">
-        LoginTime = #{record.logintime,jdbcType=TIMESTAMP},
+      <if test="row.logintime != null">
+        LoginTime = #{row.logintime,jdbcType=TIMESTAMP},
       </if>
-      <if test="record.ifsuccess != null">
-        IfSuccess = #{record.ifsuccess,jdbcType=INTEGER},
+      <if test="row.ifsuccess != null">
+        IfSuccess = #{row.ifsuccess,jdbcType=INTEGER},
       </if>
-      <if test="record.loginuserip != null">
-        LoginUserIp = #{record.loginuserip,jdbcType=VARCHAR},
+      <if test="row.loginuserip != null">
+        LoginUserIp = #{row.loginuserip,jdbcType=VARCHAR},
       </if>
-      <if test="record.logindesc != null">
-        LoginDesc = #{record.logindesc,jdbcType=VARCHAR},
+      <if test="row.logindesc != null">
+        LoginDesc = #{row.logindesc,jdbcType=VARCHAR},
       </if>
     </set>
-    <if test="_parameter != null">
+    <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
   <update id="updateByExample" parameterType="map">
     update loginlog
-    set LoginId = #{record.loginid,jdbcType=INTEGER},
-      UserId = #{record.userid,jdbcType=VARCHAR},
-      LoginTime = #{record.logintime,jdbcType=TIMESTAMP},
-      IfSuccess = #{record.ifsuccess,jdbcType=INTEGER},
-      LoginUserIp = #{record.loginuserip,jdbcType=VARCHAR},
-      LoginDesc = #{record.logindesc,jdbcType=VARCHAR}
-    <if test="_parameter != null">
+    set LoginId = #{row.loginid,jdbcType=INTEGER},
+      UserId = #{row.userid,jdbcType=VARCHAR},
+      LoginTime = #{row.logintime,jdbcType=TIMESTAMP},
+      IfSuccess = #{row.ifsuccess,jdbcType=INTEGER},
+      LoginUserIp = #{row.loginuserip,jdbcType=VARCHAR},
+      LoginDesc = #{row.logindesc,jdbcType=VARCHAR}
+    <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>

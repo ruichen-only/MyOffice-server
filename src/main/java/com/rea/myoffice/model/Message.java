@@ -1,25 +1,35 @@
 package com.rea.myoffice.model;
 
+import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
 import java.util.Date;
 
 public class Message implements Serializable {
+    @ApiModelProperty(value = "消息Id")
     private Integer messageid;
 
+    @ApiModelProperty(value = "消息标题")
     private String title;
 
+    @ApiModelProperty(value = "消息内容")
     private String content;
 
+    @ApiModelProperty(value = "消息类型")
     private Integer type;
 
+    @ApiModelProperty(value = "开始有效时间")
     private Date begintime;
 
+    @ApiModelProperty(value = "有效结束时间")
     private Date endtime;
 
+    @ApiModelProperty(value = "发送者")
     private String fromuserid;
 
+    @ApiModelProperty(value = "是否已发布")
     private Integer ifpublish;
 
+    @ApiModelProperty(value = "发送时间")
     private Date recordtime;
 
     private static final long serialVersionUID = 1L;

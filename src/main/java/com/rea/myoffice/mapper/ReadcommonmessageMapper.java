@@ -12,19 +12,19 @@ public interface ReadcommonmessageMapper {
 
     int deleteByPrimaryKey(Integer readid);
 
-    int insert(Readcommonmessage record);
+    int insert(Readcommonmessage row);
 
-    int insertSelective(Readcommonmessage record);
+    int insertSelective(Readcommonmessage row);
 
     List<Readcommonmessage> selectByExample(ReadcommonmessageExample example);
 
     Readcommonmessage selectByPrimaryKey(Integer readid);
 
-    int updateByExampleSelective(@Param("record") Readcommonmessage record, @Param("example") ReadcommonmessageExample example);
+    int updateByExampleSelective(@Param("row") Readcommonmessage row, @Param("example") ReadcommonmessageExample example);
 
-    int updateByExample(@Param("record") Readcommonmessage record, @Param("example") ReadcommonmessageExample example);
+    int updateByExample(@Param("row") Readcommonmessage row, @Param("example") ReadcommonmessageExample example);
 
-    int updateByPrimaryKeySelective(Readcommonmessage record);
+    int updateByPrimaryKeySelective(Readcommonmessage row);
 
-    int updateByPrimaryKey(Readcommonmessage record);
+    int updateByPrimaryKey(Readcommonmessage row);
 }

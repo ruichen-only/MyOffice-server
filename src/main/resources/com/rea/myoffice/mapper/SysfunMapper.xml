@@ -151,34 +151,34 @@
   <update id="updateByExampleSelective" parameterType="map">
     update sysfun
     <set>
-      <if test="record.nodeid != null">
-        NodeId = #{record.nodeid,jdbcType=INTEGER},
+      <if test="row.nodeid != null">
+        NodeId = #{row.nodeid,jdbcType=INTEGER},
       </if>
-      <if test="record.displayname != null">
-        DisplayName = #{record.displayname,jdbcType=VARCHAR},
+      <if test="row.displayname != null">
+        DisplayName = #{row.displayname,jdbcType=VARCHAR},
       </if>
-      <if test="record.nodeurl != null">
-        NodeURL = #{record.nodeurl,jdbcType=VARCHAR},
+      <if test="row.nodeurl != null">
+        NodeURL = #{row.nodeurl,jdbcType=VARCHAR},
       </if>
-      <if test="record.displayorder != null">
-        DisplayOrder = #{record.displayorder,jdbcType=INTEGER},
+      <if test="row.displayorder != null">
+        DisplayOrder = #{row.displayorder,jdbcType=INTEGER},
       </if>
-      <if test="record.parentnodeid != null">
-        ParentNodeId = #{record.parentnodeid,jdbcType=INTEGER},
+      <if test="row.parentnodeid != null">
+        ParentNodeId = #{row.parentnodeid,jdbcType=INTEGER},
       </if>
     </set>
-    <if test="_parameter != null">
+    <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
   <update id="updateByExample" parameterType="map">
     update sysfun
-    set NodeId = #{record.nodeid,jdbcType=INTEGER},
-      DisplayName = #{record.displayname,jdbcType=VARCHAR},
-      NodeURL = #{record.nodeurl,jdbcType=VARCHAR},
-      DisplayOrder = #{record.displayorder,jdbcType=INTEGER},
-      ParentNodeId = #{record.parentnodeid,jdbcType=INTEGER}
-    <if test="_parameter != null">
+    set NodeId = #{row.nodeid,jdbcType=INTEGER},
+      DisplayName = #{row.displayname,jdbcType=VARCHAR},
+      NodeURL = #{row.nodeurl,jdbcType=VARCHAR},
+      DisplayOrder = #{row.displayorder,jdbcType=INTEGER},
+      ParentNodeId = #{row.parentnodeid,jdbcType=INTEGER}
+    <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>

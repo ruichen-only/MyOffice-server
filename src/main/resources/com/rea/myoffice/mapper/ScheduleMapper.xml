@@ -191,54 +191,54 @@
   <update id="updateByExampleSelective" parameterType="map">
     update schedule
     <set>
-      <if test="record.scheduleid != null">
-        ScheduleId = #{record.scheduleid,jdbcType=INTEGER},
+      <if test="row.scheduleid != null">
+        ScheduleId = #{row.scheduleid,jdbcType=INTEGER},
       </if>
-      <if test="record.title != null">
-        Title = #{record.title,jdbcType=VARCHAR},
+      <if test="row.title != null">
+        Title = #{row.title,jdbcType=VARCHAR},
       </if>
-      <if test="record.address != null">
-        Address = #{record.address,jdbcType=VARCHAR},
+      <if test="row.address != null">
+        Address = #{row.address,jdbcType=VARCHAR},
       </if>
-      <if test="record.meetingid != null">
-        MeetingId = #{record.meetingid,jdbcType=INTEGER},
+      <if test="row.meetingid != null">
+        MeetingId = #{row.meetingid,jdbcType=INTEGER},
       </if>
-      <if test="record.begintime != null">
-        BeginTime = #{record.begintime,jdbcType=TIMESTAMP},
+      <if test="row.begintime != null">
+        BeginTime = #{row.begintime,jdbcType=TIMESTAMP},
       </if>
-      <if test="record.endtime != null">
-        EndTime = #{record.endtime,jdbcType=TIMESTAMP},
+      <if test="row.endtime != null">
+        EndTime = #{row.endtime,jdbcType=TIMESTAMP},
       </if>
-      <if test="record.schcontent != null">
-        SchContent = #{record.schcontent,jdbcType=VARCHAR},
+      <if test="row.schcontent != null">
+        SchContent = #{row.schcontent,jdbcType=VARCHAR},
       </if>
-      <if test="record.createuser != null">
-        CreateUser = #{record.createuser,jdbcType=VARCHAR},
+      <if test="row.createuser != null">
+        CreateUser = #{row.createuser,jdbcType=VARCHAR},
       </if>
-      <if test="record.createtime != null">
-        CreateTime = #{record.createtime,jdbcType=TIMESTAMP},
+      <if test="row.createtime != null">
+        CreateTime = #{row.createtime,jdbcType=TIMESTAMP},
       </if>
-      <if test="record.ifprivate != null">
-        IfPrivate = #{record.ifprivate,jdbcType=INTEGER},
+      <if test="row.ifprivate != null">
+        IfPrivate = #{row.ifprivate,jdbcType=INTEGER},
       </if>
     </set>
-    <if test="_parameter != null">
+    <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
   <update id="updateByExample" parameterType="map">
     update schedule
-    set ScheduleId = #{record.scheduleid,jdbcType=INTEGER},
-      Title = #{record.title,jdbcType=VARCHAR},
-      Address = #{record.address,jdbcType=VARCHAR},
-      MeetingId = #{record.meetingid,jdbcType=INTEGER},
-      BeginTime = #{record.begintime,jdbcType=TIMESTAMP},
-      EndTime = #{record.endtime,jdbcType=TIMESTAMP},
-      SchContent = #{record.schcontent,jdbcType=VARCHAR},
-      CreateUser = #{record.createuser,jdbcType=VARCHAR},
-      CreateTime = #{record.createtime,jdbcType=TIMESTAMP},
-      IfPrivate = #{record.ifprivate,jdbcType=INTEGER}
-    <if test="_parameter != null">
+    set ScheduleId = #{row.scheduleid,jdbcType=INTEGER},
+      Title = #{row.title,jdbcType=VARCHAR},
+      Address = #{row.address,jdbcType=VARCHAR},
+      MeetingId = #{row.meetingid,jdbcType=INTEGER},
+      BeginTime = #{row.begintime,jdbcType=TIMESTAMP},
+      EndTime = #{row.endtime,jdbcType=TIMESTAMP},
+      SchContent = #{row.schcontent,jdbcType=VARCHAR},
+      CreateUser = #{row.createuser,jdbcType=VARCHAR},
+      CreateTime = #{row.createtime,jdbcType=TIMESTAMP},
+      IfPrivate = #{row.ifprivate,jdbcType=INTEGER}
+    <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>

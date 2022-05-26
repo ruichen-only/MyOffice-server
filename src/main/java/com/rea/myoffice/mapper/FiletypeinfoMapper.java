@@ -12,19 +12,19 @@ public interface FiletypeinfoMapper {
 
     int deleteByPrimaryKey(Integer filetypeid);
 
-    int insert(Filetypeinfo record);
+    int insert(Filetypeinfo row);
 
-    int insertSelective(Filetypeinfo record);
+    int insertSelective(Filetypeinfo row);
 
     List<Filetypeinfo> selectByExample(FiletypeinfoExample example);
 
     Filetypeinfo selectByPrimaryKey(Integer filetypeid);
 
-    int updateByExampleSelective(@Param("record") Filetypeinfo record, @Param("example") FiletypeinfoExample example);
+    int updateByExampleSelective(@Param("row") Filetypeinfo row, @Param("example") FiletypeinfoExample example);
 
-    int updateByExample(@Param("record") Filetypeinfo record, @Param("example") FiletypeinfoExample example);
+    int updateByExample(@Param("row") Filetypeinfo row, @Param("example") FiletypeinfoExample example);
 
-    int updateByPrimaryKeySelective(Filetypeinfo record);
+    int updateByPrimaryKeySelective(Filetypeinfo row);
 
-    int updateByPrimaryKey(Filetypeinfo record);
+    int updateByPrimaryKey(Filetypeinfo row);
 }

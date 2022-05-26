@@ -12,9 +12,9 @@ public interface PrecontractMapper {
 
     int deleteByPrimaryKey(Integer precontractid);
 
-    int insert(Precontract record);
+    int insert(Precontract row);
 
-    int insertSelective(Precontract record);
+    int insertSelective(Precontract row);
 
     List<Precontract> selectByExampleWithBLOBs(PrecontractExample example);
 
@@ -22,15 +22,15 @@ public interface PrecontractMapper {
 
     Precontract selectByPrimaryKey(Integer precontractid);
 
-    int updateByExampleSelective(@Param("record") Precontract record, @Param("example") PrecontractExample example);
+    int updateByExampleSelective(@Param("row") Precontract row, @Param("example") PrecontractExample example);
 
-    int updateByExampleWithBLOBs(@Param("record") Precontract record, @Param("example") PrecontractExample example);
+    int updateByExampleWithBLOBs(@Param("row") Precontract row, @Param("example") PrecontractExample example);
 
-    int updateByExample(@Param("record") Precontract record, @Param("example") PrecontractExample example);
+    int updateByExample(@Param("row") Precontract row, @Param("example") PrecontractExample example);
 
-    int updateByPrimaryKeySelective(Precontract record);
+    int updateByPrimaryKeySelective(Precontract row);
 
-    int updateByPrimaryKeyWithBLOBs(Precontract record);
+    int updateByPrimaryKeyWithBLOBs(Precontract row);
 
-    int updateByPrimaryKey(Precontract record);
+    int updateByPrimaryKey(Precontract row);
 }

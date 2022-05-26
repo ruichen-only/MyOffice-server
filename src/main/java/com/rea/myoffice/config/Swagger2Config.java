@@ -15,21 +15,26 @@ import springfox.documentation.spring.web.plugins.Docket;
  */
 @Configuration
 @EnableWebMvc
-public class SwaggerConfig {
+public class Swagger2Config {
   @Bean
-  public Docket buildDocket() {
+  public Docket createRestApi() {
     return new Docket(DocumentationType.SWAGGER_2)
-        .apiInfo(buildApiInf())
+        .apiInfo(apiInfo())
         .select()
-        .apis(RequestHandlerSelectors.basePackage("com.rea.springpractice.controller"))
+        // 为当前包下controller生成API文档
+        .apis(RequestHandlerSelectors.basePackage("com.rea.myoffice.controller"))
+        // 为有@Api注解的Controller生成API文档
+        //                .apis(RequestHandlerSelectors.withClassAnnotation(Api.class))
+        // 为有@ApiOperation注解的方法生成API文档
+        //                .apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class))
         .paths(PathSelectors.any())
         .build();
   }
 
-  private ApiInfo buildApiInf() {
+  private ApiInfo apiInfo() {
     return new ApiInfoBuilder()
-        .title("系统API文档")
-        //        .contact(new Contact("mrbird", "https://mrbird.cc", "852252810@qq.com"))
+        .title("SwaggerUI-MyOffice")
+        .description("MyOffice")
         .version("1.0")
         .build();
   }

@@ -137,26 +137,26 @@
   <update id="updateByExampleSelective" parameterType="map">
     update worktime
     <set>
-      <if test="record.worktimeid != null">
-        WorkTimeId = #{record.worktimeid,jdbcType=INTEGER},
+      <if test="row.worktimeid != null">
+        WorkTimeId = #{row.worktimeid,jdbcType=INTEGER},
       </if>
-      <if test="record.ondutytime != null">
-        OnDutyTime = #{record.ondutytime,jdbcType=TIMESTAMP},
+      <if test="row.ondutytime != null">
+        OnDutyTime = #{row.ondutytime,jdbcType=TIMESTAMP},
       </if>
-      <if test="record.offdutytime != null">
-        OffDutyTime = #{record.offdutytime,jdbcType=TIMESTAMP},
+      <if test="row.offdutytime != null">
+        OffDutyTime = #{row.offdutytime,jdbcType=TIMESTAMP},
       </if>
     </set>
-    <if test="_parameter != null">
+    <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
   <update id="updateByExample" parameterType="map">
     update worktime
-    set WorkTimeId = #{record.worktimeid,jdbcType=INTEGER},
-      OnDutyTime = #{record.ondutytime,jdbcType=TIMESTAMP},
-      OffDutyTime = #{record.offdutytime,jdbcType=TIMESTAMP}
-    <if test="_parameter != null">
+    set WorkTimeId = #{row.worktimeid,jdbcType=INTEGER},
+      OnDutyTime = #{row.ondutytime,jdbcType=TIMESTAMP},
+      OffDutyTime = #{row.offdutytime,jdbcType=TIMESTAMP}
+    <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>

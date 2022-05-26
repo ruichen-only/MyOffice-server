@@ -137,26 +137,26 @@
   <update id="updateByExampleSelective" parameterType="map">
     update messagetype
     <set>
-      <if test="record.messagetypeid != null">
-        MessageTypeId = #{record.messagetypeid,jdbcType=INTEGER},
+      <if test="row.messagetypeid != null">
+        MessageTypeId = #{row.messagetypeid,jdbcType=INTEGER},
       </if>
-      <if test="record.messagetypename != null">
-        MessageTypeName = #{record.messagetypename,jdbcType=VARCHAR},
+      <if test="row.messagetypename != null">
+        MessageTypeName = #{row.messagetypename,jdbcType=VARCHAR},
       </if>
-      <if test="record.messagedesc != null">
-        MessageDesc = #{record.messagedesc,jdbcType=VARCHAR},
+      <if test="row.messagedesc != null">
+        MessageDesc = #{row.messagedesc,jdbcType=VARCHAR},
       </if>
     </set>
-    <if test="_parameter != null">
+    <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
   <update id="updateByExample" parameterType="map">
     update messagetype
-    set MessageTypeId = #{record.messagetypeid,jdbcType=INTEGER},
-      MessageTypeName = #{record.messagetypename,jdbcType=VARCHAR},
-      MessageDesc = #{record.messagedesc,jdbcType=VARCHAR}
-    <if test="_parameter != null">
+    set MessageTypeId = #{row.messagetypeid,jdbcType=INTEGER},
+      MessageTypeName = #{row.messagetypename,jdbcType=VARCHAR},
+      MessageDesc = #{row.messagedesc,jdbcType=VARCHAR}
+    <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>

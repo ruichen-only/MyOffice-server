@@ -1,21 +1,29 @@
 package com.rea.myoffice.model;
 
+import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
 import java.util.Date;
 
 public class Accessoryfile implements Serializable {
+    @ApiModelProperty(value = "文件附件Id")
     private Integer accessoryid;
 
+    @ApiModelProperty(value = "文件Id")
     private Integer fileid;
 
+    @ApiModelProperty(value = "附件名称")
     private String accessoryname;
 
+    @ApiModelProperty(value = "附件大小")
     private Integer accessorysize;
 
+    @ApiModelProperty(value = "附件类型")
     private Integer accessorytype;
 
+    @ApiModelProperty(value = "创建日期")
     private Date createdate;
 
+    @ApiModelProperty(value = "附件路径")
     private String accessorypath;
 
     private static final long serialVersionUID = 1L;

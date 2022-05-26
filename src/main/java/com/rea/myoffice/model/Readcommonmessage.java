@@ -1,12 +1,16 @@
 package com.rea.myoffice.model;
 
+import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
 
 public class Readcommonmessage implements Serializable {
+    @ApiModelProperty(value = "序号Id")
     private Integer readid;
 
+    @ApiModelProperty(value = "消息Id")
     private Integer messageid;
 
+    @ApiModelProperty(value = "消息读取者")
     private String userid;
 
     private static final long serialVersionUID = 1L;

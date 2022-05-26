@@ -1,25 +1,35 @@
 package com.rea.myoffice.model;
 
+import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
 import java.util.Date;
 
 public class Fileinfo implements Serializable {
+    @ApiModelProperty(value = "文件Id")
     private Integer fileid;
 
+    @ApiModelProperty(value = "文件名称")
     private String filename;
 
+    @ApiModelProperty(value = "文件类型")
     private Integer filetype;
 
+    @ApiModelProperty(value = "备注")
     private String remark;
 
+    @ApiModelProperty(value = "创建者")
     private String fileowner;
 
+    @ApiModelProperty(value = "创建日期")
     private Date createdate;
 
+    @ApiModelProperty(value = "父节点Id")
     private Integer parentid;
 
+    @ApiModelProperty(value = "文件路径")
     private String filepath;
 
+    @ApiModelProperty(value = "是否已删除。1：已删除、2：未删除")
     private Integer ifdelete;
 
     private static final long serialVersionUID = 1L;

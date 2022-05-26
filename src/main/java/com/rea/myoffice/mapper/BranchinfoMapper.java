@@ -12,19 +12,19 @@ public interface BranchinfoMapper {
 
     int deleteByPrimaryKey(Integer branchid);
 
-    int insert(Branchinfo record);
+    int insert(Branchinfo row);
 
-    int insertSelective(Branchinfo record);
+    int insertSelective(Branchinfo row);
 
     List<Branchinfo> selectByExample(BranchinfoExample example);
 
     Branchinfo selectByPrimaryKey(Integer branchid);
 
-    int updateByExampleSelective(@Param("record") Branchinfo record, @Param("example") BranchinfoExample example);
+    int updateByExampleSelective(@Param("row") Branchinfo row, @Param("example") BranchinfoExample example);
 
-    int updateByExample(@Param("record") Branchinfo record, @Param("example") BranchinfoExample example);
+    int updateByExample(@Param("row") Branchinfo row, @Param("example") BranchinfoExample example);
 
-    int updateByPrimaryKeySelective(Branchinfo record);
+    int updateByPrimaryKeySelective(Branchinfo row);
 
-    int updateByPrimaryKey(Branchinfo record);
+    int updateByPrimaryKey(Branchinfo row);
 }

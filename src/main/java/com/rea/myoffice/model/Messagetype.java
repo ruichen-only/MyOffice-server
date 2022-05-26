@@ -1,12 +1,16 @@
 package com.rea.myoffice.model;
 
+import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
 
 public class Messagetype implements Serializable {
+    @ApiModelProperty(value = "消息类型Id")
     private Integer messagetypeid;
 
+    @ApiModelProperty(value = "消息类型名称")
     private String messagetypename;
 
+    @ApiModelProperty(value = "消息类型描述")
     private String messagedesc;
 
     private static final long serialVersionUID = 1L;

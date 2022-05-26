@@ -144,30 +144,30 @@
   <update id="updateByExampleSelective" parameterType="map">
     update messagetouser
     <set>
-      <if test="record.id != null">
-        Id = #{record.id,jdbcType=INTEGER},
+      <if test="row.id != null">
+        Id = #{row.id,jdbcType=INTEGER},
       </if>
-      <if test="record.messageid != null">
-        MessageId = #{record.messageid,jdbcType=INTEGER},
+      <if test="row.messageid != null">
+        MessageId = #{row.messageid,jdbcType=INTEGER},
       </if>
-      <if test="record.touserid != null">
-        ToUserId = #{record.touserid,jdbcType=VARCHAR},
+      <if test="row.touserid != null">
+        ToUserId = #{row.touserid,jdbcType=VARCHAR},
       </if>
-      <if test="record.ifread != null">
-        IfRead = #{record.ifread,jdbcType=INTEGER},
+      <if test="row.ifread != null">
+        IfRead = #{row.ifread,jdbcType=INTEGER},
       </if>
     </set>
-    <if test="_parameter != null">
+    <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
   <update id="updateByExample" parameterType="map">
     update messagetouser
-    set Id = #{record.id,jdbcType=INTEGER},
-      MessageId = #{record.messageid,jdbcType=INTEGER},
-      ToUserId = #{record.touserid,jdbcType=VARCHAR},
-      IfRead = #{record.ifread,jdbcType=INTEGER}
-    <if test="_parameter != null">
+    set Id = #{row.id,jdbcType=INTEGER},
+      MessageId = #{row.messageid,jdbcType=INTEGER},
+      ToUserId = #{row.touserid,jdbcType=VARCHAR},
+      IfRead = #{row.ifread,jdbcType=INTEGER}
+    <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>

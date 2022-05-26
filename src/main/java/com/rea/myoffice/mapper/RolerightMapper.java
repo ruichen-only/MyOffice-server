@@ -12,19 +12,19 @@ public interface RolerightMapper {
 
     int deleteByPrimaryKey(Integer rolerightid);
 
-    int insert(Roleright record);
+    int insert(Roleright row);
 
-    int insertSelective(Roleright record);
+    int insertSelective(Roleright row);
 
     List<Roleright> selectByExample(RolerightExample example);
 
     Roleright selectByPrimaryKey(Integer rolerightid);
 
-    int updateByExampleSelective(@Param("record") Roleright record, @Param("example") RolerightExample example);
+    int updateByExampleSelective(@Param("row") Roleright row, @Param("example") RolerightExample example);
 
-    int updateByExample(@Param("record") Roleright record, @Param("example") RolerightExample example);
+    int updateByExample(@Param("row") Roleright row, @Param("example") RolerightExample example);
 
-    int updateByPrimaryKeySelective(Roleright record);
+    int updateByPrimaryKeySelective(Roleright row);
 
-    int updateByPrimaryKey(Roleright record);
+    int updateByPrimaryKey(Roleright row);
 }

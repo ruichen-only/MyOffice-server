@@ -12,19 +12,19 @@ public interface ScheduleMapper {
 
     int deleteByPrimaryKey(Integer scheduleid);
 
-    int insert(Schedule record);
+    int insert(Schedule row);
 
-    int insertSelective(Schedule record);
+    int insertSelective(Schedule row);
 
     List<Schedule> selectByExample(ScheduleExample example);
 
     Schedule selectByPrimaryKey(Integer scheduleid);
 
-    int updateByExampleSelective(@Param("record") Schedule record, @Param("example") ScheduleExample example);
+    int updateByExampleSelective(@Param("row") Schedule row, @Param("example") ScheduleExample example);
 
-    int updateByExample(@Param("record") Schedule record, @Param("example") ScheduleExample example);
+    int updateByExample(@Param("row") Schedule row, @Param("example") ScheduleExample example);
 
-    int updateByPrimaryKeySelective(Schedule record);
+    int updateByPrimaryKeySelective(Schedule row);
 
-    int updateByPrimaryKey(Schedule record);
+    int updateByPrimaryKey(Schedule row);
 }

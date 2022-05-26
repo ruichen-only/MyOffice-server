@@ -12,19 +12,19 @@ public interface MeetinginfoMapper {
 
     int deleteByPrimaryKey(Integer meetingid);
 
-    int insert(Meetinginfo record);
+    int insert(Meetinginfo row);
 
-    int insertSelective(Meetinginfo record);
+    int insertSelective(Meetinginfo row);
 
     List<Meetinginfo> selectByExample(MeetinginfoExample example);
 
     Meetinginfo selectByPrimaryKey(Integer meetingid);
 
-    int updateByExampleSelective(@Param("record") Meetinginfo record, @Param("example") MeetinginfoExample example);
+    int updateByExampleSelective(@Param("row") Meetinginfo row, @Param("example") MeetinginfoExample example);
 
-    int updateByExample(@Param("record") Meetinginfo record, @Param("example") MeetinginfoExample example);
+    int updateByExample(@Param("row") Meetinginfo row, @Param("example") MeetinginfoExample example);
 
-    int updateByPrimaryKeySelective(Meetinginfo record);
+    int updateByPrimaryKeySelective(Meetinginfo row);
 
-    int updateByPrimaryKey(Meetinginfo record);
+    int updateByPrimaryKey(Meetinginfo row);
 }

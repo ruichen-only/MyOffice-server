@@ -1,12 +1,16 @@
 package com.rea.myoffice.model;
 
+import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
 
 public class Precontract implements Serializable {
+    @ApiModelProperty(value = "预约序号Id")
     private Integer precontractid;
 
+    @ApiModelProperty(value = "日程Id")
     private Integer scheduleid;
 
+    @ApiModelProperty(value = "预约人")
     private byte[] userid;
 
     private static final long serialVersionUID = 1L;

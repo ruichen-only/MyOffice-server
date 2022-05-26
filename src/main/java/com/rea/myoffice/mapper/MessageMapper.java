@@ -12,19 +12,19 @@ public interface MessageMapper {
 
     int deleteByPrimaryKey(Integer messageid);
 
-    int insert(Message record);
+    int insert(Message row);
 
-    int insertSelective(Message record);
+    int insertSelective(Message row);
 
     List<Message> selectByExample(MessageExample example);
 
     Message selectByPrimaryKey(Integer messageid);
 
-    int updateByExampleSelective(@Param("record") Message record, @Param("example") MessageExample example);
+    int updateByExampleSelective(@Param("row") Message row, @Param("example") MessageExample example);
 
-    int updateByExample(@Param("record") Message record, @Param("example") MessageExample example);
+    int updateByExample(@Param("row") Message row, @Param("example") MessageExample example);
 
-    int updateByPrimaryKeySelective(Message record);
+    int updateByPrimaryKeySelective(Message row);
 
-    int updateByPrimaryKey(Message record);
+    int updateByPrimaryKey(Message row);
 }

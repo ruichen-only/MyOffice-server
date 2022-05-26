@@ -160,34 +160,34 @@
   <update id="updateByExampleSelective" parameterType="map">
     update precontract
     <set>
-      <if test="record.precontractid != null">
-        PreContractId = #{record.precontractid,jdbcType=INTEGER},
+      <if test="row.precontractid != null">
+        PreContractId = #{row.precontractid,jdbcType=INTEGER},
       </if>
-      <if test="record.scheduleid != null">
-        ScheduleId = #{record.scheduleid,jdbcType=INTEGER},
+      <if test="row.scheduleid != null">
+        ScheduleId = #{row.scheduleid,jdbcType=INTEGER},
       </if>
-      <if test="record.userid != null">
-        UserId = #{record.userid,jdbcType=VARBINARY},
+      <if test="row.userid != null">
+        UserId = #{row.userid,jdbcType=VARBINARY},
       </if>
     </set>
-    <if test="_parameter != null">
+    <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
   <update id="updateByExampleWithBLOBs" parameterType="map">
     update precontract
-    set PreContractId = #{record.precontractid,jdbcType=INTEGER},
-      ScheduleId = #{record.scheduleid,jdbcType=INTEGER},
-      UserId = #{record.userid,jdbcType=VARBINARY}
-    <if test="_parameter != null">
+    set PreContractId = #{row.precontractid,jdbcType=INTEGER},
+      ScheduleId = #{row.scheduleid,jdbcType=INTEGER},
+      UserId = #{row.userid,jdbcType=VARBINARY}
+    <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
   <update id="updateByExample" parameterType="map">
     update precontract
-    set PreContractId = #{record.precontractid,jdbcType=INTEGER},
-      ScheduleId = #{record.scheduleid,jdbcType=INTEGER}
-    <if test="_parameter != null">
+    set PreContractId = #{row.precontractid,jdbcType=INTEGER},
+      ScheduleId = #{row.scheduleid,jdbcType=INTEGER}
+    <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>

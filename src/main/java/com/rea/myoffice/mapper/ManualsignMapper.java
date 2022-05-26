@@ -12,19 +12,19 @@ public interface ManualsignMapper {
 
     int deleteByPrimaryKey(Integer signid);
 
-    int insert(Manualsign record);
+    int insert(Manualsign row);
 
-    int insertSelective(Manualsign record);
+    int insertSelective(Manualsign row);
 
     List<Manualsign> selectByExample(ManualsignExample example);
 
     Manualsign selectByPrimaryKey(Integer signid);
 
-    int updateByExampleSelective(@Param("record") Manualsign record, @Param("example") ManualsignExample example);
+    int updateByExampleSelective(@Param("row") Manualsign row, @Param("example") ManualsignExample example);
 
-    int updateByExample(@Param("record") Manualsign record, @Param("example") ManualsignExample example);
+    int updateByExample(@Param("row") Manualsign row, @Param("example") ManualsignExample example);
 
-    int updateByPrimaryKeySelective(Manualsign record);
+    int updateByPrimaryKeySelective(Manualsign row);
 
-    int updateByPrimaryKey(Manualsign record);
+    int updateByPrimaryKey(Manualsign row);
 }
