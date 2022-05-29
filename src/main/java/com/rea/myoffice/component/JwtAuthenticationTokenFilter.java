@@ -1,7 +1,6 @@
 package com.rea.myoffice.component;
 
 import com.rea.myoffice.util.JwtTokenUtil;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -20,8 +19,8 @@ import java.io.IOException;
  * @author CRR
  */
 public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
-  private UserDetailsService userDetailsService;
-  private JwtTokenUtil jwtTokenUtil;
+  private final UserDetailsService userDetailsService;
+  private final JwtTokenUtil jwtTokenUtil;
 
   @Value("${jwt.tokenHeader}")
   private String tokenHeader;
@@ -29,9 +28,6 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
   @Value("${jwt.tokenHead}")
   private String tokenHead;
 
-  public JwtAuthenticationTokenFilter() {}
-
-  @Autowired
   public JwtAuthenticationTokenFilter(
       UserDetailsService userDetailsService, JwtTokenUtil jwtTokenUtil) {
     this.userDetailsService = userDetailsService;
@@ -43,6 +39,7 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
       HttpServletRequest request, HttpServletResponse response, FilterChain chain)
       throws ServletException, IOException {
     String authHeader = request.getHeader(this.tokenHeader);
+    logger.info("========= token: " + authHeader);
     if (authHeader != null && authHeader.startsWith(this.tokenHead)) {
       // The part after "Bearer "
       String authToken = authHeader.substring(this.tokenHead.length());

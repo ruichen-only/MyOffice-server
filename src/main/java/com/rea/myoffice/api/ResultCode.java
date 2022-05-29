@@ -17,8 +17,8 @@ public enum ResultCode implements IErrorCode {
   /** 没有相关权限 */
   FORBIDDEN(403, "没有相关权限");
 
-  private long code;
-  private String message;
+  private final long code;
+  private final String message;
 
   ResultCode(long code, String message) {
     this.code = code;

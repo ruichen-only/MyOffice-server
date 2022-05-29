@@ -3,6 +3,7 @@ package com.rea.myoffice.config;
 import com.rea.myoffice.component.JwtAuthenticationTokenFilter;
 import com.rea.myoffice.component.RestAuthenticationEntryPoint;
 import com.rea.myoffice.component.RestfulAccessDeniedHandler;
+import com.rea.myoffice.util.JwtTokenUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -31,15 +32,18 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
   private final UserDetailsService userDetailsService;
   private final RestfulAccessDeniedHandler restfulAccessDeniedHandler;
   private final RestAuthenticationEntryPoint restAuthenticationEntryPoint;
+  private final JwtTokenUtil jwtTokenUtil;
 
   @Autowired
   public SecurityConfig(
       UserDetailsService userDetailsService,
       RestfulAccessDeniedHandler restfulAccessDeniedHandler,
-      RestAuthenticationEntryPoint restAuthenticationEntryPoint) {
+      RestAuthenticationEntryPoint restAuthenticationEntryPoint,
+      JwtTokenUtil jwtTokenUtil) {
     this.userDetailsService = userDetailsService;
     this.restfulAccessDeniedHandler = restfulAccessDeniedHandler;
     this.restAuthenticationEntryPoint = restAuthenticationEntryPoint;
+    this.jwtTokenUtil = jwtTokenUtil;
   }
 
   @Override
@@ -107,7 +111,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
   @Bean
   public JwtAuthenticationTokenFilter jwtAuthenticationTokenFilter() {
-    return new JwtAuthenticationTokenFilter();
+    return new JwtAuthenticationTokenFilter(userDetailsService, jwtTokenUtil);
   }
 
   @Bean
