@@ -248,7 +248,7 @@
         <if test="distinct">
             distinct
         </if>
-        d.DepartId, DepartName, PrincipalUser userId, ConnectTelNo, ConnectMobileTelNo, Faxes, b.BranchId as BranchId,
+        d.DepartId, DepartName, PrincipalUser, ConnectTelNo, ConnectMobileTelNo, Faxes, b.BranchId as BranchId,
         BranchName, u.UserName as username
         from departinfo d
         inner join branchinfo b on d.BranchId = b.BranchId

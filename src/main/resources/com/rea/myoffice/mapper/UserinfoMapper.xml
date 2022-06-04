@@ -235,7 +235,7 @@
     </update>
     <update id="updateByPrimaryKey" parameterType="com.rea.myoffice.model.Userinfo">
         update userinfo
-        set UserName  = #{userName,jdbcType=VARCHAR},
+        set UserName  = #{username,jdbcType=VARCHAR},
             Password  = #{password,jdbcType=VARCHAR},
             DepartId  = #{departId,jdbcType=INTEGER},
             Gender    = #{gender,jdbcType=INTEGER},
