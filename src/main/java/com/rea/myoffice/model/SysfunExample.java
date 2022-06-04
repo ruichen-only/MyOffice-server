@@ -104,323 +104,323 @@ public class SysfunExample {
             criteria.add(new Criterion(condition, value1, value2));
         }
 
-        public Criteria andNodeidIsNull() {
+        public Criteria andNodeIdIsNull() {
             addCriterion("NodeId is null");
             return (Criteria) this;
         }
 
-        public Criteria andNodeidIsNotNull() {
+        public Criteria andNodeIdIsNotNull() {
             addCriterion("NodeId is not null");
             return (Criteria) this;
         }
 
-        public Criteria andNodeidEqualTo(Integer value) {
-            addCriterion("NodeId =", value, "nodeid");
+        public Criteria andNodeIdEqualTo(Integer value) {
+            addCriterion("NodeId =", value, "nodeId");
             return (Criteria) this;
         }
 
-        public Criteria andNodeidNotEqualTo(Integer value) {
-            addCriterion("NodeId <>", value, "nodeid");
+        public Criteria andNodeIdNotEqualTo(Integer value) {
+            addCriterion("NodeId <>", value, "nodeId");
             return (Criteria) this;
         }
 
-        public Criteria andNodeidGreaterThan(Integer value) {
-            addCriterion("NodeId >", value, "nodeid");
+        public Criteria andNodeIdGreaterThan(Integer value) {
+            addCriterion("NodeId >", value, "nodeId");
             return (Criteria) this;
         }
 
-        public Criteria andNodeidGreaterThanOrEqualTo(Integer value) {
-            addCriterion("NodeId >=", value, "nodeid");
+        public Criteria andNodeIdGreaterThanOrEqualTo(Integer value) {
+            addCriterion("NodeId >=", value, "nodeId");
             return (Criteria) this;
         }
 
-        public Criteria andNodeidLessThan(Integer value) {
-            addCriterion("NodeId <", value, "nodeid");
+        public Criteria andNodeIdLessThan(Integer value) {
+            addCriterion("NodeId <", value, "nodeId");
             return (Criteria) this;
         }
 
-        public Criteria andNodeidLessThanOrEqualTo(Integer value) {
-            addCriterion("NodeId <=", value, "nodeid");
+        public Criteria andNodeIdLessThanOrEqualTo(Integer value) {
+            addCriterion("NodeId <=", value, "nodeId");
             return (Criteria) this;
         }
 
-        public Criteria andNodeidIn(List<Integer> values) {
-            addCriterion("NodeId in", values, "nodeid");
+        public Criteria andNodeIdIn(List<Integer> values) {
+            addCriterion("NodeId in", values, "nodeId");
             return (Criteria) this;
         }
 
-        public Criteria andNodeidNotIn(List<Integer> values) {
-            addCriterion("NodeId not in", values, "nodeid");
+        public Criteria andNodeIdNotIn(List<Integer> values) {
+            addCriterion("NodeId not in", values, "nodeId");
             return (Criteria) this;
         }
 
-        public Criteria andNodeidBetween(Integer value1, Integer value2) {
-            addCriterion("NodeId between", value1, value2, "nodeid");
+        public Criteria andNodeIdBetween(Integer value1, Integer value2) {
+            addCriterion("NodeId between", value1, value2, "nodeId");
             return (Criteria) this;
         }
 
-        public Criteria andNodeidNotBetween(Integer value1, Integer value2) {
-            addCriterion("NodeId not between", value1, value2, "nodeid");
+        public Criteria andNodeIdNotBetween(Integer value1, Integer value2) {
+            addCriterion("NodeId not between", value1, value2, "nodeId");
             return (Criteria) this;
         }
 
-        public Criteria andDisplaynameIsNull() {
+        public Criteria andDisplayNameIsNull() {
             addCriterion("DisplayName is null");
             return (Criteria) this;
         }
 
-        public Criteria andDisplaynameIsNotNull() {
+        public Criteria andDisplayNameIsNotNull() {
             addCriterion("DisplayName is not null");
             return (Criteria) this;
         }
 
-        public Criteria andDisplaynameEqualTo(String value) {
-            addCriterion("DisplayName =", value, "displayname");
+        public Criteria andDisplayNameEqualTo(String value) {
+            addCriterion("DisplayName =", value, "displayName");
             return (Criteria) this;
         }
 
-        public Criteria andDisplaynameNotEqualTo(String value) {
-            addCriterion("DisplayName <>", value, "displayname");
+        public Criteria andDisplayNameNotEqualTo(String value) {
+            addCriterion("DisplayName <>", value, "displayName");
             return (Criteria) this;
         }
 
-        public Criteria andDisplaynameGreaterThan(String value) {
-            addCriterion("DisplayName >", value, "displayname");
+        public Criteria andDisplayNameGreaterThan(String value) {
+            addCriterion("DisplayName >", value, "displayName");
             return (Criteria) this;
         }
 
-        public Criteria andDisplaynameGreaterThanOrEqualTo(String value) {
-            addCriterion("DisplayName >=", value, "displayname");
+        public Criteria andDisplayNameGreaterThanOrEqualTo(String value) {
+            addCriterion("DisplayName >=", value, "displayName");
             return (Criteria) this;
         }
 
-        public Criteria andDisplaynameLessThan(String value) {
-            addCriterion("DisplayName <", value, "displayname");
+        public Criteria andDisplayNameLessThan(String value) {
+            addCriterion("DisplayName <", value, "displayName");
             return (Criteria) this;
         }
 
-        public Criteria andDisplaynameLessThanOrEqualTo(String value) {
-            addCriterion("DisplayName <=", value, "displayname");
+        public Criteria andDisplayNameLessThanOrEqualTo(String value) {
+            addCriterion("DisplayName <=", value, "displayName");
             return (Criteria) this;
         }
 
-        public Criteria andDisplaynameLike(String value) {
-            addCriterion("DisplayName like", value, "displayname");
+        public Criteria andDisplayNameLike(String value) {
+            addCriterion("DisplayName like", value, "displayName");
             return (Criteria) this;
         }
 
-        public Criteria andDisplaynameNotLike(String value) {
-            addCriterion("DisplayName not like", value, "displayname");
+        public Criteria andDisplayNameNotLike(String value) {
+            addCriterion("DisplayName not like", value, "displayName");
             return (Criteria) this;
         }
 
-        public Criteria andDisplaynameIn(List<String> values) {
-            addCriterion("DisplayName in", values, "displayname");
+        public Criteria andDisplayNameIn(List<String> values) {
+            addCriterion("DisplayName in", values, "displayName");
             return (Criteria) this;
         }
 
-        public Criteria andDisplaynameNotIn(List<String> values) {
-            addCriterion("DisplayName not in", values, "displayname");
+        public Criteria andDisplayNameNotIn(List<String> values) {
+            addCriterion("DisplayName not in", values, "displayName");
             return (Criteria) this;
         }
 
-        public Criteria andDisplaynameBetween(String value1, String value2) {
-            addCriterion("DisplayName between", value1, value2, "displayname");
+        public Criteria andDisplayNameBetween(String value1, String value2) {
+            addCriterion("DisplayName between", value1, value2, "displayName");
             return (Criteria) this;
         }
 
-        public Criteria andDisplaynameNotBetween(String value1, String value2) {
-            addCriterion("DisplayName not between", value1, value2, "displayname");
+        public Criteria andDisplayNameNotBetween(String value1, String value2) {
+            addCriterion("DisplayName not between", value1, value2, "displayName");
             return (Criteria) this;
         }
 
-        public Criteria andNodeurlIsNull() {
+        public Criteria andNodeURLIsNull() {
             addCriterion("NodeURL is null");
             return (Criteria) this;
         }
 
-        public Criteria andNodeurlIsNotNull() {
+        public Criteria andNodeURLIsNotNull() {
             addCriterion("NodeURL is not null");
             return (Criteria) this;
         }
 
-        public Criteria andNodeurlEqualTo(String value) {
-            addCriterion("NodeURL =", value, "nodeurl");
+        public Criteria andNodeURLEqualTo(String value) {
+            addCriterion("NodeURL =", value, "nodeURL");
             return (Criteria) this;
         }
 
-        public Criteria andNodeurlNotEqualTo(String value) {
-            addCriterion("NodeURL <>", value, "nodeurl");
+        public Criteria andNodeURLNotEqualTo(String value) {
+            addCriterion("NodeURL <>", value, "nodeURL");
             return (Criteria) this;
         }
 
-        public Criteria andNodeurlGreaterThan(String value) {
-            addCriterion("NodeURL >", value, "nodeurl");
+        public Criteria andNodeURLGreaterThan(String value) {
+            addCriterion("NodeURL >", value, "nodeURL");
             return (Criteria) this;
         }
 
-        public Criteria andNodeurlGreaterThanOrEqualTo(String value) {
-            addCriterion("NodeURL >=", value, "nodeurl");
+        public Criteria andNodeURLGreaterThanOrEqualTo(String value) {
+            addCriterion("NodeURL >=", value, "nodeURL");
             return (Criteria) this;
         }
 
-        public Criteria andNodeurlLessThan(String value) {
-            addCriterion("NodeURL <", value, "nodeurl");
+        public Criteria andNodeURLLessThan(String value) {
+            addCriterion("NodeURL <", value, "nodeURL");
             return (Criteria) this;
         }
 
-        public Criteria andNodeurlLessThanOrEqualTo(String value) {
-            addCriterion("NodeURL <=", value, "nodeurl");
+        public Criteria andNodeURLLessThanOrEqualTo(String value) {
+            addCriterion("NodeURL <=", value, "nodeURL");
             return (Criteria) this;
         }
 
-        public Criteria andNodeurlLike(String value) {
-            addCriterion("NodeURL like", value, "nodeurl");
+        public Criteria andNodeURLLike(String value) {
+            addCriterion("NodeURL like", value, "nodeURL");
             return (Criteria) this;
         }
 
-        public Criteria andNodeurlNotLike(String value) {
-            addCriterion("NodeURL not like", value, "nodeurl");
+        public Criteria andNodeURLNotLike(String value) {
+            addCriterion("NodeURL not like", value, "nodeURL");
             return (Criteria) this;
         }
 
-        public Criteria andNodeurlIn(List<String> values) {
-            addCriterion("NodeURL in", values, "nodeurl");
+        public Criteria andNodeURLIn(List<String> values) {
+            addCriterion("NodeURL in", values, "nodeURL");
             return (Criteria) this;
         }
 
-        public Criteria andNodeurlNotIn(List<String> values) {
-            addCriterion("NodeURL not in", values, "nodeurl");
+        public Criteria andNodeURLNotIn(List<String> values) {
+            addCriterion("NodeURL not in", values, "nodeURL");
             return (Criteria) this;
         }
 
-        public Criteria andNodeurlBetween(String value1, String value2) {
-            addCriterion("NodeURL between", value1, value2, "nodeurl");
+        public Criteria andNodeURLBetween(String value1, String value2) {
+            addCriterion("NodeURL between", value1, value2, "nodeURL");
             return (Criteria) this;
         }
 
-        public Criteria andNodeurlNotBetween(String value1, String value2) {
-            addCriterion("NodeURL not between", value1, value2, "nodeurl");
+        public Criteria andNodeURLNotBetween(String value1, String value2) {
+            addCriterion("NodeURL not between", value1, value2, "nodeURL");
             return (Criteria) this;
         }
 
-        public Criteria andDisplayorderIsNull() {
+        public Criteria andDisplayOrderIsNull() {
             addCriterion("DisplayOrder is null");
             return (Criteria) this;
         }
 
-        public Criteria andDisplayorderIsNotNull() {
+        public Criteria andDisplayOrderIsNotNull() {
             addCriterion("DisplayOrder is not null");
             return (Criteria) this;
         }
 
-        public Criteria andDisplayorderEqualTo(Integer value) {
-            addCriterion("DisplayOrder =", value, "displayorder");
+        public Criteria andDisplayOrderEqualTo(Integer value) {
+            addCriterion("DisplayOrder =", value, "displayOrder");
             return (Criteria) this;
         }
 
-        public Criteria andDisplayorderNotEqualTo(Integer value) {
-            addCriterion("DisplayOrder <>", value, "displayorder");
+        public Criteria andDisplayOrderNotEqualTo(Integer value) {
+            addCriterion("DisplayOrder <>", value, "displayOrder");
             return (Criteria) this;
         }
 
-        public Criteria andDisplayorderGreaterThan(Integer value) {
-            addCriterion("DisplayOrder >", value, "displayorder");
+        public Criteria andDisplayOrderGreaterThan(Integer value) {
+            addCriterion("DisplayOrder >", value, "displayOrder");
             return (Criteria) this;
         }
 
-        public Criteria andDisplayorderGreaterThanOrEqualTo(Integer value) {
-            addCriterion("DisplayOrder >=", value, "displayorder");
+        public Criteria andDisplayOrderGreaterThanOrEqualTo(Integer value) {
+            addCriterion("DisplayOrder >=", value, "displayOrder");
             return (Criteria) this;
         }
 
-        public Criteria andDisplayorderLessThan(Integer value) {
-            addCriterion("DisplayOrder <", value, "displayorder");
+        public Criteria andDisplayOrderLessThan(Integer value) {
+            addCriterion("DisplayOrder <", value, "displayOrder");
             return (Criteria) this;
         }
 
-        public Criteria andDisplayorderLessThanOrEqualTo(Integer value) {
-            addCriterion("DisplayOrder <=", value, "displayorder");
+        public Criteria andDisplayOrderLessThanOrEqualTo(Integer value) {
+            addCriterion("DisplayOrder <=", value, "displayOrder");
             return (Criteria) this;
         }
 
-        public Criteria andDisplayorderIn(List<Integer> values) {
-            addCriterion("DisplayOrder in", values, "displayorder");
+        public Criteria andDisplayOrderIn(List<Integer> values) {
+            addCriterion("DisplayOrder in", values, "displayOrder");
             return (Criteria) this;
         }
 
-        public Criteria andDisplayorderNotIn(List<Integer> values) {
-            addCriterion("DisplayOrder not in", values, "displayorder");
+        public Criteria andDisplayOrderNotIn(List<Integer> values) {
+            addCriterion("DisplayOrder not in", values, "displayOrder");
             return (Criteria) this;
         }
 
-        public Criteria andDisplayorderBetween(Integer value1, Integer value2) {
-            addCriterion("DisplayOrder between", value1, value2, "displayorder");
+        public Criteria andDisplayOrderBetween(Integer value1, Integer value2) {
+            addCriterion("DisplayOrder between", value1, value2, "displayOrder");
             return (Criteria) this;
         }
 
-        public Criteria andDisplayorderNotBetween(Integer value1, Integer value2) {
-            addCriterion("DisplayOrder not between", value1, value2, "displayorder");
+        public Criteria andDisplayOrderNotBetween(Integer value1, Integer value2) {
+            addCriterion("DisplayOrder not between", value1, value2, "displayOrder");
             return (Criteria) this;
         }
 
-        public Criteria andParentnodeidIsNull() {
+        public Criteria andParentNodeIdIsNull() {
             addCriterion("ParentNodeId is null");
             return (Criteria) this;
         }
 
-        public Criteria andParentnodeidIsNotNull() {
+        public Criteria andParentNodeIdIsNotNull() {
             addCriterion("ParentNodeId is not null");
             return (Criteria) this;
         }
 
-        public Criteria andParentnodeidEqualTo(Integer value) {
-            addCriterion("ParentNodeId =", value, "parentnodeid");
+        public Criteria andParentNodeIdEqualTo(Integer value) {
+            addCriterion("ParentNodeId =", value, "parentNodeId");
             return (Criteria) this;
         }
 
-        public Criteria andParentnodeidNotEqualTo(Integer value) {
-            addCriterion("ParentNodeId <>", value, "parentnodeid");
+        public Criteria andParentNodeIdNotEqualTo(Integer value) {
+            addCriterion("ParentNodeId <>", value, "parentNodeId");
             return (Criteria) this;
         }
 
-        public Criteria andParentnodeidGreaterThan(Integer value) {
-            addCriterion("ParentNodeId >", value, "parentnodeid");
+        public Criteria andParentNodeIdGreaterThan(Integer value) {
+            addCriterion("ParentNodeId >", value, "parentNodeId");
             return (Criteria) this;
         }
 
-        public Criteria andParentnodeidGreaterThanOrEqualTo(Integer value) {
-            addCriterion("ParentNodeId >=", value, "parentnodeid");
+        public Criteria andParentNodeIdGreaterThanOrEqualTo(Integer value) {
+            addCriterion("ParentNodeId >=", value, "parentNodeId");
             return (Criteria) this;
         }
 
-        public Criteria andParentnodeidLessThan(Integer value) {
-            addCriterion("ParentNodeId <", value, "parentnodeid");
+        public Criteria andParentNodeIdLessThan(Integer value) {
+            addCriterion("ParentNodeId <", value, "parentNodeId");
             return (Criteria) this;
         }
 
-        public Criteria andParentnodeidLessThanOrEqualTo(Integer value) {
-            addCriterion("ParentNodeId <=", value, "parentnodeid");
+        public Criteria andParentNodeIdLessThanOrEqualTo(Integer value) {
+            addCriterion("ParentNodeId <=", value, "parentNodeId");
             return (Criteria) this;
         }
 
-        public Criteria andParentnodeidIn(List<Integer> values) {
-            addCriterion("ParentNodeId in", values, "parentnodeid");
+        public Criteria andParentNodeIdIn(List<Integer> values) {
+            addCriterion("ParentNodeId in", values, "parentNodeId");
             return (Criteria) this;
         }
 
-        public Criteria andParentnodeidNotIn(List<Integer> values) {
-            addCriterion("ParentNodeId not in", values, "parentnodeid");
+        public Criteria andParentNodeIdNotIn(List<Integer> values) {
+            addCriterion("ParentNodeId not in", values, "parentNodeId");
             return (Criteria) this;
         }
 
-        public Criteria andParentnodeidBetween(Integer value1, Integer value2) {
-            addCriterion("ParentNodeId between", value1, value2, "parentnodeid");
+        public Criteria andParentNodeIdBetween(Integer value1, Integer value2) {
+            addCriterion("ParentNodeId between", value1, value2, "parentNodeId");
             return (Criteria) this;
         }
 
-        public Criteria andParentnodeidNotBetween(Integer value1, Integer value2) {
-            addCriterion("ParentNodeId not between", value1, value2, "parentnodeid");
+        public Criteria andParentNodeIdNotBetween(Integer value1, Integer value2) {
+            addCriterion("ParentNodeId not between", value1, value2, "parentNodeId");
             return (Criteria) this;
         }
     }

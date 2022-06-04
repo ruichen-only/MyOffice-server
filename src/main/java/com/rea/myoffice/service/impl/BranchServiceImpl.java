@@ -29,7 +29,7 @@ public class BranchServiceImpl implements BranchService {
   @Override
   public int deleteById(int branchId) {
     BranchinfoExample example = new BranchinfoExample();
-    example.createCriteria().andBranchidEqualTo(branchId);
+    example.createCriteria().andBranchIdEqualTo(branchId);
 
     return branchinfoMapper.deleteByExample(example);
   }
@@ -37,7 +37,7 @@ public class BranchServiceImpl implements BranchService {
   @Override
   public int deleteByIds(List<Integer> branchIds) {
     BranchinfoExample example = new BranchinfoExample();
-    example.createCriteria().andBranchidIn(branchIds);
+    example.createCriteria().andBranchIdIn(branchIds);
 
     return branchinfoMapper.deleteByExample(example);
   }

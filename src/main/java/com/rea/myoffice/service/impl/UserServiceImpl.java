@@ -70,7 +70,7 @@ public class UserServiceImpl implements UserService {
   @Override
   public int deleteById(String userId) {
     UserinfoExample example = new UserinfoExample();
-    example.createCriteria().andUseridEqualTo(userId);
+    example.createCriteria().andUserIdEqualTo(userId);
 
     return userinfoMapper.deleteByExample(example);
   }
@@ -78,7 +78,7 @@ public class UserServiceImpl implements UserService {
   @Override
   public int deleteByIds(List<String> userIds) {
     UserinfoExample example = new UserinfoExample();
-    example.createCriteria().andUseridIn(userIds);
+    example.createCriteria().andUserIdIn(userIds);
 
     return userinfoMapper.deleteByExample(example);
   }

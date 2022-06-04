@@ -10,7 +10,7 @@ public interface SysfunMapper {
 
     int deleteByExample(SysfunExample example);
 
-    int deleteByPrimaryKey(Integer nodeid);
+    int deleteByPrimaryKey(Integer nodeId);
 
     int insert(Sysfun row);
 
@@ -18,7 +18,7 @@ public interface SysfunMapper {
 
     List<Sysfun> selectByExample(SysfunExample example);
 
-    Sysfun selectByPrimaryKey(Integer nodeid);
+    Sysfun selectByPrimaryKey(Integer nodeId);
 
     int updateByExampleSelective(@Param("row") Sysfun row, @Param("example") SysfunExample example);
 

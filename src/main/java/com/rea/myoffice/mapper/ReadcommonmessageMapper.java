@@ -10,7 +10,7 @@ public interface ReadcommonmessageMapper {
 
     int deleteByExample(ReadcommonmessageExample example);
 
-    int deleteByPrimaryKey(Integer readid);
+    int deleteByPrimaryKey(Integer readId);
 
     int insert(Readcommonmessage row);
 
@@ -18,7 +18,7 @@ public interface ReadcommonmessageMapper {
 
     List<Readcommonmessage> selectByExample(ReadcommonmessageExample example);
 
-    Readcommonmessage selectByPrimaryKey(Integer readid);
+    Readcommonmessage selectByPrimaryKey(Integer readId);
 
     int updateByExampleSelective(@Param("row") Readcommonmessage row, @Param("example") ReadcommonmessageExample example);
 

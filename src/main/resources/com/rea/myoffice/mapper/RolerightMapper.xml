@@ -2,9 +2,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.rea.myoffice.mapper.RolerightMapper">
   <resultMap id="BaseResultMap" type="com.rea.myoffice.model.Roleright">
-    <id column="RoleRightId" jdbcType="INTEGER" property="rolerightid" />
-    <result column="RoleId" jdbcType="INTEGER" property="roleid" />
-    <result column="NodeId" jdbcType="INTEGER" property="nodeid" />
+    <id column="RoleRightId" jdbcType="INTEGER" property="roleRightId" />
+    <result column="RoleId" jdbcType="INTEGER" property="roleId" />
+    <result column="NodeId" jdbcType="INTEGER" property="nodeId" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -85,11 +85,11 @@
     select 
     <include refid="Base_Column_List" />
     from roleright
-    where RoleRightId = #{rolerightid,jdbcType=INTEGER}
+    where RoleRightId = #{roleRightId,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from roleright
-    where RoleRightId = #{rolerightid,jdbcType=INTEGER}
+    where RoleRightId = #{roleRightId,jdbcType=INTEGER}
   </delete>
   <delete id="deleteByExample" parameterType="com.rea.myoffice.model.RolerightExample">
     delete from roleright
@@ -100,31 +100,31 @@
   <insert id="insert" parameterType="com.rea.myoffice.model.Roleright">
     insert into roleright (RoleRightId, RoleId, NodeId
       )
-    values (#{rolerightid,jdbcType=INTEGER}, #{roleid,jdbcType=INTEGER}, #{nodeid,jdbcType=INTEGER}
+    values (#{roleRightId,jdbcType=INTEGER}, #{roleId,jdbcType=INTEGER}, #{nodeId,jdbcType=INTEGER}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.rea.myoffice.model.Roleright">
     insert into roleright
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="rolerightid != null">
+      <if test="roleRightId != null">
         RoleRightId,
       </if>
-      <if test="roleid != null">
+      <if test="roleId != null">
         RoleId,
       </if>
-      <if test="nodeid != null">
+      <if test="nodeId != null">
         NodeId,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="rolerightid != null">
-        #{rolerightid,jdbcType=INTEGER},
+      <if test="roleRightId != null">
+        #{roleRightId,jdbcType=INTEGER},
       </if>
-      <if test="roleid != null">
-        #{roleid,jdbcType=INTEGER},
+      <if test="roleId != null">
+        #{roleId,jdbcType=INTEGER},
       </if>
-      <if test="nodeid != null">
-        #{nodeid,jdbcType=INTEGER},
+      <if test="nodeId != null">
+        #{nodeId,jdbcType=INTEGER},
       </if>
     </trim>
   </insert>
@@ -137,14 +137,14 @@
   <update id="updateByExampleSelective" parameterType="map">
     update roleright
     <set>
-      <if test="row.rolerightid != null">
-        RoleRightId = #{row.rolerightid,jdbcType=INTEGER},
+      <if test="row.roleRightId != null">
+        RoleRightId = #{row.roleRightId,jdbcType=INTEGER},
       </if>
-      <if test="row.roleid != null">
-        RoleId = #{row.roleid,jdbcType=INTEGER},
+      <if test="row.roleId != null">
+        RoleId = #{row.roleId,jdbcType=INTEGER},
       </if>
-      <if test="row.nodeid != null">
-        NodeId = #{row.nodeid,jdbcType=INTEGER},
+      <if test="row.nodeId != null">
+        NodeId = #{row.nodeId,jdbcType=INTEGER},
       </if>
     </set>
     <if test="example != null">
@@ -153,9 +153,9 @@
   </update>
   <update id="updateByExample" parameterType="map">
     update roleright
-    set RoleRightId = #{row.rolerightid,jdbcType=INTEGER},
-      RoleId = #{row.roleid,jdbcType=INTEGER},
-      NodeId = #{row.nodeid,jdbcType=INTEGER}
+    set RoleRightId = #{row.roleRightId,jdbcType=INTEGER},
+      RoleId = #{row.roleId,jdbcType=INTEGER},
+      NodeId = #{row.nodeId,jdbcType=INTEGER}
     <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -163,19 +163,19 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.rea.myoffice.model.Roleright">
     update roleright
     <set>
-      <if test="roleid != null">
-        RoleId = #{roleid,jdbcType=INTEGER},
+      <if test="roleId != null">
+        RoleId = #{roleId,jdbcType=INTEGER},
       </if>
-      <if test="nodeid != null">
-        NodeId = #{nodeid,jdbcType=INTEGER},
+      <if test="nodeId != null">
+        NodeId = #{nodeId,jdbcType=INTEGER},
       </if>
     </set>
-    where RoleRightId = #{rolerightid,jdbcType=INTEGER}
+    where RoleRightId = #{roleRightId,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.rea.myoffice.model.Roleright">
     update roleright
-    set RoleId = #{roleid,jdbcType=INTEGER},
-      NodeId = #{nodeid,jdbcType=INTEGER}
-    where RoleRightId = #{rolerightid,jdbcType=INTEGER}
+    set RoleId = #{roleId,jdbcType=INTEGER},
+      NodeId = #{nodeId,jdbcType=INTEGER}
+    where RoleRightId = #{roleRightId,jdbcType=INTEGER}
   </update>
 </mapper>

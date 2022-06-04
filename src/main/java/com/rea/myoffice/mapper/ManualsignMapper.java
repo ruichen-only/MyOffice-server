@@ -10,7 +10,7 @@ public interface ManualsignMapper {
 
     int deleteByExample(ManualsignExample example);
 
-    int deleteByPrimaryKey(Integer signid);
+    int deleteByPrimaryKey(Integer signId);
 
     int insert(Manualsign row);
 
@@ -18,7 +18,7 @@ public interface ManualsignMapper {
 
     List<Manualsign> selectByExample(ManualsignExample example);
 
-    Manualsign selectByPrimaryKey(Integer signid);
+    Manualsign selectByPrimaryKey(Integer signId);
 
     int updateByExampleSelective(@Param("row") Manualsign row, @Param("example") ManualsignExample example);
 

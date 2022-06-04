@@ -2,9 +2,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.rea.myoffice.mapper.ReadcommonmessageMapper">
   <resultMap id="BaseResultMap" type="com.rea.myoffice.model.Readcommonmessage">
-    <id column="ReadId" jdbcType="INTEGER" property="readid" />
-    <result column="MessageId" jdbcType="INTEGER" property="messageid" />
-    <result column="UserId" jdbcType="VARCHAR" property="userid" />
+    <id column="ReadId" jdbcType="INTEGER" property="readId" />
+    <result column="MessageId" jdbcType="INTEGER" property="messageId" />
+    <result column="UserId" jdbcType="VARCHAR" property="userId" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -85,11 +85,11 @@
     select 
     <include refid="Base_Column_List" />
     from readcommonmessage
-    where ReadId = #{readid,jdbcType=INTEGER}
+    where ReadId = #{readId,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from readcommonmessage
-    where ReadId = #{readid,jdbcType=INTEGER}
+    where ReadId = #{readId,jdbcType=INTEGER}
   </delete>
   <delete id="deleteByExample" parameterType="com.rea.myoffice.model.ReadcommonmessageExample">
     delete from readcommonmessage
@@ -100,31 +100,31 @@
   <insert id="insert" parameterType="com.rea.myoffice.model.Readcommonmessage">
     insert into readcommonmessage (ReadId, MessageId, UserId
       )
-    values (#{readid,jdbcType=INTEGER}, #{messageid,jdbcType=INTEGER}, #{userid,jdbcType=VARCHAR}
+    values (#{readId,jdbcType=INTEGER}, #{messageId,jdbcType=INTEGER}, #{userId,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.rea.myoffice.model.Readcommonmessage">
     insert into readcommonmessage
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="readid != null">
+      <if test="readId != null">
         ReadId,
       </if>
-      <if test="messageid != null">
+      <if test="messageId != null">
         MessageId,
       </if>
-      <if test="userid != null">
+      <if test="userId != null">
         UserId,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="readid != null">
-        #{readid,jdbcType=INTEGER},
+      <if test="readId != null">
+        #{readId,jdbcType=INTEGER},
       </if>
-      <if test="messageid != null">
-        #{messageid,jdbcType=INTEGER},
+      <if test="messageId != null">
+        #{messageId,jdbcType=INTEGER},
       </if>
-      <if test="userid != null">
-        #{userid,jdbcType=VARCHAR},
+      <if test="userId != null">
+        #{userId,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -137,14 +137,14 @@
   <update id="updateByExampleSelective" parameterType="map">
     update readcommonmessage
     <set>
-      <if test="row.readid != null">
-        ReadId = #{row.readid,jdbcType=INTEGER},
+      <if test="row.readId != null">
+        ReadId = #{row.readId,jdbcType=INTEGER},
       </if>
-      <if test="row.messageid != null">
-        MessageId = #{row.messageid,jdbcType=INTEGER},
+      <if test="row.messageId != null">
+        MessageId = #{row.messageId,jdbcType=INTEGER},
       </if>
-      <if test="row.userid != null">
-        UserId = #{row.userid,jdbcType=VARCHAR},
+      <if test="row.userId != null">
+        UserId = #{row.userId,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="example != null">
@@ -153,9 +153,9 @@
   </update>
   <update id="updateByExample" parameterType="map">
     update readcommonmessage
-    set ReadId = #{row.readid,jdbcType=INTEGER},
-      MessageId = #{row.messageid,jdbcType=INTEGER},
-      UserId = #{row.userid,jdbcType=VARCHAR}
+    set ReadId = #{row.readId,jdbcType=INTEGER},
+      MessageId = #{row.messageId,jdbcType=INTEGER},
+      UserId = #{row.userId,jdbcType=VARCHAR}
     <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -163,19 +163,19 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.rea.myoffice.model.Readcommonmessage">
     update readcommonmessage
     <set>
-      <if test="messageid != null">
-        MessageId = #{messageid,jdbcType=INTEGER},
+      <if test="messageId != null">
+        MessageId = #{messageId,jdbcType=INTEGER},
       </if>
-      <if test="userid != null">
-        UserId = #{userid,jdbcType=VARCHAR},
+      <if test="userId != null">
+        UserId = #{userId,jdbcType=VARCHAR},
       </if>
     </set>
-    where ReadId = #{readid,jdbcType=INTEGER}
+    where ReadId = #{readId,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.rea.myoffice.model.Readcommonmessage">
     update readcommonmessage
-    set MessageId = #{messageid,jdbcType=INTEGER},
-      UserId = #{userid,jdbcType=VARCHAR}
-    where ReadId = #{readid,jdbcType=INTEGER}
+    set MessageId = #{messageId,jdbcType=INTEGER},
+      UserId = #{userId,jdbcType=VARCHAR}
+    where ReadId = #{readId,jdbcType=INTEGER}
   </update>
 </mapper>

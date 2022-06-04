@@ -6,82 +6,82 @@ import java.util.Date;
 
 public class Accessoryfile implements Serializable {
     @ApiModelProperty(value = "文件附件Id")
-    private Integer accessoryid;
+    private Integer accessoryId;
 
     @ApiModelProperty(value = "文件Id")
-    private Integer fileid;
+    private Integer fileId;
 
     @ApiModelProperty(value = "附件名称")
-    private String accessoryname;
+    private String accessoryName;
 
     @ApiModelProperty(value = "附件大小")
-    private Integer accessorysize;
+    private Integer accessorySize;
 
     @ApiModelProperty(value = "附件类型")
-    private Integer accessorytype;
+    private Integer accessoryType;
 
     @ApiModelProperty(value = "创建日期")
-    private Date createdate;
+    private Date createDate;
 
     @ApiModelProperty(value = "附件路径")
-    private String accessorypath;
+    private String accessoryPath;
 
     private static final long serialVersionUID = 1L;
 
-    public Integer getAccessoryid() {
-        return accessoryid;
+    public Integer getAccessoryId() {
+        return accessoryId;
     }
 
-    public void setAccessoryid(Integer accessoryid) {
-        this.accessoryid = accessoryid;
+    public void setAccessoryId(Integer accessoryId) {
+        this.accessoryId = accessoryId;
     }
 
-    public Integer getFileid() {
-        return fileid;
+    public Integer getFileId() {
+        return fileId;
     }
 
-    public void setFileid(Integer fileid) {
-        this.fileid = fileid;
+    public void setFileId(Integer fileId) {
+        this.fileId = fileId;
     }
 
-    public String getAccessoryname() {
-        return accessoryname;
+    public String getAccessoryName() {
+        return accessoryName;
     }
 
-    public void setAccessoryname(String accessoryname) {
-        this.accessoryname = accessoryname;
+    public void setAccessoryName(String accessoryName) {
+        this.accessoryName = accessoryName;
     }
 
-    public Integer getAccessorysize() {
-        return accessorysize;
+    public Integer getAccessorySize() {
+        return accessorySize;
     }
 
-    public void setAccessorysize(Integer accessorysize) {
-        this.accessorysize = accessorysize;
+    public void setAccessorySize(Integer accessorySize) {
+        this.accessorySize = accessorySize;
     }
 
-    public Integer getAccessorytype() {
-        return accessorytype;
+    public Integer getAccessoryType() {
+        return accessoryType;
     }
 
-    public void setAccessorytype(Integer accessorytype) {
-        this.accessorytype = accessorytype;
+    public void setAccessoryType(Integer accessoryType) {
+        this.accessoryType = accessoryType;
     }
 
-    public Date getCreatedate() {
-        return createdate;
+    public Date getCreateDate() {
+        return createDate;
     }
 
-    public void setCreatedate(Date createdate) {
-        this.createdate = createdate;
+    public void setCreateDate(Date createDate) {
+        this.createDate = createDate;
     }
 
-    public String getAccessorypath() {
-        return accessorypath;
+    public String getAccessoryPath() {
+        return accessoryPath;
     }
 
-    public void setAccessorypath(String accessorypath) {
-        this.accessorypath = accessorypath;
+    public void setAccessoryPath(String accessoryPath) {
+        this.accessoryPath = accessoryPath;
     }
 
     @Override
@@ -90,13 +90,13 @@ public class Accessoryfile implements Serializable {
         sb.append(getClass().getSimpleName());
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
-        sb.append(", accessoryid=").append(accessoryid);
-        sb.append(", fileid=").append(fileid);
-        sb.append(", accessoryname=").append(accessoryname);
-        sb.append(", accessorysize=").append(accessorysize);
-        sb.append(", accessorytype=").append(accessorytype);
-        sb.append(", createdate=").append(createdate);
-        sb.append(", accessorypath=").append(accessorypath);
+        sb.append(", accessoryId=").append(accessoryId);
+        sb.append(", fileId=").append(fileId);
+        sb.append(", accessoryName=").append(accessoryName);
+        sb.append(", accessorySize=").append(accessorySize);
+        sb.append(", accessoryType=").append(accessoryType);
+        sb.append(", createDate=").append(createDate);
+        sb.append(", accessoryPath=").append(accessoryPath);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

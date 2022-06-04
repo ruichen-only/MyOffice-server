@@ -2,10 +2,10 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.rea.myoffice.mapper.FiletypeinfoMapper">
   <resultMap id="BaseResultMap" type="com.rea.myoffice.model.Filetypeinfo">
-    <id column="FileTypeId" jdbcType="INTEGER" property="filetypeid" />
-    <result column="FileTypeName" jdbcType="VARCHAR" property="filetypename" />
-    <result column="FileTypeImage" jdbcType="VARCHAR" property="filetypeimage" />
-    <result column="FileTypeSuffix" jdbcType="VARCHAR" property="filetypesuffix" />
+    <id column="FileTypeId" jdbcType="INTEGER" property="fileTypeId" />
+    <result column="FileTypeName" jdbcType="VARCHAR" property="fileTypeName" />
+    <result column="FileTypeImage" jdbcType="VARCHAR" property="fileTypeImage" />
+    <result column="FileTypeSuffix" jdbcType="VARCHAR" property="fileTypeSuffix" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -86,11 +86,11 @@
     select 
     <include refid="Base_Column_List" />
     from filetypeinfo
-    where FileTypeId = #{filetypeid,jdbcType=INTEGER}
+    where FileTypeId = #{fileTypeId,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from filetypeinfo
-    where FileTypeId = #{filetypeid,jdbcType=INTEGER}
+    where FileTypeId = #{fileTypeId,jdbcType=INTEGER}
   </delete>
   <delete id="deleteByExample" parameterType="com.rea.myoffice.model.FiletypeinfoExample">
     delete from filetypeinfo
@@ -101,37 +101,37 @@
   <insert id="insert" parameterType="com.rea.myoffice.model.Filetypeinfo">
     insert into filetypeinfo (FileTypeId, FileTypeName, FileTypeImage, 
       FileTypeSuffix)
-    values (#{filetypeid,jdbcType=INTEGER}, #{filetypename,jdbcType=VARCHAR}, #{filetypeimage,jdbcType=VARCHAR}, 
-      #{filetypesuffix,jdbcType=VARCHAR})
+    values (#{fileTypeId,jdbcType=INTEGER}, #{fileTypeName,jdbcType=VARCHAR}, #{fileTypeImage,jdbcType=VARCHAR}, 
+      #{fileTypeSuffix,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.rea.myoffice.model.Filetypeinfo">
     insert into filetypeinfo
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="filetypeid != null">
+      <if test="fileTypeId != null">
         FileTypeId,
       </if>
-      <if test="filetypename != null">
+      <if test="fileTypeName != null">
         FileTypeName,
       </if>
-      <if test="filetypeimage != null">
+      <if test="fileTypeImage != null">
         FileTypeImage,
       </if>
-      <if test="filetypesuffix != null">
+      <if test="fileTypeSuffix != null">
         FileTypeSuffix,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="filetypeid != null">
-        #{filetypeid,jdbcType=INTEGER},
+      <if test="fileTypeId != null">
+        #{fileTypeId,jdbcType=INTEGER},
       </if>
-      <if test="filetypename != null">
-        #{filetypename,jdbcType=VARCHAR},
+      <if test="fileTypeName != null">
+        #{fileTypeName,jdbcType=VARCHAR},
       </if>
-      <if test="filetypeimage != null">
-        #{filetypeimage,jdbcType=VARCHAR},
+      <if test="fileTypeImage != null">
+        #{fileTypeImage,jdbcType=VARCHAR},
       </if>
-      <if test="filetypesuffix != null">
-        #{filetypesuffix,jdbcType=VARCHAR},
+      <if test="fileTypeSuffix != null">
+        #{fileTypeSuffix,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -144,17 +144,17 @@
   <update id="updateByExampleSelective" parameterType="map">
     update filetypeinfo
     <set>
-      <if test="row.filetypeid != null">
-        FileTypeId = #{row.filetypeid,jdbcType=INTEGER},
+      <if test="row.fileTypeId != null">
+        FileTypeId = #{row.fileTypeId,jdbcType=INTEGER},
       </if>
-      <if test="row.filetypename != null">
-        FileTypeName = #{row.filetypename,jdbcType=VARCHAR},
+      <if test="row.fileTypeName != null">
+        FileTypeName = #{row.fileTypeName,jdbcType=VARCHAR},
       </if>
-      <if test="row.filetypeimage != null">
-        FileTypeImage = #{row.filetypeimage,jdbcType=VARCHAR},
+      <if test="row.fileTypeImage != null">
+        FileTypeImage = #{row.fileTypeImage,jdbcType=VARCHAR},
       </if>
-      <if test="row.filetypesuffix != null">
-        FileTypeSuffix = #{row.filetypesuffix,jdbcType=VARCHAR},
+      <if test="row.fileTypeSuffix != null">
+        FileTypeSuffix = #{row.fileTypeSuffix,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="example != null">
@@ -163,10 +163,10 @@
   </update>
   <update id="updateByExample" parameterType="map">
     update filetypeinfo
-    set FileTypeId = #{row.filetypeid,jdbcType=INTEGER},
-      FileTypeName = #{row.filetypename,jdbcType=VARCHAR},
-      FileTypeImage = #{row.filetypeimage,jdbcType=VARCHAR},
-      FileTypeSuffix = #{row.filetypesuffix,jdbcType=VARCHAR}
+    set FileTypeId = #{row.fileTypeId,jdbcType=INTEGER},
+      FileTypeName = #{row.fileTypeName,jdbcType=VARCHAR},
+      FileTypeImage = #{row.fileTypeImage,jdbcType=VARCHAR},
+      FileTypeSuffix = #{row.fileTypeSuffix,jdbcType=VARCHAR}
     <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -174,23 +174,23 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.rea.myoffice.model.Filetypeinfo">
     update filetypeinfo
     <set>
-      <if test="filetypename != null">
-        FileTypeName = #{filetypename,jdbcType=VARCHAR},
+      <if test="fileTypeName != null">
+        FileTypeName = #{fileTypeName,jdbcType=VARCHAR},
       </if>
-      <if test="filetypeimage != null">
-        FileTypeImage = #{filetypeimage,jdbcType=VARCHAR},
+      <if test="fileTypeImage != null">
+        FileTypeImage = #{fileTypeImage,jdbcType=VARCHAR},
       </if>
-      <if test="filetypesuffix != null">
-        FileTypeSuffix = #{filetypesuffix,jdbcType=VARCHAR},
+      <if test="fileTypeSuffix != null">
+        FileTypeSuffix = #{fileTypeSuffix,jdbcType=VARCHAR},
       </if>
     </set>
-    where FileTypeId = #{filetypeid,jdbcType=INTEGER}
+    where FileTypeId = #{fileTypeId,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.rea.myoffice.model.Filetypeinfo">
     update filetypeinfo
-    set FileTypeName = #{filetypename,jdbcType=VARCHAR},
-      FileTypeImage = #{filetypeimage,jdbcType=VARCHAR},
-      FileTypeSuffix = #{filetypesuffix,jdbcType=VARCHAR}
-    where FileTypeId = #{filetypeid,jdbcType=INTEGER}
+    set FileTypeName = #{fileTypeName,jdbcType=VARCHAR},
+      FileTypeImage = #{fileTypeImage,jdbcType=VARCHAR},
+      FileTypeSuffix = #{fileTypeSuffix,jdbcType=VARCHAR}
+    where FileTypeId = #{fileTypeId,jdbcType=INTEGER}
   </update>
 </mapper>

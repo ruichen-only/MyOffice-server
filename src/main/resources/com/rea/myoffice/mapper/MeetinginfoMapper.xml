@@ -2,8 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.rea.myoffice.mapper.MeetinginfoMapper">
   <resultMap id="BaseResultMap" type="com.rea.myoffice.model.Meetinginfo">
-    <id column="MeetingId" jdbcType="INTEGER" property="meetingid" />
-    <result column="MeetingName" jdbcType="VARCHAR" property="meetingname" />
+    <id column="MeetingId" jdbcType="INTEGER" property="meetingId" />
+    <result column="MeetingName" jdbcType="VARCHAR" property="meetingName" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -84,11 +84,11 @@
     select 
     <include refid="Base_Column_List" />
     from meetinginfo
-    where MeetingId = #{meetingid,jdbcType=INTEGER}
+    where MeetingId = #{meetingId,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from meetinginfo
-    where MeetingId = #{meetingid,jdbcType=INTEGER}
+    where MeetingId = #{meetingId,jdbcType=INTEGER}
   </delete>
   <delete id="deleteByExample" parameterType="com.rea.myoffice.model.MeetinginfoExample">
     delete from meetinginfo
@@ -98,24 +98,24 @@
   </delete>
   <insert id="insert" parameterType="com.rea.myoffice.model.Meetinginfo">
     insert into meetinginfo (MeetingId, MeetingName)
-    values (#{meetingid,jdbcType=INTEGER}, #{meetingname,jdbcType=VARCHAR})
+    values (#{meetingId,jdbcType=INTEGER}, #{meetingName,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.rea.myoffice.model.Meetinginfo">
     insert into meetinginfo
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="meetingid != null">
+      <if test="meetingId != null">
         MeetingId,
       </if>
-      <if test="meetingname != null">
+      <if test="meetingName != null">
         MeetingName,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="meetingid != null">
-        #{meetingid,jdbcType=INTEGER},
+      <if test="meetingId != null">
+        #{meetingId,jdbcType=INTEGER},
       </if>
-      <if test="meetingname != null">
-        #{meetingname,jdbcType=VARCHAR},
+      <if test="meetingName != null">
+        #{meetingName,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -128,11 +128,11 @@
   <update id="updateByExampleSelective" parameterType="map">
     update meetinginfo
     <set>
-      <if test="row.meetingid != null">
-        MeetingId = #{row.meetingid,jdbcType=INTEGER},
+      <if test="row.meetingId != null">
+        MeetingId = #{row.meetingId,jdbcType=INTEGER},
       </if>
-      <if test="row.meetingname != null">
-        MeetingName = #{row.meetingname,jdbcType=VARCHAR},
+      <if test="row.meetingName != null">
+        MeetingName = #{row.meetingName,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="example != null">
@@ -141,8 +141,8 @@
   </update>
   <update id="updateByExample" parameterType="map">
     update meetinginfo
-    set MeetingId = #{row.meetingid,jdbcType=INTEGER},
-      MeetingName = #{row.meetingname,jdbcType=VARCHAR}
+    set MeetingId = #{row.meetingId,jdbcType=INTEGER},
+      MeetingName = #{row.meetingName,jdbcType=VARCHAR}
     <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -150,15 +150,15 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.rea.myoffice.model.Meetinginfo">
     update meetinginfo
     <set>
-      <if test="meetingname != null">
-        MeetingName = #{meetingname,jdbcType=VARCHAR},
+      <if test="meetingName != null">
+        MeetingName = #{meetingName,jdbcType=VARCHAR},
       </if>
     </set>
-    where MeetingId = #{meetingid,jdbcType=INTEGER}
+    where MeetingId = #{meetingId,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.rea.myoffice.model.Meetinginfo">
     update meetinginfo
-    set MeetingName = #{meetingname,jdbcType=VARCHAR}
-    where MeetingId = #{meetingid,jdbcType=INTEGER}
+    set MeetingName = #{meetingName,jdbcType=VARCHAR}
+    where MeetingId = #{meetingId,jdbcType=INTEGER}
   </update>
 </mapper>

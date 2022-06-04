@@ -105,323 +105,323 @@ public class ManualsignExample {
             criteria.add(new Criterion(condition, value1, value2));
         }
 
-        public Criteria andSignidIsNull() {
+        public Criteria andSignIdIsNull() {
             addCriterion("SignId is null");
             return (Criteria) this;
         }
 
-        public Criteria andSignidIsNotNull() {
+        public Criteria andSignIdIsNotNull() {
             addCriterion("SignId is not null");
             return (Criteria) this;
         }
 
-        public Criteria andSignidEqualTo(Integer value) {
-            addCriterion("SignId =", value, "signid");
+        public Criteria andSignIdEqualTo(Integer value) {
+            addCriterion("SignId =", value, "signId");
             return (Criteria) this;
         }
 
-        public Criteria andSignidNotEqualTo(Integer value) {
-            addCriterion("SignId <>", value, "signid");
+        public Criteria andSignIdNotEqualTo(Integer value) {
+            addCriterion("SignId <>", value, "signId");
             return (Criteria) this;
         }
 
-        public Criteria andSignidGreaterThan(Integer value) {
-            addCriterion("SignId >", value, "signid");
+        public Criteria andSignIdGreaterThan(Integer value) {
+            addCriterion("SignId >", value, "signId");
             return (Criteria) this;
         }
 
-        public Criteria andSignidGreaterThanOrEqualTo(Integer value) {
-            addCriterion("SignId >=", value, "signid");
+        public Criteria andSignIdGreaterThanOrEqualTo(Integer value) {
+            addCriterion("SignId >=", value, "signId");
             return (Criteria) this;
         }
 
-        public Criteria andSignidLessThan(Integer value) {
-            addCriterion("SignId <", value, "signid");
+        public Criteria andSignIdLessThan(Integer value) {
+            addCriterion("SignId <", value, "signId");
             return (Criteria) this;
         }
 
-        public Criteria andSignidLessThanOrEqualTo(Integer value) {
-            addCriterion("SignId <=", value, "signid");
+        public Criteria andSignIdLessThanOrEqualTo(Integer value) {
+            addCriterion("SignId <=", value, "signId");
             return (Criteria) this;
         }
 
-        public Criteria andSignidIn(List<Integer> values) {
-            addCriterion("SignId in", values, "signid");
+        public Criteria andSignIdIn(List<Integer> values) {
+            addCriterion("SignId in", values, "signId");
             return (Criteria) this;
         }
 
-        public Criteria andSignidNotIn(List<Integer> values) {
-            addCriterion("SignId not in", values, "signid");
+        public Criteria andSignIdNotIn(List<Integer> values) {
+            addCriterion("SignId not in", values, "signId");
             return (Criteria) this;
         }
 
-        public Criteria andSignidBetween(Integer value1, Integer value2) {
-            addCriterion("SignId between", value1, value2, "signid");
+        public Criteria andSignIdBetween(Integer value1, Integer value2) {
+            addCriterion("SignId between", value1, value2, "signId");
             return (Criteria) this;
         }
 
-        public Criteria andSignidNotBetween(Integer value1, Integer value2) {
-            addCriterion("SignId not between", value1, value2, "signid");
+        public Criteria andSignIdNotBetween(Integer value1, Integer value2) {
+            addCriterion("SignId not between", value1, value2, "signId");
             return (Criteria) this;
         }
 
-        public Criteria andUseridIsNull() {
+        public Criteria andUserIdIsNull() {
             addCriterion("UserId is null");
             return (Criteria) this;
         }
 
-        public Criteria andUseridIsNotNull() {
+        public Criteria andUserIdIsNotNull() {
             addCriterion("UserId is not null");
             return (Criteria) this;
         }
 
-        public Criteria andUseridEqualTo(String value) {
-            addCriterion("UserId =", value, "userid");
+        public Criteria andUserIdEqualTo(String value) {
+            addCriterion("UserId =", value, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andUseridNotEqualTo(String value) {
-            addCriterion("UserId <>", value, "userid");
+        public Criteria andUserIdNotEqualTo(String value) {
+            addCriterion("UserId <>", value, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andUseridGreaterThan(String value) {
-            addCriterion("UserId >", value, "userid");
+        public Criteria andUserIdGreaterThan(String value) {
+            addCriterion("UserId >", value, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andUseridGreaterThanOrEqualTo(String value) {
-            addCriterion("UserId >=", value, "userid");
+        public Criteria andUserIdGreaterThanOrEqualTo(String value) {
+            addCriterion("UserId >=", value, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andUseridLessThan(String value) {
-            addCriterion("UserId <", value, "userid");
+        public Criteria andUserIdLessThan(String value) {
+            addCriterion("UserId <", value, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andUseridLessThanOrEqualTo(String value) {
-            addCriterion("UserId <=", value, "userid");
+        public Criteria andUserIdLessThanOrEqualTo(String value) {
+            addCriterion("UserId <=", value, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andUseridLike(String value) {
-            addCriterion("UserId like", value, "userid");
+        public Criteria andUserIdLike(String value) {
+            addCriterion("UserId like", value, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andUseridNotLike(String value) {
-            addCriterion("UserId not like", value, "userid");
+        public Criteria andUserIdNotLike(String value) {
+            addCriterion("UserId not like", value, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andUseridIn(List<String> values) {
-            addCriterion("UserId in", values, "userid");
+        public Criteria andUserIdIn(List<String> values) {
+            addCriterion("UserId in", values, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andUseridNotIn(List<String> values) {
-            addCriterion("UserId not in", values, "userid");
+        public Criteria andUserIdNotIn(List<String> values) {
+            addCriterion("UserId not in", values, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andUseridBetween(String value1, String value2) {
-            addCriterion("UserId between", value1, value2, "userid");
+        public Criteria andUserIdBetween(String value1, String value2) {
+            addCriterion("UserId between", value1, value2, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andUseridNotBetween(String value1, String value2) {
-            addCriterion("UserId not between", value1, value2, "userid");
+        public Criteria andUserIdNotBetween(String value1, String value2) {
+            addCriterion("UserId not between", value1, value2, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andSigntimeIsNull() {
+        public Criteria andSignTimeIsNull() {
             addCriterion("SignTime is null");
             return (Criteria) this;
         }
 
-        public Criteria andSigntimeIsNotNull() {
+        public Criteria andSignTimeIsNotNull() {
             addCriterion("SignTime is not null");
             return (Criteria) this;
         }
 
-        public Criteria andSigntimeEqualTo(Date value) {
-            addCriterion("SignTime =", value, "signtime");
+        public Criteria andSignTimeEqualTo(Date value) {
+            addCriterion("SignTime =", value, "signTime");
             return (Criteria) this;
         }
 
-        public Criteria andSigntimeNotEqualTo(Date value) {
-            addCriterion("SignTime <>", value, "signtime");
+        public Criteria andSignTimeNotEqualTo(Date value) {
+            addCriterion("SignTime <>", value, "signTime");
             return (Criteria) this;
         }
 
-        public Criteria andSigntimeGreaterThan(Date value) {
-            addCriterion("SignTime >", value, "signtime");
+        public Criteria andSignTimeGreaterThan(Date value) {
+            addCriterion("SignTime >", value, "signTime");
             return (Criteria) this;
         }
 
-        public Criteria andSigntimeGreaterThanOrEqualTo(Date value) {
-            addCriterion("SignTime >=", value, "signtime");
+        public Criteria andSignTimeGreaterThanOrEqualTo(Date value) {
+            addCriterion("SignTime >=", value, "signTime");
             return (Criteria) this;
         }
 
-        public Criteria andSigntimeLessThan(Date value) {
-            addCriterion("SignTime <", value, "signtime");
+        public Criteria andSignTimeLessThan(Date value) {
+            addCriterion("SignTime <", value, "signTime");
             return (Criteria) this;
         }
 
-        public Criteria andSigntimeLessThanOrEqualTo(Date value) {
-            addCriterion("SignTime <=", value, "signtime");
+        public Criteria andSignTimeLessThanOrEqualTo(Date value) {
+            addCriterion("SignTime <=", value, "signTime");
             return (Criteria) this;
         }
 
-        public Criteria andSigntimeIn(List<Date> values) {
-            addCriterion("SignTime in", values, "signtime");
+        public Criteria andSignTimeIn(List<Date> values) {
+            addCriterion("SignTime in", values, "signTime");
             return (Criteria) this;
         }
 
-        public Criteria andSigntimeNotIn(List<Date> values) {
-            addCriterion("SignTime not in", values, "signtime");
+        public Criteria andSignTimeNotIn(List<Date> values) {
+            addCriterion("SignTime not in", values, "signTime");
             return (Criteria) this;
         }
 
-        public Criteria andSigntimeBetween(Date value1, Date value2) {
-            addCriterion("SignTime between", value1, value2, "signtime");
+        public Criteria andSignTimeBetween(Date value1, Date value2) {
+            addCriterion("SignTime between", value1, value2, "signTime");
             return (Criteria) this;
         }
 
-        public Criteria andSigntimeNotBetween(Date value1, Date value2) {
-            addCriterion("SignTime not between", value1, value2, "signtime");
+        public Criteria andSignTimeNotBetween(Date value1, Date value2) {
+            addCriterion("SignTime not between", value1, value2, "signTime");
             return (Criteria) this;
         }
 
-        public Criteria andSigndescIsNull() {
+        public Criteria andSignDescIsNull() {
             addCriterion("SignDesc is null");
             return (Criteria) this;
         }
 
-        public Criteria andSigndescIsNotNull() {
+        public Criteria andSignDescIsNotNull() {
             addCriterion("SignDesc is not null");
             return (Criteria) this;
         }
 
-        public Criteria andSigndescEqualTo(String value) {
-            addCriterion("SignDesc =", value, "signdesc");
+        public Criteria andSignDescEqualTo(String value) {
+            addCriterion("SignDesc =", value, "signDesc");
             return (Criteria) this;
         }
 
-        public Criteria andSigndescNotEqualTo(String value) {
-            addCriterion("SignDesc <>", value, "signdesc");
+        public Criteria andSignDescNotEqualTo(String value) {
+            addCriterion("SignDesc <>", value, "signDesc");
             return (Criteria) this;
         }
 
-        public Criteria andSigndescGreaterThan(String value) {
-            addCriterion("SignDesc >", value, "signdesc");
+        public Criteria andSignDescGreaterThan(String value) {
+            addCriterion("SignDesc >", value, "signDesc");
             return (Criteria) this;
         }
 
-        public Criteria andSigndescGreaterThanOrEqualTo(String value) {
-            addCriterion("SignDesc >=", value, "signdesc");
+        public Criteria andSignDescGreaterThanOrEqualTo(String value) {
+            addCriterion("SignDesc >=", value, "signDesc");
             return (Criteria) this;
         }
 
-        public Criteria andSigndescLessThan(String value) {
-            addCriterion("SignDesc <", value, "signdesc");
+        public Criteria andSignDescLessThan(String value) {
+            addCriterion("SignDesc <", value, "signDesc");
             return (Criteria) this;
         }
 
-        public Criteria andSigndescLessThanOrEqualTo(String value) {
-            addCriterion("SignDesc <=", value, "signdesc");
+        public Criteria andSignDescLessThanOrEqualTo(String value) {
+            addCriterion("SignDesc <=", value, "signDesc");
             return (Criteria) this;
         }
 
-        public Criteria andSigndescLike(String value) {
-            addCriterion("SignDesc like", value, "signdesc");
+        public Criteria andSignDescLike(String value) {
+            addCriterion("SignDesc like", value, "signDesc");
             return (Criteria) this;
         }
 
-        public Criteria andSigndescNotLike(String value) {
-            addCriterion("SignDesc not like", value, "signdesc");
+        public Criteria andSignDescNotLike(String value) {
+            addCriterion("SignDesc not like", value, "signDesc");
             return (Criteria) this;
         }
 
-        public Criteria andSigndescIn(List<String> values) {
-            addCriterion("SignDesc in", values, "signdesc");
+        public Criteria andSignDescIn(List<String> values) {
+            addCriterion("SignDesc in", values, "signDesc");
             return (Criteria) this;
         }
 
-        public Criteria andSigndescNotIn(List<String> values) {
-            addCriterion("SignDesc not in", values, "signdesc");
+        public Criteria andSignDescNotIn(List<String> values) {
+            addCriterion("SignDesc not in", values, "signDesc");
             return (Criteria) this;
         }
 
-        public Criteria andSigndescBetween(String value1, String value2) {
-            addCriterion("SignDesc between", value1, value2, "signdesc");
+        public Criteria andSignDescBetween(String value1, String value2) {
+            addCriterion("SignDesc between", value1, value2, "signDesc");
             return (Criteria) this;
         }
 
-        public Criteria andSigndescNotBetween(String value1, String value2) {
-            addCriterion("SignDesc not between", value1, value2, "signdesc");
+        public Criteria andSignDescNotBetween(String value1, String value2) {
+            addCriterion("SignDesc not between", value1, value2, "signDesc");
             return (Criteria) this;
         }
 
-        public Criteria andSigntagIsNull() {
+        public Criteria andSignTagIsNull() {
             addCriterion("SignTag is null");
             return (Criteria) this;
         }
 
-        public Criteria andSigntagIsNotNull() {
+        public Criteria andSignTagIsNotNull() {
             addCriterion("SignTag is not null");
             return (Criteria) this;
         }
 
-        public Criteria andSigntagEqualTo(Integer value) {
-            addCriterion("SignTag =", value, "signtag");
+        public Criteria andSignTagEqualTo(Integer value) {
+            addCriterion("SignTag =", value, "signTag");
             return (Criteria) this;
         }
 
-        public Criteria andSigntagNotEqualTo(Integer value) {
-            addCriterion("SignTag <>", value, "signtag");
+        public Criteria andSignTagNotEqualTo(Integer value) {
+            addCriterion("SignTag <>", value, "signTag");
             return (Criteria) this;
         }
 
-        public Criteria andSigntagGreaterThan(Integer value) {
-            addCriterion("SignTag >", value, "signtag");
+        public Criteria andSignTagGreaterThan(Integer value) {
+            addCriterion("SignTag >", value, "signTag");
             return (Criteria) this;
         }
 
-        public Criteria andSigntagGreaterThanOrEqualTo(Integer value) {
-            addCriterion("SignTag >=", value, "signtag");
+        public Criteria andSignTagGreaterThanOrEqualTo(Integer value) {
+            addCriterion("SignTag >=", value, "signTag");
             return (Criteria) this;
         }
 
-        public Criteria andSigntagLessThan(Integer value) {
-            addCriterion("SignTag <", value, "signtag");
+        public Criteria andSignTagLessThan(Integer value) {
+            addCriterion("SignTag <", value, "signTag");
             return (Criteria) this;
         }
 
-        public Criteria andSigntagLessThanOrEqualTo(Integer value) {
-            addCriterion("SignTag <=", value, "signtag");
+        public Criteria andSignTagLessThanOrEqualTo(Integer value) {
+            addCriterion("SignTag <=", value, "signTag");
             return (Criteria) this;
         }
 
-        public Criteria andSigntagIn(List<Integer> values) {
-            addCriterion("SignTag in", values, "signtag");
+        public Criteria andSignTagIn(List<Integer> values) {
+            addCriterion("SignTag in", values, "signTag");
             return (Criteria) this;
         }
 
-        public Criteria andSigntagNotIn(List<Integer> values) {
-            addCriterion("SignTag not in", values, "signtag");
+        public Criteria andSignTagNotIn(List<Integer> values) {
+            addCriterion("SignTag not in", values, "signTag");
             return (Criteria) this;
         }
 
-        public Criteria andSigntagBetween(Integer value1, Integer value2) {
-            addCriterion("SignTag between", value1, value2, "signtag");
+        public Criteria andSignTagBetween(Integer value1, Integer value2) {
+            addCriterion("SignTag between", value1, value2, "signTag");
             return (Criteria) this;
         }
 
-        public Criteria andSigntagNotBetween(Integer value1, Integer value2) {
-            addCriterion("SignTag not between", value1, value2, "signtag");
+        public Criteria andSignTagNotBetween(Integer value1, Integer value2) {
+            addCriterion("SignTag not between", value1, value2, "signTag");
             return (Criteria) this;
         }
     }

@@ -2,12 +2,12 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.rea.myoffice.mapper.OperatelogMapper">
   <resultMap id="BaseResultMap" type="com.rea.myoffice.model.Operatelog">
-    <id column="OperateId" jdbcType="INTEGER" property="operateid" />
-    <result column="UserId" jdbcType="VARCHAR" property="userid" />
-    <result column="OperateName" jdbcType="VARCHAR" property="operatename" />
-    <result column="ObjectId" jdbcType="VARCHAR" property="objectid" />
-    <result column="OperateDesc" jdbcType="VARCHAR" property="operatedesc" />
-    <result column="OperateTime" jdbcType="TIMESTAMP" property="operatetime" />
+    <id column="OperateId" jdbcType="INTEGER" property="operateId" />
+    <result column="UserId" jdbcType="VARCHAR" property="userId" />
+    <result column="OperateName" jdbcType="VARCHAR" property="operateName" />
+    <result column="ObjectId" jdbcType="VARCHAR" property="objectId" />
+    <result column="OperateDesc" jdbcType="VARCHAR" property="operateDesc" />
+    <result column="OperateTime" jdbcType="TIMESTAMP" property="operateTime" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -88,11 +88,11 @@
     select 
     <include refid="Base_Column_List" />
     from operatelog
-    where OperateId = #{operateid,jdbcType=INTEGER}
+    where OperateId = #{operateId,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from operatelog
-    where OperateId = #{operateid,jdbcType=INTEGER}
+    where OperateId = #{operateId,jdbcType=INTEGER}
   </delete>
   <delete id="deleteByExample" parameterType="com.rea.myoffice.model.OperatelogExample">
     delete from operatelog
@@ -104,50 +104,50 @@
     insert into operatelog (OperateId, UserId, OperateName, 
       ObjectId, OperateDesc, OperateTime
       )
-    values (#{operateid,jdbcType=INTEGER}, #{userid,jdbcType=VARCHAR}, #{operatename,jdbcType=VARCHAR}, 
-      #{objectid,jdbcType=VARCHAR}, #{operatedesc,jdbcType=VARCHAR}, #{operatetime,jdbcType=TIMESTAMP}
+    values (#{operateId,jdbcType=INTEGER}, #{userId,jdbcType=VARCHAR}, #{operateName,jdbcType=VARCHAR}, 
+      #{objectId,jdbcType=VARCHAR}, #{operateDesc,jdbcType=VARCHAR}, #{operateTime,jdbcType=TIMESTAMP}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.rea.myoffice.model.Operatelog">
     insert into operatelog
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="operateid != null">
+      <if test="operateId != null">
         OperateId,
       </if>
-      <if test="userid != null">
+      <if test="userId != null">
         UserId,
       </if>
-      <if test="operatename != null">
+      <if test="operateName != null">
         OperateName,
       </if>
-      <if test="objectid != null">
+      <if test="objectId != null">
         ObjectId,
       </if>
-      <if test="operatedesc != null">
+      <if test="operateDesc != null">
         OperateDesc,
       </if>
-      <if test="operatetime != null">
+      <if test="operateTime != null">
         OperateTime,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="operateid != null">
-        #{operateid,jdbcType=INTEGER},
+      <if test="operateId != null">
+        #{operateId,jdbcType=INTEGER},
       </if>
-      <if test="userid != null">
-        #{userid,jdbcType=VARCHAR},
+      <if test="userId != null">
+        #{userId,jdbcType=VARCHAR},
       </if>
-      <if test="operatename != null">
-        #{operatename,jdbcType=VARCHAR},
+      <if test="operateName != null">
+        #{operateName,jdbcType=VARCHAR},
       </if>
-      <if test="objectid != null">
-        #{objectid,jdbcType=VARCHAR},
+      <if test="objectId != null">
+        #{objectId,jdbcType=VARCHAR},
       </if>
-      <if test="operatedesc != null">
-        #{operatedesc,jdbcType=VARCHAR},
+      <if test="operateDesc != null">
+        #{operateDesc,jdbcType=VARCHAR},
       </if>
-      <if test="operatetime != null">
-        #{operatetime,jdbcType=TIMESTAMP},
+      <if test="operateTime != null">
+        #{operateTime,jdbcType=TIMESTAMP},
       </if>
     </trim>
   </insert>
@@ -160,23 +160,23 @@
   <update id="updateByExampleSelective" parameterType="map">
     update operatelog
     <set>
-      <if test="row.operateid != null">
-        OperateId = #{row.operateid,jdbcType=INTEGER},
+      <if test="row.operateId != null">
+        OperateId = #{row.operateId,jdbcType=INTEGER},
       </if>
-      <if test="row.userid != null">
-        UserId = #{row.userid,jdbcType=VARCHAR},
+      <if test="row.userId != null">
+        UserId = #{row.userId,jdbcType=VARCHAR},
       </if>
-      <if test="row.operatename != null">
-        OperateName = #{row.operatename,jdbcType=VARCHAR},
+      <if test="row.operateName != null">
+        OperateName = #{row.operateName,jdbcType=VARCHAR},
       </if>
-      <if test="row.objectid != null">
-        ObjectId = #{row.objectid,jdbcType=VARCHAR},
+      <if test="row.objectId != null">
+        ObjectId = #{row.objectId,jdbcType=VARCHAR},
       </if>
-      <if test="row.operatedesc != null">
-        OperateDesc = #{row.operatedesc,jdbcType=VARCHAR},
+      <if test="row.operateDesc != null">
+        OperateDesc = #{row.operateDesc,jdbcType=VARCHAR},
       </if>
-      <if test="row.operatetime != null">
-        OperateTime = #{row.operatetime,jdbcType=TIMESTAMP},
+      <if test="row.operateTime != null">
+        OperateTime = #{row.operateTime,jdbcType=TIMESTAMP},
       </if>
     </set>
     <if test="example != null">
@@ -185,12 +185,12 @@
   </update>
   <update id="updateByExample" parameterType="map">
     update operatelog
-    set OperateId = #{row.operateid,jdbcType=INTEGER},
-      UserId = #{row.userid,jdbcType=VARCHAR},
-      OperateName = #{row.operatename,jdbcType=VARCHAR},
-      ObjectId = #{row.objectid,jdbcType=VARCHAR},
-      OperateDesc = #{row.operatedesc,jdbcType=VARCHAR},
-      OperateTime = #{row.operatetime,jdbcType=TIMESTAMP}
+    set OperateId = #{row.operateId,jdbcType=INTEGER},
+      UserId = #{row.userId,jdbcType=VARCHAR},
+      OperateName = #{row.operateName,jdbcType=VARCHAR},
+      ObjectId = #{row.objectId,jdbcType=VARCHAR},
+      OperateDesc = #{row.operateDesc,jdbcType=VARCHAR},
+      OperateTime = #{row.operateTime,jdbcType=TIMESTAMP}
     <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -198,31 +198,31 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.rea.myoffice.model.Operatelog">
     update operatelog
     <set>
-      <if test="userid != null">
-        UserId = #{userid,jdbcType=VARCHAR},
+      <if test="userId != null">
+        UserId = #{userId,jdbcType=VARCHAR},
       </if>
-      <if test="operatename != null">
-        OperateName = #{operatename,jdbcType=VARCHAR},
+      <if test="operateName != null">
+        OperateName = #{operateName,jdbcType=VARCHAR},
       </if>
-      <if test="objectid != null">
-        ObjectId = #{objectid,jdbcType=VARCHAR},
+      <if test="objectId != null">
+        ObjectId = #{objectId,jdbcType=VARCHAR},
       </if>
-      <if test="operatedesc != null">
-        OperateDesc = #{operatedesc,jdbcType=VARCHAR},
+      <if test="operateDesc != null">
+        OperateDesc = #{operateDesc,jdbcType=VARCHAR},
       </if>
-      <if test="operatetime != null">
-        OperateTime = #{operatetime,jdbcType=TIMESTAMP},
+      <if test="operateTime != null">
+        OperateTime = #{operateTime,jdbcType=TIMESTAMP},
       </if>
     </set>
-    where OperateId = #{operateid,jdbcType=INTEGER}
+    where OperateId = #{operateId,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.rea.myoffice.model.Operatelog">
     update operatelog
-    set UserId = #{userid,jdbcType=VARCHAR},
-      OperateName = #{operatename,jdbcType=VARCHAR},
-      ObjectId = #{objectid,jdbcType=VARCHAR},
-      OperateDesc = #{operatedesc,jdbcType=VARCHAR},
-      OperateTime = #{operatetime,jdbcType=TIMESTAMP}
-    where OperateId = #{operateid,jdbcType=INTEGER}
+    set UserId = #{userId,jdbcType=VARCHAR},
+      OperateName = #{operateName,jdbcType=VARCHAR},
+      ObjectId = #{objectId,jdbcType=VARCHAR},
+      OperateDesc = #{operateDesc,jdbcType=VARCHAR},
+      OperateTime = #{operateTime,jdbcType=TIMESTAMP}
+    where OperateId = #{operateId,jdbcType=INTEGER}
   </update>
 </mapper>

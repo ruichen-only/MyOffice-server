@@ -2,8 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.rea.myoffice.mapper.UserstateMapper">
   <resultMap id="BaseResultMap" type="com.rea.myoffice.model.Userstate">
-    <id column="UserStateId" jdbcType="INTEGER" property="userstateid" />
-    <result column="UserStateName" jdbcType="VARCHAR" property="userstatename" />
+    <id column="UserStateId" jdbcType="INTEGER" property="userStateId" />
+    <result column="UserStateName" jdbcType="VARCHAR" property="userStateName" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -84,11 +84,11 @@
     select 
     <include refid="Base_Column_List" />
     from userstate
-    where UserStateId = #{userstateid,jdbcType=INTEGER}
+    where UserStateId = #{userStateId,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from userstate
-    where UserStateId = #{userstateid,jdbcType=INTEGER}
+    where UserStateId = #{userStateId,jdbcType=INTEGER}
   </delete>
   <delete id="deleteByExample" parameterType="com.rea.myoffice.model.UserstateExample">
     delete from userstate
@@ -98,24 +98,24 @@
   </delete>
   <insert id="insert" parameterType="com.rea.myoffice.model.Userstate">
     insert into userstate (UserStateId, UserStateName)
-    values (#{userstateid,jdbcType=INTEGER}, #{userstatename,jdbcType=VARCHAR})
+    values (#{userStateId,jdbcType=INTEGER}, #{userStateName,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.rea.myoffice.model.Userstate">
     insert into userstate
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="userstateid != null">
+      <if test="userStateId != null">
         UserStateId,
       </if>
-      <if test="userstatename != null">
+      <if test="userStateName != null">
         UserStateName,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="userstateid != null">
-        #{userstateid,jdbcType=INTEGER},
+      <if test="userStateId != null">
+        #{userStateId,jdbcType=INTEGER},
       </if>
-      <if test="userstatename != null">
-        #{userstatename,jdbcType=VARCHAR},
+      <if test="userStateName != null">
+        #{userStateName,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -128,11 +128,11 @@
   <update id="updateByExampleSelective" parameterType="map">
     update userstate
     <set>
-      <if test="row.userstateid != null">
-        UserStateId = #{row.userstateid,jdbcType=INTEGER},
+      <if test="row.userStateId != null">
+        UserStateId = #{row.userStateId,jdbcType=INTEGER},
       </if>
-      <if test="row.userstatename != null">
-        UserStateName = #{row.userstatename,jdbcType=VARCHAR},
+      <if test="row.userStateName != null">
+        UserStateName = #{row.userStateName,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="example != null">
@@ -141,8 +141,8 @@
   </update>
   <update id="updateByExample" parameterType="map">
     update userstate
-    set UserStateId = #{row.userstateid,jdbcType=INTEGER},
-      UserStateName = #{row.userstatename,jdbcType=VARCHAR}
+    set UserStateId = #{row.userStateId,jdbcType=INTEGER},
+      UserStateName = #{row.userStateName,jdbcType=VARCHAR}
     <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -150,15 +150,15 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.rea.myoffice.model.Userstate">
     update userstate
     <set>
-      <if test="userstatename != null">
-        UserStateName = #{userstatename,jdbcType=VARCHAR},
+      <if test="userStateName != null">
+        UserStateName = #{userStateName,jdbcType=VARCHAR},
       </if>
     </set>
-    where UserStateId = #{userstateid,jdbcType=INTEGER}
+    where UserStateId = #{userStateId,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.rea.myoffice.model.Userstate">
     update userstate
-    set UserStateName = #{userstatename,jdbcType=VARCHAR}
-    where UserStateId = #{userstateid,jdbcType=INTEGER}
+    set UserStateName = #{userStateName,jdbcType=VARCHAR}
+    where UserStateId = #{userStateId,jdbcType=INTEGER}
   </update>
 </mapper>

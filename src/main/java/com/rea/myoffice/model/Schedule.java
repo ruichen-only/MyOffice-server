@@ -6,7 +6,7 @@ import java.util.Date;
 
 public class Schedule implements Serializable {
     @ApiModelProperty(value = "日程Id")
-    private Integer scheduleid;
+    private Integer scheduleId;
 
     @ApiModelProperty(value = "日程标题")
     private String title;
@@ -15,34 +15,34 @@ public class Schedule implements Serializable {
     private String address;
 
     @ApiModelProperty(value = "会议类型")
-    private Integer meetingid;
+    private Integer meetingId;
 
     @ApiModelProperty(value = "日程开始时间")
-    private Date begintime;
+    private Date beginTime;
 
     @ApiModelProperty(value = "日程结束时间")
-    private Date endtime;
+    private Date endTime;
 
     @ApiModelProperty(value = "日程内容")
-    private String schcontent;
+    private String schContent;
 
     @ApiModelProperty(value = "创建者")
-    private String createuser;
+    private String createUser;
 
     @ApiModelProperty(value = "创建时间")
-    private Date createtime;
+    private Date createTime;
 
     @ApiModelProperty(value = "是否私有")
-    private Integer ifprivate;
+    private Integer ifPrivate;
 
     private static final long serialVersionUID = 1L;
 
-    public Integer getScheduleid() {
-        return scheduleid;
+    public Integer getScheduleId() {
+        return scheduleId;
     }
 
-    public void setScheduleid(Integer scheduleid) {
-        this.scheduleid = scheduleid;
+    public void setScheduleId(Integer scheduleId) {
+        this.scheduleId = scheduleId;
     }
 
     public String getTitle() {
@@ -61,60 +61,60 @@ public class Schedule implements Serializable {
         this.address = address;
     }
 
-    public Integer getMeetingid() {
-        return meetingid;
+    public Integer getMeetingId() {
+        return meetingId;
     }
 
-    public void setMeetingid(Integer meetingid) {
-        this.meetingid = meetingid;
+    public void setMeetingId(Integer meetingId) {
+        this.meetingId = meetingId;
     }
 
-    public Date getBegintime() {
-        return begintime;
+    public Date getBeginTime() {
+        return beginTime;
     }
 
-    public void setBegintime(Date begintime) {
-        this.begintime = begintime;
+    public void setBeginTime(Date beginTime) {
+        this.beginTime = beginTime;
     }
 
-    public Date getEndtime() {
-        return endtime;
+    public Date getEndTime() {
+        return endTime;
     }
 
-    public void setEndtime(Date endtime) {
-        this.endtime = endtime;
+    public void setEndTime(Date endTime) {
+        this.endTime = endTime;
     }
 
-    public String getSchcontent() {
-        return schcontent;
+    public String getSchContent() {
+        return schContent;
     }
 
-    public void setSchcontent(String schcontent) {
-        this.schcontent = schcontent;
+    public void setSchContent(String schContent) {
+        this.schContent = schContent;
     }
 
-    public String getCreateuser() {
-        return createuser;
+    public String getCreateUser() {
+        return createUser;
     }
 
-    public void setCreateuser(String createuser) {
-        this.createuser = createuser;
+    public void setCreateUser(String createUser) {
+        this.createUser = createUser;
     }
 
-    public Date getCreatetime() {
-        return createtime;
+    public Date getCreateTime() {
+        return createTime;
     }
 
-    public void setCreatetime(Date createtime) {
-        this.createtime = createtime;
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 
-    public Integer getIfprivate() {
-        return ifprivate;
+    public Integer getIfPrivate() {
+        return ifPrivate;
     }
 
-    public void setIfprivate(Integer ifprivate) {
-        this.ifprivate = ifprivate;
+    public void setIfPrivate(Integer ifPrivate) {
+        this.ifPrivate = ifPrivate;
     }
 
     @Override
@@ -123,16 +123,16 @@ public class Schedule implements Serializable {
         sb.append(getClass().getSimpleName());
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
-        sb.append(", scheduleid=").append(scheduleid);
+        sb.append(", scheduleId=").append(scheduleId);
         sb.append(", title=").append(title);
         sb.append(", address=").append(address);
-        sb.append(", meetingid=").append(meetingid);
-        sb.append(", begintime=").append(begintime);
-        sb.append(", endtime=").append(endtime);
-        sb.append(", schcontent=").append(schcontent);
-        sb.append(", createuser=").append(createuser);
-        sb.append(", createtime=").append(createtime);
-        sb.append(", ifprivate=").append(ifprivate);
+        sb.append(", meetingId=").append(meetingId);
+        sb.append(", beginTime=").append(beginTime);
+        sb.append(", endTime=").append(endTime);
+        sb.append(", schContent=").append(schContent);
+        sb.append(", createUser=").append(createUser);
+        sb.append(", createTime=").append(createTime);
+        sb.append(", ifPrivate=").append(ifPrivate);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

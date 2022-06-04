@@ -5,38 +5,38 @@ import java.io.Serializable;
 
 public class Messagetype implements Serializable {
     @ApiModelProperty(value = "消息类型Id")
-    private Integer messagetypeid;
+    private Integer messageTypeId;
 
     @ApiModelProperty(value = "消息类型名称")
-    private String messagetypename;
+    private String messageTypeName;
 
     @ApiModelProperty(value = "消息类型描述")
-    private String messagedesc;
+    private String messageDesc;
 
     private static final long serialVersionUID = 1L;
 
-    public Integer getMessagetypeid() {
-        return messagetypeid;
+    public Integer getMessageTypeId() {
+        return messageTypeId;
     }
 
-    public void setMessagetypeid(Integer messagetypeid) {
-        this.messagetypeid = messagetypeid;
+    public void setMessageTypeId(Integer messageTypeId) {
+        this.messageTypeId = messageTypeId;
     }
 
-    public String getMessagetypename() {
-        return messagetypename;
+    public String getMessageTypeName() {
+        return messageTypeName;
     }
 
-    public void setMessagetypename(String messagetypename) {
-        this.messagetypename = messagetypename;
+    public void setMessageTypeName(String messageTypeName) {
+        this.messageTypeName = messageTypeName;
     }
 
-    public String getMessagedesc() {
-        return messagedesc;
+    public String getMessageDesc() {
+        return messageDesc;
     }
 
-    public void setMessagedesc(String messagedesc) {
-        this.messagedesc = messagedesc;
+    public void setMessageDesc(String messageDesc) {
+        this.messageDesc = messageDesc;
     }
 
     @Override
@@ -45,9 +45,9 @@ public class Messagetype implements Serializable {
         sb.append(getClass().getSimpleName());
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
-        sb.append(", messagetypeid=").append(messagetypeid);
-        sb.append(", messagetypename=").append(messagetypename);
-        sb.append(", messagedesc=").append(messagedesc);
+        sb.append(", messageTypeId=").append(messageTypeId);
+        sb.append(", messageTypeName=").append(messageTypeName);
+        sb.append(", messageDesc=").append(messageDesc);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

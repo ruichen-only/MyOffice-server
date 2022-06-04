@@ -10,7 +10,7 @@ public interface LoginlogMapper {
 
     int deleteByExample(LoginlogExample example);
 
-    int deleteByPrimaryKey(Integer loginid);
+    int deleteByPrimaryKey(Integer loginId);
 
     int insert(Loginlog row);
 
@@ -18,7 +18,7 @@ public interface LoginlogMapper {
 
     List<Loginlog> selectByExample(LoginlogExample example);
 
-    Loginlog selectByPrimaryKey(Integer loginid);
+    Loginlog selectByPrimaryKey(Integer loginId);
 
     int updateByExampleSelective(@Param("row") Loginlog row, @Param("example") LoginlogExample example);
 

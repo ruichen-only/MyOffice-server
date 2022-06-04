@@ -6,56 +6,56 @@ import java.util.Date;
 
 public class Fileinfo implements Serializable {
     @ApiModelProperty(value = "文件Id")
-    private Integer fileid;
+    private Integer fileId;
 
     @ApiModelProperty(value = "文件名称")
-    private String filename;
+    private String fileName;
 
     @ApiModelProperty(value = "文件类型")
-    private Integer filetype;
+    private Integer fileType;
 
     @ApiModelProperty(value = "备注")
     private String remark;
 
     @ApiModelProperty(value = "创建者")
-    private String fileowner;
+    private String fileOwner;
 
     @ApiModelProperty(value = "创建日期")
-    private Date createdate;
+    private Date createDate;
 
     @ApiModelProperty(value = "父节点Id")
-    private Integer parentid;
+    private Integer parentId;
 
     @ApiModelProperty(value = "文件路径")
-    private String filepath;
+    private String filePath;
 
     @ApiModelProperty(value = "是否已删除。1：已删除、2：未删除")
-    private Integer ifdelete;
+    private Integer ifDelete;
 
     private static final long serialVersionUID = 1L;
 
-    public Integer getFileid() {
-        return fileid;
+    public Integer getFileId() {
+        return fileId;
     }
 
-    public void setFileid(Integer fileid) {
-        this.fileid = fileid;
+    public void setFileId(Integer fileId) {
+        this.fileId = fileId;
     }
 
-    public String getFilename() {
-        return filename;
+    public String getFileName() {
+        return fileName;
     }
 
-    public void setFilename(String filename) {
-        this.filename = filename;
+    public void setFileName(String fileName) {
+        this.fileName = fileName;
     }
 
-    public Integer getFiletype() {
-        return filetype;
+    public Integer getFileType() {
+        return fileType;
     }
 
-    public void setFiletype(Integer filetype) {
-        this.filetype = filetype;
+    public void setFileType(Integer fileType) {
+        this.fileType = fileType;
     }
 
     public String getRemark() {
@@ -66,44 +66,44 @@ public class Fileinfo implements Serializable {
         this.remark = remark;
     }
 
-    public String getFileowner() {
-        return fileowner;
+    public String getFileOwner() {
+        return fileOwner;
     }
 
-    public void setFileowner(String fileowner) {
-        this.fileowner = fileowner;
+    public void setFileOwner(String fileOwner) {
+        this.fileOwner = fileOwner;
     }
 
-    public Date getCreatedate() {
-        return createdate;
+    public Date getCreateDate() {
+        return createDate;
     }
 
-    public void setCreatedate(Date createdate) {
-        this.createdate = createdate;
+    public void setCreateDate(Date createDate) {
+        this.createDate = createDate;
     }
 
-    public Integer getParentid() {
-        return parentid;
+    public Integer getParentId() {
+        return parentId;
     }
 
-    public void setParentid(Integer parentid) {
-        this.parentid = parentid;
+    public void setParentId(Integer parentId) {
+        this.parentId = parentId;
     }
 
-    public String getFilepath() {
-        return filepath;
+    public String getFilePath() {
+        return filePath;
     }
 
-    public void setFilepath(String filepath) {
-        this.filepath = filepath;
+    public void setFilePath(String filePath) {
+        this.filePath = filePath;
     }
 
-    public Integer getIfdelete() {
-        return ifdelete;
+    public Integer getIfDelete() {
+        return ifDelete;
     }
 
-    public void setIfdelete(Integer ifdelete) {
-        this.ifdelete = ifdelete;
+    public void setIfDelete(Integer ifDelete) {
+        this.ifDelete = ifDelete;
     }
 
     @Override
@@ -112,15 +112,15 @@ public class Fileinfo implements Serializable {
         sb.append(getClass().getSimpleName());
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
-        sb.append(", fileid=").append(fileid);
-        sb.append(", filename=").append(filename);
-        sb.append(", filetype=").append(filetype);
+        sb.append(", fileId=").append(fileId);
+        sb.append(", fileName=").append(fileName);
+        sb.append(", fileType=").append(fileType);
         sb.append(", remark=").append(remark);
-        sb.append(", fileowner=").append(fileowner);
-        sb.append(", createdate=").append(createdate);
-        sb.append(", parentid=").append(parentid);
-        sb.append(", filepath=").append(filepath);
-        sb.append(", ifdelete=").append(ifdelete);
+        sb.append(", fileOwner=").append(fileOwner);
+        sb.append(", createDate=").append(createDate);
+        sb.append(", parentId=").append(parentId);
+        sb.append(", filePath=").append(filePath);
+        sb.append(", ifDelete=").append(ifDelete);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

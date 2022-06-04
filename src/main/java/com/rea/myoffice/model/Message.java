@@ -6,7 +6,7 @@ import java.util.Date;
 
 public class Message implements Serializable {
     @ApiModelProperty(value = "消息Id")
-    private Integer messageid;
+    private Integer messageId;
 
     @ApiModelProperty(value = "消息标题")
     private String title;
@@ -18,28 +18,28 @@ public class Message implements Serializable {
     private Integer type;
 
     @ApiModelProperty(value = "开始有效时间")
-    private Date begintime;
+    private Date beginTime;
 
     @ApiModelProperty(value = "有效结束时间")
-    private Date endtime;
+    private Date endTime;
 
     @ApiModelProperty(value = "发送者")
-    private String fromuserid;
+    private String fromUserId;
 
     @ApiModelProperty(value = "是否已发布")
-    private Integer ifpublish;
+    private Integer ifPublish;
 
     @ApiModelProperty(value = "发送时间")
-    private Date recordtime;
+    private Date recordTime;
 
     private static final long serialVersionUID = 1L;
 
-    public Integer getMessageid() {
-        return messageid;
+    public Integer getMessageId() {
+        return messageId;
     }
 
-    public void setMessageid(Integer messageid) {
-        this.messageid = messageid;
+    public void setMessageId(Integer messageId) {
+        this.messageId = messageId;
     }
 
     public String getTitle() {
@@ -66,44 +66,44 @@ public class Message implements Serializable {
         this.type = type;
     }
 
-    public Date getBegintime() {
-        return begintime;
+    public Date getBeginTime() {
+        return beginTime;
     }
 
-    public void setBegintime(Date begintime) {
-        this.begintime = begintime;
+    public void setBeginTime(Date beginTime) {
+        this.beginTime = beginTime;
     }
 
-    public Date getEndtime() {
-        return endtime;
+    public Date getEndTime() {
+        return endTime;
     }
 
-    public void setEndtime(Date endtime) {
-        this.endtime = endtime;
+    public void setEndTime(Date endTime) {
+        this.endTime = endTime;
     }
 
-    public String getFromuserid() {
-        return fromuserid;
+    public String getFromUserId() {
+        return fromUserId;
     }
 
-    public void setFromuserid(String fromuserid) {
-        this.fromuserid = fromuserid;
+    public void setFromUserId(String fromUserId) {
+        this.fromUserId = fromUserId;
     }
 
-    public Integer getIfpublish() {
-        return ifpublish;
+    public Integer getIfPublish() {
+        return ifPublish;
     }
 
-    public void setIfpublish(Integer ifpublish) {
-        this.ifpublish = ifpublish;
+    public void setIfPublish(Integer ifPublish) {
+        this.ifPublish = ifPublish;
     }
 
-    public Date getRecordtime() {
-        return recordtime;
+    public Date getRecordTime() {
+        return recordTime;
     }
 
-    public void setRecordtime(Date recordtime) {
-        this.recordtime = recordtime;
+    public void setRecordTime(Date recordTime) {
+        this.recordTime = recordTime;
     }
 
     @Override
@@ -112,15 +112,15 @@ public class Message implements Serializable {
         sb.append(getClass().getSimpleName());
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
-        sb.append(", messageid=").append(messageid);
+        sb.append(", messageId=").append(messageId);
         sb.append(", title=").append(title);
         sb.append(", content=").append(content);
         sb.append(", type=").append(type);
-        sb.append(", begintime=").append(begintime);
-        sb.append(", endtime=").append(endtime);
-        sb.append(", fromuserid=").append(fromuserid);
-        sb.append(", ifpublish=").append(ifpublish);
-        sb.append(", recordtime=").append(recordtime);
+        sb.append(", beginTime=").append(beginTime);
+        sb.append(", endTime=").append(endTime);
+        sb.append(", fromUserId=").append(fromUserId);
+        sb.append(", ifPublish=").append(ifPublish);
+        sb.append(", recordTime=").append(recordTime);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

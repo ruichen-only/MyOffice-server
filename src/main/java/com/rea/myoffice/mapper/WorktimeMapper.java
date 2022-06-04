@@ -10,7 +10,7 @@ public interface WorktimeMapper {
 
     int deleteByExample(WorktimeExample example);
 
-    int deleteByPrimaryKey(Integer worktimeid);
+    int deleteByPrimaryKey(Integer workTimeId);
 
     int insert(Worktime row);
 
@@ -18,7 +18,7 @@ public interface WorktimeMapper {
 
     List<Worktime> selectByExample(WorktimeExample example);
 
-    Worktime selectByPrimaryKey(Integer worktimeid);
+    Worktime selectByPrimaryKey(Integer workTimeId);
 
     int updateByExampleSelective(@Param("row") Worktime row, @Param("example") WorktimeExample example);
 

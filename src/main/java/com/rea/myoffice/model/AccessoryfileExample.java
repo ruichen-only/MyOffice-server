@@ -105,443 +105,443 @@ public class AccessoryfileExample {
             criteria.add(new Criterion(condition, value1, value2));
         }
 
-        public Criteria andAccessoryidIsNull() {
+        public Criteria andAccessoryIdIsNull() {
             addCriterion("AccessoryId is null");
             return (Criteria) this;
         }
 
-        public Criteria andAccessoryidIsNotNull() {
+        public Criteria andAccessoryIdIsNotNull() {
             addCriterion("AccessoryId is not null");
             return (Criteria) this;
         }
 
-        public Criteria andAccessoryidEqualTo(Integer value) {
-            addCriterion("AccessoryId =", value, "accessoryid");
+        public Criteria andAccessoryIdEqualTo(Integer value) {
+            addCriterion("AccessoryId =", value, "accessoryId");
             return (Criteria) this;
         }
 
-        public Criteria andAccessoryidNotEqualTo(Integer value) {
-            addCriterion("AccessoryId <>", value, "accessoryid");
+        public Criteria andAccessoryIdNotEqualTo(Integer value) {
+            addCriterion("AccessoryId <>", value, "accessoryId");
             return (Criteria) this;
         }
 
-        public Criteria andAccessoryidGreaterThan(Integer value) {
-            addCriterion("AccessoryId >", value, "accessoryid");
+        public Criteria andAccessoryIdGreaterThan(Integer value) {
+            addCriterion("AccessoryId >", value, "accessoryId");
             return (Criteria) this;
         }
 
-        public Criteria andAccessoryidGreaterThanOrEqualTo(Integer value) {
-            addCriterion("AccessoryId >=", value, "accessoryid");
+        public Criteria andAccessoryIdGreaterThanOrEqualTo(Integer value) {
+            addCriterion("AccessoryId >=", value, "accessoryId");
             return (Criteria) this;
         }
 
-        public Criteria andAccessoryidLessThan(Integer value) {
-            addCriterion("AccessoryId <", value, "accessoryid");
+        public Criteria andAccessoryIdLessThan(Integer value) {
+            addCriterion("AccessoryId <", value, "accessoryId");
             return (Criteria) this;
         }
 
-        public Criteria andAccessoryidLessThanOrEqualTo(Integer value) {
-            addCriterion("AccessoryId <=", value, "accessoryid");
+        public Criteria andAccessoryIdLessThanOrEqualTo(Integer value) {
+            addCriterion("AccessoryId <=", value, "accessoryId");
             return (Criteria) this;
         }
 
-        public Criteria andAccessoryidIn(List<Integer> values) {
-            addCriterion("AccessoryId in", values, "accessoryid");
+        public Criteria andAccessoryIdIn(List<Integer> values) {
+            addCriterion("AccessoryId in", values, "accessoryId");
             return (Criteria) this;
         }
 
-        public Criteria andAccessoryidNotIn(List<Integer> values) {
-            addCriterion("AccessoryId not in", values, "accessoryid");
+        public Criteria andAccessoryIdNotIn(List<Integer> values) {
+            addCriterion("AccessoryId not in", values, "accessoryId");
             return (Criteria) this;
         }
 
-        public Criteria andAccessoryidBetween(Integer value1, Integer value2) {
-            addCriterion("AccessoryId between", value1, value2, "accessoryid");
+        public Criteria andAccessoryIdBetween(Integer value1, Integer value2) {
+            addCriterion("AccessoryId between", value1, value2, "accessoryId");
             return (Criteria) this;
         }
 
-        public Criteria andAccessoryidNotBetween(Integer value1, Integer value2) {
-            addCriterion("AccessoryId not between", value1, value2, "accessoryid");
+        public Criteria andAccessoryIdNotBetween(Integer value1, Integer value2) {
+            addCriterion("AccessoryId not between", value1, value2, "accessoryId");
             return (Criteria) this;
         }
 
-        public Criteria andFileidIsNull() {
+        public Criteria andFileIdIsNull() {
             addCriterion("FileId is null");
             return (Criteria) this;
         }
 
-        public Criteria andFileidIsNotNull() {
+        public Criteria andFileIdIsNotNull() {
             addCriterion("FileId is not null");
             return (Criteria) this;
         }
 
-        public Criteria andFileidEqualTo(Integer value) {
-            addCriterion("FileId =", value, "fileid");
+        public Criteria andFileIdEqualTo(Integer value) {
+            addCriterion("FileId =", value, "fileId");
             return (Criteria) this;
         }
 
-        public Criteria andFileidNotEqualTo(Integer value) {
-            addCriterion("FileId <>", value, "fileid");
+        public Criteria andFileIdNotEqualTo(Integer value) {
+            addCriterion("FileId <>", value, "fileId");
             return (Criteria) this;
         }
 
-        public Criteria andFileidGreaterThan(Integer value) {
-            addCriterion("FileId >", value, "fileid");
+        public Criteria andFileIdGreaterThan(Integer value) {
+            addCriterion("FileId >", value, "fileId");
             return (Criteria) this;
         }
 
-        public Criteria andFileidGreaterThanOrEqualTo(Integer value) {
-            addCriterion("FileId >=", value, "fileid");
+        public Criteria andFileIdGreaterThanOrEqualTo(Integer value) {
+            addCriterion("FileId >=", value, "fileId");
             return (Criteria) this;
         }
 
-        public Criteria andFileidLessThan(Integer value) {
-            addCriterion("FileId <", value, "fileid");
+        public Criteria andFileIdLessThan(Integer value) {
+            addCriterion("FileId <", value, "fileId");
             return (Criteria) this;
         }
 
-        public Criteria andFileidLessThanOrEqualTo(Integer value) {
-            addCriterion("FileId <=", value, "fileid");
+        public Criteria andFileIdLessThanOrEqualTo(Integer value) {
+            addCriterion("FileId <=", value, "fileId");
             return (Criteria) this;
         }
 
-        public Criteria andFileidIn(List<Integer> values) {
-            addCriterion("FileId in", values, "fileid");
+        public Criteria andFileIdIn(List<Integer> values) {
+            addCriterion("FileId in", values, "fileId");
             return (Criteria) this;
         }
 
-        public Criteria andFileidNotIn(List<Integer> values) {
-            addCriterion("FileId not in", values, "fileid");
+        public Criteria andFileIdNotIn(List<Integer> values) {
+            addCriterion("FileId not in", values, "fileId");
             return (Criteria) this;
         }
 
-        public Criteria andFileidBetween(Integer value1, Integer value2) {
-            addCriterion("FileId between", value1, value2, "fileid");
+        public Criteria andFileIdBetween(Integer value1, Integer value2) {
+            addCriterion("FileId between", value1, value2, "fileId");
             return (Criteria) this;
         }
 
-        public Criteria andFileidNotBetween(Integer value1, Integer value2) {
-            addCriterion("FileId not between", value1, value2, "fileid");
+        public Criteria andFileIdNotBetween(Integer value1, Integer value2) {
+            addCriterion("FileId not between", value1, value2, "fileId");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorynameIsNull() {
+        public Criteria andAccessoryNameIsNull() {
             addCriterion("AccessoryName is null");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorynameIsNotNull() {
+        public Criteria andAccessoryNameIsNotNull() {
             addCriterion("AccessoryName is not null");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorynameEqualTo(String value) {
-            addCriterion("AccessoryName =", value, "accessoryname");
+        public Criteria andAccessoryNameEqualTo(String value) {
+            addCriterion("AccessoryName =", value, "accessoryName");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorynameNotEqualTo(String value) {
-            addCriterion("AccessoryName <>", value, "accessoryname");
+        public Criteria andAccessoryNameNotEqualTo(String value) {
+            addCriterion("AccessoryName <>", value, "accessoryName");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorynameGreaterThan(String value) {
-            addCriterion("AccessoryName >", value, "accessoryname");
+        public Criteria andAccessoryNameGreaterThan(String value) {
+            addCriterion("AccessoryName >", value, "accessoryName");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorynameGreaterThanOrEqualTo(String value) {
-            addCriterion("AccessoryName >=", value, "accessoryname");
+        public Criteria andAccessoryNameGreaterThanOrEqualTo(String value) {
+            addCriterion("AccessoryName >=", value, "accessoryName");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorynameLessThan(String value) {
-            addCriterion("AccessoryName <", value, "accessoryname");
+        public Criteria andAccessoryNameLessThan(String value) {
+            addCriterion("AccessoryName <", value, "accessoryName");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorynameLessThanOrEqualTo(String value) {
-            addCriterion("AccessoryName <=", value, "accessoryname");
+        public Criteria andAccessoryNameLessThanOrEqualTo(String value) {
+            addCriterion("AccessoryName <=", value, "accessoryName");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorynameLike(String value) {
-            addCriterion("AccessoryName like", value, "accessoryname");
+        public Criteria andAccessoryNameLike(String value) {
+            addCriterion("AccessoryName like", value, "accessoryName");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorynameNotLike(String value) {
-            addCriterion("AccessoryName not like", value, "accessoryname");
+        public Criteria andAccessoryNameNotLike(String value) {
+            addCriterion("AccessoryName not like", value, "accessoryName");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorynameIn(List<String> values) {
-            addCriterion("AccessoryName in", values, "accessoryname");
+        public Criteria andAccessoryNameIn(List<String> values) {
+            addCriterion("AccessoryName in", values, "accessoryName");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorynameNotIn(List<String> values) {
-            addCriterion("AccessoryName not in", values, "accessoryname");
+        public Criteria andAccessoryNameNotIn(List<String> values) {
+            addCriterion("AccessoryName not in", values, "accessoryName");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorynameBetween(String value1, String value2) {
-            addCriterion("AccessoryName between", value1, value2, "accessoryname");
+        public Criteria andAccessoryNameBetween(String value1, String value2) {
+            addCriterion("AccessoryName between", value1, value2, "accessoryName");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorynameNotBetween(String value1, String value2) {
-            addCriterion("AccessoryName not between", value1, value2, "accessoryname");
+        public Criteria andAccessoryNameNotBetween(String value1, String value2) {
+            addCriterion("AccessoryName not between", value1, value2, "accessoryName");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorysizeIsNull() {
+        public Criteria andAccessorySizeIsNull() {
             addCriterion("AccessorySize is null");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorysizeIsNotNull() {
+        public Criteria andAccessorySizeIsNotNull() {
             addCriterion("AccessorySize is not null");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorysizeEqualTo(Integer value) {
-            addCriterion("AccessorySize =", value, "accessorysize");
+        public Criteria andAccessorySizeEqualTo(Integer value) {
+            addCriterion("AccessorySize =", value, "accessorySize");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorysizeNotEqualTo(Integer value) {
-            addCriterion("AccessorySize <>", value, "accessorysize");
+        public Criteria andAccessorySizeNotEqualTo(Integer value) {
+            addCriterion("AccessorySize <>", value, "accessorySize");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorysizeGreaterThan(Integer value) {
-            addCriterion("AccessorySize >", value, "accessorysize");
+        public Criteria andAccessorySizeGreaterThan(Integer value) {
+            addCriterion("AccessorySize >", value, "accessorySize");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorysizeGreaterThanOrEqualTo(Integer value) {
-            addCriterion("AccessorySize >=", value, "accessorysize");
+        public Criteria andAccessorySizeGreaterThanOrEqualTo(Integer value) {
+            addCriterion("AccessorySize >=", value, "accessorySize");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorysizeLessThan(Integer value) {
-            addCriterion("AccessorySize <", value, "accessorysize");
+        public Criteria andAccessorySizeLessThan(Integer value) {
+            addCriterion("AccessorySize <", value, "accessorySize");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorysizeLessThanOrEqualTo(Integer value) {
-            addCriterion("AccessorySize <=", value, "accessorysize");
+        public Criteria andAccessorySizeLessThanOrEqualTo(Integer value) {
+            addCriterion("AccessorySize <=", value, "accessorySize");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorysizeIn(List<Integer> values) {
-            addCriterion("AccessorySize in", values, "accessorysize");
+        public Criteria andAccessorySizeIn(List<Integer> values) {
+            addCriterion("AccessorySize in", values, "accessorySize");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorysizeNotIn(List<Integer> values) {
-            addCriterion("AccessorySize not in", values, "accessorysize");
+        public Criteria andAccessorySizeNotIn(List<Integer> values) {
+            addCriterion("AccessorySize not in", values, "accessorySize");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorysizeBetween(Integer value1, Integer value2) {
-            addCriterion("AccessorySize between", value1, value2, "accessorysize");
+        public Criteria andAccessorySizeBetween(Integer value1, Integer value2) {
+            addCriterion("AccessorySize between", value1, value2, "accessorySize");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorysizeNotBetween(Integer value1, Integer value2) {
-            addCriterion("AccessorySize not between", value1, value2, "accessorysize");
+        public Criteria andAccessorySizeNotBetween(Integer value1, Integer value2) {
+            addCriterion("AccessorySize not between", value1, value2, "accessorySize");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorytypeIsNull() {
+        public Criteria andAccessoryTypeIsNull() {
             addCriterion("AccessoryType is null");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorytypeIsNotNull() {
+        public Criteria andAccessoryTypeIsNotNull() {
             addCriterion("AccessoryType is not null");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorytypeEqualTo(Integer value) {
-            addCriterion("AccessoryType =", value, "accessorytype");
+        public Criteria andAccessoryTypeEqualTo(Integer value) {
+            addCriterion("AccessoryType =", value, "accessoryType");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorytypeNotEqualTo(Integer value) {
-            addCriterion("AccessoryType <>", value, "accessorytype");
+        public Criteria andAccessoryTypeNotEqualTo(Integer value) {
+            addCriterion("AccessoryType <>", value, "accessoryType");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorytypeGreaterThan(Integer value) {
-            addCriterion("AccessoryType >", value, "accessorytype");
+        public Criteria andAccessoryTypeGreaterThan(Integer value) {
+            addCriterion("AccessoryType >", value, "accessoryType");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorytypeGreaterThanOrEqualTo(Integer value) {
-            addCriterion("AccessoryType >=", value, "accessorytype");
+        public Criteria andAccessoryTypeGreaterThanOrEqualTo(Integer value) {
+            addCriterion("AccessoryType >=", value, "accessoryType");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorytypeLessThan(Integer value) {
-            addCriterion("AccessoryType <", value, "accessorytype");
+        public Criteria andAccessoryTypeLessThan(Integer value) {
+            addCriterion("AccessoryType <", value, "accessoryType");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorytypeLessThanOrEqualTo(Integer value) {
-            addCriterion("AccessoryType <=", value, "accessorytype");
+        public Criteria andAccessoryTypeLessThanOrEqualTo(Integer value) {
+            addCriterion("AccessoryType <=", value, "accessoryType");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorytypeIn(List<Integer> values) {
-            addCriterion("AccessoryType in", values, "accessorytype");
+        public Criteria andAccessoryTypeIn(List<Integer> values) {
+            addCriterion("AccessoryType in", values, "accessoryType");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorytypeNotIn(List<Integer> values) {
-            addCriterion("AccessoryType not in", values, "accessorytype");
+        public Criteria andAccessoryTypeNotIn(List<Integer> values) {
+            addCriterion("AccessoryType not in", values, "accessoryType");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorytypeBetween(Integer value1, Integer value2) {
-            addCriterion("AccessoryType between", value1, value2, "accessorytype");
+        public Criteria andAccessoryTypeBetween(Integer value1, Integer value2) {
+            addCriterion("AccessoryType between", value1, value2, "accessoryType");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorytypeNotBetween(Integer value1, Integer value2) {
-            addCriterion("AccessoryType not between", value1, value2, "accessorytype");
+        public Criteria andAccessoryTypeNotBetween(Integer value1, Integer value2) {
+            addCriterion("AccessoryType not between", value1, value2, "accessoryType");
             return (Criteria) this;
         }
 
-        public Criteria andCreatedateIsNull() {
+        public Criteria andCreateDateIsNull() {
             addCriterion("CreateDate is null");
             return (Criteria) this;
         }
 
-        public Criteria andCreatedateIsNotNull() {
+        public Criteria andCreateDateIsNotNull() {
             addCriterion("CreateDate is not null");
             return (Criteria) this;
         }
 
-        public Criteria andCreatedateEqualTo(Date value) {
-            addCriterion("CreateDate =", value, "createdate");
+        public Criteria andCreateDateEqualTo(Date value) {
+            addCriterion("CreateDate =", value, "createDate");
             return (Criteria) this;
         }
 
-        public Criteria andCreatedateNotEqualTo(Date value) {
-            addCriterion("CreateDate <>", value, "createdate");
+        public Criteria andCreateDateNotEqualTo(Date value) {
+            addCriterion("CreateDate <>", value, "createDate");
             return (Criteria) this;
         }
 
-        public Criteria andCreatedateGreaterThan(Date value) {
-            addCriterion("CreateDate >", value, "createdate");
+        public Criteria andCreateDateGreaterThan(Date value) {
+            addCriterion("CreateDate >", value, "createDate");
             return (Criteria) this;
         }
 
-        public Criteria andCreatedateGreaterThanOrEqualTo(Date value) {
-            addCriterion("CreateDate >=", value, "createdate");
+        public Criteria andCreateDateGreaterThanOrEqualTo(Date value) {
+            addCriterion("CreateDate >=", value, "createDate");
             return (Criteria) this;
         }
 
-        public Criteria andCreatedateLessThan(Date value) {
-            addCriterion("CreateDate <", value, "createdate");
+        public Criteria andCreateDateLessThan(Date value) {
+            addCriterion("CreateDate <", value, "createDate");
             return (Criteria) this;
         }
 
-        public Criteria andCreatedateLessThanOrEqualTo(Date value) {
-            addCriterion("CreateDate <=", value, "createdate");
+        public Criteria andCreateDateLessThanOrEqualTo(Date value) {
+            addCriterion("CreateDate <=", value, "createDate");
             return (Criteria) this;
         }
 
-        public Criteria andCreatedateIn(List<Date> values) {
-            addCriterion("CreateDate in", values, "createdate");
+        public Criteria andCreateDateIn(List<Date> values) {
+            addCriterion("CreateDate in", values, "createDate");
             return (Criteria) this;
         }
 
-        public Criteria andCreatedateNotIn(List<Date> values) {
-            addCriterion("CreateDate not in", values, "createdate");
+        public Criteria andCreateDateNotIn(List<Date> values) {
+            addCriterion("CreateDate not in", values, "createDate");
             return (Criteria) this;
         }
 
-        public Criteria andCreatedateBetween(Date value1, Date value2) {
-            addCriterion("CreateDate between", value1, value2, "createdate");
+        public Criteria andCreateDateBetween(Date value1, Date value2) {
+            addCriterion("CreateDate between", value1, value2, "createDate");
             return (Criteria) this;
         }
 
-        public Criteria andCreatedateNotBetween(Date value1, Date value2) {
-            addCriterion("CreateDate not between", value1, value2, "createdate");
+        public Criteria andCreateDateNotBetween(Date value1, Date value2) {
+            addCriterion("CreateDate not between", value1, value2, "createDate");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorypathIsNull() {
+        public Criteria andAccessoryPathIsNull() {
             addCriterion("AccessoryPath is null");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorypathIsNotNull() {
+        public Criteria andAccessoryPathIsNotNull() {
             addCriterion("AccessoryPath is not null");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorypathEqualTo(String value) {
-            addCriterion("AccessoryPath =", value, "accessorypath");
+        public Criteria andAccessoryPathEqualTo(String value) {
+            addCriterion("AccessoryPath =", value, "accessoryPath");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorypathNotEqualTo(String value) {
-            addCriterion("AccessoryPath <>", value, "accessorypath");
+        public Criteria andAccessoryPathNotEqualTo(String value) {
+            addCriterion("AccessoryPath <>", value, "accessoryPath");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorypathGreaterThan(String value) {
-            addCriterion("AccessoryPath >", value, "accessorypath");
+        public Criteria andAccessoryPathGreaterThan(String value) {
+            addCriterion("AccessoryPath >", value, "accessoryPath");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorypathGreaterThanOrEqualTo(String value) {
-            addCriterion("AccessoryPath >=", value, "accessorypath");
+        public Criteria andAccessoryPathGreaterThanOrEqualTo(String value) {
+            addCriterion("AccessoryPath >=", value, "accessoryPath");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorypathLessThan(String value) {
-            addCriterion("AccessoryPath <", value, "accessorypath");
+        public Criteria andAccessoryPathLessThan(String value) {
+            addCriterion("AccessoryPath <", value, "accessoryPath");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorypathLessThanOrEqualTo(String value) {
-            addCriterion("AccessoryPath <=", value, "accessorypath");
+        public Criteria andAccessoryPathLessThanOrEqualTo(String value) {
+            addCriterion("AccessoryPath <=", value, "accessoryPath");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorypathLike(String value) {
-            addCriterion("AccessoryPath like", value, "accessorypath");
+        public Criteria andAccessoryPathLike(String value) {
+            addCriterion("AccessoryPath like", value, "accessoryPath");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorypathNotLike(String value) {
-            addCriterion("AccessoryPath not like", value, "accessorypath");
+        public Criteria andAccessoryPathNotLike(String value) {
+            addCriterion("AccessoryPath not like", value, "accessoryPath");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorypathIn(List<String> values) {
-            addCriterion("AccessoryPath in", values, "accessorypath");
+        public Criteria andAccessoryPathIn(List<String> values) {
+            addCriterion("AccessoryPath in", values, "accessoryPath");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorypathNotIn(List<String> values) {
-            addCriterion("AccessoryPath not in", values, "accessorypath");
+        public Criteria andAccessoryPathNotIn(List<String> values) {
+            addCriterion("AccessoryPath not in", values, "accessoryPath");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorypathBetween(String value1, String value2) {
-            addCriterion("AccessoryPath between", value1, value2, "accessorypath");
+        public Criteria andAccessoryPathBetween(String value1, String value2) {
+            addCriterion("AccessoryPath between", value1, value2, "accessoryPath");
             return (Criteria) this;
         }
 
-        public Criteria andAccessorypathNotBetween(String value1, String value2) {
-            addCriterion("AccessoryPath not between", value1, value2, "accessorypath");
+        public Criteria andAccessoryPathNotBetween(String value1, String value2) {
+            addCriterion("AccessoryPath not between", value1, value2, "accessoryPath");
             return (Criteria) this;
         }
     }

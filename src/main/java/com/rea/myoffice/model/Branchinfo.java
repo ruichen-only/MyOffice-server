@@ -5,38 +5,38 @@ import java.io.Serializable;
 
 public class Branchinfo implements Serializable {
     @ApiModelProperty(value = "机构id")
-    private Integer branchid;
+    private Integer branchId;
 
     @ApiModelProperty(value = "机构名称")
-    private String branchname;
+    private String branchName;
 
     @ApiModelProperty(value = "机构简称")
-    private String branchshortname;
+    private String branchShortName;
 
     private static final long serialVersionUID = 1L;
 
-    public Integer getBranchid() {
-        return branchid;
+    public Integer getBranchId() {
+        return branchId;
     }
 
-    public void setBranchid(Integer branchid) {
-        this.branchid = branchid;
+    public void setBranchId(Integer branchId) {
+        this.branchId = branchId;
     }
 
-    public String getBranchname() {
-        return branchname;
+    public String getBranchName() {
+        return branchName;
     }
 
-    public void setBranchname(String branchname) {
-        this.branchname = branchname;
+    public void setBranchName(String branchName) {
+        this.branchName = branchName;
     }
 
-    public String getBranchshortname() {
-        return branchshortname;
+    public String getBranchShortName() {
+        return branchShortName;
     }
 
-    public void setBranchshortname(String branchshortname) {
-        this.branchshortname = branchshortname;
+    public void setBranchShortName(String branchShortName) {
+        this.branchShortName = branchShortName;
     }
 
     @Override
@@ -45,9 +45,9 @@ public class Branchinfo implements Serializable {
         sb.append(getClass().getSimpleName());
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
-        sb.append(", branchid=").append(branchid);
-        sb.append(", branchname=").append(branchname);
-        sb.append(", branchshortname=").append(branchshortname);
+        sb.append(", branchId=").append(branchId);
+        sb.append(", branchName=").append(branchName);
+        sb.append(", branchShortName=").append(branchShortName);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

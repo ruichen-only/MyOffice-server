@@ -10,7 +10,7 @@ public interface MessagetypeMapper {
 
     int deleteByExample(MessagetypeExample example);
 
-    int deleteByPrimaryKey(Integer messagetypeid);
+    int deleteByPrimaryKey(Integer messageTypeId);
 
     int insert(Messagetype row);
 
@@ -18,7 +18,7 @@ public interface MessagetypeMapper {
 
     List<Messagetype> selectByExample(MessagetypeExample example);
 
-    Messagetype selectByPrimaryKey(Integer messagetypeid);
+    Messagetype selectByPrimaryKey(Integer messageTypeId);
 
     int updateByExampleSelective(@Param("row") Messagetype row, @Param("example") MessagetypeExample example);
 

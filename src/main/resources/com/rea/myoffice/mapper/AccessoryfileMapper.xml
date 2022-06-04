@@ -2,13 +2,13 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.rea.myoffice.mapper.AccessoryfileMapper">
   <resultMap id="BaseResultMap" type="com.rea.myoffice.model.Accessoryfile">
-    <id column="AccessoryId" jdbcType="INTEGER" property="accessoryid" />
-    <result column="FileId" jdbcType="INTEGER" property="fileid" />
-    <result column="AccessoryName" jdbcType="VARCHAR" property="accessoryname" />
-    <result column="AccessorySize" jdbcType="INTEGER" property="accessorysize" />
-    <result column="AccessoryType" jdbcType="INTEGER" property="accessorytype" />
-    <result column="CreateDate" jdbcType="TIMESTAMP" property="createdate" />
-    <result column="AccessoryPath" jdbcType="VARCHAR" property="accessorypath" />
+    <id column="AccessoryId" jdbcType="INTEGER" property="accessoryId" />
+    <result column="FileId" jdbcType="INTEGER" property="fileId" />
+    <result column="AccessoryName" jdbcType="VARCHAR" property="accessoryName" />
+    <result column="AccessorySize" jdbcType="INTEGER" property="accessorySize" />
+    <result column="AccessoryType" jdbcType="INTEGER" property="accessoryType" />
+    <result column="CreateDate" jdbcType="TIMESTAMP" property="createDate" />
+    <result column="AccessoryPath" jdbcType="VARCHAR" property="accessoryPath" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -89,11 +89,11 @@
     select 
     <include refid="Base_Column_List" />
     from accessoryfile
-    where AccessoryId = #{accessoryid,jdbcType=INTEGER}
+    where AccessoryId = #{accessoryId,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from accessoryfile
-    where AccessoryId = #{accessoryid,jdbcType=INTEGER}
+    where AccessoryId = #{accessoryId,jdbcType=INTEGER}
   </delete>
   <delete id="deleteByExample" parameterType="com.rea.myoffice.model.AccessoryfileExample">
     delete from accessoryfile
@@ -105,56 +105,56 @@
     insert into accessoryfile (AccessoryId, FileId, AccessoryName, 
       AccessorySize, AccessoryType, CreateDate, 
       AccessoryPath)
-    values (#{accessoryid,jdbcType=INTEGER}, #{fileid,jdbcType=INTEGER}, #{accessoryname,jdbcType=VARCHAR}, 
-      #{accessorysize,jdbcType=INTEGER}, #{accessorytype,jdbcType=INTEGER}, #{createdate,jdbcType=TIMESTAMP}, 
-      #{accessorypath,jdbcType=VARCHAR})
+    values (#{accessoryId,jdbcType=INTEGER}, #{fileId,jdbcType=INTEGER}, #{accessoryName,jdbcType=VARCHAR}, 
+      #{accessorySize,jdbcType=INTEGER}, #{accessoryType,jdbcType=INTEGER}, #{createDate,jdbcType=TIMESTAMP}, 
+      #{accessoryPath,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.rea.myoffice.model.Accessoryfile">
     insert into accessoryfile
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="accessoryid != null">
+      <if test="accessoryId != null">
         AccessoryId,
       </if>
-      <if test="fileid != null">
+      <if test="fileId != null">
         FileId,
       </if>
-      <if test="accessoryname != null">
+      <if test="accessoryName != null">
         AccessoryName,
       </if>
-      <if test="accessorysize != null">
+      <if test="accessorySize != null">
         AccessorySize,
       </if>
-      <if test="accessorytype != null">
+      <if test="accessoryType != null">
         AccessoryType,
       </if>
-      <if test="createdate != null">
+      <if test="createDate != null">
         CreateDate,
       </if>
-      <if test="accessorypath != null">
+      <if test="accessoryPath != null">
         AccessoryPath,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="accessoryid != null">
-        #{accessoryid,jdbcType=INTEGER},
+      <if test="accessoryId != null">
+        #{accessoryId,jdbcType=INTEGER},
       </if>
-      <if test="fileid != null">
-        #{fileid,jdbcType=INTEGER},
+      <if test="fileId != null">
+        #{fileId,jdbcType=INTEGER},
       </if>
-      <if test="accessoryname != null">
-        #{accessoryname,jdbcType=VARCHAR},
+      <if test="accessoryName != null">
+        #{accessoryName,jdbcType=VARCHAR},
       </if>
-      <if test="accessorysize != null">
-        #{accessorysize,jdbcType=INTEGER},
+      <if test="accessorySize != null">
+        #{accessorySize,jdbcType=INTEGER},
       </if>
-      <if test="accessorytype != null">
-        #{accessorytype,jdbcType=INTEGER},
+      <if test="accessoryType != null">
+        #{accessoryType,jdbcType=INTEGER},
       </if>
-      <if test="createdate != null">
-        #{createdate,jdbcType=TIMESTAMP},
+      <if test="createDate != null">
+        #{createDate,jdbcType=TIMESTAMP},
       </if>
-      <if test="accessorypath != null">
-        #{accessorypath,jdbcType=VARCHAR},
+      <if test="accessoryPath != null">
+        #{accessoryPath,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -167,26 +167,26 @@
   <update id="updateByExampleSelective" parameterType="map">
     update accessoryfile
     <set>
-      <if test="row.accessoryid != null">
-        AccessoryId = #{row.accessoryid,jdbcType=INTEGER},
+      <if test="row.accessoryId != null">
+        AccessoryId = #{row.accessoryId,jdbcType=INTEGER},
       </if>
-      <if test="row.fileid != null">
-        FileId = #{row.fileid,jdbcType=INTEGER},
+      <if test="row.fileId != null">
+        FileId = #{row.fileId,jdbcType=INTEGER},
       </if>
-      <if test="row.accessoryname != null">
-        AccessoryName = #{row.accessoryname,jdbcType=VARCHAR},
+      <if test="row.accessoryName != null">
+        AccessoryName = #{row.accessoryName,jdbcType=VARCHAR},
       </if>
-      <if test="row.accessorysize != null">
-        AccessorySize = #{row.accessorysize,jdbcType=INTEGER},
+      <if test="row.accessorySize != null">
+        AccessorySize = #{row.accessorySize,jdbcType=INTEGER},
       </if>
-      <if test="row.accessorytype != null">
-        AccessoryType = #{row.accessorytype,jdbcType=INTEGER},
+      <if test="row.accessoryType != null">
+        AccessoryType = #{row.accessoryType,jdbcType=INTEGER},
       </if>
-      <if test="row.createdate != null">
-        CreateDate = #{row.createdate,jdbcType=TIMESTAMP},
+      <if test="row.createDate != null">
+        CreateDate = #{row.createDate,jdbcType=TIMESTAMP},
       </if>
-      <if test="row.accessorypath != null">
-        AccessoryPath = #{row.accessorypath,jdbcType=VARCHAR},
+      <if test="row.accessoryPath != null">
+        AccessoryPath = #{row.accessoryPath,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="example != null">
@@ -195,13 +195,13 @@
   </update>
   <update id="updateByExample" parameterType="map">
     update accessoryfile
-    set AccessoryId = #{row.accessoryid,jdbcType=INTEGER},
-      FileId = #{row.fileid,jdbcType=INTEGER},
-      AccessoryName = #{row.accessoryname,jdbcType=VARCHAR},
-      AccessorySize = #{row.accessorysize,jdbcType=INTEGER},
-      AccessoryType = #{row.accessorytype,jdbcType=INTEGER},
-      CreateDate = #{row.createdate,jdbcType=TIMESTAMP},
-      AccessoryPath = #{row.accessorypath,jdbcType=VARCHAR}
+    set AccessoryId = #{row.accessoryId,jdbcType=INTEGER},
+      FileId = #{row.fileId,jdbcType=INTEGER},
+      AccessoryName = #{row.accessoryName,jdbcType=VARCHAR},
+      AccessorySize = #{row.accessorySize,jdbcType=INTEGER},
+      AccessoryType = #{row.accessoryType,jdbcType=INTEGER},
+      CreateDate = #{row.createDate,jdbcType=TIMESTAMP},
+      AccessoryPath = #{row.accessoryPath,jdbcType=VARCHAR}
     <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -209,35 +209,35 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.rea.myoffice.model.Accessoryfile">
     update accessoryfile
     <set>
-      <if test="fileid != null">
-        FileId = #{fileid,jdbcType=INTEGER},
+      <if test="fileId != null">
+        FileId = #{fileId,jdbcType=INTEGER},
       </if>
-      <if test="accessoryname != null">
-        AccessoryName = #{accessoryname,jdbcType=VARCHAR},
+      <if test="accessoryName != null">
+        AccessoryName = #{accessoryName,jdbcType=VARCHAR},
       </if>
-      <if test="accessorysize != null">
-        AccessorySize = #{accessorysize,jdbcType=INTEGER},
+      <if test="accessorySize != null">
+        AccessorySize = #{accessorySize,jdbcType=INTEGER},
       </if>
-      <if test="accessorytype != null">
-        AccessoryType = #{accessorytype,jdbcType=INTEGER},
+      <if test="accessoryType != null">
+        AccessoryType = #{accessoryType,jdbcType=INTEGER},
       </if>
-      <if test="createdate != null">
-        CreateDate = #{createdate,jdbcType=TIMESTAMP},
+      <if test="createDate != null">
+        CreateDate = #{createDate,jdbcType=TIMESTAMP},
       </if>
-      <if test="accessorypath != null">
-        AccessoryPath = #{accessorypath,jdbcType=VARCHAR},
+      <if test="accessoryPath != null">
+        AccessoryPath = #{accessoryPath,jdbcType=VARCHAR},
       </if>
     </set>
-    where AccessoryId = #{accessoryid,jdbcType=INTEGER}
+    where AccessoryId = #{accessoryId,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.rea.myoffice.model.Accessoryfile">
     update accessoryfile
-    set FileId = #{fileid,jdbcType=INTEGER},
-      AccessoryName = #{accessoryname,jdbcType=VARCHAR},
-      AccessorySize = #{accessorysize,jdbcType=INTEGER},
-      AccessoryType = #{accessorytype,jdbcType=INTEGER},
-      CreateDate = #{createdate,jdbcType=TIMESTAMP},
-      AccessoryPath = #{accessorypath,jdbcType=VARCHAR}
-    where AccessoryId = #{accessoryid,jdbcType=INTEGER}
+    set FileId = #{fileId,jdbcType=INTEGER},
+      AccessoryName = #{accessoryName,jdbcType=VARCHAR},
+      AccessorySize = #{accessorySize,jdbcType=INTEGER},
+      AccessoryType = #{accessoryType,jdbcType=INTEGER},
+      CreateDate = #{createDate,jdbcType=TIMESTAMP},
+      AccessoryPath = #{accessoryPath,jdbcType=VARCHAR}
+    where AccessoryId = #{accessoryId,jdbcType=INTEGER}
   </update>
 </mapper>

@@ -10,7 +10,7 @@ public interface PrecontractMapper {
 
     int deleteByExample(PrecontractExample example);
 
-    int deleteByPrimaryKey(Integer precontractid);
+    int deleteByPrimaryKey(Integer preContractId);
 
     int insert(Precontract row);
 
@@ -20,7 +20,7 @@ public interface PrecontractMapper {
 
     List<Precontract> selectByExample(PrecontractExample example);
 
-    Precontract selectByPrimaryKey(Integer precontractid);
+    Precontract selectByPrimaryKey(Integer preContractId);
 
     int updateByExampleSelective(@Param("row") Precontract row, @Param("example") PrecontractExample example);
 

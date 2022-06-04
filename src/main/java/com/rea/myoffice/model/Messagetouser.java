@@ -8,13 +8,13 @@ public class Messagetouser implements Serializable {
     private Integer id;
 
     @ApiModelProperty(value = "消息Id")
-    private Integer messageid;
+    private Integer messageId;
 
     @ApiModelProperty(value = "发送对象Id")
-    private String touserid;
+    private String toUserId;
 
     @ApiModelProperty(value = "是否已读。1：已读、0：未读")
-    private Integer ifread;
+    private Integer ifRead;
 
     private static final long serialVersionUID = 1L;
 
@@ -26,28 +26,28 @@ public class Messagetouser implements Serializable {
         this.id = id;
     }
 
-    public Integer getMessageid() {
-        return messageid;
+    public Integer getMessageId() {
+        return messageId;
     }
 
-    public void setMessageid(Integer messageid) {
-        this.messageid = messageid;
+    public void setMessageId(Integer messageId) {
+        this.messageId = messageId;
     }
 
-    public String getTouserid() {
-        return touserid;
+    public String getToUserId() {
+        return toUserId;
     }
 
-    public void setTouserid(String touserid) {
-        this.touserid = touserid;
+    public void setToUserId(String toUserId) {
+        this.toUserId = toUserId;
     }
 
-    public Integer getIfread() {
-        return ifread;
+    public Integer getIfRead() {
+        return ifRead;
     }
 
-    public void setIfread(Integer ifread) {
-        this.ifread = ifread;
+    public void setIfRead(Integer ifRead) {
+        this.ifRead = ifRead;
     }
 
     @Override
@@ -57,9 +57,9 @@ public class Messagetouser implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", messageid=").append(messageid);
-        sb.append(", touserid=").append(touserid);
-        sb.append(", ifread=").append(ifread);
+        sb.append(", messageId=").append(messageId);
+        sb.append(", toUserId=").append(toUserId);
+        sb.append(", ifRead=").append(ifRead);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

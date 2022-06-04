@@ -2,9 +2,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.rea.myoffice.mapper.BranchinfoMapper">
   <resultMap id="BaseResultMap" type="com.rea.myoffice.model.Branchinfo">
-    <id column="BranchId" jdbcType="INTEGER" property="branchid" />
-    <result column="BranchName" jdbcType="VARCHAR" property="branchname" />
-    <result column="BranchShortName" jdbcType="VARCHAR" property="branchshortname" />
+    <id column="BranchId" jdbcType="INTEGER" property="branchId" />
+    <result column="BranchName" jdbcType="VARCHAR" property="branchName" />
+    <result column="BranchShortName" jdbcType="VARCHAR" property="branchShortName" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -85,11 +85,11 @@
     select 
     <include refid="Base_Column_List" />
     from branchinfo
-    where BranchId = #{branchid,jdbcType=INTEGER}
+    where BranchId = #{branchId,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from branchinfo
-    where BranchId = #{branchid,jdbcType=INTEGER}
+    where BranchId = #{branchId,jdbcType=INTEGER}
   </delete>
   <delete id="deleteByExample" parameterType="com.rea.myoffice.model.BranchinfoExample">
     delete from branchinfo
@@ -100,31 +100,31 @@
   <insert id="insert" parameterType="com.rea.myoffice.model.Branchinfo">
     insert into branchinfo (BranchId, BranchName, BranchShortName
       )
-    values (#{branchid,jdbcType=INTEGER}, #{branchname,jdbcType=VARCHAR}, #{branchshortname,jdbcType=VARCHAR}
+    values (#{branchId,jdbcType=INTEGER}, #{branchName,jdbcType=VARCHAR}, #{branchShortName,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.rea.myoffice.model.Branchinfo">
     insert into branchinfo
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="branchid != null">
+      <if test="branchId != null">
         BranchId,
       </if>
-      <if test="branchname != null">
+      <if test="branchName != null">
         BranchName,
       </if>
-      <if test="branchshortname != null">
+      <if test="branchShortName != null">
         BranchShortName,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="branchid != null">
-        #{branchid,jdbcType=INTEGER},
+      <if test="branchId != null">
+        #{branchId,jdbcType=INTEGER},
       </if>
-      <if test="branchname != null">
-        #{branchname,jdbcType=VARCHAR},
+      <if test="branchName != null">
+        #{branchName,jdbcType=VARCHAR},
       </if>
-      <if test="branchshortname != null">
-        #{branchshortname,jdbcType=VARCHAR},
+      <if test="branchShortName != null">
+        #{branchShortName,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -137,14 +137,14 @@
   <update id="updateByExampleSelective" parameterType="map">
     update branchinfo
     <set>
-      <if test="row.branchid != null">
-        BranchId = #{row.branchid,jdbcType=INTEGER},
+      <if test="row.branchId != null">
+        BranchId = #{row.branchId,jdbcType=INTEGER},
       </if>
-      <if test="row.branchname != null">
-        BranchName = #{row.branchname,jdbcType=VARCHAR},
+      <if test="row.branchName != null">
+        BranchName = #{row.branchName,jdbcType=VARCHAR},
       </if>
-      <if test="row.branchshortname != null">
-        BranchShortName = #{row.branchshortname,jdbcType=VARCHAR},
+      <if test="row.branchShortName != null">
+        BranchShortName = #{row.branchShortName,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="example != null">
@@ -153,9 +153,9 @@
   </update>
   <update id="updateByExample" parameterType="map">
     update branchinfo
-    set BranchId = #{row.branchid,jdbcType=INTEGER},
-      BranchName = #{row.branchname,jdbcType=VARCHAR},
-      BranchShortName = #{row.branchshortname,jdbcType=VARCHAR}
+    set BranchId = #{row.branchId,jdbcType=INTEGER},
+      BranchName = #{row.branchName,jdbcType=VARCHAR},
+      BranchShortName = #{row.branchShortName,jdbcType=VARCHAR}
     <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -163,19 +163,19 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.rea.myoffice.model.Branchinfo">
     update branchinfo
     <set>
-      <if test="branchname != null">
-        BranchName = #{branchname,jdbcType=VARCHAR},
+      <if test="branchName != null">
+        BranchName = #{branchName,jdbcType=VARCHAR},
       </if>
-      <if test="branchshortname != null">
-        BranchShortName = #{branchshortname,jdbcType=VARCHAR},
+      <if test="branchShortName != null">
+        BranchShortName = #{branchShortName,jdbcType=VARCHAR},
       </if>
     </set>
-    where BranchId = #{branchid,jdbcType=INTEGER}
+    where BranchId = #{branchId,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.rea.myoffice.model.Branchinfo">
     update branchinfo
-    set BranchName = #{branchname,jdbcType=VARCHAR},
-      BranchShortName = #{branchshortname,jdbcType=VARCHAR}
-    where BranchId = #{branchid,jdbcType=INTEGER}
+    set BranchName = #{branchName,jdbcType=VARCHAR},
+      BranchShortName = #{branchShortName,jdbcType=VARCHAR}
+    where BranchId = #{branchId,jdbcType=INTEGER}
   </update>
 </mapper>

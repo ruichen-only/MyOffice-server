@@ -2,11 +2,11 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.rea.myoffice.mapper.ManualsignMapper">
   <resultMap id="BaseResultMap" type="com.rea.myoffice.model.Manualsign">
-    <id column="SignId" jdbcType="INTEGER" property="signid" />
-    <result column="UserId" jdbcType="VARCHAR" property="userid" />
-    <result column="SignTime" jdbcType="TIMESTAMP" property="signtime" />
-    <result column="SignDesc" jdbcType="VARCHAR" property="signdesc" />
-    <result column="SignTag" jdbcType="INTEGER" property="signtag" />
+    <id column="SignId" jdbcType="INTEGER" property="signId" />
+    <result column="UserId" jdbcType="VARCHAR" property="userId" />
+    <result column="SignTime" jdbcType="TIMESTAMP" property="signTime" />
+    <result column="SignDesc" jdbcType="VARCHAR" property="signDesc" />
+    <result column="SignTag" jdbcType="INTEGER" property="signTag" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -87,11 +87,11 @@
     select 
     <include refid="Base_Column_List" />
     from manualsign
-    where SignId = #{signid,jdbcType=INTEGER}
+    where SignId = #{signId,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from manualsign
-    where SignId = #{signid,jdbcType=INTEGER}
+    where SignId = #{signId,jdbcType=INTEGER}
   </delete>
   <delete id="deleteByExample" parameterType="com.rea.myoffice.model.ManualsignExample">
     delete from manualsign
@@ -102,43 +102,43 @@
   <insert id="insert" parameterType="com.rea.myoffice.model.Manualsign">
     insert into manualsign (SignId, UserId, SignTime, 
       SignDesc, SignTag)
-    values (#{signid,jdbcType=INTEGER}, #{userid,jdbcType=VARCHAR}, #{signtime,jdbcType=TIMESTAMP}, 
-      #{signdesc,jdbcType=VARCHAR}, #{signtag,jdbcType=INTEGER})
+    values (#{signId,jdbcType=INTEGER}, #{userId,jdbcType=VARCHAR}, #{signTime,jdbcType=TIMESTAMP}, 
+      #{signDesc,jdbcType=VARCHAR}, #{signTag,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.rea.myoffice.model.Manualsign">
     insert into manualsign
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="signid != null">
+      <if test="signId != null">
         SignId,
       </if>
-      <if test="userid != null">
+      <if test="userId != null">
         UserId,
       </if>
-      <if test="signtime != null">
+      <if test="signTime != null">
         SignTime,
       </if>
-      <if test="signdesc != null">
+      <if test="signDesc != null">
         SignDesc,
       </if>
-      <if test="signtag != null">
+      <if test="signTag != null">
         SignTag,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="signid != null">
-        #{signid,jdbcType=INTEGER},
+      <if test="signId != null">
+        #{signId,jdbcType=INTEGER},
       </if>
-      <if test="userid != null">
-        #{userid,jdbcType=VARCHAR},
+      <if test="userId != null">
+        #{userId,jdbcType=VARCHAR},
       </if>
-      <if test="signtime != null">
-        #{signtime,jdbcType=TIMESTAMP},
+      <if test="signTime != null">
+        #{signTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="signdesc != null">
-        #{signdesc,jdbcType=VARCHAR},
+      <if test="signDesc != null">
+        #{signDesc,jdbcType=VARCHAR},
       </if>
-      <if test="signtag != null">
-        #{signtag,jdbcType=INTEGER},
+      <if test="signTag != null">
+        #{signTag,jdbcType=INTEGER},
       </if>
     </trim>
   </insert>
@@ -151,20 +151,20 @@
   <update id="updateByExampleSelective" parameterType="map">
     update manualsign
     <set>
-      <if test="row.signid != null">
-        SignId = #{row.signid,jdbcType=INTEGER},
+      <if test="row.signId != null">
+        SignId = #{row.signId,jdbcType=INTEGER},
       </if>
-      <if test="row.userid != null">
-        UserId = #{row.userid,jdbcType=VARCHAR},
+      <if test="row.userId != null">
+        UserId = #{row.userId,jdbcType=VARCHAR},
       </if>
-      <if test="row.signtime != null">
-        SignTime = #{row.signtime,jdbcType=TIMESTAMP},
+      <if test="row.signTime != null">
+        SignTime = #{row.signTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="row.signdesc != null">
-        SignDesc = #{row.signdesc,jdbcType=VARCHAR},
+      <if test="row.signDesc != null">
+        SignDesc = #{row.signDesc,jdbcType=VARCHAR},
       </if>
-      <if test="row.signtag != null">
-        SignTag = #{row.signtag,jdbcType=INTEGER},
+      <if test="row.signTag != null">
+        SignTag = #{row.signTag,jdbcType=INTEGER},
       </if>
     </set>
     <if test="example != null">
@@ -173,11 +173,11 @@
   </update>
   <update id="updateByExample" parameterType="map">
     update manualsign
-    set SignId = #{row.signid,jdbcType=INTEGER},
-      UserId = #{row.userid,jdbcType=VARCHAR},
-      SignTime = #{row.signtime,jdbcType=TIMESTAMP},
-      SignDesc = #{row.signdesc,jdbcType=VARCHAR},
-      SignTag = #{row.signtag,jdbcType=INTEGER}
+    set SignId = #{row.signId,jdbcType=INTEGER},
+      UserId = #{row.userId,jdbcType=VARCHAR},
+      SignTime = #{row.signTime,jdbcType=TIMESTAMP},
+      SignDesc = #{row.signDesc,jdbcType=VARCHAR},
+      SignTag = #{row.signTag,jdbcType=INTEGER}
     <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -185,27 +185,27 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.rea.myoffice.model.Manualsign">
     update manualsign
     <set>
-      <if test="userid != null">
-        UserId = #{userid,jdbcType=VARCHAR},
+      <if test="userId != null">
+        UserId = #{userId,jdbcType=VARCHAR},
       </if>
-      <if test="signtime != null">
-        SignTime = #{signtime,jdbcType=TIMESTAMP},
+      <if test="signTime != null">
+        SignTime = #{signTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="signdesc != null">
-        SignDesc = #{signdesc,jdbcType=VARCHAR},
+      <if test="signDesc != null">
+        SignDesc = #{signDesc,jdbcType=VARCHAR},
       </if>
-      <if test="signtag != null">
-        SignTag = #{signtag,jdbcType=INTEGER},
+      <if test="signTag != null">
+        SignTag = #{signTag,jdbcType=INTEGER},
       </if>
     </set>
-    where SignId = #{signid,jdbcType=INTEGER}
+    where SignId = #{signId,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.rea.myoffice.model.Manualsign">
     update manualsign
-    set UserId = #{userid,jdbcType=VARCHAR},
-      SignTime = #{signtime,jdbcType=TIMESTAMP},
-      SignDesc = #{signdesc,jdbcType=VARCHAR},
-      SignTag = #{signtag,jdbcType=INTEGER}
-    where SignId = #{signid,jdbcType=INTEGER}
+    set UserId = #{userId,jdbcType=VARCHAR},
+      SignTime = #{signTime,jdbcType=TIMESTAMP},
+      SignDesc = #{signDesc,jdbcType=VARCHAR},
+      SignTag = #{signTag,jdbcType=INTEGER}
+    where SignId = #{signId,jdbcType=INTEGER}
   </update>
 </mapper>

@@ -10,7 +10,7 @@ public interface UserstateMapper {
 
     int deleteByExample(UserstateExample example);
 
-    int deleteByPrimaryKey(Integer userstateid);
+    int deleteByPrimaryKey(Integer userStateId);
 
     int insert(Userstate row);
 
@@ -18,7 +18,7 @@ public interface UserstateMapper {
 
     List<Userstate> selectByExample(UserstateExample example);
 
-    Userstate selectByPrimaryKey(Integer userstateid);
+    Userstate selectByPrimaryKey(Integer userStateId);
 
     int updateByExampleSelective(@Param("row") Userstate row, @Param("example") UserstateExample example);
 

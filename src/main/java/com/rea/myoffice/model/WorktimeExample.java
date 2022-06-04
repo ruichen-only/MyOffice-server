@@ -105,183 +105,183 @@ public class WorktimeExample {
             criteria.add(new Criterion(condition, value1, value2));
         }
 
-        public Criteria andWorktimeidIsNull() {
+        public Criteria andWorkTimeIdIsNull() {
             addCriterion("WorkTimeId is null");
             return (Criteria) this;
         }
 
-        public Criteria andWorktimeidIsNotNull() {
+        public Criteria andWorkTimeIdIsNotNull() {
             addCriterion("WorkTimeId is not null");
             return (Criteria) this;
         }
 
-        public Criteria andWorktimeidEqualTo(Integer value) {
-            addCriterion("WorkTimeId =", value, "worktimeid");
+        public Criteria andWorkTimeIdEqualTo(Integer value) {
+            addCriterion("WorkTimeId =", value, "workTimeId");
             return (Criteria) this;
         }
 
-        public Criteria andWorktimeidNotEqualTo(Integer value) {
-            addCriterion("WorkTimeId <>", value, "worktimeid");
+        public Criteria andWorkTimeIdNotEqualTo(Integer value) {
+            addCriterion("WorkTimeId <>", value, "workTimeId");
             return (Criteria) this;
         }
 
-        public Criteria andWorktimeidGreaterThan(Integer value) {
-            addCriterion("WorkTimeId >", value, "worktimeid");
+        public Criteria andWorkTimeIdGreaterThan(Integer value) {
+            addCriterion("WorkTimeId >", value, "workTimeId");
             return (Criteria) this;
         }
 
-        public Criteria andWorktimeidGreaterThanOrEqualTo(Integer value) {
-            addCriterion("WorkTimeId >=", value, "worktimeid");
+        public Criteria andWorkTimeIdGreaterThanOrEqualTo(Integer value) {
+            addCriterion("WorkTimeId >=", value, "workTimeId");
             return (Criteria) this;
         }
 
-        public Criteria andWorktimeidLessThan(Integer value) {
-            addCriterion("WorkTimeId <", value, "worktimeid");
+        public Criteria andWorkTimeIdLessThan(Integer value) {
+            addCriterion("WorkTimeId <", value, "workTimeId");
             return (Criteria) this;
         }
 
-        public Criteria andWorktimeidLessThanOrEqualTo(Integer value) {
-            addCriterion("WorkTimeId <=", value, "worktimeid");
+        public Criteria andWorkTimeIdLessThanOrEqualTo(Integer value) {
+            addCriterion("WorkTimeId <=", value, "workTimeId");
             return (Criteria) this;
         }
 
-        public Criteria andWorktimeidIn(List<Integer> values) {
-            addCriterion("WorkTimeId in", values, "worktimeid");
+        public Criteria andWorkTimeIdIn(List<Integer> values) {
+            addCriterion("WorkTimeId in", values, "workTimeId");
             return (Criteria) this;
         }
 
-        public Criteria andWorktimeidNotIn(List<Integer> values) {
-            addCriterion("WorkTimeId not in", values, "worktimeid");
+        public Criteria andWorkTimeIdNotIn(List<Integer> values) {
+            addCriterion("WorkTimeId not in", values, "workTimeId");
             return (Criteria) this;
         }
 
-        public Criteria andWorktimeidBetween(Integer value1, Integer value2) {
-            addCriterion("WorkTimeId between", value1, value2, "worktimeid");
+        public Criteria andWorkTimeIdBetween(Integer value1, Integer value2) {
+            addCriterion("WorkTimeId between", value1, value2, "workTimeId");
             return (Criteria) this;
         }
 
-        public Criteria andWorktimeidNotBetween(Integer value1, Integer value2) {
-            addCriterion("WorkTimeId not between", value1, value2, "worktimeid");
+        public Criteria andWorkTimeIdNotBetween(Integer value1, Integer value2) {
+            addCriterion("WorkTimeId not between", value1, value2, "workTimeId");
             return (Criteria) this;
         }
 
-        public Criteria andOndutytimeIsNull() {
+        public Criteria andOnDutyTimeIsNull() {
             addCriterion("OnDutyTime is null");
             return (Criteria) this;
         }
 
-        public Criteria andOndutytimeIsNotNull() {
+        public Criteria andOnDutyTimeIsNotNull() {
             addCriterion("OnDutyTime is not null");
             return (Criteria) this;
         }
 
-        public Criteria andOndutytimeEqualTo(Date value) {
-            addCriterion("OnDutyTime =", value, "ondutytime");
+        public Criteria andOnDutyTimeEqualTo(Date value) {
+            addCriterion("OnDutyTime =", value, "onDutyTime");
             return (Criteria) this;
         }
 
-        public Criteria andOndutytimeNotEqualTo(Date value) {
-            addCriterion("OnDutyTime <>", value, "ondutytime");
+        public Criteria andOnDutyTimeNotEqualTo(Date value) {
+            addCriterion("OnDutyTime <>", value, "onDutyTime");
             return (Criteria) this;
         }
 
-        public Criteria andOndutytimeGreaterThan(Date value) {
-            addCriterion("OnDutyTime >", value, "ondutytime");
+        public Criteria andOnDutyTimeGreaterThan(Date value) {
+            addCriterion("OnDutyTime >", value, "onDutyTime");
             return (Criteria) this;
         }
 
-        public Criteria andOndutytimeGreaterThanOrEqualTo(Date value) {
-            addCriterion("OnDutyTime >=", value, "ondutytime");
+        public Criteria andOnDutyTimeGreaterThanOrEqualTo(Date value) {
+            addCriterion("OnDutyTime >=", value, "onDutyTime");
             return (Criteria) this;
         }
 
-        public Criteria andOndutytimeLessThan(Date value) {
-            addCriterion("OnDutyTime <", value, "ondutytime");
+        public Criteria andOnDutyTimeLessThan(Date value) {
+            addCriterion("OnDutyTime <", value, "onDutyTime");
             return (Criteria) this;
         }
 
-        public Criteria andOndutytimeLessThanOrEqualTo(Date value) {
-            addCriterion("OnDutyTime <=", value, "ondutytime");
+        public Criteria andOnDutyTimeLessThanOrEqualTo(Date value) {
+            addCriterion("OnDutyTime <=", value, "onDutyTime");
             return (Criteria) this;
         }
 
-        public Criteria andOndutytimeIn(List<Date> values) {
-            addCriterion("OnDutyTime in", values, "ondutytime");
+        public Criteria andOnDutyTimeIn(List<Date> values) {
+            addCriterion("OnDutyTime in", values, "onDutyTime");
             return (Criteria) this;
         }
 
-        public Criteria andOndutytimeNotIn(List<Date> values) {
-            addCriterion("OnDutyTime not in", values, "ondutytime");
+        public Criteria andOnDutyTimeNotIn(List<Date> values) {
+            addCriterion("OnDutyTime not in", values, "onDutyTime");
             return (Criteria) this;
         }
 
-        public Criteria andOndutytimeBetween(Date value1, Date value2) {
-            addCriterion("OnDutyTime between", value1, value2, "ondutytime");
+        public Criteria andOnDutyTimeBetween(Date value1, Date value2) {
+            addCriterion("OnDutyTime between", value1, value2, "onDutyTime");
             return (Criteria) this;
         }
 
-        public Criteria andOndutytimeNotBetween(Date value1, Date value2) {
-            addCriterion("OnDutyTime not between", value1, value2, "ondutytime");
+        public Criteria andOnDutyTimeNotBetween(Date value1, Date value2) {
+            addCriterion("OnDutyTime not between", value1, value2, "onDutyTime");
             return (Criteria) this;
         }
 
-        public Criteria andOffdutytimeIsNull() {
+        public Criteria andOffDutyTimeIsNull() {
             addCriterion("OffDutyTime is null");
             return (Criteria) this;
         }
 
-        public Criteria andOffdutytimeIsNotNull() {
+        public Criteria andOffDutyTimeIsNotNull() {
             addCriterion("OffDutyTime is not null");
             return (Criteria) this;
         }
 
-        public Criteria andOffdutytimeEqualTo(Date value) {
-            addCriterion("OffDutyTime =", value, "offdutytime");
+        public Criteria andOffDutyTimeEqualTo(Date value) {
+            addCriterion("OffDutyTime =", value, "offDutyTime");
             return (Criteria) this;
         }
 
-        public Criteria andOffdutytimeNotEqualTo(Date value) {
-            addCriterion("OffDutyTime <>", value, "offdutytime");
+        public Criteria andOffDutyTimeNotEqualTo(Date value) {
+            addCriterion("OffDutyTime <>", value, "offDutyTime");
             return (Criteria) this;
         }
 
-        public Criteria andOffdutytimeGreaterThan(Date value) {
-            addCriterion("OffDutyTime >", value, "offdutytime");
+        public Criteria andOffDutyTimeGreaterThan(Date value) {
+            addCriterion("OffDutyTime >", value, "offDutyTime");
             return (Criteria) this;
         }
 
-        public Criteria andOffdutytimeGreaterThanOrEqualTo(Date value) {
-            addCriterion("OffDutyTime >=", value, "offdutytime");
+        public Criteria andOffDutyTimeGreaterThanOrEqualTo(Date value) {
+            addCriterion("OffDutyTime >=", value, "offDutyTime");
             return (Criteria) this;
         }
 
-        public Criteria andOffdutytimeLessThan(Date value) {
-            addCriterion("OffDutyTime <", value, "offdutytime");
+        public Criteria andOffDutyTimeLessThan(Date value) {
+            addCriterion("OffDutyTime <", value, "offDutyTime");
             return (Criteria) this;
         }
 
-        public Criteria andOffdutytimeLessThanOrEqualTo(Date value) {
-            addCriterion("OffDutyTime <=", value, "offdutytime");
+        public Criteria andOffDutyTimeLessThanOrEqualTo(Date value) {
+            addCriterion("OffDutyTime <=", value, "offDutyTime");
             return (Criteria) this;
         }
 
-        public Criteria andOffdutytimeIn(List<Date> values) {
-            addCriterion("OffDutyTime in", values, "offdutytime");
+        public Criteria andOffDutyTimeIn(List<Date> values) {
+            addCriterion("OffDutyTime in", values, "offDutyTime");
             return (Criteria) this;
         }
 
-        public Criteria andOffdutytimeNotIn(List<Date> values) {
-            addCriterion("OffDutyTime not in", values, "offdutytime");
+        public Criteria andOffDutyTimeNotIn(List<Date> values) {
+            addCriterion("OffDutyTime not in", values, "offDutyTime");
             return (Criteria) this;
         }
 
-        public Criteria andOffdutytimeBetween(Date value1, Date value2) {
-            addCriterion("OffDutyTime between", value1, value2, "offdutytime");
+        public Criteria andOffDutyTimeBetween(Date value1, Date value2) {
+            addCriterion("OffDutyTime between", value1, value2, "offDutyTime");
             return (Criteria) this;
         }
 
-        public Criteria andOffdutytimeNotBetween(Date value1, Date value2) {
-            addCriterion("OffDutyTime not between", value1, value2, "offdutytime");
+        public Criteria andOffDutyTimeNotBetween(Date value1, Date value2) {
+            addCriterion("OffDutyTime not between", value1, value2, "offDutyTime");
             return (Criteria) this;
         }
     }

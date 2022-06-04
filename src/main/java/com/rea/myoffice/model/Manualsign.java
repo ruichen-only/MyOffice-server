@@ -6,60 +6,60 @@ import java.util.Date;
 
 public class Manualsign implements Serializable {
     @ApiModelProperty(value = "签卡Id")
-    private Integer signid;
+    private Integer signId;
 
     @ApiModelProperty(value = "用户id")
-    private String userid;
+    private String userId;
 
     @ApiModelProperty(value = "签卡时间")
-    private Date signtime;
+    private Date signTime;
 
     @ApiModelProperty(value = "签卡备注")
-    private String signdesc;
+    private String signDesc;
 
     @ApiModelProperty(value = "签卡标记")
-    private Integer signtag;
+    private Integer signTag;
 
     private static final long serialVersionUID = 1L;
 
-    public Integer getSignid() {
-        return signid;
+    public Integer getSignId() {
+        return signId;
     }
 
-    public void setSignid(Integer signid) {
-        this.signid = signid;
+    public void setSignId(Integer signId) {
+        this.signId = signId;
     }
 
-    public String getUserid() {
-        return userid;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setUserid(String userid) {
-        this.userid = userid;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
-    public Date getSigntime() {
-        return signtime;
+    public Date getSignTime() {
+        return signTime;
     }
 
-    public void setSigntime(Date signtime) {
-        this.signtime = signtime;
+    public void setSignTime(Date signTime) {
+        this.signTime = signTime;
     }
 
-    public String getSigndesc() {
-        return signdesc;
+    public String getSignDesc() {
+        return signDesc;
     }
 
-    public void setSigndesc(String signdesc) {
-        this.signdesc = signdesc;
+    public void setSignDesc(String signDesc) {
+        this.signDesc = signDesc;
     }
 
-    public Integer getSigntag() {
-        return signtag;
+    public Integer getSignTag() {
+        return signTag;
     }
 
-    public void setSigntag(Integer signtag) {
-        this.signtag = signtag;
+    public void setSignTag(Integer signTag) {
+        this.signTag = signTag;
     }
 
     @Override
@@ -68,11 +68,11 @@ public class Manualsign implements Serializable {
         sb.append(getClass().getSimpleName());
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
-        sb.append(", signid=").append(signid);
-        sb.append(", userid=").append(userid);
-        sb.append(", signtime=").append(signtime);
-        sb.append(", signdesc=").append(signdesc);
-        sb.append(", signtag=").append(signtag);
+        sb.append(", signId=").append(signId);
+        sb.append(", userId=").append(userId);
+        sb.append(", signTime=").append(signTime);
+        sb.append(", signDesc=").append(signDesc);
+        sb.append(", signTag=").append(signTag);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

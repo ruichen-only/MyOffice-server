@@ -2,11 +2,11 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.rea.myoffice.mapper.MynoteMapper">
   <resultMap id="BaseResultMap" type="com.rea.myoffice.model.Mynote">
-    <id column="NoteId" jdbcType="INTEGER" property="noteid" />
-    <result column="NoteTitle" jdbcType="VARCHAR" property="notetitle" />
-    <result column="NoteContent" jdbcType="VARCHAR" property="notecontent" />
-    <result column="CreateTime" jdbcType="TIMESTAMP" property="createtime" />
-    <result column="CreateUser" jdbcType="VARCHAR" property="createuser" />
+    <id column="NoteId" jdbcType="INTEGER" property="noteId" />
+    <result column="NoteTitle" jdbcType="VARCHAR" property="noteTitle" />
+    <result column="NoteContent" jdbcType="VARCHAR" property="noteContent" />
+    <result column="CreateTime" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="CreateUser" jdbcType="VARCHAR" property="createUser" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -87,11 +87,11 @@
     select 
     <include refid="Base_Column_List" />
     from mynote
-    where NoteId = #{noteid,jdbcType=INTEGER}
+    where NoteId = #{noteId,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from mynote
-    where NoteId = #{noteid,jdbcType=INTEGER}
+    where NoteId = #{noteId,jdbcType=INTEGER}
   </delete>
   <delete id="deleteByExample" parameterType="com.rea.myoffice.model.MynoteExample">
     delete from mynote
@@ -102,43 +102,43 @@
   <insert id="insert" parameterType="com.rea.myoffice.model.Mynote">
     insert into mynote (NoteId, NoteTitle, NoteContent, 
       CreateTime, CreateUser)
-    values (#{noteid,jdbcType=INTEGER}, #{notetitle,jdbcType=VARCHAR}, #{notecontent,jdbcType=VARCHAR}, 
-      #{createtime,jdbcType=TIMESTAMP}, #{createuser,jdbcType=VARCHAR})
+    values (#{noteId,jdbcType=INTEGER}, #{noteTitle,jdbcType=VARCHAR}, #{noteContent,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{createUser,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.rea.myoffice.model.Mynote">
     insert into mynote
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="noteid != null">
+      <if test="noteId != null">
         NoteId,
       </if>
-      <if test="notetitle != null">
+      <if test="noteTitle != null">
         NoteTitle,
       </if>
-      <if test="notecontent != null">
+      <if test="noteContent != null">
         NoteContent,
       </if>
-      <if test="createtime != null">
+      <if test="createTime != null">
         CreateTime,
       </if>
-      <if test="createuser != null">
+      <if test="createUser != null">
         CreateUser,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="noteid != null">
-        #{noteid,jdbcType=INTEGER},
+      <if test="noteId != null">
+        #{noteId,jdbcType=INTEGER},
       </if>
-      <if test="notetitle != null">
-        #{notetitle,jdbcType=VARCHAR},
+      <if test="noteTitle != null">
+        #{noteTitle,jdbcType=VARCHAR},
       </if>
-      <if test="notecontent != null">
-        #{notecontent,jdbcType=VARCHAR},
+      <if test="noteContent != null">
+        #{noteContent,jdbcType=VARCHAR},
       </if>
-      <if test="createtime != null">
-        #{createtime,jdbcType=TIMESTAMP},
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="createuser != null">
-        #{createuser,jdbcType=VARCHAR},
+      <if test="createUser != null">
+        #{createUser,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -151,20 +151,20 @@
   <update id="updateByExampleSelective" parameterType="map">
     update mynote
     <set>
-      <if test="row.noteid != null">
-        NoteId = #{row.noteid,jdbcType=INTEGER},
+      <if test="row.noteId != null">
+        NoteId = #{row.noteId,jdbcType=INTEGER},
       </if>
-      <if test="row.notetitle != null">
-        NoteTitle = #{row.notetitle,jdbcType=VARCHAR},
+      <if test="row.noteTitle != null">
+        NoteTitle = #{row.noteTitle,jdbcType=VARCHAR},
       </if>
-      <if test="row.notecontent != null">
-        NoteContent = #{row.notecontent,jdbcType=VARCHAR},
+      <if test="row.noteContent != null">
+        NoteContent = #{row.noteContent,jdbcType=VARCHAR},
       </if>
-      <if test="row.createtime != null">
-        CreateTime = #{row.createtime,jdbcType=TIMESTAMP},
+      <if test="row.createTime != null">
+        CreateTime = #{row.createTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="row.createuser != null">
-        CreateUser = #{row.createuser,jdbcType=VARCHAR},
+      <if test="row.createUser != null">
+        CreateUser = #{row.createUser,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="example != null">
@@ -173,11 +173,11 @@
   </update>
   <update id="updateByExample" parameterType="map">
     update mynote
-    set NoteId = #{row.noteid,jdbcType=INTEGER},
-      NoteTitle = #{row.notetitle,jdbcType=VARCHAR},
-      NoteContent = #{row.notecontent,jdbcType=VARCHAR},
-      CreateTime = #{row.createtime,jdbcType=TIMESTAMP},
-      CreateUser = #{row.createuser,jdbcType=VARCHAR}
+    set NoteId = #{row.noteId,jdbcType=INTEGER},
+      NoteTitle = #{row.noteTitle,jdbcType=VARCHAR},
+      NoteContent = #{row.noteContent,jdbcType=VARCHAR},
+      CreateTime = #{row.createTime,jdbcType=TIMESTAMP},
+      CreateUser = #{row.createUser,jdbcType=VARCHAR}
     <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -185,27 +185,27 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.rea.myoffice.model.Mynote">
     update mynote
     <set>
-      <if test="notetitle != null">
-        NoteTitle = #{notetitle,jdbcType=VARCHAR},
+      <if test="noteTitle != null">
+        NoteTitle = #{noteTitle,jdbcType=VARCHAR},
       </if>
-      <if test="notecontent != null">
-        NoteContent = #{notecontent,jdbcType=VARCHAR},
+      <if test="noteContent != null">
+        NoteContent = #{noteContent,jdbcType=VARCHAR},
       </if>
-      <if test="createtime != null">
-        CreateTime = #{createtime,jdbcType=TIMESTAMP},
+      <if test="createTime != null">
+        CreateTime = #{createTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="createuser != null">
-        CreateUser = #{createuser,jdbcType=VARCHAR},
+      <if test="createUser != null">
+        CreateUser = #{createUser,jdbcType=VARCHAR},
       </if>
     </set>
-    where NoteId = #{noteid,jdbcType=INTEGER}
+    where NoteId = #{noteId,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.rea.myoffice.model.Mynote">
     update mynote
-    set NoteTitle = #{notetitle,jdbcType=VARCHAR},
-      NoteContent = #{notecontent,jdbcType=VARCHAR},
-      CreateTime = #{createtime,jdbcType=TIMESTAMP},
-      CreateUser = #{createuser,jdbcType=VARCHAR}
-    where NoteId = #{noteid,jdbcType=INTEGER}
+    set NoteTitle = #{noteTitle,jdbcType=VARCHAR},
+      NoteContent = #{noteContent,jdbcType=VARCHAR},
+      CreateTime = #{createTime,jdbcType=TIMESTAMP},
+      CreateUser = #{createUser,jdbcType=VARCHAR}
+    where NoteId = #{noteId,jdbcType=INTEGER}
   </update>
 </mapper>

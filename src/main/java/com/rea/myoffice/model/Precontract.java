@@ -5,38 +5,38 @@ import java.io.Serializable;
 
 public class Precontract implements Serializable {
     @ApiModelProperty(value = "预约序号Id")
-    private Integer precontractid;
+    private Integer preContractId;
 
     @ApiModelProperty(value = "日程Id")
-    private Integer scheduleid;
+    private Integer scheduleId;
 
     @ApiModelProperty(value = "预约人")
-    private byte[] userid;
+    private byte[] userId;
 
     private static final long serialVersionUID = 1L;
 
-    public Integer getPrecontractid() {
-        return precontractid;
+    public Integer getPreContractId() {
+        return preContractId;
     }
 
-    public void setPrecontractid(Integer precontractid) {
-        this.precontractid = precontractid;
+    public void setPreContractId(Integer preContractId) {
+        this.preContractId = preContractId;
     }
 
-    public Integer getScheduleid() {
-        return scheduleid;
+    public Integer getScheduleId() {
+        return scheduleId;
     }
 
-    public void setScheduleid(Integer scheduleid) {
-        this.scheduleid = scheduleid;
+    public void setScheduleId(Integer scheduleId) {
+        this.scheduleId = scheduleId;
     }
 
-    public byte[] getUserid() {
-        return userid;
+    public byte[] getUserId() {
+        return userId;
     }
 
-    public void setUserid(byte[] userid) {
-        this.userid = userid;
+    public void setUserId(byte[] userId) {
+        this.userId = userId;
     }
 
     @Override
@@ -45,9 +45,9 @@ public class Precontract implements Serializable {
         sb.append(getClass().getSimpleName());
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
-        sb.append(", precontractid=").append(precontractid);
-        sb.append(", scheduleid=").append(scheduleid);
-        sb.append(", userid=").append(userid);
+        sb.append(", preContractId=").append(preContractId);
+        sb.append(", scheduleId=").append(scheduleId);
+        sb.append(", userId=").append(userId);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

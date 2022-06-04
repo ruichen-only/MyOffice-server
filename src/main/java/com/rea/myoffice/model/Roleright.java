@@ -5,38 +5,38 @@ import java.io.Serializable;
 
 public class Roleright implements Serializable {
     @ApiModelProperty(value = "角色权限id")
-    private Integer rolerightid;
+    private Integer roleRightId;
 
     @ApiModelProperty(value = "角色id")
-    private Integer roleid;
+    private Integer roleId;
 
     @ApiModelProperty(value = "菜单节点id")
-    private Integer nodeid;
+    private Integer nodeId;
 
     private static final long serialVersionUID = 1L;
 
-    public Integer getRolerightid() {
-        return rolerightid;
+    public Integer getRoleRightId() {
+        return roleRightId;
     }
 
-    public void setRolerightid(Integer rolerightid) {
-        this.rolerightid = rolerightid;
+    public void setRoleRightId(Integer roleRightId) {
+        this.roleRightId = roleRightId;
     }
 
-    public Integer getRoleid() {
-        return roleid;
+    public Integer getRoleId() {
+        return roleId;
     }
 
-    public void setRoleid(Integer roleid) {
-        this.roleid = roleid;
+    public void setRoleId(Integer roleId) {
+        this.roleId = roleId;
     }
 
-    public Integer getNodeid() {
-        return nodeid;
+    public Integer getNodeId() {
+        return nodeId;
     }
 
-    public void setNodeid(Integer nodeid) {
-        this.nodeid = nodeid;
+    public void setNodeId(Integer nodeId) {
+        this.nodeId = nodeId;
     }
 
     @Override
@@ -45,9 +45,9 @@ public class Roleright implements Serializable {
         sb.append(getClass().getSimpleName());
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
-        sb.append(", rolerightid=").append(rolerightid);
-        sb.append(", roleid=").append(roleid);
-        sb.append(", nodeid=").append(nodeid);
+        sb.append(", roleRightId=").append(roleRightId);
+        sb.append(", roleId=").append(roleId);
+        sb.append(", nodeId=").append(nodeId);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

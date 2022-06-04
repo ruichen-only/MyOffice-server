@@ -104,203 +104,203 @@ public class BranchinfoExample {
             criteria.add(new Criterion(condition, value1, value2));
         }
 
-        public Criteria andBranchidIsNull() {
+        public Criteria andBranchIdIsNull() {
             addCriterion("BranchId is null");
             return (Criteria) this;
         }
 
-        public Criteria andBranchidIsNotNull() {
+        public Criteria andBranchIdIsNotNull() {
             addCriterion("BranchId is not null");
             return (Criteria) this;
         }
 
-        public Criteria andBranchidEqualTo(Integer value) {
-            addCriterion("BranchId =", value, "branchid");
+        public Criteria andBranchIdEqualTo(Integer value) {
+            addCriterion("BranchId =", value, "branchId");
             return (Criteria) this;
         }
 
-        public Criteria andBranchidNotEqualTo(Integer value) {
-            addCriterion("BranchId <>", value, "branchid");
+        public Criteria andBranchIdNotEqualTo(Integer value) {
+            addCriterion("BranchId <>", value, "branchId");
             return (Criteria) this;
         }
 
-        public Criteria andBranchidGreaterThan(Integer value) {
-            addCriterion("BranchId >", value, "branchid");
+        public Criteria andBranchIdGreaterThan(Integer value) {
+            addCriterion("BranchId >", value, "branchId");
             return (Criteria) this;
         }
 
-        public Criteria andBranchidGreaterThanOrEqualTo(Integer value) {
-            addCriterion("BranchId >=", value, "branchid");
+        public Criteria andBranchIdGreaterThanOrEqualTo(Integer value) {
+            addCriterion("BranchId >=", value, "branchId");
             return (Criteria) this;
         }
 
-        public Criteria andBranchidLessThan(Integer value) {
-            addCriterion("BranchId <", value, "branchid");
+        public Criteria andBranchIdLessThan(Integer value) {
+            addCriterion("BranchId <", value, "branchId");
             return (Criteria) this;
         }
 
-        public Criteria andBranchidLessThanOrEqualTo(Integer value) {
-            addCriterion("BranchId <=", value, "branchid");
+        public Criteria andBranchIdLessThanOrEqualTo(Integer value) {
+            addCriterion("BranchId <=", value, "branchId");
             return (Criteria) this;
         }
 
-        public Criteria andBranchidIn(List<Integer> values) {
-            addCriterion("BranchId in", values, "branchid");
+        public Criteria andBranchIdIn(List<Integer> values) {
+            addCriterion("BranchId in", values, "branchId");
             return (Criteria) this;
         }
 
-        public Criteria andBranchidNotIn(List<Integer> values) {
-            addCriterion("BranchId not in", values, "branchid");
+        public Criteria andBranchIdNotIn(List<Integer> values) {
+            addCriterion("BranchId not in", values, "branchId");
             return (Criteria) this;
         }
 
-        public Criteria andBranchidBetween(Integer value1, Integer value2) {
-            addCriterion("BranchId between", value1, value2, "branchid");
+        public Criteria andBranchIdBetween(Integer value1, Integer value2) {
+            addCriterion("BranchId between", value1, value2, "branchId");
             return (Criteria) this;
         }
 
-        public Criteria andBranchidNotBetween(Integer value1, Integer value2) {
-            addCriterion("BranchId not between", value1, value2, "branchid");
+        public Criteria andBranchIdNotBetween(Integer value1, Integer value2) {
+            addCriterion("BranchId not between", value1, value2, "branchId");
             return (Criteria) this;
         }
 
-        public Criteria andBranchnameIsNull() {
+        public Criteria andBranchNameIsNull() {
             addCriterion("BranchName is null");
             return (Criteria) this;
         }
 
-        public Criteria andBranchnameIsNotNull() {
+        public Criteria andBranchNameIsNotNull() {
             addCriterion("BranchName is not null");
             return (Criteria) this;
         }
 
-        public Criteria andBranchnameEqualTo(String value) {
-            addCriterion("BranchName =", value, "branchname");
+        public Criteria andBranchNameEqualTo(String value) {
+            addCriterion("BranchName =", value, "branchName");
             return (Criteria) this;
         }
 
-        public Criteria andBranchnameNotEqualTo(String value) {
-            addCriterion("BranchName <>", value, "branchname");
+        public Criteria andBranchNameNotEqualTo(String value) {
+            addCriterion("BranchName <>", value, "branchName");
             return (Criteria) this;
         }
 
-        public Criteria andBranchnameGreaterThan(String value) {
-            addCriterion("BranchName >", value, "branchname");
+        public Criteria andBranchNameGreaterThan(String value) {
+            addCriterion("BranchName >", value, "branchName");
             return (Criteria) this;
         }
 
-        public Criteria andBranchnameGreaterThanOrEqualTo(String value) {
-            addCriterion("BranchName >=", value, "branchname");
+        public Criteria andBranchNameGreaterThanOrEqualTo(String value) {
+            addCriterion("BranchName >=", value, "branchName");
             return (Criteria) this;
         }
 
-        public Criteria andBranchnameLessThan(String value) {
-            addCriterion("BranchName <", value, "branchname");
+        public Criteria andBranchNameLessThan(String value) {
+            addCriterion("BranchName <", value, "branchName");
             return (Criteria) this;
         }
 
-        public Criteria andBranchnameLessThanOrEqualTo(String value) {
-            addCriterion("BranchName <=", value, "branchname");
+        public Criteria andBranchNameLessThanOrEqualTo(String value) {
+            addCriterion("BranchName <=", value, "branchName");
             return (Criteria) this;
         }
 
-        public Criteria andBranchnameLike(String value) {
-            addCriterion("BranchName like", value, "branchname");
+        public Criteria andBranchNameLike(String value) {
+            addCriterion("BranchName like", value, "branchName");
             return (Criteria) this;
         }
 
-        public Criteria andBranchnameNotLike(String value) {
-            addCriterion("BranchName not like", value, "branchname");
+        public Criteria andBranchNameNotLike(String value) {
+            addCriterion("BranchName not like", value, "branchName");
             return (Criteria) this;
         }
 
-        public Criteria andBranchnameIn(List<String> values) {
-            addCriterion("BranchName in", values, "branchname");
+        public Criteria andBranchNameIn(List<String> values) {
+            addCriterion("BranchName in", values, "branchName");
             return (Criteria) this;
         }
 
-        public Criteria andBranchnameNotIn(List<String> values) {
-            addCriterion("BranchName not in", values, "branchname");
+        public Criteria andBranchNameNotIn(List<String> values) {
+            addCriterion("BranchName not in", values, "branchName");
             return (Criteria) this;
         }
 
-        public Criteria andBranchnameBetween(String value1, String value2) {
-            addCriterion("BranchName between", value1, value2, "branchname");
+        public Criteria andBranchNameBetween(String value1, String value2) {
+            addCriterion("BranchName between", value1, value2, "branchName");
             return (Criteria) this;
         }
 
-        public Criteria andBranchnameNotBetween(String value1, String value2) {
-            addCriterion("BranchName not between", value1, value2, "branchname");
+        public Criteria andBranchNameNotBetween(String value1, String value2) {
+            addCriterion("BranchName not between", value1, value2, "branchName");
             return (Criteria) this;
         }
 
-        public Criteria andBranchshortnameIsNull() {
+        public Criteria andBranchShortNameIsNull() {
             addCriterion("BranchShortName is null");
             return (Criteria) this;
         }
 
-        public Criteria andBranchshortnameIsNotNull() {
+        public Criteria andBranchShortNameIsNotNull() {
             addCriterion("BranchShortName is not null");
             return (Criteria) this;
         }
 
-        public Criteria andBranchshortnameEqualTo(String value) {
-            addCriterion("BranchShortName =", value, "branchshortname");
+        public Criteria andBranchShortNameEqualTo(String value) {
+            addCriterion("BranchShortName =", value, "branchShortName");
             return (Criteria) this;
         }
 
-        public Criteria andBranchshortnameNotEqualTo(String value) {
-            addCriterion("BranchShortName <>", value, "branchshortname");
+        public Criteria andBranchShortNameNotEqualTo(String value) {
+            addCriterion("BranchShortName <>", value, "branchShortName");
             return (Criteria) this;
         }
 
-        public Criteria andBranchshortnameGreaterThan(String value) {
-            addCriterion("BranchShortName >", value, "branchshortname");
+        public Criteria andBranchShortNameGreaterThan(String value) {
+            addCriterion("BranchShortName >", value, "branchShortName");
             return (Criteria) this;
         }
 
-        public Criteria andBranchshortnameGreaterThanOrEqualTo(String value) {
-            addCriterion("BranchShortName >=", value, "branchshortname");
+        public Criteria andBranchShortNameGreaterThanOrEqualTo(String value) {
+            addCriterion("BranchShortName >=", value, "branchShortName");
             return (Criteria) this;
         }
 
-        public Criteria andBranchshortnameLessThan(String value) {
-            addCriterion("BranchShortName <", value, "branchshortname");
+        public Criteria andBranchShortNameLessThan(String value) {
+            addCriterion("BranchShortName <", value, "branchShortName");
             return (Criteria) this;
         }
 
-        public Criteria andBranchshortnameLessThanOrEqualTo(String value) {
-            addCriterion("BranchShortName <=", value, "branchshortname");
+        public Criteria andBranchShortNameLessThanOrEqualTo(String value) {
+            addCriterion("BranchShortName <=", value, "branchShortName");
             return (Criteria) this;
         }
 
-        public Criteria andBranchshortnameLike(String value) {
-            addCriterion("BranchShortName like", value, "branchshortname");
+        public Criteria andBranchShortNameLike(String value) {
+            addCriterion("BranchShortName like", value, "branchShortName");
             return (Criteria) this;
         }
 
-        public Criteria andBranchshortnameNotLike(String value) {
-            addCriterion("BranchShortName not like", value, "branchshortname");
+        public Criteria andBranchShortNameNotLike(String value) {
+            addCriterion("BranchShortName not like", value, "branchShortName");
             return (Criteria) this;
         }
 
-        public Criteria andBranchshortnameIn(List<String> values) {
-            addCriterion("BranchShortName in", values, "branchshortname");
+        public Criteria andBranchShortNameIn(List<String> values) {
+            addCriterion("BranchShortName in", values, "branchShortName");
             return (Criteria) this;
         }
 
-        public Criteria andBranchshortnameNotIn(List<String> values) {
-            addCriterion("BranchShortName not in", values, "branchshortname");
+        public Criteria andBranchShortNameNotIn(List<String> values) {
+            addCriterion("BranchShortName not in", values, "branchShortName");
             return (Criteria) this;
         }
 
-        public Criteria andBranchshortnameBetween(String value1, String value2) {
-            addCriterion("BranchShortName between", value1, value2, "branchshortname");
+        public Criteria andBranchShortNameBetween(String value1, String value2) {
+            addCriterion("BranchShortName between", value1, value2, "branchShortName");
             return (Criteria) this;
         }
 
-        public Criteria andBranchshortnameNotBetween(String value1, String value2) {
-            addCriterion("BranchShortName not between", value1, value2, "branchshortname");
+        public Criteria andBranchShortNameNotBetween(String value1, String value2) {
+            addCriterion("BranchShortName not between", value1, value2, "branchShortName");
             return (Criteria) this;
         }
     }

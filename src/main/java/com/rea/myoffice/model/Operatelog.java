@@ -6,71 +6,71 @@ import java.util.Date;
 
 public class Operatelog implements Serializable {
     @ApiModelProperty(value = "操作日志Id")
-    private Integer operateid;
+    private Integer operateId;
 
     @ApiModelProperty(value = "操作者")
-    private String userid;
+    private String userId;
 
     @ApiModelProperty(value = "操作名称")
-    private String operatename;
+    private String operateName;
 
     @ApiModelProperty(value = "操作对象Id")
-    private String objectid;
+    private String objectId;
 
     @ApiModelProperty(value = "操作描述")
-    private String operatedesc;
+    private String operateDesc;
 
     @ApiModelProperty(value = "操作时间")
-    private Date operatetime;
+    private Date operateTime;
 
     private static final long serialVersionUID = 1L;
 
-    public Integer getOperateid() {
-        return operateid;
+    public Integer getOperateId() {
+        return operateId;
     }
 
-    public void setOperateid(Integer operateid) {
-        this.operateid = operateid;
+    public void setOperateId(Integer operateId) {
+        this.operateId = operateId;
     }
 
-    public String getUserid() {
-        return userid;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setUserid(String userid) {
-        this.userid = userid;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
-    public String getOperatename() {
-        return operatename;
+    public String getOperateName() {
+        return operateName;
     }
 
-    public void setOperatename(String operatename) {
-        this.operatename = operatename;
+    public void setOperateName(String operateName) {
+        this.operateName = operateName;
     }
 
-    public String getObjectid() {
-        return objectid;
+    public String getObjectId() {
+        return objectId;
     }
 
-    public void setObjectid(String objectid) {
-        this.objectid = objectid;
+    public void setObjectId(String objectId) {
+        this.objectId = objectId;
     }
 
-    public String getOperatedesc() {
-        return operatedesc;
+    public String getOperateDesc() {
+        return operateDesc;
     }
 
-    public void setOperatedesc(String operatedesc) {
-        this.operatedesc = operatedesc;
+    public void setOperateDesc(String operateDesc) {
+        this.operateDesc = operateDesc;
     }
 
-    public Date getOperatetime() {
-        return operatetime;
+    public Date getOperateTime() {
+        return operateTime;
     }
 
-    public void setOperatetime(Date operatetime) {
-        this.operatetime = operatetime;
+    public void setOperateTime(Date operateTime) {
+        this.operateTime = operateTime;
     }
 
     @Override
@@ -79,12 +79,12 @@ public class Operatelog implements Serializable {
         sb.append(getClass().getSimpleName());
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
-        sb.append(", operateid=").append(operateid);
-        sb.append(", userid=").append(userid);
-        sb.append(", operatename=").append(operatename);
-        sb.append(", objectid=").append(objectid);
-        sb.append(", operatedesc=").append(operatedesc);
-        sb.append(", operatetime=").append(operatetime);
+        sb.append(", operateId=").append(operateId);
+        sb.append(", userId=").append(userId);
+        sb.append(", operateName=").append(operateName);
+        sb.append(", objectId=").append(objectId);
+        sb.append(", operateDesc=").append(operateDesc);
+        sb.append(", operateTime=").append(operateTime);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

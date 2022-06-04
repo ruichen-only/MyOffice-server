@@ -10,7 +10,7 @@ public interface MeetinginfoMapper {
 
     int deleteByExample(MeetinginfoExample example);
 
-    int deleteByPrimaryKey(Integer meetingid);
+    int deleteByPrimaryKey(Integer meetingId);
 
     int insert(Meetinginfo row);
 
@@ -18,7 +18,7 @@ public interface MeetinginfoMapper {
 
     List<Meetinginfo> selectByExample(MeetinginfoExample example);
 
-    Meetinginfo selectByPrimaryKey(Integer meetingid);
+    Meetinginfo selectByPrimaryKey(Integer meetingId);
 
     int updateByExampleSelective(@Param("row") Meetinginfo row, @Param("example") MeetinginfoExample example);
 

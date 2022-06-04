@@ -27,7 +27,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
   @Override
   public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
     UserinfoExample userinfoExample = new UserinfoExample();
-    userinfoExample.createCriteria().andUsernameEqualTo(username);
+    userinfoExample.createCriteria().andUserNameEqualTo(username);
 
     List<Userinfo> userInfos = userinfoMapper.selectByExample(userinfoExample);
     if (userInfos == null) {

@@ -11,7 +11,7 @@ import lombok.EqualsAndHashCode;
 @Data
 public class UserBean extends Userinfo {
   private String roleName;
-  private String deptName;
+  private String departName;
   private String branchId;
   private String branchName;
 }

@@ -3,9 +3,9 @@
 <mapper namespace="com.rea.myoffice.mapper.MessagetouserMapper">
   <resultMap id="BaseResultMap" type="com.rea.myoffice.model.Messagetouser">
     <id column="Id" jdbcType="INTEGER" property="id" />
-    <result column="MessageId" jdbcType="INTEGER" property="messageid" />
-    <result column="ToUserId" jdbcType="VARCHAR" property="touserid" />
-    <result column="IfRead" jdbcType="INTEGER" property="ifread" />
+    <result column="MessageId" jdbcType="INTEGER" property="messageId" />
+    <result column="ToUserId" jdbcType="VARCHAR" property="toUserId" />
+    <result column="IfRead" jdbcType="INTEGER" property="ifRead" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -104,7 +104,7 @@
     </selectKey>
     insert into messagetouser (MessageId, ToUserId, IfRead
       )
-    values (#{messageid,jdbcType=INTEGER}, #{touserid,jdbcType=VARCHAR}, #{ifread,jdbcType=INTEGER}
+    values (#{messageId,jdbcType=INTEGER}, #{toUserId,jdbcType=VARCHAR}, #{ifRead,jdbcType=INTEGER}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.rea.myoffice.model.Messagetouser">
@@ -113,25 +113,25 @@
     </selectKey>
     insert into messagetouser
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="messageid != null">
+      <if test="messageId != null">
         MessageId,
       </if>
-      <if test="touserid != null">
+      <if test="toUserId != null">
         ToUserId,
       </if>
-      <if test="ifread != null">
+      <if test="ifRead != null">
         IfRead,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="messageid != null">
-        #{messageid,jdbcType=INTEGER},
+      <if test="messageId != null">
+        #{messageId,jdbcType=INTEGER},
       </if>
-      <if test="touserid != null">
-        #{touserid,jdbcType=VARCHAR},
+      <if test="toUserId != null">
+        #{toUserId,jdbcType=VARCHAR},
       </if>
-      <if test="ifread != null">
-        #{ifread,jdbcType=INTEGER},
+      <if test="ifRead != null">
+        #{ifRead,jdbcType=INTEGER},
       </if>
     </trim>
   </insert>
@@ -147,14 +147,14 @@
       <if test="row.id != null">
         Id = #{row.id,jdbcType=INTEGER},
       </if>
-      <if test="row.messageid != null">
-        MessageId = #{row.messageid,jdbcType=INTEGER},
+      <if test="row.messageId != null">
+        MessageId = #{row.messageId,jdbcType=INTEGER},
       </if>
-      <if test="row.touserid != null">
-        ToUserId = #{row.touserid,jdbcType=VARCHAR},
+      <if test="row.toUserId != null">
+        ToUserId = #{row.toUserId,jdbcType=VARCHAR},
       </if>
-      <if test="row.ifread != null">
-        IfRead = #{row.ifread,jdbcType=INTEGER},
+      <if test="row.ifRead != null">
+        IfRead = #{row.ifRead,jdbcType=INTEGER},
       </if>
     </set>
     <if test="example != null">
@@ -164,9 +164,9 @@
   <update id="updateByExample" parameterType="map">
     update messagetouser
     set Id = #{row.id,jdbcType=INTEGER},
-      MessageId = #{row.messageid,jdbcType=INTEGER},
-      ToUserId = #{row.touserid,jdbcType=VARCHAR},
-      IfRead = #{row.ifread,jdbcType=INTEGER}
+      MessageId = #{row.messageId,jdbcType=INTEGER},
+      ToUserId = #{row.toUserId,jdbcType=VARCHAR},
+      IfRead = #{row.ifRead,jdbcType=INTEGER}
     <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -174,23 +174,23 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.rea.myoffice.model.Messagetouser">
     update messagetouser
     <set>
-      <if test="messageid != null">
-        MessageId = #{messageid,jdbcType=INTEGER},
+      <if test="messageId != null">
+        MessageId = #{messageId,jdbcType=INTEGER},
       </if>
-      <if test="touserid != null">
-        ToUserId = #{touserid,jdbcType=VARCHAR},
+      <if test="toUserId != null">
+        ToUserId = #{toUserId,jdbcType=VARCHAR},
       </if>
-      <if test="ifread != null">
-        IfRead = #{ifread,jdbcType=INTEGER},
+      <if test="ifRead != null">
+        IfRead = #{ifRead,jdbcType=INTEGER},
       </if>
     </set>
     where Id = #{id,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.rea.myoffice.model.Messagetouser">
     update messagetouser
-    set MessageId = #{messageid,jdbcType=INTEGER},
-      ToUserId = #{touserid,jdbcType=VARCHAR},
-      IfRead = #{ifread,jdbcType=INTEGER}
+    set MessageId = #{messageId,jdbcType=INTEGER},
+      ToUserId = #{toUserId,jdbcType=VARCHAR},
+      IfRead = #{ifRead,jdbcType=INTEGER}
     where Id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

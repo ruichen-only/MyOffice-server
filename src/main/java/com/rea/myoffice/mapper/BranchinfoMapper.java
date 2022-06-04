@@ -10,7 +10,7 @@ public interface BranchinfoMapper {
 
     int deleteByExample(BranchinfoExample example);
 
-    int deleteByPrimaryKey(Integer branchid);
+    int deleteByPrimaryKey(Integer branchId);
 
     int insert(Branchinfo row);
 
@@ -18,7 +18,7 @@ public interface BranchinfoMapper {
 
     List<Branchinfo> selectByExample(BranchinfoExample example);
 
-    Branchinfo selectByPrimaryKey(Integer branchid);
+    Branchinfo selectByPrimaryKey(Integer branchId);
 
     int updateByExampleSelective(@Param("row") Branchinfo row, @Param("example") BranchinfoExample example);
 

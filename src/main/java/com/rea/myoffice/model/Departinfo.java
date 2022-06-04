@@ -5,66 +5,66 @@ import java.io.Serializable;
 
 public class Departinfo implements Serializable {
     @ApiModelProperty(value = "部门id")
-    private Integer departid;
+    private Integer departId;
 
     @ApiModelProperty(value = "部门名称")
-    private String departname;
+    private String departName;
 
     @ApiModelProperty(value = "部门负责人")
-    private String principaluser;
+    private String principalUser;
 
     @ApiModelProperty(value = "联系电话")
-    private Long connecttelno;
+    private Long connectTelNo;
 
     @ApiModelProperty(value = "移动电话")
-    private Long connectmobiletelno;
+    private Long connectMobileTelNo;
 
     @ApiModelProperty(value = "传真")
     private Long faxes;
 
     @ApiModelProperty(value = "所属机构")
-    private Integer branchid;
+    private Integer branchId;
 
     private static final long serialVersionUID = 1L;
 
-    public Integer getDepartid() {
-        return departid;
+    public Integer getDepartId() {
+        return departId;
     }
 
-    public void setDepartid(Integer departid) {
-        this.departid = departid;
+    public void setDepartId(Integer departId) {
+        this.departId = departId;
     }
 
-    public String getDepartname() {
-        return departname;
+    public String getDepartName() {
+        return departName;
     }
 
-    public void setDepartname(String departname) {
-        this.departname = departname;
+    public void setDepartName(String departName) {
+        this.departName = departName;
     }
 
-    public String getPrincipaluser() {
-        return principaluser;
+    public String getPrincipalUser() {
+        return principalUser;
     }
 
-    public void setPrincipaluser(String principaluser) {
-        this.principaluser = principaluser;
+    public void setPrincipalUser(String principalUser) {
+        this.principalUser = principalUser;
     }
 
-    public Long getConnecttelno() {
-        return connecttelno;
+    public Long getConnectTelNo() {
+        return connectTelNo;
     }
 
-    public void setConnecttelno(Long connecttelno) {
-        this.connecttelno = connecttelno;
+    public void setConnectTelNo(Long connectTelNo) {
+        this.connectTelNo = connectTelNo;
     }
 
-    public Long getConnectmobiletelno() {
-        return connectmobiletelno;
+    public Long getConnectMobileTelNo() {
+        return connectMobileTelNo;
     }
 
-    public void setConnectmobiletelno(Long connectmobiletelno) {
-        this.connectmobiletelno = connectmobiletelno;
+    public void setConnectMobileTelNo(Long connectMobileTelNo) {
+        this.connectMobileTelNo = connectMobileTelNo;
     }
 
     public Long getFaxes() {
@@ -75,12 +75,12 @@ public class Departinfo implements Serializable {
         this.faxes = faxes;
     }
 
-    public Integer getBranchid() {
-        return branchid;
+    public Integer getBranchId() {
+        return branchId;
     }
 
-    public void setBranchid(Integer branchid) {
-        this.branchid = branchid;
+    public void setBranchId(Integer branchId) {
+        this.branchId = branchId;
     }
 
     @Override
@@ -89,13 +89,13 @@ public class Departinfo implements Serializable {
         sb.append(getClass().getSimpleName());
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
-        sb.append(", departid=").append(departid);
-        sb.append(", departname=").append(departname);
-        sb.append(", principaluser=").append(principaluser);
-        sb.append(", connecttelno=").append(connecttelno);
-        sb.append(", connectmobiletelno=").append(connectmobiletelno);
+        sb.append(", departId=").append(departId);
+        sb.append(", departName=").append(departName);
+        sb.append(", principalUser=").append(principalUser);
+        sb.append(", connectTelNo=").append(connectTelNo);
+        sb.append(", connectMobileTelNo=").append(connectMobileTelNo);
         sb.append(", faxes=").append(faxes);
-        sb.append(", branchid=").append(branchid);
+        sb.append(", branchId=").append(branchId);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

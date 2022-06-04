@@ -1,103 +1,104 @@
 package com.rea.myoffice.model;
 
 import io.swagger.annotations.ApiModelProperty;
+
 import java.io.Serializable;
 
 public class Userinfo implements Serializable {
-    @ApiModelProperty(value = "用户唯一标识")
-    private String userid;
+  @ApiModelProperty(value = "用户唯一标识")
+  private String userId;
 
-    @ApiModelProperty(value = "真实姓名")
-    private String username;
+  @ApiModelProperty(value = "真实姓名")
+  private String username;
 
-    @ApiModelProperty(value = "密码")
-    private String password;
+  @ApiModelProperty(value = "密码")
+  private String password;
 
-    @ApiModelProperty(value = "所在部门")
-    private Integer departid;
+  @ApiModelProperty(value = "所在部门")
+  private Integer departId;
 
-    @ApiModelProperty(value = "性别")
-    private Integer gender;
+  @ApiModelProperty(value = "性别")
+  private Integer gender;
 
-    @ApiModelProperty(value = "用户角色")
-    private Integer roleid;
+  @ApiModelProperty(value = "用户角色")
+  private Integer roleId;
 
-    @ApiModelProperty(value = "用户状态")
-    private Integer userstate;
+  @ApiModelProperty(value = "用户状态")
+  private Integer userState;
 
-    private static final long serialVersionUID = 1L;
+  private static final long serialVersionUID = 1L;
 
-    public String getUserid() {
-        return userid;
-    }
+  public String getUserId() {
+    return userId;
+  }
 
-    public void setUserid(String userid) {
-        this.userid = userid;
-    }
+  public void setUserId(String userId) {
+    this.userId = userId;
+  }
 
-    public String getUsername() {
-        return username;
-    }
+  public String getUsername() {
+    return username;
+  }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
+  public void setUserName(String userName) {
+    this.username = userName;
+  }
 
-    public String getPassword() {
-        return password;
-    }
+  public String getPassword() {
+    return password;
+  }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+  public void setPassword(String password) {
+    this.password = password;
+  }
 
-    public Integer getDepartid() {
-        return departid;
-    }
+  public Integer getDepartId() {
+    return departId;
+  }
 
-    public void setDepartid(Integer departid) {
-        this.departid = departid;
-    }
+  public void setDepartId(Integer departId) {
+    this.departId = departId;
+  }
 
-    public Integer getGender() {
-        return gender;
-    }
+  public Integer getGender() {
+    return gender;
+  }
 
-    public void setGender(Integer gender) {
-        this.gender = gender;
-    }
+  public void setGender(Integer gender) {
+    this.gender = gender;
+  }
 
-    public Integer getRoleid() {
-        return roleid;
-    }
+  public Integer getRoleId() {
+    return roleId;
+  }
 
-    public void setRoleid(Integer roleid) {
-        this.roleid = roleid;
-    }
+  public void setRoleId(Integer roleId) {
+    this.roleId = roleId;
+  }
 
-    public Integer getUserstate() {
-        return userstate;
-    }
+  public Integer getUserState() {
+    return userState;
+  }
 
-    public void setUserstate(Integer userstate) {
-        this.userstate = userstate;
-    }
+  public void setUserState(Integer userState) {
+    this.userState = userState;
+  }
 
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", userid=").append(userid);
-        sb.append(", username=").append(username);
-        sb.append(", password=").append(password);
-        sb.append(", departid=").append(departid);
-        sb.append(", gender=").append(gender);
-        sb.append(", roleid=").append(roleid);
-        sb.append(", userstate=").append(userstate);
-        sb.append(", serialVersionUID=").append(serialVersionUID);
-        sb.append("]");
-        return sb.toString();
-    }
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append(getClass().getSimpleName());
+    sb.append(" [");
+    sb.append("Hash = ").append(hashCode());
+    sb.append(", userId=").append(userId);
+    sb.append(", userName=").append(username);
+    sb.append(", password=").append(password);
+    sb.append(", departId=").append(departId);
+    sb.append(", gender=").append(gender);
+    sb.append(", roleId=").append(roleId);
+    sb.append(", userState=").append(userState);
+    sb.append(", serialVersionUID=").append(serialVersionUID);
+    sb.append("]");
+    return sb.toString();
+  }
 }

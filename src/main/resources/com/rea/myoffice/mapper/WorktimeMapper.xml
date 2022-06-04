@@ -2,9 +2,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.rea.myoffice.mapper.WorktimeMapper">
   <resultMap id="BaseResultMap" type="com.rea.myoffice.model.Worktime">
-    <id column="WorkTimeId" jdbcType="INTEGER" property="worktimeid" />
-    <result column="OnDutyTime" jdbcType="TIMESTAMP" property="ondutytime" />
-    <result column="OffDutyTime" jdbcType="TIMESTAMP" property="offdutytime" />
+    <id column="WorkTimeId" jdbcType="INTEGER" property="workTimeId" />
+    <result column="OnDutyTime" jdbcType="TIMESTAMP" property="onDutyTime" />
+    <result column="OffDutyTime" jdbcType="TIMESTAMP" property="offDutyTime" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -85,11 +85,11 @@
     select 
     <include refid="Base_Column_List" />
     from worktime
-    where WorkTimeId = #{worktimeid,jdbcType=INTEGER}
+    where WorkTimeId = #{workTimeId,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from worktime
-    where WorkTimeId = #{worktimeid,jdbcType=INTEGER}
+    where WorkTimeId = #{workTimeId,jdbcType=INTEGER}
   </delete>
   <delete id="deleteByExample" parameterType="com.rea.myoffice.model.WorktimeExample">
     delete from worktime
@@ -100,31 +100,31 @@
   <insert id="insert" parameterType="com.rea.myoffice.model.Worktime">
     insert into worktime (WorkTimeId, OnDutyTime, OffDutyTime
       )
-    values (#{worktimeid,jdbcType=INTEGER}, #{ondutytime,jdbcType=TIMESTAMP}, #{offdutytime,jdbcType=TIMESTAMP}
+    values (#{workTimeId,jdbcType=INTEGER}, #{onDutyTime,jdbcType=TIMESTAMP}, #{offDutyTime,jdbcType=TIMESTAMP}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.rea.myoffice.model.Worktime">
     insert into worktime
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="worktimeid != null">
+      <if test="workTimeId != null">
         WorkTimeId,
       </if>
-      <if test="ondutytime != null">
+      <if test="onDutyTime != null">
         OnDutyTime,
       </if>
-      <if test="offdutytime != null">
+      <if test="offDutyTime != null">
         OffDutyTime,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="worktimeid != null">
-        #{worktimeid,jdbcType=INTEGER},
+      <if test="workTimeId != null">
+        #{workTimeId,jdbcType=INTEGER},
       </if>
-      <if test="ondutytime != null">
-        #{ondutytime,jdbcType=TIMESTAMP},
+      <if test="onDutyTime != null">
+        #{onDutyTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="offdutytime != null">
-        #{offdutytime,jdbcType=TIMESTAMP},
+      <if test="offDutyTime != null">
+        #{offDutyTime,jdbcType=TIMESTAMP},
       </if>
     </trim>
   </insert>
@@ -137,14 +137,14 @@
   <update id="updateByExampleSelective" parameterType="map">
     update worktime
     <set>
-      <if test="row.worktimeid != null">
-        WorkTimeId = #{row.worktimeid,jdbcType=INTEGER},
+      <if test="row.workTimeId != null">
+        WorkTimeId = #{row.workTimeId,jdbcType=INTEGER},
       </if>
-      <if test="row.ondutytime != null">
-        OnDutyTime = #{row.ondutytime,jdbcType=TIMESTAMP},
+      <if test="row.onDutyTime != null">
+        OnDutyTime = #{row.onDutyTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="row.offdutytime != null">
-        OffDutyTime = #{row.offdutytime,jdbcType=TIMESTAMP},
+      <if test="row.offDutyTime != null">
+        OffDutyTime = #{row.offDutyTime,jdbcType=TIMESTAMP},
       </if>
     </set>
     <if test="example != null">
@@ -153,9 +153,9 @@
   </update>
   <update id="updateByExample" parameterType="map">
     update worktime
-    set WorkTimeId = #{row.worktimeid,jdbcType=INTEGER},
-      OnDutyTime = #{row.ondutytime,jdbcType=TIMESTAMP},
-      OffDutyTime = #{row.offdutytime,jdbcType=TIMESTAMP}
+    set WorkTimeId = #{row.workTimeId,jdbcType=INTEGER},
+      OnDutyTime = #{row.onDutyTime,jdbcType=TIMESTAMP},
+      OffDutyTime = #{row.offDutyTime,jdbcType=TIMESTAMP}
     <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -163,19 +163,19 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.rea.myoffice.model.Worktime">
     update worktime
     <set>
-      <if test="ondutytime != null">
-        OnDutyTime = #{ondutytime,jdbcType=TIMESTAMP},
+      <if test="onDutyTime != null">
+        OnDutyTime = #{onDutyTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="offdutytime != null">
-        OffDutyTime = #{offdutytime,jdbcType=TIMESTAMP},
+      <if test="offDutyTime != null">
+        OffDutyTime = #{offDutyTime,jdbcType=TIMESTAMP},
       </if>
     </set>
-    where WorkTimeId = #{worktimeid,jdbcType=INTEGER}
+    where WorkTimeId = #{workTimeId,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.rea.myoffice.model.Worktime">
     update worktime
-    set OnDutyTime = #{ondutytime,jdbcType=TIMESTAMP},
-      OffDutyTime = #{offdutytime,jdbcType=TIMESTAMP}
-    where WorkTimeId = #{worktimeid,jdbcType=INTEGER}
+    set OnDutyTime = #{onDutyTime,jdbcType=TIMESTAMP},
+      OffDutyTime = #{offDutyTime,jdbcType=TIMESTAMP}
+    where WorkTimeId = #{workTimeId,jdbcType=INTEGER}
   </update>
 </mapper>

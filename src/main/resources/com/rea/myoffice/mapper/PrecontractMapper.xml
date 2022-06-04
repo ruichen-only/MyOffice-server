@@ -2,11 +2,11 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.rea.myoffice.mapper.PrecontractMapper">
   <resultMap id="BaseResultMap" type="com.rea.myoffice.model.Precontract">
-    <id column="PreContractId" jdbcType="INTEGER" property="precontractid" />
-    <result column="ScheduleId" jdbcType="INTEGER" property="scheduleid" />
+    <id column="PreContractId" jdbcType="INTEGER" property="preContractId" />
+    <result column="ScheduleId" jdbcType="INTEGER" property="scheduleId" />
   </resultMap>
   <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.rea.myoffice.model.Precontract">
-    <result column="UserId" jdbcType="VARBINARY" property="userid" />
+    <result column="UserId" jdbcType="VARBINARY" property="userId" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -108,11 +108,11 @@
     ,
     <include refid="Blob_Column_List" />
     from precontract
-    where PreContractId = #{precontractid,jdbcType=INTEGER}
+    where PreContractId = #{preContractId,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from precontract
-    where PreContractId = #{precontractid,jdbcType=INTEGER}
+    where PreContractId = #{preContractId,jdbcType=INTEGER}
   </delete>
   <delete id="deleteByExample" parameterType="com.rea.myoffice.model.PrecontractExample">
     delete from precontract
@@ -123,31 +123,31 @@
   <insert id="insert" parameterType="com.rea.myoffice.model.Precontract">
     insert into precontract (PreContractId, ScheduleId, UserId
       )
-    values (#{precontractid,jdbcType=INTEGER}, #{scheduleid,jdbcType=INTEGER}, #{userid,jdbcType=VARBINARY}
+    values (#{preContractId,jdbcType=INTEGER}, #{scheduleId,jdbcType=INTEGER}, #{userId,jdbcType=VARBINARY}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.rea.myoffice.model.Precontract">
     insert into precontract
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="precontractid != null">
+      <if test="preContractId != null">
         PreContractId,
       </if>
-      <if test="scheduleid != null">
+      <if test="scheduleId != null">
         ScheduleId,
       </if>
-      <if test="userid != null">
+      <if test="userId != null">
         UserId,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="precontractid != null">
-        #{precontractid,jdbcType=INTEGER},
+      <if test="preContractId != null">
+        #{preContractId,jdbcType=INTEGER},
       </if>
-      <if test="scheduleid != null">
-        #{scheduleid,jdbcType=INTEGER},
+      <if test="scheduleId != null">
+        #{scheduleId,jdbcType=INTEGER},
       </if>
-      <if test="userid != null">
-        #{userid,jdbcType=VARBINARY},
+      <if test="userId != null">
+        #{userId,jdbcType=VARBINARY},
       </if>
     </trim>
   </insert>
@@ -160,14 +160,14 @@
   <update id="updateByExampleSelective" parameterType="map">
     update precontract
     <set>
-      <if test="row.precontractid != null">
-        PreContractId = #{row.precontractid,jdbcType=INTEGER},
+      <if test="row.preContractId != null">
+        PreContractId = #{row.preContractId,jdbcType=INTEGER},
       </if>
-      <if test="row.scheduleid != null">
-        ScheduleId = #{row.scheduleid,jdbcType=INTEGER},
+      <if test="row.scheduleId != null">
+        ScheduleId = #{row.scheduleId,jdbcType=INTEGER},
       </if>
-      <if test="row.userid != null">
-        UserId = #{row.userid,jdbcType=VARBINARY},
+      <if test="row.userId != null">
+        UserId = #{row.userId,jdbcType=VARBINARY},
       </if>
     </set>
     <if test="example != null">
@@ -176,17 +176,17 @@
   </update>
   <update id="updateByExampleWithBLOBs" parameterType="map">
     update precontract
-    set PreContractId = #{row.precontractid,jdbcType=INTEGER},
-      ScheduleId = #{row.scheduleid,jdbcType=INTEGER},
-      UserId = #{row.userid,jdbcType=VARBINARY}
+    set PreContractId = #{row.preContractId,jdbcType=INTEGER},
+      ScheduleId = #{row.scheduleId,jdbcType=INTEGER},
+      UserId = #{row.userId,jdbcType=VARBINARY}
     <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
   <update id="updateByExample" parameterType="map">
     update precontract
-    set PreContractId = #{row.precontractid,jdbcType=INTEGER},
-      ScheduleId = #{row.scheduleid,jdbcType=INTEGER}
+    set PreContractId = #{row.preContractId,jdbcType=INTEGER},
+      ScheduleId = #{row.scheduleId,jdbcType=INTEGER}
     <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -194,24 +194,24 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.rea.myoffice.model.Precontract">
     update precontract
     <set>
-      <if test="scheduleid != null">
-        ScheduleId = #{scheduleid,jdbcType=INTEGER},
+      <if test="scheduleId != null">
+        ScheduleId = #{scheduleId,jdbcType=INTEGER},
       </if>
-      <if test="userid != null">
-        UserId = #{userid,jdbcType=VARBINARY},
+      <if test="userId != null">
+        UserId = #{userId,jdbcType=VARBINARY},
       </if>
     </set>
-    where PreContractId = #{precontractid,jdbcType=INTEGER}
+    where PreContractId = #{preContractId,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.rea.myoffice.model.Precontract">
     update precontract
-    set ScheduleId = #{scheduleid,jdbcType=INTEGER},
-      UserId = #{userid,jdbcType=VARBINARY}
-    where PreContractId = #{precontractid,jdbcType=INTEGER}
+    set ScheduleId = #{scheduleId,jdbcType=INTEGER},
+      UserId = #{userId,jdbcType=VARBINARY}
+    where PreContractId = #{preContractId,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.rea.myoffice.model.Precontract">
     update precontract
-    set ScheduleId = #{scheduleid,jdbcType=INTEGER}
-    where PreContractId = #{precontractid,jdbcType=INTEGER}
+    set ScheduleId = #{scheduleId,jdbcType=INTEGER}
+    where PreContractId = #{preContractId,jdbcType=INTEGER}
   </update>
 </mapper>

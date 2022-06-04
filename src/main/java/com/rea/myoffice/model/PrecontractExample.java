@@ -104,123 +104,123 @@ public class PrecontractExample {
             criteria.add(new Criterion(condition, value1, value2));
         }
 
-        public Criteria andPrecontractidIsNull() {
+        public Criteria andPreContractIdIsNull() {
             addCriterion("PreContractId is null");
             return (Criteria) this;
         }
 
-        public Criteria andPrecontractidIsNotNull() {
+        public Criteria andPreContractIdIsNotNull() {
             addCriterion("PreContractId is not null");
             return (Criteria) this;
         }
 
-        public Criteria andPrecontractidEqualTo(Integer value) {
-            addCriterion("PreContractId =", value, "precontractid");
+        public Criteria andPreContractIdEqualTo(Integer value) {
+            addCriterion("PreContractId =", value, "preContractId");
             return (Criteria) this;
         }
 
-        public Criteria andPrecontractidNotEqualTo(Integer value) {
-            addCriterion("PreContractId <>", value, "precontractid");
+        public Criteria andPreContractIdNotEqualTo(Integer value) {
+            addCriterion("PreContractId <>", value, "preContractId");
             return (Criteria) this;
         }
 
-        public Criteria andPrecontractidGreaterThan(Integer value) {
-            addCriterion("PreContractId >", value, "precontractid");
+        public Criteria andPreContractIdGreaterThan(Integer value) {
+            addCriterion("PreContractId >", value, "preContractId");
             return (Criteria) this;
         }
 
-        public Criteria andPrecontractidGreaterThanOrEqualTo(Integer value) {
-            addCriterion("PreContractId >=", value, "precontractid");
+        public Criteria andPreContractIdGreaterThanOrEqualTo(Integer value) {
+            addCriterion("PreContractId >=", value, "preContractId");
             return (Criteria) this;
         }
 
-        public Criteria andPrecontractidLessThan(Integer value) {
-            addCriterion("PreContractId <", value, "precontractid");
+        public Criteria andPreContractIdLessThan(Integer value) {
+            addCriterion("PreContractId <", value, "preContractId");
             return (Criteria) this;
         }
 
-        public Criteria andPrecontractidLessThanOrEqualTo(Integer value) {
-            addCriterion("PreContractId <=", value, "precontractid");
+        public Criteria andPreContractIdLessThanOrEqualTo(Integer value) {
+            addCriterion("PreContractId <=", value, "preContractId");
             return (Criteria) this;
         }
 
-        public Criteria andPrecontractidIn(List<Integer> values) {
-            addCriterion("PreContractId in", values, "precontractid");
+        public Criteria andPreContractIdIn(List<Integer> values) {
+            addCriterion("PreContractId in", values, "preContractId");
             return (Criteria) this;
         }
 
-        public Criteria andPrecontractidNotIn(List<Integer> values) {
-            addCriterion("PreContractId not in", values, "precontractid");
+        public Criteria andPreContractIdNotIn(List<Integer> values) {
+            addCriterion("PreContractId not in", values, "preContractId");
             return (Criteria) this;
         }
 
-        public Criteria andPrecontractidBetween(Integer value1, Integer value2) {
-            addCriterion("PreContractId between", value1, value2, "precontractid");
+        public Criteria andPreContractIdBetween(Integer value1, Integer value2) {
+            addCriterion("PreContractId between", value1, value2, "preContractId");
             return (Criteria) this;
         }
 
-        public Criteria andPrecontractidNotBetween(Integer value1, Integer value2) {
-            addCriterion("PreContractId not between", value1, value2, "precontractid");
+        public Criteria andPreContractIdNotBetween(Integer value1, Integer value2) {
+            addCriterion("PreContractId not between", value1, value2, "preContractId");
             return (Criteria) this;
         }
 
-        public Criteria andScheduleidIsNull() {
+        public Criteria andScheduleIdIsNull() {
             addCriterion("ScheduleId is null");
             return (Criteria) this;
         }
 
-        public Criteria andScheduleidIsNotNull() {
+        public Criteria andScheduleIdIsNotNull() {
             addCriterion("ScheduleId is not null");
             return (Criteria) this;
         }
 
-        public Criteria andScheduleidEqualTo(Integer value) {
-            addCriterion("ScheduleId =", value, "scheduleid");
+        public Criteria andScheduleIdEqualTo(Integer value) {
+            addCriterion("ScheduleId =", value, "scheduleId");
             return (Criteria) this;
         }
 
-        public Criteria andScheduleidNotEqualTo(Integer value) {
-            addCriterion("ScheduleId <>", value, "scheduleid");
+        public Criteria andScheduleIdNotEqualTo(Integer value) {
+            addCriterion("ScheduleId <>", value, "scheduleId");
             return (Criteria) this;
         }
 
-        public Criteria andScheduleidGreaterThan(Integer value) {
-            addCriterion("ScheduleId >", value, "scheduleid");
+        public Criteria andScheduleIdGreaterThan(Integer value) {
+            addCriterion("ScheduleId >", value, "scheduleId");
             return (Criteria) this;
         }
 
-        public Criteria andScheduleidGreaterThanOrEqualTo(Integer value) {
-            addCriterion("ScheduleId >=", value, "scheduleid");
+        public Criteria andScheduleIdGreaterThanOrEqualTo(Integer value) {
+            addCriterion("ScheduleId >=", value, "scheduleId");
             return (Criteria) this;
         }
 
-        public Criteria andScheduleidLessThan(Integer value) {
-            addCriterion("ScheduleId <", value, "scheduleid");
+        public Criteria andScheduleIdLessThan(Integer value) {
+            addCriterion("ScheduleId <", value, "scheduleId");
             return (Criteria) this;
         }
 
-        public Criteria andScheduleidLessThanOrEqualTo(Integer value) {
-            addCriterion("ScheduleId <=", value, "scheduleid");
+        public Criteria andScheduleIdLessThanOrEqualTo(Integer value) {
+            addCriterion("ScheduleId <=", value, "scheduleId");
             return (Criteria) this;
         }
 
-        public Criteria andScheduleidIn(List<Integer> values) {
-            addCriterion("ScheduleId in", values, "scheduleid");
+        public Criteria andScheduleIdIn(List<Integer> values) {
+            addCriterion("ScheduleId in", values, "scheduleId");
             return (Criteria) this;
         }
 
-        public Criteria andScheduleidNotIn(List<Integer> values) {
-            addCriterion("ScheduleId not in", values, "scheduleid");
+        public Criteria andScheduleIdNotIn(List<Integer> values) {
+            addCriterion("ScheduleId not in", values, "scheduleId");
             return (Criteria) this;
         }
 
-        public Criteria andScheduleidBetween(Integer value1, Integer value2) {
-            addCriterion("ScheduleId between", value1, value2, "scheduleid");
+        public Criteria andScheduleIdBetween(Integer value1, Integer value2) {
+            addCriterion("ScheduleId between", value1, value2, "scheduleId");
             return (Criteria) this;
         }
 
-        public Criteria andScheduleidNotBetween(Integer value1, Integer value2) {
-            addCriterion("ScheduleId not between", value1, value2, "scheduleid");
+        public Criteria andScheduleIdNotBetween(Integer value1, Integer value2) {
+            addCriterion("ScheduleId not between", value1, value2, "scheduleId");
             return (Criteria) this;
         }
     }

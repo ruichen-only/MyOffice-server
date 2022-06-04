@@ -2,16 +2,16 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.rea.myoffice.mapper.ScheduleMapper">
   <resultMap id="BaseResultMap" type="com.rea.myoffice.model.Schedule">
-    <id column="ScheduleId" jdbcType="INTEGER" property="scheduleid" />
+    <id column="ScheduleId" jdbcType="INTEGER" property="scheduleId" />
     <result column="Title" jdbcType="VARCHAR" property="title" />
     <result column="Address" jdbcType="VARCHAR" property="address" />
-    <result column="MeetingId" jdbcType="INTEGER" property="meetingid" />
-    <result column="BeginTime" jdbcType="TIMESTAMP" property="begintime" />
-    <result column="EndTime" jdbcType="TIMESTAMP" property="endtime" />
-    <result column="SchContent" jdbcType="VARCHAR" property="schcontent" />
-    <result column="CreateUser" jdbcType="VARCHAR" property="createuser" />
-    <result column="CreateTime" jdbcType="TIMESTAMP" property="createtime" />
-    <result column="IfPrivate" jdbcType="INTEGER" property="ifprivate" />
+    <result column="MeetingId" jdbcType="INTEGER" property="meetingId" />
+    <result column="BeginTime" jdbcType="TIMESTAMP" property="beginTime" />
+    <result column="EndTime" jdbcType="TIMESTAMP" property="endTime" />
+    <result column="SchContent" jdbcType="VARCHAR" property="schContent" />
+    <result column="CreateUser" jdbcType="VARCHAR" property="createUser" />
+    <result column="CreateTime" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="IfPrivate" jdbcType="INTEGER" property="ifPrivate" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -93,11 +93,11 @@
     select 
     <include refid="Base_Column_List" />
     from schedule
-    where ScheduleId = #{scheduleid,jdbcType=INTEGER}
+    where ScheduleId = #{scheduleId,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from schedule
-    where ScheduleId = #{scheduleid,jdbcType=INTEGER}
+    where ScheduleId = #{scheduleId,jdbcType=INTEGER}
   </delete>
   <delete id="deleteByExample" parameterType="com.rea.myoffice.model.ScheduleExample">
     delete from schedule
@@ -110,15 +110,15 @@
       MeetingId, BeginTime, EndTime, 
       SchContent, CreateUser, CreateTime, 
       IfPrivate)
-    values (#{scheduleid,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, 
-      #{meetingid,jdbcType=INTEGER}, #{begintime,jdbcType=TIMESTAMP}, #{endtime,jdbcType=TIMESTAMP}, 
-      #{schcontent,jdbcType=VARCHAR}, #{createuser,jdbcType=VARCHAR}, #{createtime,jdbcType=TIMESTAMP}, 
-      #{ifprivate,jdbcType=INTEGER})
+    values (#{scheduleId,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, 
+      #{meetingId,jdbcType=INTEGER}, #{beginTime,jdbcType=TIMESTAMP}, #{endTime,jdbcType=TIMESTAMP}, 
+      #{schContent,jdbcType=VARCHAR}, #{createUser,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{ifPrivate,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.rea.myoffice.model.Schedule">
     insert into schedule
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="scheduleid != null">
+      <if test="scheduleId != null">
         ScheduleId,
       </if>
       <if test="title != null">
@@ -127,31 +127,31 @@
       <if test="address != null">
         Address,
       </if>
-      <if test="meetingid != null">
+      <if test="meetingId != null">
         MeetingId,
       </if>
-      <if test="begintime != null">
+      <if test="beginTime != null">
         BeginTime,
       </if>
-      <if test="endtime != null">
+      <if test="endTime != null">
         EndTime,
       </if>
-      <if test="schcontent != null">
+      <if test="schContent != null">
         SchContent,
       </if>
-      <if test="createuser != null">
+      <if test="createUser != null">
         CreateUser,
       </if>
-      <if test="createtime != null">
+      <if test="createTime != null">
         CreateTime,
       </if>
-      <if test="ifprivate != null">
+      <if test="ifPrivate != null">
         IfPrivate,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="scheduleid != null">
-        #{scheduleid,jdbcType=INTEGER},
+      <if test="scheduleId != null">
+        #{scheduleId,jdbcType=INTEGER},
       </if>
       <if test="title != null">
         #{title,jdbcType=VARCHAR},
@@ -159,26 +159,26 @@
       <if test="address != null">
         #{address,jdbcType=VARCHAR},
       </if>
-      <if test="meetingid != null">
-        #{meetingid,jdbcType=INTEGER},
+      <if test="meetingId != null">
+        #{meetingId,jdbcType=INTEGER},
       </if>
-      <if test="begintime != null">
-        #{begintime,jdbcType=TIMESTAMP},
+      <if test="beginTime != null">
+        #{beginTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="endtime != null">
-        #{endtime,jdbcType=TIMESTAMP},
+      <if test="endTime != null">
+        #{endTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="schcontent != null">
-        #{schcontent,jdbcType=VARCHAR},
+      <if test="schContent != null">
+        #{schContent,jdbcType=VARCHAR},
       </if>
-      <if test="createuser != null">
-        #{createuser,jdbcType=VARCHAR},
+      <if test="createUser != null">
+        #{createUser,jdbcType=VARCHAR},
       </if>
-      <if test="createtime != null">
-        #{createtime,jdbcType=TIMESTAMP},
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="ifprivate != null">
-        #{ifprivate,jdbcType=INTEGER},
+      <if test="ifPrivate != null">
+        #{ifPrivate,jdbcType=INTEGER},
       </if>
     </trim>
   </insert>
@@ -191,8 +191,8 @@
   <update id="updateByExampleSelective" parameterType="map">
     update schedule
     <set>
-      <if test="row.scheduleid != null">
-        ScheduleId = #{row.scheduleid,jdbcType=INTEGER},
+      <if test="row.scheduleId != null">
+        ScheduleId = #{row.scheduleId,jdbcType=INTEGER},
       </if>
       <if test="row.title != null">
         Title = #{row.title,jdbcType=VARCHAR},
@@ -200,26 +200,26 @@
       <if test="row.address != null">
         Address = #{row.address,jdbcType=VARCHAR},
       </if>
-      <if test="row.meetingid != null">
-        MeetingId = #{row.meetingid,jdbcType=INTEGER},
+      <if test="row.meetingId != null">
+        MeetingId = #{row.meetingId,jdbcType=INTEGER},
       </if>
-      <if test="row.begintime != null">
-        BeginTime = #{row.begintime,jdbcType=TIMESTAMP},
+      <if test="row.beginTime != null">
+        BeginTime = #{row.beginTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="row.endtime != null">
-        EndTime = #{row.endtime,jdbcType=TIMESTAMP},
+      <if test="row.endTime != null">
+        EndTime = #{row.endTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="row.schcontent != null">
-        SchContent = #{row.schcontent,jdbcType=VARCHAR},
+      <if test="row.schContent != null">
+        SchContent = #{row.schContent,jdbcType=VARCHAR},
       </if>
-      <if test="row.createuser != null">
-        CreateUser = #{row.createuser,jdbcType=VARCHAR},
+      <if test="row.createUser != null">
+        CreateUser = #{row.createUser,jdbcType=VARCHAR},
       </if>
-      <if test="row.createtime != null">
-        CreateTime = #{row.createtime,jdbcType=TIMESTAMP},
+      <if test="row.createTime != null">
+        CreateTime = #{row.createTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="row.ifprivate != null">
-        IfPrivate = #{row.ifprivate,jdbcType=INTEGER},
+      <if test="row.ifPrivate != null">
+        IfPrivate = #{row.ifPrivate,jdbcType=INTEGER},
       </if>
     </set>
     <if test="example != null">
@@ -228,16 +228,16 @@
   </update>
   <update id="updateByExample" parameterType="map">
     update schedule
-    set ScheduleId = #{row.scheduleid,jdbcType=INTEGER},
+    set ScheduleId = #{row.scheduleId,jdbcType=INTEGER},
       Title = #{row.title,jdbcType=VARCHAR},
       Address = #{row.address,jdbcType=VARCHAR},
-      MeetingId = #{row.meetingid,jdbcType=INTEGER},
-      BeginTime = #{row.begintime,jdbcType=TIMESTAMP},
-      EndTime = #{row.endtime,jdbcType=TIMESTAMP},
-      SchContent = #{row.schcontent,jdbcType=VARCHAR},
-      CreateUser = #{row.createuser,jdbcType=VARCHAR},
-      CreateTime = #{row.createtime,jdbcType=TIMESTAMP},
-      IfPrivate = #{row.ifprivate,jdbcType=INTEGER}
+      MeetingId = #{row.meetingId,jdbcType=INTEGER},
+      BeginTime = #{row.beginTime,jdbcType=TIMESTAMP},
+      EndTime = #{row.endTime,jdbcType=TIMESTAMP},
+      SchContent = #{row.schContent,jdbcType=VARCHAR},
+      CreateUser = #{row.createUser,jdbcType=VARCHAR},
+      CreateTime = #{row.createTime,jdbcType=TIMESTAMP},
+      IfPrivate = #{row.ifPrivate,jdbcType=INTEGER}
     <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -251,41 +251,41 @@
       <if test="address != null">
         Address = #{address,jdbcType=VARCHAR},
       </if>
-      <if test="meetingid != null">
-        MeetingId = #{meetingid,jdbcType=INTEGER},
+      <if test="meetingId != null">
+        MeetingId = #{meetingId,jdbcType=INTEGER},
       </if>
-      <if test="begintime != null">
-        BeginTime = #{begintime,jdbcType=TIMESTAMP},
+      <if test="beginTime != null">
+        BeginTime = #{beginTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="endtime != null">
-        EndTime = #{endtime,jdbcType=TIMESTAMP},
+      <if test="endTime != null">
+        EndTime = #{endTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="schcontent != null">
-        SchContent = #{schcontent,jdbcType=VARCHAR},
+      <if test="schContent != null">
+        SchContent = #{schContent,jdbcType=VARCHAR},
       </if>
-      <if test="createuser != null">
-        CreateUser = #{createuser,jdbcType=VARCHAR},
+      <if test="createUser != null">
+        CreateUser = #{createUser,jdbcType=VARCHAR},
       </if>
-      <if test="createtime != null">
-        CreateTime = #{createtime,jdbcType=TIMESTAMP},
+      <if test="createTime != null">
+        CreateTime = #{createTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="ifprivate != null">
-        IfPrivate = #{ifprivate,jdbcType=INTEGER},
+      <if test="ifPrivate != null">
+        IfPrivate = #{ifPrivate,jdbcType=INTEGER},
       </if>
     </set>
-    where ScheduleId = #{scheduleid,jdbcType=INTEGER}
+    where ScheduleId = #{scheduleId,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.rea.myoffice.model.Schedule">
     update schedule
     set Title = #{title,jdbcType=VARCHAR},
       Address = #{address,jdbcType=VARCHAR},
-      MeetingId = #{meetingid,jdbcType=INTEGER},
-      BeginTime = #{begintime,jdbcType=TIMESTAMP},
-      EndTime = #{endtime,jdbcType=TIMESTAMP},
-      SchContent = #{schcontent,jdbcType=VARCHAR},
-      CreateUser = #{createuser,jdbcType=VARCHAR},
-      CreateTime = #{createtime,jdbcType=TIMESTAMP},
-      IfPrivate = #{ifprivate,jdbcType=INTEGER}
-    where ScheduleId = #{scheduleid,jdbcType=INTEGER}
+      MeetingId = #{meetingId,jdbcType=INTEGER},
+      BeginTime = #{beginTime,jdbcType=TIMESTAMP},
+      EndTime = #{endTime,jdbcType=TIMESTAMP},
+      SchContent = #{schContent,jdbcType=VARCHAR},
+      CreateUser = #{createUser,jdbcType=VARCHAR},
+      CreateTime = #{createTime,jdbcType=TIMESTAMP},
+      IfPrivate = #{ifPrivate,jdbcType=INTEGER}
+    where ScheduleId = #{scheduleId,jdbcType=INTEGER}
   </update>
 </mapper>

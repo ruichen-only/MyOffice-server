@@ -5,60 +5,60 @@ import java.io.Serializable;
 
 public class Sysfun implements Serializable {
     @ApiModelProperty(value = "菜单节点id")
-    private Integer nodeid;
+    private Integer nodeId;
 
     @ApiModelProperty(value = "菜单名称")
-    private String displayname;
+    private String displayName;
 
     @ApiModelProperty(value = "菜单连接地址")
-    private String nodeurl;
+    private String nodeURL;
 
     @ApiModelProperty(value = "菜单显示顺序")
-    private Integer displayorder;
+    private Integer displayOrder;
 
     @ApiModelProperty(value = "父节点id")
-    private Integer parentnodeid;
+    private Integer parentNodeId;
 
     private static final long serialVersionUID = 1L;
 
-    public Integer getNodeid() {
-        return nodeid;
+    public Integer getNodeId() {
+        return nodeId;
     }
 
-    public void setNodeid(Integer nodeid) {
-        this.nodeid = nodeid;
+    public void setNodeId(Integer nodeId) {
+        this.nodeId = nodeId;
     }
 
-    public String getDisplayname() {
-        return displayname;
+    public String getDisplayName() {
+        return displayName;
     }
 
-    public void setDisplayname(String displayname) {
-        this.displayname = displayname;
+    public void setDisplayName(String displayName) {
+        this.displayName = displayName;
     }
 
-    public String getNodeurl() {
-        return nodeurl;
+    public String getNodeURL() {
+        return nodeURL;
     }
 
-    public void setNodeurl(String nodeurl) {
-        this.nodeurl = nodeurl;
+    public void setNodeURL(String nodeURL) {
+        this.nodeURL = nodeURL;
     }
 
-    public Integer getDisplayorder() {
-        return displayorder;
+    public Integer getDisplayOrder() {
+        return displayOrder;
     }
 
-    public void setDisplayorder(Integer displayorder) {
-        this.displayorder = displayorder;
+    public void setDisplayOrder(Integer displayOrder) {
+        this.displayOrder = displayOrder;
     }
 
-    public Integer getParentnodeid() {
-        return parentnodeid;
+    public Integer getParentNodeId() {
+        return parentNodeId;
     }
 
-    public void setParentnodeid(Integer parentnodeid) {
-        this.parentnodeid = parentnodeid;
+    public void setParentNodeId(Integer parentNodeId) {
+        this.parentNodeId = parentNodeId;
     }
 
     @Override
@@ -67,11 +67,11 @@ public class Sysfun implements Serializable {
         sb.append(getClass().getSimpleName());
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
-        sb.append(", nodeid=").append(nodeid);
-        sb.append(", displayname=").append(displayname);
-        sb.append(", nodeurl=").append(nodeurl);
-        sb.append(", displayorder=").append(displayorder);
-        sb.append(", parentnodeid=").append(parentnodeid);
+        sb.append(", nodeId=").append(nodeId);
+        sb.append(", displayName=").append(displayName);
+        sb.append(", nodeURL=").append(nodeURL);
+        sb.append(", displayOrder=").append(displayOrder);
+        sb.append(", parentNodeId=").append(parentNodeId);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

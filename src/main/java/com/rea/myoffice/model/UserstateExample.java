@@ -104,133 +104,133 @@ public class UserstateExample {
             criteria.add(new Criterion(condition, value1, value2));
         }
 
-        public Criteria andUserstateidIsNull() {
+        public Criteria andUserStateIdIsNull() {
             addCriterion("UserStateId is null");
             return (Criteria) this;
         }
 
-        public Criteria andUserstateidIsNotNull() {
+        public Criteria andUserStateIdIsNotNull() {
             addCriterion("UserStateId is not null");
             return (Criteria) this;
         }
 
-        public Criteria andUserstateidEqualTo(Integer value) {
-            addCriterion("UserStateId =", value, "userstateid");
+        public Criteria andUserStateIdEqualTo(Integer value) {
+            addCriterion("UserStateId =", value, "userStateId");
             return (Criteria) this;
         }
 
-        public Criteria andUserstateidNotEqualTo(Integer value) {
-            addCriterion("UserStateId <>", value, "userstateid");
+        public Criteria andUserStateIdNotEqualTo(Integer value) {
+            addCriterion("UserStateId <>", value, "userStateId");
             return (Criteria) this;
         }
 
-        public Criteria andUserstateidGreaterThan(Integer value) {
-            addCriterion("UserStateId >", value, "userstateid");
+        public Criteria andUserStateIdGreaterThan(Integer value) {
+            addCriterion("UserStateId >", value, "userStateId");
             return (Criteria) this;
         }
 
-        public Criteria andUserstateidGreaterThanOrEqualTo(Integer value) {
-            addCriterion("UserStateId >=", value, "userstateid");
+        public Criteria andUserStateIdGreaterThanOrEqualTo(Integer value) {
+            addCriterion("UserStateId >=", value, "userStateId");
             return (Criteria) this;
         }
 
-        public Criteria andUserstateidLessThan(Integer value) {
-            addCriterion("UserStateId <", value, "userstateid");
+        public Criteria andUserStateIdLessThan(Integer value) {
+            addCriterion("UserStateId <", value, "userStateId");
             return (Criteria) this;
         }
 
-        public Criteria andUserstateidLessThanOrEqualTo(Integer value) {
-            addCriterion("UserStateId <=", value, "userstateid");
+        public Criteria andUserStateIdLessThanOrEqualTo(Integer value) {
+            addCriterion("UserStateId <=", value, "userStateId");
             return (Criteria) this;
         }
 
-        public Criteria andUserstateidIn(List<Integer> values) {
-            addCriterion("UserStateId in", values, "userstateid");
+        public Criteria andUserStateIdIn(List<Integer> values) {
+            addCriterion("UserStateId in", values, "userStateId");
             return (Criteria) this;
         }
 
-        public Criteria andUserstateidNotIn(List<Integer> values) {
-            addCriterion("UserStateId not in", values, "userstateid");
+        public Criteria andUserStateIdNotIn(List<Integer> values) {
+            addCriterion("UserStateId not in", values, "userStateId");
             return (Criteria) this;
         }
 
-        public Criteria andUserstateidBetween(Integer value1, Integer value2) {
-            addCriterion("UserStateId between", value1, value2, "userstateid");
+        public Criteria andUserStateIdBetween(Integer value1, Integer value2) {
+            addCriterion("UserStateId between", value1, value2, "userStateId");
             return (Criteria) this;
         }
 
-        public Criteria andUserstateidNotBetween(Integer value1, Integer value2) {
-            addCriterion("UserStateId not between", value1, value2, "userstateid");
+        public Criteria andUserStateIdNotBetween(Integer value1, Integer value2) {
+            addCriterion("UserStateId not between", value1, value2, "userStateId");
             return (Criteria) this;
         }
 
-        public Criteria andUserstatenameIsNull() {
+        public Criteria andUserStateNameIsNull() {
             addCriterion("UserStateName is null");
             return (Criteria) this;
         }
 
-        public Criteria andUserstatenameIsNotNull() {
+        public Criteria andUserStateNameIsNotNull() {
             addCriterion("UserStateName is not null");
             return (Criteria) this;
         }
 
-        public Criteria andUserstatenameEqualTo(String value) {
-            addCriterion("UserStateName =", value, "userstatename");
+        public Criteria andUserStateNameEqualTo(String value) {
+            addCriterion("UserStateName =", value, "userStateName");
             return (Criteria) this;
         }
 
-        public Criteria andUserstatenameNotEqualTo(String value) {
-            addCriterion("UserStateName <>", value, "userstatename");
+        public Criteria andUserStateNameNotEqualTo(String value) {
+            addCriterion("UserStateName <>", value, "userStateName");
             return (Criteria) this;
         }
 
-        public Criteria andUserstatenameGreaterThan(String value) {
-            addCriterion("UserStateName >", value, "userstatename");
+        public Criteria andUserStateNameGreaterThan(String value) {
+            addCriterion("UserStateName >", value, "userStateName");
             return (Criteria) this;
         }
 
-        public Criteria andUserstatenameGreaterThanOrEqualTo(String value) {
-            addCriterion("UserStateName >=", value, "userstatename");
+        public Criteria andUserStateNameGreaterThanOrEqualTo(String value) {
+            addCriterion("UserStateName >=", value, "userStateName");
             return (Criteria) this;
         }
 
-        public Criteria andUserstatenameLessThan(String value) {
-            addCriterion("UserStateName <", value, "userstatename");
+        public Criteria andUserStateNameLessThan(String value) {
+            addCriterion("UserStateName <", value, "userStateName");
             return (Criteria) this;
         }
 
-        public Criteria andUserstatenameLessThanOrEqualTo(String value) {
-            addCriterion("UserStateName <=", value, "userstatename");
+        public Criteria andUserStateNameLessThanOrEqualTo(String value) {
+            addCriterion("UserStateName <=", value, "userStateName");
             return (Criteria) this;
         }
 
-        public Criteria andUserstatenameLike(String value) {
-            addCriterion("UserStateName like", value, "userstatename");
+        public Criteria andUserStateNameLike(String value) {
+            addCriterion("UserStateName like", value, "userStateName");
             return (Criteria) this;
         }
 
-        public Criteria andUserstatenameNotLike(String value) {
-            addCriterion("UserStateName not like", value, "userstatename");
+        public Criteria andUserStateNameNotLike(String value) {
+            addCriterion("UserStateName not like", value, "userStateName");
             return (Criteria) this;
         }
 
-        public Criteria andUserstatenameIn(List<String> values) {
-            addCriterion("UserStateName in", values, "userstatename");
+        public Criteria andUserStateNameIn(List<String> values) {
+            addCriterion("UserStateName in", values, "userStateName");
             return (Criteria) this;
         }
 
-        public Criteria andUserstatenameNotIn(List<String> values) {
-            addCriterion("UserStateName not in", values, "userstatename");
+        public Criteria andUserStateNameNotIn(List<String> values) {
+            addCriterion("UserStateName not in", values, "userStateName");
             return (Criteria) this;
         }
 
-        public Criteria andUserstatenameBetween(String value1, String value2) {
-            addCriterion("UserStateName between", value1, value2, "userstatename");
+        public Criteria andUserStateNameBetween(String value1, String value2) {
+            addCriterion("UserStateName between", value1, value2, "userStateName");
             return (Criteria) this;
         }
 
-        public Criteria andUserstatenameNotBetween(String value1, String value2) {
-            addCriterion("UserStateName not between", value1, value2, "userstatename");
+        public Criteria andUserStateNameNotBetween(String value1, String value2) {
+            addCriterion("UserStateName not between", value1, value2, "userStateName");
             return (Criteria) this;
         }
     }

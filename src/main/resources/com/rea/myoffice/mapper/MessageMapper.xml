@@ -2,15 +2,15 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.rea.myoffice.mapper.MessageMapper">
   <resultMap id="BaseResultMap" type="com.rea.myoffice.model.Message">
-    <id column="MessageId" jdbcType="INTEGER" property="messageid" />
+    <id column="MessageId" jdbcType="INTEGER" property="messageId" />
     <result column="Title" jdbcType="VARCHAR" property="title" />
     <result column="Content" jdbcType="VARCHAR" property="content" />
     <result column="Type" jdbcType="INTEGER" property="type" />
-    <result column="BeginTime" jdbcType="TIMESTAMP" property="begintime" />
-    <result column="EndTime" jdbcType="TIMESTAMP" property="endtime" />
-    <result column="FromUserId" jdbcType="VARCHAR" property="fromuserid" />
-    <result column="IfPublish" jdbcType="INTEGER" property="ifpublish" />
-    <result column="RecordTime" jdbcType="TIMESTAMP" property="recordtime" />
+    <result column="BeginTime" jdbcType="TIMESTAMP" property="beginTime" />
+    <result column="EndTime" jdbcType="TIMESTAMP" property="endTime" />
+    <result column="FromUserId" jdbcType="VARCHAR" property="fromUserId" />
+    <result column="IfPublish" jdbcType="INTEGER" property="ifPublish" />
+    <result column="RecordTime" jdbcType="TIMESTAMP" property="recordTime" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -91,11 +91,11 @@
     select 
     <include refid="Base_Column_List" />
     from message
-    where MessageId = #{messageid,jdbcType=INTEGER}
+    where MessageId = #{messageId,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from message
-    where MessageId = #{messageid,jdbcType=INTEGER}
+    where MessageId = #{messageId,jdbcType=INTEGER}
   </delete>
   <delete id="deleteByExample" parameterType="com.rea.myoffice.model.MessageExample">
     delete from message
@@ -108,15 +108,15 @@
       Type, BeginTime, EndTime, 
       FromUserId, IfPublish, RecordTime
       )
-    values (#{messageid,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR}, 
-      #{type,jdbcType=INTEGER}, #{begintime,jdbcType=TIMESTAMP}, #{endtime,jdbcType=TIMESTAMP}, 
-      #{fromuserid,jdbcType=VARCHAR}, #{ifpublish,jdbcType=INTEGER}, #{recordtime,jdbcType=TIMESTAMP}
+    values (#{messageId,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR}, 
+      #{type,jdbcType=INTEGER}, #{beginTime,jdbcType=TIMESTAMP}, #{endTime,jdbcType=TIMESTAMP}, 
+      #{fromUserId,jdbcType=VARCHAR}, #{ifPublish,jdbcType=INTEGER}, #{recordTime,jdbcType=TIMESTAMP}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.rea.myoffice.model.Message">
     insert into message
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="messageid != null">
+      <if test="messageId != null">
         MessageId,
       </if>
       <if test="title != null">
@@ -128,25 +128,25 @@
       <if test="type != null">
         Type,
       </if>
-      <if test="begintime != null">
+      <if test="beginTime != null">
         BeginTime,
       </if>
-      <if test="endtime != null">
+      <if test="endTime != null">
         EndTime,
       </if>
-      <if test="fromuserid != null">
+      <if test="fromUserId != null">
         FromUserId,
       </if>
-      <if test="ifpublish != null">
+      <if test="ifPublish != null">
         IfPublish,
       </if>
-      <if test="recordtime != null">
+      <if test="recordTime != null">
         RecordTime,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="messageid != null">
-        #{messageid,jdbcType=INTEGER},
+      <if test="messageId != null">
+        #{messageId,jdbcType=INTEGER},
       </if>
       <if test="title != null">
         #{title,jdbcType=VARCHAR},
@@ -157,20 +157,20 @@
       <if test="type != null">
         #{type,jdbcType=INTEGER},
       </if>
-      <if test="begintime != null">
-        #{begintime,jdbcType=TIMESTAMP},
+      <if test="beginTime != null">
+        #{beginTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="endtime != null">
-        #{endtime,jdbcType=TIMESTAMP},
+      <if test="endTime != null">
+        #{endTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="fromuserid != null">
-        #{fromuserid,jdbcType=VARCHAR},
+      <if test="fromUserId != null">
+        #{fromUserId,jdbcType=VARCHAR},
       </if>
-      <if test="ifpublish != null">
-        #{ifpublish,jdbcType=INTEGER},
+      <if test="ifPublish != null">
+        #{ifPublish,jdbcType=INTEGER},
       </if>
-      <if test="recordtime != null">
-        #{recordtime,jdbcType=TIMESTAMP},
+      <if test="recordTime != null">
+        #{recordTime,jdbcType=TIMESTAMP},
       </if>
     </trim>
   </insert>
@@ -183,8 +183,8 @@
   <update id="updateByExampleSelective" parameterType="map">
     update message
     <set>
-      <if test="row.messageid != null">
-        MessageId = #{row.messageid,jdbcType=INTEGER},
+      <if test="row.messageId != null">
+        MessageId = #{row.messageId,jdbcType=INTEGER},
       </if>
       <if test="row.title != null">
         Title = #{row.title,jdbcType=VARCHAR},
@@ -195,20 +195,20 @@
       <if test="row.type != null">
         Type = #{row.type,jdbcType=INTEGER},
       </if>
-      <if test="row.begintime != null">
-        BeginTime = #{row.begintime,jdbcType=TIMESTAMP},
+      <if test="row.beginTime != null">
+        BeginTime = #{row.beginTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="row.endtime != null">
-        EndTime = #{row.endtime,jdbcType=TIMESTAMP},
+      <if test="row.endTime != null">
+        EndTime = #{row.endTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="row.fromuserid != null">
-        FromUserId = #{row.fromuserid,jdbcType=VARCHAR},
+      <if test="row.fromUserId != null">
+        FromUserId = #{row.fromUserId,jdbcType=VARCHAR},
       </if>
-      <if test="row.ifpublish != null">
-        IfPublish = #{row.ifpublish,jdbcType=INTEGER},
+      <if test="row.ifPublish != null">
+        IfPublish = #{row.ifPublish,jdbcType=INTEGER},
       </if>
-      <if test="row.recordtime != null">
-        RecordTime = #{row.recordtime,jdbcType=TIMESTAMP},
+      <if test="row.recordTime != null">
+        RecordTime = #{row.recordTime,jdbcType=TIMESTAMP},
       </if>
     </set>
     <if test="example != null">
@@ -217,15 +217,15 @@
   </update>
   <update id="updateByExample" parameterType="map">
     update message
-    set MessageId = #{row.messageid,jdbcType=INTEGER},
+    set MessageId = #{row.messageId,jdbcType=INTEGER},
       Title = #{row.title,jdbcType=VARCHAR},
       Content = #{row.content,jdbcType=VARCHAR},
       Type = #{row.type,jdbcType=INTEGER},
-      BeginTime = #{row.begintime,jdbcType=TIMESTAMP},
-      EndTime = #{row.endtime,jdbcType=TIMESTAMP},
-      FromUserId = #{row.fromuserid,jdbcType=VARCHAR},
-      IfPublish = #{row.ifpublish,jdbcType=INTEGER},
-      RecordTime = #{row.recordtime,jdbcType=TIMESTAMP}
+      BeginTime = #{row.beginTime,jdbcType=TIMESTAMP},
+      EndTime = #{row.endTime,jdbcType=TIMESTAMP},
+      FromUserId = #{row.fromUserId,jdbcType=VARCHAR},
+      IfPublish = #{row.ifPublish,jdbcType=INTEGER},
+      RecordTime = #{row.recordTime,jdbcType=TIMESTAMP}
     <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -242,34 +242,34 @@
       <if test="type != null">
         Type = #{type,jdbcType=INTEGER},
       </if>
-      <if test="begintime != null">
-        BeginTime = #{begintime,jdbcType=TIMESTAMP},
+      <if test="beginTime != null">
+        BeginTime = #{beginTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="endtime != null">
-        EndTime = #{endtime,jdbcType=TIMESTAMP},
+      <if test="endTime != null">
+        EndTime = #{endTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="fromuserid != null">
-        FromUserId = #{fromuserid,jdbcType=VARCHAR},
+      <if test="fromUserId != null">
+        FromUserId = #{fromUserId,jdbcType=VARCHAR},
       </if>
-      <if test="ifpublish != null">
-        IfPublish = #{ifpublish,jdbcType=INTEGER},
+      <if test="ifPublish != null">
+        IfPublish = #{ifPublish,jdbcType=INTEGER},
       </if>
-      <if test="recordtime != null">
-        RecordTime = #{recordtime,jdbcType=TIMESTAMP},
+      <if test="recordTime != null">
+        RecordTime = #{recordTime,jdbcType=TIMESTAMP},
       </if>
     </set>
-    where MessageId = #{messageid,jdbcType=INTEGER}
+    where MessageId = #{messageId,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.rea.myoffice.model.Message">
     update message
     set Title = #{title,jdbcType=VARCHAR},
       Content = #{content,jdbcType=VARCHAR},
       Type = #{type,jdbcType=INTEGER},
-      BeginTime = #{begintime,jdbcType=TIMESTAMP},
-      EndTime = #{endtime,jdbcType=TIMESTAMP},
-      FromUserId = #{fromuserid,jdbcType=VARCHAR},
-      IfPublish = #{ifpublish,jdbcType=INTEGER},
-      RecordTime = #{recordtime,jdbcType=TIMESTAMP}
-    where MessageId = #{messageid,jdbcType=INTEGER}
+      BeginTime = #{beginTime,jdbcType=TIMESTAMP},
+      EndTime = #{endTime,jdbcType=TIMESTAMP},
+      FromUserId = #{fromUserId,jdbcType=VARCHAR},
+      IfPublish = #{ifPublish,jdbcType=INTEGER},
+      RecordTime = #{recordTime,jdbcType=TIMESTAMP}
+    where MessageId = #{messageId,jdbcType=INTEGER}
   </update>
 </mapper>

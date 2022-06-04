@@ -5,26 +5,26 @@ import java.io.Serializable;
 
 public class Userstate implements Serializable {
     @ApiModelProperty(value = "1：正常状态；0：被屏蔽")
-    private Integer userstateid;
+    private Integer userStateId;
 
-    private String userstatename;
+    private String userStateName;
 
     private static final long serialVersionUID = 1L;
 
-    public Integer getUserstateid() {
-        return userstateid;
+    public Integer getUserStateId() {
+        return userStateId;
     }
 
-    public void setUserstateid(Integer userstateid) {
-        this.userstateid = userstateid;
+    public void setUserStateId(Integer userStateId) {
+        this.userStateId = userStateId;
     }
 
-    public String getUserstatename() {
-        return userstatename;
+    public String getUserStateName() {
+        return userStateName;
     }
 
-    public void setUserstatename(String userstatename) {
-        this.userstatename = userstatename;
+    public void setUserStateName(String userStateName) {
+        this.userStateName = userStateName;
     }
 
     @Override
@@ -33,8 +33,8 @@ public class Userstate implements Serializable {
         sb.append(getClass().getSimpleName());
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
-        sb.append(", userstateid=").append(userstateid);
-        sb.append(", userstatename=").append(userstatename);
+        sb.append(", userStateId=").append(userStateId);
+        sb.append(", userStateName=").append(userStateName);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

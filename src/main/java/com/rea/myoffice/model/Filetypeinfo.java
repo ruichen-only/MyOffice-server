@@ -5,49 +5,49 @@ import java.io.Serializable;
 
 public class Filetypeinfo implements Serializable {
     @ApiModelProperty(value = "文件类型id")
-    private Integer filetypeid;
+    private Integer fileTypeId;
 
     @ApiModelProperty(value = "文件类型名")
-    private String filetypename;
+    private String fileTypeName;
 
     @ApiModelProperty(value = "文件类型对应的图标")
-    private String filetypeimage;
+    private String fileTypeImage;
 
     @ApiModelProperty(value = "文件类型后缀")
-    private String filetypesuffix;
+    private String fileTypeSuffix;
 
     private static final long serialVersionUID = 1L;
 
-    public Integer getFiletypeid() {
-        return filetypeid;
+    public Integer getFileTypeId() {
+        return fileTypeId;
     }
 
-    public void setFiletypeid(Integer filetypeid) {
-        this.filetypeid = filetypeid;
+    public void setFileTypeId(Integer fileTypeId) {
+        this.fileTypeId = fileTypeId;
     }
 
-    public String getFiletypename() {
-        return filetypename;
+    public String getFileTypeName() {
+        return fileTypeName;
     }
 
-    public void setFiletypename(String filetypename) {
-        this.filetypename = filetypename;
+    public void setFileTypeName(String fileTypeName) {
+        this.fileTypeName = fileTypeName;
     }
 
-    public String getFiletypeimage() {
-        return filetypeimage;
+    public String getFileTypeImage() {
+        return fileTypeImage;
     }
 
-    public void setFiletypeimage(String filetypeimage) {
-        this.filetypeimage = filetypeimage;
+    public void setFileTypeImage(String fileTypeImage) {
+        this.fileTypeImage = fileTypeImage;
     }
 
-    public String getFiletypesuffix() {
-        return filetypesuffix;
+    public String getFileTypeSuffix() {
+        return fileTypeSuffix;
     }
 
-    public void setFiletypesuffix(String filetypesuffix) {
-        this.filetypesuffix = filetypesuffix;
+    public void setFileTypeSuffix(String fileTypeSuffix) {
+        this.fileTypeSuffix = fileTypeSuffix;
     }
 
     @Override
@@ -56,10 +56,10 @@ public class Filetypeinfo implements Serializable {
         sb.append(getClass().getSimpleName());
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
-        sb.append(", filetypeid=").append(filetypeid);
-        sb.append(", filetypename=").append(filetypename);
-        sb.append(", filetypeimage=").append(filetypeimage);
-        sb.append(", filetypesuffix=").append(filetypesuffix);
+        sb.append(", fileTypeId=").append(fileTypeId);
+        sb.append(", fileTypeName=").append(fileTypeName);
+        sb.append(", fileTypeImage=").append(fileTypeImage);
+        sb.append(", fileTypeSuffix=").append(fileTypeSuffix);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

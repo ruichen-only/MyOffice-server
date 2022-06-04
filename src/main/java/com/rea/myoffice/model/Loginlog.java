@@ -6,71 +6,71 @@ import java.util.Date;
 
 public class Loginlog implements Serializable {
     @ApiModelProperty(value = "登录日志id")
-    private Integer loginid;
+    private Integer loginId;
 
     @ApiModelProperty(value = "登录者")
-    private String userid;
+    private String userId;
 
     @ApiModelProperty(value = "登录时间")
-    private Date logintime;
+    private Date loginTime;
 
     @ApiModelProperty(value = "登录是否成功。1：成功、0失败。")
-    private Integer ifsuccess;
+    private Integer ifSuccess;
 
     @ApiModelProperty(value = "登录用户IP")
-    private String loginuserip;
+    private String loginUserIp;
 
     @ApiModelProperty(value = "登录备注")
-    private String logindesc;
+    private String loginDesc;
 
     private static final long serialVersionUID = 1L;
 
-    public Integer getLoginid() {
-        return loginid;
+    public Integer getLoginId() {
+        return loginId;
     }
 
-    public void setLoginid(Integer loginid) {
-        this.loginid = loginid;
+    public void setLoginId(Integer loginId) {
+        this.loginId = loginId;
     }
 
-    public String getUserid() {
-        return userid;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setUserid(String userid) {
-        this.userid = userid;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
-    public Date getLogintime() {
-        return logintime;
+    public Date getLoginTime() {
+        return loginTime;
     }
 
-    public void setLogintime(Date logintime) {
-        this.logintime = logintime;
+    public void setLoginTime(Date loginTime) {
+        this.loginTime = loginTime;
     }
 
-    public Integer getIfsuccess() {
-        return ifsuccess;
+    public Integer getIfSuccess() {
+        return ifSuccess;
     }
 
-    public void setIfsuccess(Integer ifsuccess) {
-        this.ifsuccess = ifsuccess;
+    public void setIfSuccess(Integer ifSuccess) {
+        this.ifSuccess = ifSuccess;
     }
 
-    public String getLoginuserip() {
-        return loginuserip;
+    public String getLoginUserIp() {
+        return loginUserIp;
     }
 
-    public void setLoginuserip(String loginuserip) {
-        this.loginuserip = loginuserip;
+    public void setLoginUserIp(String loginUserIp) {
+        this.loginUserIp = loginUserIp;
     }
 
-    public String getLogindesc() {
-        return logindesc;
+    public String getLoginDesc() {
+        return loginDesc;
     }
 
-    public void setLogindesc(String logindesc) {
-        this.logindesc = logindesc;
+    public void setLoginDesc(String loginDesc) {
+        this.loginDesc = loginDesc;
     }
 
     @Override
@@ -79,12 +79,12 @@ public class Loginlog implements Serializable {
         sb.append(getClass().getSimpleName());
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
-        sb.append(", loginid=").append(loginid);
-        sb.append(", userid=").append(userid);
-        sb.append(", logintime=").append(logintime);
-        sb.append(", ifsuccess=").append(ifsuccess);
-        sb.append(", loginuserip=").append(loginuserip);
-        sb.append(", logindesc=").append(logindesc);
+        sb.append(", loginId=").append(loginId);
+        sb.append(", userId=").append(userId);
+        sb.append(", loginTime=").append(loginTime);
+        sb.append(", ifSuccess=").append(ifSuccess);
+        sb.append(", loginUserIp=").append(loginUserIp);
+        sb.append(", loginDesc=").append(loginDesc);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

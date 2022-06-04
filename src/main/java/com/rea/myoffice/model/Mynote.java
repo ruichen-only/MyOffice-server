@@ -6,60 +6,60 @@ import java.util.Date;
 
 public class Mynote implements Serializable {
     @ApiModelProperty(value = "便签id")
-    private Integer noteid;
+    private Integer noteId;
 
     @ApiModelProperty(value = "便签标题")
-    private String notetitle;
+    private String noteTitle;
 
     @ApiModelProperty(value = "便签内容")
-    private String notecontent;
+    private String noteContent;
 
     @ApiModelProperty(value = "创建时间")
-    private Date createtime;
+    private Date createTime;
 
     @ApiModelProperty(value = "创建者")
-    private String createuser;
+    private String createUser;
 
     private static final long serialVersionUID = 1L;
 
-    public Integer getNoteid() {
-        return noteid;
+    public Integer getNoteId() {
+        return noteId;
     }
 
-    public void setNoteid(Integer noteid) {
-        this.noteid = noteid;
+    public void setNoteId(Integer noteId) {
+        this.noteId = noteId;
     }
 
-    public String getNotetitle() {
-        return notetitle;
+    public String getNoteTitle() {
+        return noteTitle;
     }
 
-    public void setNotetitle(String notetitle) {
-        this.notetitle = notetitle;
+    public void setNoteTitle(String noteTitle) {
+        this.noteTitle = noteTitle;
     }
 
-    public String getNotecontent() {
-        return notecontent;
+    public String getNoteContent() {
+        return noteContent;
     }
 
-    public void setNotecontent(String notecontent) {
-        this.notecontent = notecontent;
+    public void setNoteContent(String noteContent) {
+        this.noteContent = noteContent;
     }
 
-    public Date getCreatetime() {
-        return createtime;
+    public Date getCreateTime() {
+        return createTime;
     }
 
-    public void setCreatetime(Date createtime) {
-        this.createtime = createtime;
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 
-    public String getCreateuser() {
-        return createuser;
+    public String getCreateUser() {
+        return createUser;
     }
 
-    public void setCreateuser(String createuser) {
-        this.createuser = createuser;
+    public void setCreateUser(String createUser) {
+        this.createUser = createUser;
     }
 
     @Override
@@ -68,11 +68,11 @@ public class Mynote implements Serializable {
         sb.append(getClass().getSimpleName());
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
-        sb.append(", noteid=").append(noteid);
-        sb.append(", notetitle=").append(notetitle);
-        sb.append(", notecontent=").append(notecontent);
-        sb.append(", createtime=").append(createtime);
-        sb.append(", createuser=").append(createuser);
+        sb.append(", noteId=").append(noteId);
+        sb.append(", noteTitle=").append(noteTitle);
+        sb.append(", noteContent=").append(noteContent);
+        sb.append(", createTime=").append(createTime);
+        sb.append(", createUser=").append(createUser);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

@@ -2,9 +2,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.rea.myoffice.mapper.MessagetypeMapper">
   <resultMap id="BaseResultMap" type="com.rea.myoffice.model.Messagetype">
-    <id column="MessageTypeId" jdbcType="INTEGER" property="messagetypeid" />
-    <result column="MessageTypeName" jdbcType="VARCHAR" property="messagetypename" />
-    <result column="MessageDesc" jdbcType="VARCHAR" property="messagedesc" />
+    <id column="MessageTypeId" jdbcType="INTEGER" property="messageTypeId" />
+    <result column="MessageTypeName" jdbcType="VARCHAR" property="messageTypeName" />
+    <result column="MessageDesc" jdbcType="VARCHAR" property="messageDesc" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -85,11 +85,11 @@
     select 
     <include refid="Base_Column_List" />
     from messagetype
-    where MessageTypeId = #{messagetypeid,jdbcType=INTEGER}
+    where MessageTypeId = #{messageTypeId,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from messagetype
-    where MessageTypeId = #{messagetypeid,jdbcType=INTEGER}
+    where MessageTypeId = #{messageTypeId,jdbcType=INTEGER}
   </delete>
   <delete id="deleteByExample" parameterType="com.rea.myoffice.model.MessagetypeExample">
     delete from messagetype
@@ -100,31 +100,31 @@
   <insert id="insert" parameterType="com.rea.myoffice.model.Messagetype">
     insert into messagetype (MessageTypeId, MessageTypeName, MessageDesc
       )
-    values (#{messagetypeid,jdbcType=INTEGER}, #{messagetypename,jdbcType=VARCHAR}, #{messagedesc,jdbcType=VARCHAR}
+    values (#{messageTypeId,jdbcType=INTEGER}, #{messageTypeName,jdbcType=VARCHAR}, #{messageDesc,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.rea.myoffice.model.Messagetype">
     insert into messagetype
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="messagetypeid != null">
+      <if test="messageTypeId != null">
         MessageTypeId,
       </if>
-      <if test="messagetypename != null">
+      <if test="messageTypeName != null">
         MessageTypeName,
       </if>
-      <if test="messagedesc != null">
+      <if test="messageDesc != null">
         MessageDesc,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="messagetypeid != null">
-        #{messagetypeid,jdbcType=INTEGER},
+      <if test="messageTypeId != null">
+        #{messageTypeId,jdbcType=INTEGER},
       </if>
-      <if test="messagetypename != null">
-        #{messagetypename,jdbcType=VARCHAR},
+      <if test="messageTypeName != null">
+        #{messageTypeName,jdbcType=VARCHAR},
       </if>
-      <if test="messagedesc != null">
-        #{messagedesc,jdbcType=VARCHAR},
+      <if test="messageDesc != null">
+        #{messageDesc,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -137,14 +137,14 @@
   <update id="updateByExampleSelective" parameterType="map">
     update messagetype
     <set>
-      <if test="row.messagetypeid != null">
-        MessageTypeId = #{row.messagetypeid,jdbcType=INTEGER},
+      <if test="row.messageTypeId != null">
+        MessageTypeId = #{row.messageTypeId,jdbcType=INTEGER},
       </if>
-      <if test="row.messagetypename != null">
-        MessageTypeName = #{row.messagetypename,jdbcType=VARCHAR},
+      <if test="row.messageTypeName != null">
+        MessageTypeName = #{row.messageTypeName,jdbcType=VARCHAR},
       </if>
-      <if test="row.messagedesc != null">
-        MessageDesc = #{row.messagedesc,jdbcType=VARCHAR},
+      <if test="row.messageDesc != null">
+        MessageDesc = #{row.messageDesc,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="example != null">
@@ -153,9 +153,9 @@
   </update>
   <update id="updateByExample" parameterType="map">
     update messagetype
-    set MessageTypeId = #{row.messagetypeid,jdbcType=INTEGER},
-      MessageTypeName = #{row.messagetypename,jdbcType=VARCHAR},
-      MessageDesc = #{row.messagedesc,jdbcType=VARCHAR}
+    set MessageTypeId = #{row.messageTypeId,jdbcType=INTEGER},
+      MessageTypeName = #{row.messageTypeName,jdbcType=VARCHAR},
+      MessageDesc = #{row.messageDesc,jdbcType=VARCHAR}
     <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -163,19 +163,19 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.rea.myoffice.model.Messagetype">
     update messagetype
     <set>
-      <if test="messagetypename != null">
-        MessageTypeName = #{messagetypename,jdbcType=VARCHAR},
+      <if test="messageTypeName != null">
+        MessageTypeName = #{messageTypeName,jdbcType=VARCHAR},
       </if>
-      <if test="messagedesc != null">
-        MessageDesc = #{messagedesc,jdbcType=VARCHAR},
+      <if test="messageDesc != null">
+        MessageDesc = #{messageDesc,jdbcType=VARCHAR},
       </if>
     </set>
-    where MessageTypeId = #{messagetypeid,jdbcType=INTEGER}
+    where MessageTypeId = #{messageTypeId,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.rea.myoffice.model.Messagetype">
     update messagetype
-    set MessageTypeName = #{messagetypename,jdbcType=VARCHAR},
-      MessageDesc = #{messagedesc,jdbcType=VARCHAR}
-    where MessageTypeId = #{messagetypeid,jdbcType=INTEGER}
+    set MessageTypeName = #{messageTypeName,jdbcType=VARCHAR},
+      MessageDesc = #{messageDesc,jdbcType=VARCHAR}
+    where MessageTypeId = #{messageTypeId,jdbcType=INTEGER}
   </update>
 </mapper>

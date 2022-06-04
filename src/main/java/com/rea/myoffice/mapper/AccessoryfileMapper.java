@@ -10,7 +10,7 @@ public interface AccessoryfileMapper {
 
     int deleteByExample(AccessoryfileExample example);
 
-    int deleteByPrimaryKey(Integer accessoryid);
+    int deleteByPrimaryKey(Integer accessoryId);
 
     int insert(Accessoryfile row);
 
@@ -18,7 +18,7 @@ public interface AccessoryfileMapper {
 
     List<Accessoryfile> selectByExample(AccessoryfileExample example);
 
-    Accessoryfile selectByPrimaryKey(Integer accessoryid);
+    Accessoryfile selectByPrimaryKey(Integer accessoryId);
 
     int updateByExampleSelective(@Param("row") Accessoryfile row, @Param("example") AccessoryfileExample example);
 

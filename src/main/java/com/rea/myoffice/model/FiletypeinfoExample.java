@@ -104,273 +104,273 @@ public class FiletypeinfoExample {
             criteria.add(new Criterion(condition, value1, value2));
         }
 
-        public Criteria andFiletypeidIsNull() {
+        public Criteria andFileTypeIdIsNull() {
             addCriterion("FileTypeId is null");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypeidIsNotNull() {
+        public Criteria andFileTypeIdIsNotNull() {
             addCriterion("FileTypeId is not null");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypeidEqualTo(Integer value) {
-            addCriterion("FileTypeId =", value, "filetypeid");
+        public Criteria andFileTypeIdEqualTo(Integer value) {
+            addCriterion("FileTypeId =", value, "fileTypeId");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypeidNotEqualTo(Integer value) {
-            addCriterion("FileTypeId <>", value, "filetypeid");
+        public Criteria andFileTypeIdNotEqualTo(Integer value) {
+            addCriterion("FileTypeId <>", value, "fileTypeId");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypeidGreaterThan(Integer value) {
-            addCriterion("FileTypeId >", value, "filetypeid");
+        public Criteria andFileTypeIdGreaterThan(Integer value) {
+            addCriterion("FileTypeId >", value, "fileTypeId");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypeidGreaterThanOrEqualTo(Integer value) {
-            addCriterion("FileTypeId >=", value, "filetypeid");
+        public Criteria andFileTypeIdGreaterThanOrEqualTo(Integer value) {
+            addCriterion("FileTypeId >=", value, "fileTypeId");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypeidLessThan(Integer value) {
-            addCriterion("FileTypeId <", value, "filetypeid");
+        public Criteria andFileTypeIdLessThan(Integer value) {
+            addCriterion("FileTypeId <", value, "fileTypeId");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypeidLessThanOrEqualTo(Integer value) {
-            addCriterion("FileTypeId <=", value, "filetypeid");
+        public Criteria andFileTypeIdLessThanOrEqualTo(Integer value) {
+            addCriterion("FileTypeId <=", value, "fileTypeId");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypeidIn(List<Integer> values) {
-            addCriterion("FileTypeId in", values, "filetypeid");
+        public Criteria andFileTypeIdIn(List<Integer> values) {
+            addCriterion("FileTypeId in", values, "fileTypeId");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypeidNotIn(List<Integer> values) {
-            addCriterion("FileTypeId not in", values, "filetypeid");
+        public Criteria andFileTypeIdNotIn(List<Integer> values) {
+            addCriterion("FileTypeId not in", values, "fileTypeId");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypeidBetween(Integer value1, Integer value2) {
-            addCriterion("FileTypeId between", value1, value2, "filetypeid");
+        public Criteria andFileTypeIdBetween(Integer value1, Integer value2) {
+            addCriterion("FileTypeId between", value1, value2, "fileTypeId");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypeidNotBetween(Integer value1, Integer value2) {
-            addCriterion("FileTypeId not between", value1, value2, "filetypeid");
+        public Criteria andFileTypeIdNotBetween(Integer value1, Integer value2) {
+            addCriterion("FileTypeId not between", value1, value2, "fileTypeId");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypenameIsNull() {
+        public Criteria andFileTypeNameIsNull() {
             addCriterion("FileTypeName is null");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypenameIsNotNull() {
+        public Criteria andFileTypeNameIsNotNull() {
             addCriterion("FileTypeName is not null");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypenameEqualTo(String value) {
-            addCriterion("FileTypeName =", value, "filetypename");
+        public Criteria andFileTypeNameEqualTo(String value) {
+            addCriterion("FileTypeName =", value, "fileTypeName");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypenameNotEqualTo(String value) {
-            addCriterion("FileTypeName <>", value, "filetypename");
+        public Criteria andFileTypeNameNotEqualTo(String value) {
+            addCriterion("FileTypeName <>", value, "fileTypeName");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypenameGreaterThan(String value) {
-            addCriterion("FileTypeName >", value, "filetypename");
+        public Criteria andFileTypeNameGreaterThan(String value) {
+            addCriterion("FileTypeName >", value, "fileTypeName");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypenameGreaterThanOrEqualTo(String value) {
-            addCriterion("FileTypeName >=", value, "filetypename");
+        public Criteria andFileTypeNameGreaterThanOrEqualTo(String value) {
+            addCriterion("FileTypeName >=", value, "fileTypeName");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypenameLessThan(String value) {
-            addCriterion("FileTypeName <", value, "filetypename");
+        public Criteria andFileTypeNameLessThan(String value) {
+            addCriterion("FileTypeName <", value, "fileTypeName");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypenameLessThanOrEqualTo(String value) {
-            addCriterion("FileTypeName <=", value, "filetypename");
+        public Criteria andFileTypeNameLessThanOrEqualTo(String value) {
+            addCriterion("FileTypeName <=", value, "fileTypeName");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypenameLike(String value) {
-            addCriterion("FileTypeName like", value, "filetypename");
+        public Criteria andFileTypeNameLike(String value) {
+            addCriterion("FileTypeName like", value, "fileTypeName");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypenameNotLike(String value) {
-            addCriterion("FileTypeName not like", value, "filetypename");
+        public Criteria andFileTypeNameNotLike(String value) {
+            addCriterion("FileTypeName not like", value, "fileTypeName");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypenameIn(List<String> values) {
-            addCriterion("FileTypeName in", values, "filetypename");
+        public Criteria andFileTypeNameIn(List<String> values) {
+            addCriterion("FileTypeName in", values, "fileTypeName");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypenameNotIn(List<String> values) {
-            addCriterion("FileTypeName not in", values, "filetypename");
+        public Criteria andFileTypeNameNotIn(List<String> values) {
+            addCriterion("FileTypeName not in", values, "fileTypeName");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypenameBetween(String value1, String value2) {
-            addCriterion("FileTypeName between", value1, value2, "filetypename");
+        public Criteria andFileTypeNameBetween(String value1, String value2) {
+            addCriterion("FileTypeName between", value1, value2, "fileTypeName");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypenameNotBetween(String value1, String value2) {
-            addCriterion("FileTypeName not between", value1, value2, "filetypename");
+        public Criteria andFileTypeNameNotBetween(String value1, String value2) {
+            addCriterion("FileTypeName not between", value1, value2, "fileTypeName");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypeimageIsNull() {
+        public Criteria andFileTypeImageIsNull() {
             addCriterion("FileTypeImage is null");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypeimageIsNotNull() {
+        public Criteria andFileTypeImageIsNotNull() {
             addCriterion("FileTypeImage is not null");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypeimageEqualTo(String value) {
-            addCriterion("FileTypeImage =", value, "filetypeimage");
+        public Criteria andFileTypeImageEqualTo(String value) {
+            addCriterion("FileTypeImage =", value, "fileTypeImage");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypeimageNotEqualTo(String value) {
-            addCriterion("FileTypeImage <>", value, "filetypeimage");
+        public Criteria andFileTypeImageNotEqualTo(String value) {
+            addCriterion("FileTypeImage <>", value, "fileTypeImage");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypeimageGreaterThan(String value) {
-            addCriterion("FileTypeImage >", value, "filetypeimage");
+        public Criteria andFileTypeImageGreaterThan(String value) {
+            addCriterion("FileTypeImage >", value, "fileTypeImage");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypeimageGreaterThanOrEqualTo(String value) {
-            addCriterion("FileTypeImage >=", value, "filetypeimage");
+        public Criteria andFileTypeImageGreaterThanOrEqualTo(String value) {
+            addCriterion("FileTypeImage >=", value, "fileTypeImage");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypeimageLessThan(String value) {
-            addCriterion("FileTypeImage <", value, "filetypeimage");
+        public Criteria andFileTypeImageLessThan(String value) {
+            addCriterion("FileTypeImage <", value, "fileTypeImage");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypeimageLessThanOrEqualTo(String value) {
-            addCriterion("FileTypeImage <=", value, "filetypeimage");
+        public Criteria andFileTypeImageLessThanOrEqualTo(String value) {
+            addCriterion("FileTypeImage <=", value, "fileTypeImage");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypeimageLike(String value) {
-            addCriterion("FileTypeImage like", value, "filetypeimage");
+        public Criteria andFileTypeImageLike(String value) {
+            addCriterion("FileTypeImage like", value, "fileTypeImage");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypeimageNotLike(String value) {
-            addCriterion("FileTypeImage not like", value, "filetypeimage");
+        public Criteria andFileTypeImageNotLike(String value) {
+            addCriterion("FileTypeImage not like", value, "fileTypeImage");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypeimageIn(List<String> values) {
-            addCriterion("FileTypeImage in", values, "filetypeimage");
+        public Criteria andFileTypeImageIn(List<String> values) {
+            addCriterion("FileTypeImage in", values, "fileTypeImage");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypeimageNotIn(List<String> values) {
-            addCriterion("FileTypeImage not in", values, "filetypeimage");
+        public Criteria andFileTypeImageNotIn(List<String> values) {
+            addCriterion("FileTypeImage not in", values, "fileTypeImage");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypeimageBetween(String value1, String value2) {
-            addCriterion("FileTypeImage between", value1, value2, "filetypeimage");
+        public Criteria andFileTypeImageBetween(String value1, String value2) {
+            addCriterion("FileTypeImage between", value1, value2, "fileTypeImage");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypeimageNotBetween(String value1, String value2) {
-            addCriterion("FileTypeImage not between", value1, value2, "filetypeimage");
+        public Criteria andFileTypeImageNotBetween(String value1, String value2) {
+            addCriterion("FileTypeImage not between", value1, value2, "fileTypeImage");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypesuffixIsNull() {
+        public Criteria andFileTypeSuffixIsNull() {
             addCriterion("FileTypeSuffix is null");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypesuffixIsNotNull() {
+        public Criteria andFileTypeSuffixIsNotNull() {
             addCriterion("FileTypeSuffix is not null");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypesuffixEqualTo(String value) {
-            addCriterion("FileTypeSuffix =", value, "filetypesuffix");
+        public Criteria andFileTypeSuffixEqualTo(String value) {
+            addCriterion("FileTypeSuffix =", value, "fileTypeSuffix");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypesuffixNotEqualTo(String value) {
-            addCriterion("FileTypeSuffix <>", value, "filetypesuffix");
+        public Criteria andFileTypeSuffixNotEqualTo(String value) {
+            addCriterion("FileTypeSuffix <>", value, "fileTypeSuffix");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypesuffixGreaterThan(String value) {
-            addCriterion("FileTypeSuffix >", value, "filetypesuffix");
+        public Criteria andFileTypeSuffixGreaterThan(String value) {
+            addCriterion("FileTypeSuffix >", value, "fileTypeSuffix");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypesuffixGreaterThanOrEqualTo(String value) {
-            addCriterion("FileTypeSuffix >=", value, "filetypesuffix");
+        public Criteria andFileTypeSuffixGreaterThanOrEqualTo(String value) {
+            addCriterion("FileTypeSuffix >=", value, "fileTypeSuffix");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypesuffixLessThan(String value) {
-            addCriterion("FileTypeSuffix <", value, "filetypesuffix");
+        public Criteria andFileTypeSuffixLessThan(String value) {
+            addCriterion("FileTypeSuffix <", value, "fileTypeSuffix");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypesuffixLessThanOrEqualTo(String value) {
-            addCriterion("FileTypeSuffix <=", value, "filetypesuffix");
+        public Criteria andFileTypeSuffixLessThanOrEqualTo(String value) {
+            addCriterion("FileTypeSuffix <=", value, "fileTypeSuffix");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypesuffixLike(String value) {
-            addCriterion("FileTypeSuffix like", value, "filetypesuffix");
+        public Criteria andFileTypeSuffixLike(String value) {
+            addCriterion("FileTypeSuffix like", value, "fileTypeSuffix");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypesuffixNotLike(String value) {
-            addCriterion("FileTypeSuffix not like", value, "filetypesuffix");
+        public Criteria andFileTypeSuffixNotLike(String value) {
+            addCriterion("FileTypeSuffix not like", value, "fileTypeSuffix");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypesuffixIn(List<String> values) {
-            addCriterion("FileTypeSuffix in", values, "filetypesuffix");
+        public Criteria andFileTypeSuffixIn(List<String> values) {
+            addCriterion("FileTypeSuffix in", values, "fileTypeSuffix");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypesuffixNotIn(List<String> values) {
-            addCriterion("FileTypeSuffix not in", values, "filetypesuffix");
+        public Criteria andFileTypeSuffixNotIn(List<String> values) {
+            addCriterion("FileTypeSuffix not in", values, "fileTypeSuffix");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypesuffixBetween(String value1, String value2) {
-            addCriterion("FileTypeSuffix between", value1, value2, "filetypesuffix");
+        public Criteria andFileTypeSuffixBetween(String value1, String value2) {
+            addCriterion("FileTypeSuffix between", value1, value2, "fileTypeSuffix");
             return (Criteria) this;
         }
 
-        public Criteria andFiletypesuffixNotBetween(String value1, String value2) {
-            addCriterion("FileTypeSuffix not between", value1, value2, "filetypesuffix");
+        public Criteria andFileTypeSuffixNotBetween(String value1, String value2) {
+            addCriterion("FileTypeSuffix not between", value1, value2, "fileTypeSuffix");
             return (Criteria) this;
         }
     }

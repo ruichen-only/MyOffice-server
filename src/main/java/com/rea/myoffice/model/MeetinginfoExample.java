@@ -104,133 +104,133 @@ public class MeetinginfoExample {
             criteria.add(new Criterion(condition, value1, value2));
         }
 
-        public Criteria andMeetingidIsNull() {
+        public Criteria andMeetingIdIsNull() {
             addCriterion("MeetingId is null");
             return (Criteria) this;
         }
 
-        public Criteria andMeetingidIsNotNull() {
+        public Criteria andMeetingIdIsNotNull() {
             addCriterion("MeetingId is not null");
             return (Criteria) this;
         }
 
-        public Criteria andMeetingidEqualTo(Integer value) {
-            addCriterion("MeetingId =", value, "meetingid");
+        public Criteria andMeetingIdEqualTo(Integer value) {
+            addCriterion("MeetingId =", value, "meetingId");
             return (Criteria) this;
         }
 
-        public Criteria andMeetingidNotEqualTo(Integer value) {
-            addCriterion("MeetingId <>", value, "meetingid");
+        public Criteria andMeetingIdNotEqualTo(Integer value) {
+            addCriterion("MeetingId <>", value, "meetingId");
             return (Criteria) this;
         }
 
-        public Criteria andMeetingidGreaterThan(Integer value) {
-            addCriterion("MeetingId >", value, "meetingid");
+        public Criteria andMeetingIdGreaterThan(Integer value) {
+            addCriterion("MeetingId >", value, "meetingId");
             return (Criteria) this;
         }
 
-        public Criteria andMeetingidGreaterThanOrEqualTo(Integer value) {
-            addCriterion("MeetingId >=", value, "meetingid");
+        public Criteria andMeetingIdGreaterThanOrEqualTo(Integer value) {
+            addCriterion("MeetingId >=", value, "meetingId");
             return (Criteria) this;
         }
 
-        public Criteria andMeetingidLessThan(Integer value) {
-            addCriterion("MeetingId <", value, "meetingid");
+        public Criteria andMeetingIdLessThan(Integer value) {
+            addCriterion("MeetingId <", value, "meetingId");
             return (Criteria) this;
         }
 
-        public Criteria andMeetingidLessThanOrEqualTo(Integer value) {
-            addCriterion("MeetingId <=", value, "meetingid");
+        public Criteria andMeetingIdLessThanOrEqualTo(Integer value) {
+            addCriterion("MeetingId <=", value, "meetingId");
             return (Criteria) this;
         }
 
-        public Criteria andMeetingidIn(List<Integer> values) {
-            addCriterion("MeetingId in", values, "meetingid");
+        public Criteria andMeetingIdIn(List<Integer> values) {
+            addCriterion("MeetingId in", values, "meetingId");
             return (Criteria) this;
         }
 
-        public Criteria andMeetingidNotIn(List<Integer> values) {
-            addCriterion("MeetingId not in", values, "meetingid");
+        public Criteria andMeetingIdNotIn(List<Integer> values) {
+            addCriterion("MeetingId not in", values, "meetingId");
             return (Criteria) this;
         }
 
-        public Criteria andMeetingidBetween(Integer value1, Integer value2) {
-            addCriterion("MeetingId between", value1, value2, "meetingid");
+        public Criteria andMeetingIdBetween(Integer value1, Integer value2) {
+            addCriterion("MeetingId between", value1, value2, "meetingId");
             return (Criteria) this;
         }
 
-        public Criteria andMeetingidNotBetween(Integer value1, Integer value2) {
-            addCriterion("MeetingId not between", value1, value2, "meetingid");
+        public Criteria andMeetingIdNotBetween(Integer value1, Integer value2) {
+            addCriterion("MeetingId not between", value1, value2, "meetingId");
             return (Criteria) this;
         }
 
-        public Criteria andMeetingnameIsNull() {
+        public Criteria andMeetingNameIsNull() {
             addCriterion("MeetingName is null");
             return (Criteria) this;
         }
 
-        public Criteria andMeetingnameIsNotNull() {
+        public Criteria andMeetingNameIsNotNull() {
             addCriterion("MeetingName is not null");
             return (Criteria) this;
         }
 
-        public Criteria andMeetingnameEqualTo(String value) {
-            addCriterion("MeetingName =", value, "meetingname");
+        public Criteria andMeetingNameEqualTo(String value) {
+            addCriterion("MeetingName =", value, "meetingName");
             return (Criteria) this;
         }
 
-        public Criteria andMeetingnameNotEqualTo(String value) {
-            addCriterion("MeetingName <>", value, "meetingname");
+        public Criteria andMeetingNameNotEqualTo(String value) {
+            addCriterion("MeetingName <>", value, "meetingName");
             return (Criteria) this;
         }
 
-        public Criteria andMeetingnameGreaterThan(String value) {
-            addCriterion("MeetingName >", value, "meetingname");
+        public Criteria andMeetingNameGreaterThan(String value) {
+            addCriterion("MeetingName >", value, "meetingName");
             return (Criteria) this;
         }
 
-        public Criteria andMeetingnameGreaterThanOrEqualTo(String value) {
-            addCriterion("MeetingName >=", value, "meetingname");
+        public Criteria andMeetingNameGreaterThanOrEqualTo(String value) {
+            addCriterion("MeetingName >=", value, "meetingName");
             return (Criteria) this;
         }
 
-        public Criteria andMeetingnameLessThan(String value) {
-            addCriterion("MeetingName <", value, "meetingname");
+        public Criteria andMeetingNameLessThan(String value) {
+            addCriterion("MeetingName <", value, "meetingName");
             return (Criteria) this;
         }
 
-        public Criteria andMeetingnameLessThanOrEqualTo(String value) {
-            addCriterion("MeetingName <=", value, "meetingname");
+        public Criteria andMeetingNameLessThanOrEqualTo(String value) {
+            addCriterion("MeetingName <=", value, "meetingName");
             return (Criteria) this;
         }
 
-        public Criteria andMeetingnameLike(String value) {
-            addCriterion("MeetingName like", value, "meetingname");
+        public Criteria andMeetingNameLike(String value) {
+            addCriterion("MeetingName like", value, "meetingName");
             return (Criteria) this;
         }
 
-        public Criteria andMeetingnameNotLike(String value) {
-            addCriterion("MeetingName not like", value, "meetingname");
+        public Criteria andMeetingNameNotLike(String value) {
+            addCriterion("MeetingName not like", value, "meetingName");
             return (Criteria) this;
         }
 
-        public Criteria andMeetingnameIn(List<String> values) {
-            addCriterion("MeetingName in", values, "meetingname");
+        public Criteria andMeetingNameIn(List<String> values) {
+            addCriterion("MeetingName in", values, "meetingName");
             return (Criteria) this;
         }
 
-        public Criteria andMeetingnameNotIn(List<String> values) {
-            addCriterion("MeetingName not in", values, "meetingname");
+        public Criteria andMeetingNameNotIn(List<String> values) {
+            addCriterion("MeetingName not in", values, "meetingName");
             return (Criteria) this;
         }
 
-        public Criteria andMeetingnameBetween(String value1, String value2) {
-            addCriterion("MeetingName between", value1, value2, "meetingname");
+        public Criteria andMeetingNameBetween(String value1, String value2) {
+            addCriterion("MeetingName between", value1, value2, "meetingName");
             return (Criteria) this;
         }
 
-        public Criteria andMeetingnameNotBetween(String value1, String value2) {
-            addCriterion("MeetingName not between", value1, value2, "meetingname");
+        public Criteria andMeetingNameNotBetween(String value1, String value2) {
+            addCriterion("MeetingName not between", value1, value2, "meetingName");
             return (Criteria) this;
         }
     }

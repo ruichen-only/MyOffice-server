@@ -2,12 +2,12 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.rea.myoffice.mapper.LoginlogMapper">
   <resultMap id="BaseResultMap" type="com.rea.myoffice.model.Loginlog">
-    <id column="LoginId" jdbcType="INTEGER" property="loginid" />
-    <result column="UserId" jdbcType="VARCHAR" property="userid" />
-    <result column="LoginTime" jdbcType="TIMESTAMP" property="logintime" />
-    <result column="IfSuccess" jdbcType="INTEGER" property="ifsuccess" />
-    <result column="LoginUserIp" jdbcType="VARCHAR" property="loginuserip" />
-    <result column="LoginDesc" jdbcType="VARCHAR" property="logindesc" />
+    <id column="LoginId" jdbcType="INTEGER" property="loginId" />
+    <result column="UserId" jdbcType="VARCHAR" property="userId" />
+    <result column="LoginTime" jdbcType="TIMESTAMP" property="loginTime" />
+    <result column="IfSuccess" jdbcType="INTEGER" property="ifSuccess" />
+    <result column="LoginUserIp" jdbcType="VARCHAR" property="loginUserIp" />
+    <result column="LoginDesc" jdbcType="VARCHAR" property="loginDesc" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -88,11 +88,11 @@
     select 
     <include refid="Base_Column_List" />
     from loginlog
-    where LoginId = #{loginid,jdbcType=INTEGER}
+    where LoginId = #{loginId,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from loginlog
-    where LoginId = #{loginid,jdbcType=INTEGER}
+    where LoginId = #{loginId,jdbcType=INTEGER}
   </delete>
   <delete id="deleteByExample" parameterType="com.rea.myoffice.model.LoginlogExample">
     delete from loginlog
@@ -104,50 +104,50 @@
     insert into loginlog (LoginId, UserId, LoginTime, 
       IfSuccess, LoginUserIp, LoginDesc
       )
-    values (#{loginid,jdbcType=INTEGER}, #{userid,jdbcType=VARCHAR}, #{logintime,jdbcType=TIMESTAMP}, 
-      #{ifsuccess,jdbcType=INTEGER}, #{loginuserip,jdbcType=VARCHAR}, #{logindesc,jdbcType=VARCHAR}
+    values (#{loginId,jdbcType=INTEGER}, #{userId,jdbcType=VARCHAR}, #{loginTime,jdbcType=TIMESTAMP}, 
+      #{ifSuccess,jdbcType=INTEGER}, #{loginUserIp,jdbcType=VARCHAR}, #{loginDesc,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.rea.myoffice.model.Loginlog">
     insert into loginlog
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="loginid != null">
+      <if test="loginId != null">
         LoginId,
       </if>
-      <if test="userid != null">
+      <if test="userId != null">
         UserId,
       </if>
-      <if test="logintime != null">
+      <if test="loginTime != null">
         LoginTime,
       </if>
-      <if test="ifsuccess != null">
+      <if test="ifSuccess != null">
         IfSuccess,
       </if>
-      <if test="loginuserip != null">
+      <if test="loginUserIp != null">
         LoginUserIp,
       </if>
-      <if test="logindesc != null">
+      <if test="loginDesc != null">
         LoginDesc,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="loginid != null">
-        #{loginid,jdbcType=INTEGER},
+      <if test="loginId != null">
+        #{loginId,jdbcType=INTEGER},
       </if>
-      <if test="userid != null">
-        #{userid,jdbcType=VARCHAR},
+      <if test="userId != null">
+        #{userId,jdbcType=VARCHAR},
       </if>
-      <if test="logintime != null">
-        #{logintime,jdbcType=TIMESTAMP},
+      <if test="loginTime != null">
+        #{loginTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="ifsuccess != null">
-        #{ifsuccess,jdbcType=INTEGER},
+      <if test="ifSuccess != null">
+        #{ifSuccess,jdbcType=INTEGER},
       </if>
-      <if test="loginuserip != null">
-        #{loginuserip,jdbcType=VARCHAR},
+      <if test="loginUserIp != null">
+        #{loginUserIp,jdbcType=VARCHAR},
       </if>
-      <if test="logindesc != null">
-        #{logindesc,jdbcType=VARCHAR},
+      <if test="loginDesc != null">
+        #{loginDesc,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -160,23 +160,23 @@
   <update id="updateByExampleSelective" parameterType="map">
     update loginlog
     <set>
-      <if test="row.loginid != null">
-        LoginId = #{row.loginid,jdbcType=INTEGER},
+      <if test="row.loginId != null">
+        LoginId = #{row.loginId,jdbcType=INTEGER},
       </if>
-      <if test="row.userid != null">
-        UserId = #{row.userid,jdbcType=VARCHAR},
+      <if test="row.userId != null">
+        UserId = #{row.userId,jdbcType=VARCHAR},
       </if>
-      <if test="row.logintime != null">
-        LoginTime = #{row.logintime,jdbcType=TIMESTAMP},
+      <if test="row.loginTime != null">
+        LoginTime = #{row.loginTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="row.ifsuccess != null">
-        IfSuccess = #{row.ifsuccess,jdbcType=INTEGER},
+      <if test="row.ifSuccess != null">
+        IfSuccess = #{row.ifSuccess,jdbcType=INTEGER},
       </if>
-      <if test="row.loginuserip != null">
-        LoginUserIp = #{row.loginuserip,jdbcType=VARCHAR},
+      <if test="row.loginUserIp != null">
+        LoginUserIp = #{row.loginUserIp,jdbcType=VARCHAR},
       </if>
-      <if test="row.logindesc != null">
-        LoginDesc = #{row.logindesc,jdbcType=VARCHAR},
+      <if test="row.loginDesc != null">
+        LoginDesc = #{row.loginDesc,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="example != null">
@@ -185,12 +185,12 @@
   </update>
   <update id="updateByExample" parameterType="map">
     update loginlog
-    set LoginId = #{row.loginid,jdbcType=INTEGER},
-      UserId = #{row.userid,jdbcType=VARCHAR},
-      LoginTime = #{row.logintime,jdbcType=TIMESTAMP},
-      IfSuccess = #{row.ifsuccess,jdbcType=INTEGER},
-      LoginUserIp = #{row.loginuserip,jdbcType=VARCHAR},
-      LoginDesc = #{row.logindesc,jdbcType=VARCHAR}
+    set LoginId = #{row.loginId,jdbcType=INTEGER},
+      UserId = #{row.userId,jdbcType=VARCHAR},
+      LoginTime = #{row.loginTime,jdbcType=TIMESTAMP},
+      IfSuccess = #{row.ifSuccess,jdbcType=INTEGER},
+      LoginUserIp = #{row.loginUserIp,jdbcType=VARCHAR},
+      LoginDesc = #{row.loginDesc,jdbcType=VARCHAR}
     <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -198,31 +198,31 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.rea.myoffice.model.Loginlog">
     update loginlog
     <set>
-      <if test="userid != null">
-        UserId = #{userid,jdbcType=VARCHAR},
+      <if test="userId != null">
+        UserId = #{userId,jdbcType=VARCHAR},
       </if>
-      <if test="logintime != null">
-        LoginTime = #{logintime,jdbcType=TIMESTAMP},
+      <if test="loginTime != null">
+        LoginTime = #{loginTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="ifsuccess != null">
-        IfSuccess = #{ifsuccess,jdbcType=INTEGER},
+      <if test="ifSuccess != null">
+        IfSuccess = #{ifSuccess,jdbcType=INTEGER},
       </if>
-      <if test="loginuserip != null">
-        LoginUserIp = #{loginuserip,jdbcType=VARCHAR},
+      <if test="loginUserIp != null">
+        LoginUserIp = #{loginUserIp,jdbcType=VARCHAR},
       </if>
-      <if test="logindesc != null">
-        LoginDesc = #{logindesc,jdbcType=VARCHAR},
+      <if test="loginDesc != null">
+        LoginDesc = #{loginDesc,jdbcType=VARCHAR},
       </if>
     </set>
-    where LoginId = #{loginid,jdbcType=INTEGER}
+    where LoginId = #{loginId,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.rea.myoffice.model.Loginlog">
     update loginlog
-    set UserId = #{userid,jdbcType=VARCHAR},
-      LoginTime = #{logintime,jdbcType=TIMESTAMP},
-      IfSuccess = #{ifsuccess,jdbcType=INTEGER},
-      LoginUserIp = #{loginuserip,jdbcType=VARCHAR},
-      LoginDesc = #{logindesc,jdbcType=VARCHAR}
-    where LoginId = #{loginid,jdbcType=INTEGER}
+    set UserId = #{userId,jdbcType=VARCHAR},
+      LoginTime = #{loginTime,jdbcType=TIMESTAMP},
+      IfSuccess = #{ifSuccess,jdbcType=INTEGER},
+      LoginUserIp = #{loginUserIp,jdbcType=VARCHAR},
+      LoginDesc = #{loginDesc,jdbcType=VARCHAR}
+    where LoginId = #{loginId,jdbcType=INTEGER}
   </update>
 </mapper>

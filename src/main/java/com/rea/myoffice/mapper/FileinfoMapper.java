@@ -10,7 +10,7 @@ public interface FileinfoMapper {
 
     int deleteByExample(FileinfoExample example);
 
-    int deleteByPrimaryKey(Integer fileid);
+    int deleteByPrimaryKey(Integer fileId);
 
     int insert(Fileinfo row);
 
@@ -18,7 +18,7 @@ public interface FileinfoMapper {
 
     List<Fileinfo> selectByExample(FileinfoExample example);
 
-    Fileinfo selectByPrimaryKey(Integer fileid);
+    Fileinfo selectByPrimaryKey(Integer fileId);
 
     int updateByExampleSelective(@Param("row") Fileinfo row, @Param("example") FileinfoExample example);
 

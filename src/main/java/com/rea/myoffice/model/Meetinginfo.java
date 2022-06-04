@@ -5,27 +5,27 @@ import java.io.Serializable;
 
 public class Meetinginfo implements Serializable {
     @ApiModelProperty(value = "会议类型Id")
-    private Integer meetingid;
+    private Integer meetingId;
 
     @ApiModelProperty(value = "会议类型名称")
-    private String meetingname;
+    private String meetingName;
 
     private static final long serialVersionUID = 1L;
 
-    public Integer getMeetingid() {
-        return meetingid;
+    public Integer getMeetingId() {
+        return meetingId;
     }
 
-    public void setMeetingid(Integer meetingid) {
-        this.meetingid = meetingid;
+    public void setMeetingId(Integer meetingId) {
+        this.meetingId = meetingId;
     }
 
-    public String getMeetingname() {
-        return meetingname;
+    public String getMeetingName() {
+        return meetingName;
     }
 
-    public void setMeetingname(String meetingname) {
-        this.meetingname = meetingname;
+    public void setMeetingName(String meetingName) {
+        this.meetingName = meetingName;
     }
 
     @Override
@@ -34,8 +34,8 @@ public class Meetinginfo implements Serializable {
         sb.append(getClass().getSimpleName());
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
-        sb.append(", meetingid=").append(meetingid);
-        sb.append(", meetingname=").append(meetingname);
+        sb.append(", meetingId=").append(meetingId);
+        sb.append(", meetingName=").append(meetingName);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

@@ -5,38 +5,38 @@ import java.io.Serializable;
 
 public class Roleinfo implements Serializable {
     @ApiModelProperty(value = "角色id")
-    private Integer roleid;
+    private Integer roleId;
 
     @ApiModelProperty(value = "角色名称")
-    private String rolename;
+    private String roleName;
 
     @ApiModelProperty(value = "角色描述")
-    private String roledesc;
+    private String roleDesc;
 
     private static final long serialVersionUID = 1L;
 
-    public Integer getRoleid() {
-        return roleid;
+    public Integer getRoleId() {
+        return roleId;
     }
 
-    public void setRoleid(Integer roleid) {
-        this.roleid = roleid;
+    public void setRoleId(Integer roleId) {
+        this.roleId = roleId;
     }
 
-    public String getRolename() {
-        return rolename;
+    public String getRoleName() {
+        return roleName;
     }
 
-    public void setRolename(String rolename) {
-        this.rolename = rolename;
+    public void setRoleName(String roleName) {
+        this.roleName = roleName;
     }
 
-    public String getRoledesc() {
-        return roledesc;
+    public String getRoleDesc() {
+        return roleDesc;
     }
 
-    public void setRoledesc(String roledesc) {
-        this.roledesc = roledesc;
+    public void setRoleDesc(String roleDesc) {
+        this.roleDesc = roleDesc;
     }
 
     @Override
@@ -45,9 +45,9 @@ public class Roleinfo implements Serializable {
         sb.append(getClass().getSimpleName());
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
-        sb.append(", roleid=").append(roleid);
-        sb.append(", rolename=").append(rolename);
-        sb.append(", roledesc=").append(roledesc);
+        sb.append(", roleId=").append(roleId);
+        sb.append(", roleName=").append(roleName);
+        sb.append(", roleDesc=").append(roleDesc);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

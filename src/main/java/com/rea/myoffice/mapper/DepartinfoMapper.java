@@ -12,7 +12,7 @@ public interface DepartinfoMapper {
 
   int deleteByExample(DepartinfoExample example);
 
-  int deleteByPrimaryKey(Integer departid);
+  int deleteByPrimaryKey(Integer departId);
 
   int insert(Departinfo row);
 
@@ -20,7 +20,7 @@ public interface DepartinfoMapper {
 
   List<Departinfo> selectByExample(DepartinfoExample example);
 
-  Departinfo selectByPrimaryKey(Integer departid);
+  Departinfo selectByPrimaryKey(Integer departId);
 
   int updateByExampleSelective(
       @Param("row") Departinfo row, @Param("example") DepartinfoExample example);

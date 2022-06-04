@@ -104,203 +104,203 @@ public class MessagetypeExample {
             criteria.add(new Criterion(condition, value1, value2));
         }
 
-        public Criteria andMessagetypeidIsNull() {
+        public Criteria andMessageTypeIdIsNull() {
             addCriterion("MessageTypeId is null");
             return (Criteria) this;
         }
 
-        public Criteria andMessagetypeidIsNotNull() {
+        public Criteria andMessageTypeIdIsNotNull() {
             addCriterion("MessageTypeId is not null");
             return (Criteria) this;
         }
 
-        public Criteria andMessagetypeidEqualTo(Integer value) {
-            addCriterion("MessageTypeId =", value, "messagetypeid");
+        public Criteria andMessageTypeIdEqualTo(Integer value) {
+            addCriterion("MessageTypeId =", value, "messageTypeId");
             return (Criteria) this;
         }
 
-        public Criteria andMessagetypeidNotEqualTo(Integer value) {
-            addCriterion("MessageTypeId <>", value, "messagetypeid");
+        public Criteria andMessageTypeIdNotEqualTo(Integer value) {
+            addCriterion("MessageTypeId <>", value, "messageTypeId");
             return (Criteria) this;
         }
 
-        public Criteria andMessagetypeidGreaterThan(Integer value) {
-            addCriterion("MessageTypeId >", value, "messagetypeid");
+        public Criteria andMessageTypeIdGreaterThan(Integer value) {
+            addCriterion("MessageTypeId >", value, "messageTypeId");
             return (Criteria) this;
         }
 
-        public Criteria andMessagetypeidGreaterThanOrEqualTo(Integer value) {
-            addCriterion("MessageTypeId >=", value, "messagetypeid");
+        public Criteria andMessageTypeIdGreaterThanOrEqualTo(Integer value) {
+            addCriterion("MessageTypeId >=", value, "messageTypeId");
             return (Criteria) this;
         }
 
-        public Criteria andMessagetypeidLessThan(Integer value) {
-            addCriterion("MessageTypeId <", value, "messagetypeid");
+        public Criteria andMessageTypeIdLessThan(Integer value) {
+            addCriterion("MessageTypeId <", value, "messageTypeId");
             return (Criteria) this;
         }
 
-        public Criteria andMessagetypeidLessThanOrEqualTo(Integer value) {
-            addCriterion("MessageTypeId <=", value, "messagetypeid");
+        public Criteria andMessageTypeIdLessThanOrEqualTo(Integer value) {
+            addCriterion("MessageTypeId <=", value, "messageTypeId");
             return (Criteria) this;
         }
 
-        public Criteria andMessagetypeidIn(List<Integer> values) {
-            addCriterion("MessageTypeId in", values, "messagetypeid");
+        public Criteria andMessageTypeIdIn(List<Integer> values) {
+            addCriterion("MessageTypeId in", values, "messageTypeId");
             return (Criteria) this;
         }
 
-        public Criteria andMessagetypeidNotIn(List<Integer> values) {
-            addCriterion("MessageTypeId not in", values, "messagetypeid");
+        public Criteria andMessageTypeIdNotIn(List<Integer> values) {
+            addCriterion("MessageTypeId not in", values, "messageTypeId");
             return (Criteria) this;
         }
 
-        public Criteria andMessagetypeidBetween(Integer value1, Integer value2) {
-            addCriterion("MessageTypeId between", value1, value2, "messagetypeid");
+        public Criteria andMessageTypeIdBetween(Integer value1, Integer value2) {
+            addCriterion("MessageTypeId between", value1, value2, "messageTypeId");
             return (Criteria) this;
         }
 
-        public Criteria andMessagetypeidNotBetween(Integer value1, Integer value2) {
-            addCriterion("MessageTypeId not between", value1, value2, "messagetypeid");
+        public Criteria andMessageTypeIdNotBetween(Integer value1, Integer value2) {
+            addCriterion("MessageTypeId not between", value1, value2, "messageTypeId");
             return (Criteria) this;
         }
 
-        public Criteria andMessagetypenameIsNull() {
+        public Criteria andMessageTypeNameIsNull() {
             addCriterion("MessageTypeName is null");
             return (Criteria) this;
         }
 
-        public Criteria andMessagetypenameIsNotNull() {
+        public Criteria andMessageTypeNameIsNotNull() {
             addCriterion("MessageTypeName is not null");
             return (Criteria) this;
         }
 
-        public Criteria andMessagetypenameEqualTo(String value) {
-            addCriterion("MessageTypeName =", value, "messagetypename");
+        public Criteria andMessageTypeNameEqualTo(String value) {
+            addCriterion("MessageTypeName =", value, "messageTypeName");
             return (Criteria) this;
         }
 
-        public Criteria andMessagetypenameNotEqualTo(String value) {
-            addCriterion("MessageTypeName <>", value, "messagetypename");
+        public Criteria andMessageTypeNameNotEqualTo(String value) {
+            addCriterion("MessageTypeName <>", value, "messageTypeName");
             return (Criteria) this;
         }
 
-        public Criteria andMessagetypenameGreaterThan(String value) {
-            addCriterion("MessageTypeName >", value, "messagetypename");
+        public Criteria andMessageTypeNameGreaterThan(String value) {
+            addCriterion("MessageTypeName >", value, "messageTypeName");
             return (Criteria) this;
         }
 
-        public Criteria andMessagetypenameGreaterThanOrEqualTo(String value) {
-            addCriterion("MessageTypeName >=", value, "messagetypename");
+        public Criteria andMessageTypeNameGreaterThanOrEqualTo(String value) {
+            addCriterion("MessageTypeName >=", value, "messageTypeName");
             return (Criteria) this;
         }
 
-        public Criteria andMessagetypenameLessThan(String value) {
-            addCriterion("MessageTypeName <", value, "messagetypename");
+        public Criteria andMessageTypeNameLessThan(String value) {
+            addCriterion("MessageTypeName <", value, "messageTypeName");
             return (Criteria) this;
         }
 
-        public Criteria andMessagetypenameLessThanOrEqualTo(String value) {
-            addCriterion("MessageTypeName <=", value, "messagetypename");
+        public Criteria andMessageTypeNameLessThanOrEqualTo(String value) {
+            addCriterion("MessageTypeName <=", value, "messageTypeName");
             return (Criteria) this;
         }
 
-        public Criteria andMessagetypenameLike(String value) {
-            addCriterion("MessageTypeName like", value, "messagetypename");
+        public Criteria andMessageTypeNameLike(String value) {
+            addCriterion("MessageTypeName like", value, "messageTypeName");
             return (Criteria) this;
         }
 
-        public Criteria andMessagetypenameNotLike(String value) {
-            addCriterion("MessageTypeName not like", value, "messagetypename");
+        public Criteria andMessageTypeNameNotLike(String value) {
+            addCriterion("MessageTypeName not like", value, "messageTypeName");
             return (Criteria) this;
         }
 
-        public Criteria andMessagetypenameIn(List<String> values) {
-            addCriterion("MessageTypeName in", values, "messagetypename");
+        public Criteria andMessageTypeNameIn(List<String> values) {
+            addCriterion("MessageTypeName in", values, "messageTypeName");
             return (Criteria) this;
         }
 
-        public Criteria andMessagetypenameNotIn(List<String> values) {
-            addCriterion("MessageTypeName not in", values, "messagetypename");
+        public Criteria andMessageTypeNameNotIn(List<String> values) {
+            addCriterion("MessageTypeName not in", values, "messageTypeName");
             return (Criteria) this;
         }
 
-        public Criteria andMessagetypenameBetween(String value1, String value2) {
-            addCriterion("MessageTypeName between", value1, value2, "messagetypename");
+        public Criteria andMessageTypeNameBetween(String value1, String value2) {
+            addCriterion("MessageTypeName between", value1, value2, "messageTypeName");
             return (Criteria) this;
         }
 
-        public Criteria andMessagetypenameNotBetween(String value1, String value2) {
-            addCriterion("MessageTypeName not between", value1, value2, "messagetypename");
+        public Criteria andMessageTypeNameNotBetween(String value1, String value2) {
+            addCriterion("MessageTypeName not between", value1, value2, "messageTypeName");
             return (Criteria) this;
         }
 
-        public Criteria andMessagedescIsNull() {
+        public Criteria andMessageDescIsNull() {
             addCriterion("MessageDesc is null");
             return (Criteria) this;
         }
 
-        public Criteria andMessagedescIsNotNull() {
+        public Criteria andMessageDescIsNotNull() {
             addCriterion("MessageDesc is not null");
             return (Criteria) this;
         }
 
-        public Criteria andMessagedescEqualTo(String value) {
-            addCriterion("MessageDesc =", value, "messagedesc");
+        public Criteria andMessageDescEqualTo(String value) {
+            addCriterion("MessageDesc =", value, "messageDesc");
             return (Criteria) this;
         }
 
-        public Criteria andMessagedescNotEqualTo(String value) {
-            addCriterion("MessageDesc <>", value, "messagedesc");
+        public Criteria andMessageDescNotEqualTo(String value) {
+            addCriterion("MessageDesc <>", value, "messageDesc");
             return (Criteria) this;
         }
 
-        public Criteria andMessagedescGreaterThan(String value) {
-            addCriterion("MessageDesc >", value, "messagedesc");
+        public Criteria andMessageDescGreaterThan(String value) {
+            addCriterion("MessageDesc >", value, "messageDesc");
             return (Criteria) this;
         }
 
-        public Criteria andMessagedescGreaterThanOrEqualTo(String value) {
-            addCriterion("MessageDesc >=", value, "messagedesc");
+        public Criteria andMessageDescGreaterThanOrEqualTo(String value) {
+            addCriterion("MessageDesc >=", value, "messageDesc");
             return (Criteria) this;
         }
 
-        public Criteria andMessagedescLessThan(String value) {
-            addCriterion("MessageDesc <", value, "messagedesc");
+        public Criteria andMessageDescLessThan(String value) {
+            addCriterion("MessageDesc <", value, "messageDesc");
             return (Criteria) this;
         }
 
-        public Criteria andMessagedescLessThanOrEqualTo(String value) {
-            addCriterion("MessageDesc <=", value, "messagedesc");
+        public Criteria andMessageDescLessThanOrEqualTo(String value) {
+            addCriterion("MessageDesc <=", value, "messageDesc");
             return (Criteria) this;
         }
 
-        public Criteria andMessagedescLike(String value) {
-            addCriterion("MessageDesc like", value, "messagedesc");
+        public Criteria andMessageDescLike(String value) {
+            addCriterion("MessageDesc like", value, "messageDesc");
             return (Criteria) this;
         }
 
-        public Criteria andMessagedescNotLike(String value) {
-            addCriterion("MessageDesc not like", value, "messagedesc");
+        public Criteria andMessageDescNotLike(String value) {
+            addCriterion("MessageDesc not like", value, "messageDesc");
             return (Criteria) this;
         }
 
-        public Criteria andMessagedescIn(List<String> values) {
-            addCriterion("MessageDesc in", values, "messagedesc");
+        public Criteria andMessageDescIn(List<String> values) {
+            addCriterion("MessageDesc in", values, "messageDesc");
             return (Criteria) this;
         }
 
-        public Criteria andMessagedescNotIn(List<String> values) {
-            addCriterion("MessageDesc not in", values, "messagedesc");
+        public Criteria andMessageDescNotIn(List<String> values) {
+            addCriterion("MessageDesc not in", values, "messageDesc");
             return (Criteria) this;
         }
 
-        public Criteria andMessagedescBetween(String value1, String value2) {
-            addCriterion("MessageDesc between", value1, value2, "messagedesc");
+        public Criteria andMessageDescBetween(String value1, String value2) {
+            addCriterion("MessageDesc between", value1, value2, "messageDesc");
             return (Criteria) this;
         }
 
-        public Criteria andMessagedescNotBetween(String value1, String value2) {
-            addCriterion("MessageDesc not between", value1, value2, "messagedesc");
+        public Criteria andMessageDescNotBetween(String value1, String value2) {
+            addCriterion("MessageDesc not between", value1, value2, "messageDesc");
             return (Criteria) this;
         }
     }

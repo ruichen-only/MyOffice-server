@@ -44,6 +44,7 @@
                              targetProject="src\main\java"/>
         <!--生成全部表tableName设为%-->
         <table tableName="%">
+            <property name="useActualColumnNames" value="true"/>
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
     </context>

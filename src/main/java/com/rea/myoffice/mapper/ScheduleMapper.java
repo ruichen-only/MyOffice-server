@@ -10,7 +10,7 @@ public interface ScheduleMapper {
 
     int deleteByExample(ScheduleExample example);
 
-    int deleteByPrimaryKey(Integer scheduleid);
+    int deleteByPrimaryKey(Integer scheduleId);
 
     int insert(Schedule row);
 
@@ -18,7 +18,7 @@ public interface ScheduleMapper {
 
     List<Schedule> selectByExample(ScheduleExample example);
 
-    Schedule selectByPrimaryKey(Integer scheduleid);
+    Schedule selectByPrimaryKey(Integer scheduleId);
 
     int updateByExampleSelective(@Param("row") Schedule row, @Param("example") ScheduleExample example);
 

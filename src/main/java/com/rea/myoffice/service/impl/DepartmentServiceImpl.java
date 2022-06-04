@@ -30,7 +30,7 @@ public class DepartmentServiceImpl implements DepartmentService {
   @Override
   public int deleteById(int deptId) {
     DepartinfoExample example = new DepartinfoExample();
-    example.createCriteria().andBranchidEqualTo(deptId);
+    example.createCriteria().andBranchIdEqualTo(deptId);
 
     return departinfoMapper.deleteByExample(example);
   }
@@ -38,7 +38,7 @@ public class DepartmentServiceImpl implements DepartmentService {
   @Override
   public int deleteByIds(List<Integer> deptIds) {
     DepartinfoExample example = new DepartinfoExample();
-    example.createCriteria().andBranchidIn(deptIds);
+    example.createCriteria().andBranchIdIn(deptIds);
 
     return departinfoMapper.deleteByExample(example);
   }

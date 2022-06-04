@@ -2,11 +2,11 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.rea.myoffice.mapper.SysfunMapper">
   <resultMap id="BaseResultMap" type="com.rea.myoffice.model.Sysfun">
-    <id column="NodeId" jdbcType="INTEGER" property="nodeid" />
-    <result column="DisplayName" jdbcType="VARCHAR" property="displayname" />
-    <result column="NodeURL" jdbcType="VARCHAR" property="nodeurl" />
-    <result column="DisplayOrder" jdbcType="INTEGER" property="displayorder" />
-    <result column="ParentNodeId" jdbcType="INTEGER" property="parentnodeid" />
+    <id column="NodeId" jdbcType="INTEGER" property="nodeId" />
+    <result column="DisplayName" jdbcType="VARCHAR" property="displayName" />
+    <result column="NodeURL" jdbcType="VARCHAR" property="nodeURL" />
+    <result column="DisplayOrder" jdbcType="INTEGER" property="displayOrder" />
+    <result column="ParentNodeId" jdbcType="INTEGER" property="parentNodeId" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -87,11 +87,11 @@
     select 
     <include refid="Base_Column_List" />
     from sysfun
-    where NodeId = #{nodeid,jdbcType=INTEGER}
+    where NodeId = #{nodeId,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from sysfun
-    where NodeId = #{nodeid,jdbcType=INTEGER}
+    where NodeId = #{nodeId,jdbcType=INTEGER}
   </delete>
   <delete id="deleteByExample" parameterType="com.rea.myoffice.model.SysfunExample">
     delete from sysfun
@@ -102,43 +102,43 @@
   <insert id="insert" parameterType="com.rea.myoffice.model.Sysfun">
     insert into sysfun (NodeId, DisplayName, NodeURL, 
       DisplayOrder, ParentNodeId)
-    values (#{nodeid,jdbcType=INTEGER}, #{displayname,jdbcType=VARCHAR}, #{nodeurl,jdbcType=VARCHAR}, 
-      #{displayorder,jdbcType=INTEGER}, #{parentnodeid,jdbcType=INTEGER})
+    values (#{nodeId,jdbcType=INTEGER}, #{displayName,jdbcType=VARCHAR}, #{nodeURL,jdbcType=VARCHAR}, 
+      #{displayOrder,jdbcType=INTEGER}, #{parentNodeId,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.rea.myoffice.model.Sysfun">
     insert into sysfun
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="nodeid != null">
+      <if test="nodeId != null">
         NodeId,
       </if>
-      <if test="displayname != null">
+      <if test="displayName != null">
         DisplayName,
       </if>
-      <if test="nodeurl != null">
+      <if test="nodeURL != null">
         NodeURL,
       </if>
-      <if test="displayorder != null">
+      <if test="displayOrder != null">
         DisplayOrder,
       </if>
-      <if test="parentnodeid != null">
+      <if test="parentNodeId != null">
         ParentNodeId,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="nodeid != null">
-        #{nodeid,jdbcType=INTEGER},
+      <if test="nodeId != null">
+        #{nodeId,jdbcType=INTEGER},
       </if>
-      <if test="displayname != null">
-        #{displayname,jdbcType=VARCHAR},
+      <if test="displayName != null">
+        #{displayName,jdbcType=VARCHAR},
       </if>
-      <if test="nodeurl != null">
-        #{nodeurl,jdbcType=VARCHAR},
+      <if test="nodeURL != null">
+        #{nodeURL,jdbcType=VARCHAR},
       </if>
-      <if test="displayorder != null">
-        #{displayorder,jdbcType=INTEGER},
+      <if test="displayOrder != null">
+        #{displayOrder,jdbcType=INTEGER},
       </if>
-      <if test="parentnodeid != null">
-        #{parentnodeid,jdbcType=INTEGER},
+      <if test="parentNodeId != null">
+        #{parentNodeId,jdbcType=INTEGER},
       </if>
     </trim>
   </insert>
@@ -151,20 +151,20 @@
   <update id="updateByExampleSelective" parameterType="map">
     update sysfun
     <set>
-      <if test="row.nodeid != null">
-        NodeId = #{row.nodeid,jdbcType=INTEGER},
+      <if test="row.nodeId != null">
+        NodeId = #{row.nodeId,jdbcType=INTEGER},
       </if>
-      <if test="row.displayname != null">
-        DisplayName = #{row.displayname,jdbcType=VARCHAR},
+      <if test="row.displayName != null">
+        DisplayName = #{row.displayName,jdbcType=VARCHAR},
       </if>
-      <if test="row.nodeurl != null">
-        NodeURL = #{row.nodeurl,jdbcType=VARCHAR},
+      <if test="row.nodeURL != null">
+        NodeURL = #{row.nodeURL,jdbcType=VARCHAR},
       </if>
-      <if test="row.displayorder != null">
-        DisplayOrder = #{row.displayorder,jdbcType=INTEGER},
+      <if test="row.displayOrder != null">
+        DisplayOrder = #{row.displayOrder,jdbcType=INTEGER},
       </if>
-      <if test="row.parentnodeid != null">
-        ParentNodeId = #{row.parentnodeid,jdbcType=INTEGER},
+      <if test="row.parentNodeId != null">
+        ParentNodeId = #{row.parentNodeId,jdbcType=INTEGER},
       </if>
     </set>
     <if test="example != null">
@@ -173,11 +173,11 @@
   </update>
   <update id="updateByExample" parameterType="map">
     update sysfun
-    set NodeId = #{row.nodeid,jdbcType=INTEGER},
-      DisplayName = #{row.displayname,jdbcType=VARCHAR},
-      NodeURL = #{row.nodeurl,jdbcType=VARCHAR},
-      DisplayOrder = #{row.displayorder,jdbcType=INTEGER},
-      ParentNodeId = #{row.parentnodeid,jdbcType=INTEGER}
+    set NodeId = #{row.nodeId,jdbcType=INTEGER},
+      DisplayName = #{row.displayName,jdbcType=VARCHAR},
+      NodeURL = #{row.nodeURL,jdbcType=VARCHAR},
+      DisplayOrder = #{row.displayOrder,jdbcType=INTEGER},
+      ParentNodeId = #{row.parentNodeId,jdbcType=INTEGER}
     <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -185,27 +185,27 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.rea.myoffice.model.Sysfun">
     update sysfun
     <set>
-      <if test="displayname != null">
-        DisplayName = #{displayname,jdbcType=VARCHAR},
+      <if test="displayName != null">
+        DisplayName = #{displayName,jdbcType=VARCHAR},
       </if>
-      <if test="nodeurl != null">
-        NodeURL = #{nodeurl,jdbcType=VARCHAR},
+      <if test="nodeURL != null">
+        NodeURL = #{nodeURL,jdbcType=VARCHAR},
       </if>
-      <if test="displayorder != null">
-        DisplayOrder = #{displayorder,jdbcType=INTEGER},
+      <if test="displayOrder != null">
+        DisplayOrder = #{displayOrder,jdbcType=INTEGER},
       </if>
-      <if test="parentnodeid != null">
-        ParentNodeId = #{parentnodeid,jdbcType=INTEGER},
+      <if test="parentNodeId != null">
+        ParentNodeId = #{parentNodeId,jdbcType=INTEGER},
       </if>
     </set>
-    where NodeId = #{nodeid,jdbcType=INTEGER}
+    where NodeId = #{nodeId,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.rea.myoffice.model.Sysfun">
     update sysfun
-    set DisplayName = #{displayname,jdbcType=VARCHAR},
-      NodeURL = #{nodeurl,jdbcType=VARCHAR},
-      DisplayOrder = #{displayorder,jdbcType=INTEGER},
-      ParentNodeId = #{parentnodeid,jdbcType=INTEGER}
-    where NodeId = #{nodeid,jdbcType=INTEGER}
+    set DisplayName = #{displayName,jdbcType=VARCHAR},
+      NodeURL = #{nodeURL,jdbcType=VARCHAR},
+      DisplayOrder = #{displayOrder,jdbcType=INTEGER},
+      ParentNodeId = #{parentNodeId,jdbcType=INTEGER}
+    where NodeId = #{nodeId,jdbcType=INTEGER}
   </update>
 </mapper>

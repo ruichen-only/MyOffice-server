@@ -6,38 +6,38 @@ import java.util.Date;
 
 public class Worktime implements Serializable {
     @ApiModelProperty(value = "工作时间Id")
-    private Integer worktimeid;
+    private Integer workTimeId;
 
     @ApiModelProperty(value = "上班时间")
-    private Date ondutytime;
+    private Date onDutyTime;
 
     @ApiModelProperty(value = "下班时间")
-    private Date offdutytime;
+    private Date offDutyTime;
 
     private static final long serialVersionUID = 1L;
 
-    public Integer getWorktimeid() {
-        return worktimeid;
+    public Integer getWorkTimeId() {
+        return workTimeId;
     }
 
-    public void setWorktimeid(Integer worktimeid) {
-        this.worktimeid = worktimeid;
+    public void setWorkTimeId(Integer workTimeId) {
+        this.workTimeId = workTimeId;
     }
 
-    public Date getOndutytime() {
-        return ondutytime;
+    public Date getOnDutyTime() {
+        return onDutyTime;
     }
 
-    public void setOndutytime(Date ondutytime) {
-        this.ondutytime = ondutytime;
+    public void setOnDutyTime(Date onDutyTime) {
+        this.onDutyTime = onDutyTime;
     }
 
-    public Date getOffdutytime() {
-        return offdutytime;
+    public Date getOffDutyTime() {
+        return offDutyTime;
     }
 
-    public void setOffdutytime(Date offdutytime) {
-        this.offdutytime = offdutytime;
+    public void setOffDutyTime(Date offDutyTime) {
+        this.offDutyTime = offDutyTime;
     }
 
     @Override
@@ -46,9 +46,9 @@ public class Worktime implements Serializable {
         sb.append(getClass().getSimpleName());
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
-        sb.append(", worktimeid=").append(worktimeid);
-        sb.append(", ondutytime=").append(ondutytime);
-        sb.append(", offdutytime=").append(offdutytime);
+        sb.append(", workTimeId=").append(workTimeId);
+        sb.append(", onDutyTime=").append(onDutyTime);
+        sb.append(", offDutyTime=").append(offDutyTime);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

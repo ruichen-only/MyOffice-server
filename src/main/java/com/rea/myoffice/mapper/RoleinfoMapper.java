@@ -10,7 +10,7 @@ public interface RoleinfoMapper {
 
     int deleteByExample(RoleinfoExample example);
 
-    int deleteByPrimaryKey(Integer roleid);
+    int deleteByPrimaryKey(Integer roleId);
 
     int insert(Roleinfo row);
 
@@ -18,7 +18,7 @@ public interface RoleinfoMapper {
 
     List<Roleinfo> selectByExample(RoleinfoExample example);
 
-    Roleinfo selectByPrimaryKey(Integer roleid);
+    Roleinfo selectByPrimaryKey(Integer roleId);
 
     int updateByExampleSelective(@Param("row") Roleinfo row, @Param("example") RoleinfoExample example);
 

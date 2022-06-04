@@ -10,7 +10,7 @@ public interface MynoteMapper {
 
     int deleteByExample(MynoteExample example);
 
-    int deleteByPrimaryKey(Integer noteid);
+    int deleteByPrimaryKey(Integer noteId);
 
     int insert(Mynote row);
 
@@ -18,7 +18,7 @@ public interface MynoteMapper {
 
     List<Mynote> selectByExample(MynoteExample example);
 
-    Mynote selectByPrimaryKey(Integer noteid);
+    Mynote selectByPrimaryKey(Integer noteId);
 
     int updateByExampleSelective(@Param("row") Mynote row, @Param("example") MynoteExample example);
 
